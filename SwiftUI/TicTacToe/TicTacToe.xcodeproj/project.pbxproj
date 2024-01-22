@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7225F322A56FE155A9436479 /* Pods_TicTacToe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC6C5D1F6095D6996BD52D9 /* Pods_TicTacToe.framework */; };
+		D6025FD82AB3669D00E6AE69 /* GradientsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */; };
+		D60B8AEC2AC48E300055D5FB /* PaddingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B8AEB2AC48E300055D5FB /* PaddingBootcamp.swift */; };
+		D616F5702AE6C3D900DB110C /* SheetsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616F56F2AE6C3D900DB110C /* SheetsBootcamp.swift */; };
+		D616F57E2AE8180B00DB110C /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616F57D2AE8180B00DB110C /* NavigationViewBootcamp.swift */; };
+		D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617F86B2AA9CCBC002F7193 /* SettingsView.swift */; };
+		D61C23D72AF7E20700509835 /* AlertBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61C23D62AF7E20700509835 /* AlertBootcamp.swift */; };
+		D62209E92ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62209E82ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift */; };
+		D62A69792AF00FB4000657E0 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62A69782AF00FB4000657E0 /* ListBootcamp.swift */; };
+		D65774D02AB4B88000A91AD6 /* SystemIconBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774CF2AB4B88000A91AD6 /* SystemIconBootcamp.swift */; };
+		D65774D22AB613E200A91AD6 /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774D12AB613E200A91AD6 /* ImagesBootcamp.swift */; };
+		D65774FA2ABA0D9400A91AD6 /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65774F92ABA0D9400A91AD6 /* FrameBootcamp.swift */; };
+		D6753D8C2AD14311005953DC /* StateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6753D8B2AD14311005953DC /* StateBootcamp.swift */; };
+		D6753D8E2AD1B38B005953DC /* ExtractedBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6753D8D2AD1B38B005953DC /* ExtractedBootcamp.swift */; };
+		D6753D952AD45ECC005953DC /* ExtractSubViewsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6753D942AD45ECC005953DC /* ExtractSubViewsBootcamp.swift */; };
+		D67CC0332AD6FB65008C156F /* ConditionalBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67CC0322AD6FB65008C156F /* ConditionalBootcamp.swift */; };
+		D67CC0352AD6FDCA008C156F /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67CC0342AD6FDCA008C156F /* AnimationBootcamp.swift */; };
+		D6A223312B0BB79E008FBC87 /* ActionSheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A223302B0BB79E008FBC87 /* ActionSheetBootcamp.swift */; };
+		D6A876DB2AD1312E00991C6E /* ButtonBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A876DA2AD1312E00991C6E /* ButtonBootcamp.swift */; };
+		D6A903152AB21918003AABC7 /* ColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A903142AB21918003AABC7 /* ColorBootcamp.swift */; };
+		D6A9F59C2AC3424A00F9FA02 /* StacksBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9F59B2AC3424A00F9FA02 /* StacksBootcamp.swift */; };
+		D6AB960B2B5C0B64004F8E5D /* ViewModel Bootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AB960A2B5C0B64004F8E5D /* ViewModel Bootcamp.swift */; };
+		D6AB960F2B5C3348004F8E5D /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AB960E2B5C3348004F8E5D /* EnvironmentBootcamp.swift */; };
+		D6ABFF662AC9AE5D00C5EC95 /* SpacerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFF652AC9AE5D00C5EC95 /* SpacerBootcamp.swift */; };
+		D6ABFF682AC9CB8F00C5EC95 /* InitializerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFF672AC9CB8F00C5EC95 /* InitializerBootcamp.swift */; };
+		D6ABFF6A2AC9D7F700C5EC95 /* ForEachBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFF692AC9D7F700C5EC95 /* ForEachBootcamp.swift */; };
+		D6ABFF7C2ACB229900C5EC95 /* ScrollViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFF7B2ACB229900C5EC95 /* ScrollViewBootcamp.swift */; };
+		D6ABFF7E2ACC73BD00C5EC95 /* GridViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFF7D2ACC73BD00C5EC95 /* GridViewBootcamp.swift */; };
+		D6ABFF802ACDCA8C00C5EC95 /* SafeareaBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABFF7F2ACDCA8C00C5EC95 /* SafeareaBootcamp.swift */; };
+		D6ADC5B52AD5BF9400F7A8A5 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADC5B42AD5BF9400F7A8A5 /* BindingBootcamp.swift */; };
+		D6BE123B2AAF880E00F18DDF /* TextBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */; };
+		D6C977C72AB0C64000830A99 /* ShapeBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C977C62AB0C64000830A99 /* ShapeBootcamp.swift */; };
+		D6CACD502ABB618100988AB7 /* BackgroudAndOverlayBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CACD4F2ABB618100988AB7 /* BackgroudAndOverlayBootcamp.swift */; };
+		D6E4A5BC2AE4324200F79153 /* TrasitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A5BB2AE4324200F79153 /* TrasitionBootcamp.swift */; };
+		D6F1BC822A9A209A004A2DDC /* TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */; };
+		D6F1BC842A9A209A004A2DDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1BC832A9A209A004A2DDC /* ContentView.swift */; };
+		D6F1BC862A9A209C004A2DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F1BC852A9A209C004A2DDC /* Assets.xcassets */; };
+		D6F1BC892A9A209C004A2DDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F1BC882A9A209C004A2DDC /* Preview Assets.xcassets */; };
+		D6F1BC912A9B46C3004A2DDC /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F1BC902A9B46C3004A2DDC /* Box.swift */; };
+		D6FA124E2A9D00A7002C35EB /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43563D79024FBE157ECF6B52 /* Pods-TicTacToe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.release.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.release.xcconfig"; sourceTree = "<group>"; };
+		BB0656D05597111284CF37E4 /* Pods-TicTacToe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.debug.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.debug.xcconfig"; sourceTree = "<group>"; };
+		BCC6C5D1F6095D6996BD52D9 /* Pods_TicTacToe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsBootcamp.swift; sourceTree = "<group>"; };
+		D60B8AEB2AC48E300055D5FB /* PaddingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingBootcamp.swift; sourceTree = "<group>"; };
+		D616F56F2AE6C3D900DB110C /* SheetsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetsBootcamp.swift; sourceTree = "<group>"; };
+		D616F57D2AE8180B00DB110C /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
+		D617F86B2AA9CCBC002F7193 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D61C23D62AF7E20700509835 /* AlertBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBootcamp.swift; sourceTree = "<group>"; };
+		D62209E82ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurvesOrTimingBootcamp.swift; sourceTree = "<group>"; };
+		D62A69782AF00FB4000657E0 /* ListBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootcamp.swift; sourceTree = "<group>"; };
+		D65774CF2AB4B88000A91AD6 /* SystemIconBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIconBootcamp.swift; sourceTree = "<group>"; };
+		D65774D12AB613E200A91AD6 /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
+		D65774F92ABA0D9400A91AD6 /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
+		D6753D8B2AD14311005953DC /* StateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBootcamp.swift; sourceTree = "<group>"; };
+		D6753D8D2AD1B38B005953DC /* ExtractedBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractedBootcamp.swift; sourceTree = "<group>"; };
+		D6753D942AD45ECC005953DC /* ExtractSubViewsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractSubViewsBootcamp.swift; sourceTree = "<group>"; };
+		D67CC0322AD6FB65008C156F /* ConditionalBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalBootcamp.swift; sourceTree = "<group>"; };
+		D67CC0342AD6FDCA008C156F /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
+		D6A223302B0BB79E008FBC87 /* ActionSheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetBootcamp.swift; sourceTree = "<group>"; };
+		D6A876DA2AD1312E00991C6E /* ButtonBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBootcamp.swift; sourceTree = "<group>"; };
+		D6A903142AB21918003AABC7 /* ColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBootcamp.swift; sourceTree = "<group>"; };
+		D6A9F59B2AC3424A00F9FA02 /* StacksBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootcamp.swift; sourceTree = "<group>"; };
+		D6AB960A2B5C0B64004F8E5D /* ViewModel Bootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel Bootcamp.swift"; sourceTree = "<group>"; };
+		D6AB960E2B5C3348004F8E5D /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
+		D6ABFF652AC9AE5D00C5EC95 /* SpacerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerBootcamp.swift; sourceTree = "<group>"; };
+		D6ABFF672AC9CB8F00C5EC95 /* InitializerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerBootcamp.swift; sourceTree = "<group>"; };
+		D6ABFF692AC9D7F700C5EC95 /* ForEachBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachBootcamp.swift; sourceTree = "<group>"; };
+		D6ABFF7B2ACB229900C5EC95 /* ScrollViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBootcamp.swift; sourceTree = "<group>"; };
+		D6ABFF7D2ACC73BD00C5EC95 /* GridViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewBootcamp.swift; sourceTree = "<group>"; };
+		D6ABFF7F2ACDCA8C00C5EC95 /* SafeareaBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeareaBootcamp.swift; sourceTree = "<group>"; };
+		D6ADC5B42AD5BF9400F7A8A5 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
+		D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcamp.swift; sourceTree = "<group>"; };
+		D6C977C62AB0C64000830A99 /* ShapeBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeBootcamp.swift; sourceTree = "<group>"; };
+		D6CACD4F2ABB618100988AB7 /* BackgroudAndOverlayBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroudAndOverlayBootcamp.swift; sourceTree = "<group>"; };
+		D6E4A5BB2AE4324200F79153 /* TrasitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrasitionBootcamp.swift; sourceTree = "<group>"; };
+		D6F1BC7E2A9A209A004A2DDC /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeApp.swift; sourceTree = "<group>"; };
+		D6F1BC832A9A209A004A2DDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6F1BC852A9A209C004A2DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6F1BC882A9A209C004A2DDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D6F1BC902A9B46C3004A2DDC /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6F1BC7B2A9A209A004A2DDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7225F322A56FE155A9436479 /* Pods_TicTacToe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B8D4AED24439911E8BAE16A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCC6C5D1F6095D6996BD52D9 /* Pods_TicTacToe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A765D6A8802E64C94381607C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB0656D05597111284CF37E4 /* Pods-TicTacToe.debug.xcconfig */,
+				43563D79024FBE157ECF6B52 /* Pods-TicTacToe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6F1BC752A9A2099004A2DDC = {
+			isa = PBXGroup;
+			children = (
+				D6F1BC802A9A209A004A2DDC /* TicTacToe */,
+				D6F1BC7F2A9A209A004A2DDC /* Products */,
+				A765D6A8802E64C94381607C /* Pods */,
+				1B8D4AED24439911E8BAE16A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D6F1BC7F2A9A209A004A2DDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1BC7E2A9A209A004A2DDC /* TicTacToe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6F1BC802A9A209A004A2DDC /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1BC8F2A9B46A2004A2DDC /* Components */,
+				D6F1BC812A9A209A004A2DDC /* TicTacToeApp.swift */,
+				D6C977C62AB0C64000830A99 /* ShapeBootcamp.swift */,
+				D6A903142AB21918003AABC7 /* ColorBootcamp.swift */,
+				D6F1BC832A9A209A004A2DDC /* ContentView.swift */,
+				D6FA124D2A9D00A7002C35EB /* ContentViewModel.swift */,
+				D6025FD72AB3669D00E6AE69 /* GradientsBootcamp.swift */,
+				D6BE123A2AAF880E00F18DDF /* TextBootcamp.swift */,
+				D617F86B2AA9CCBC002F7193 /* SettingsView.swift */,
+				D65774CF2AB4B88000A91AD6 /* SystemIconBootcamp.swift */,
+				D65774D12AB613E200A91AD6 /* ImagesBootcamp.swift */,
+				D65774F92ABA0D9400A91AD6 /* FrameBootcamp.swift */,
+				D6CACD4F2ABB618100988AB7 /* BackgroudAndOverlayBootcamp.swift */,
+				D6A9F59B2AC3424A00F9FA02 /* StacksBootcamp.swift */,
+				D60B8AEB2AC48E300055D5FB /* PaddingBootcamp.swift */,
+				D6ABFF652AC9AE5D00C5EC95 /* SpacerBootcamp.swift */,
+				D6ABFF672AC9CB8F00C5EC95 /* InitializerBootcamp.swift */,
+				D6ABFF692AC9D7F700C5EC95 /* ForEachBootcamp.swift */,
+				D6ABFF7B2ACB229900C5EC95 /* ScrollViewBootcamp.swift */,
+				D6ABFF7D2ACC73BD00C5EC95 /* GridViewBootcamp.swift */,
+				D6ABFF7F2ACDCA8C00C5EC95 /* SafeareaBootcamp.swift */,
+				D6A876DA2AD1312E00991C6E /* ButtonBootcamp.swift */,
+				D6753D8B2AD14311005953DC /* StateBootcamp.swift */,
+				D6753D8D2AD1B38B005953DC /* ExtractedBootcamp.swift */,
+				D6753D942AD45ECC005953DC /* ExtractSubViewsBootcamp.swift */,
+				D6ADC5B42AD5BF9400F7A8A5 /* BindingBootcamp.swift */,
+				D67CC0322AD6FB65008C156F /* ConditionalBootcamp.swift */,
+				D67CC0342AD6FDCA008C156F /* AnimationBootcamp.swift */,
+				D62209E82ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift */,
+				D6E4A5BB2AE4324200F79153 /* TrasitionBootcamp.swift */,
+				D616F56F2AE6C3D900DB110C /* SheetsBootcamp.swift */,
+				D616F57D2AE8180B00DB110C /* NavigationViewBootcamp.swift */,
+				D62A69782AF00FB4000657E0 /* ListBootcamp.swift */,
+				D61C23D62AF7E20700509835 /* AlertBootcamp.swift */,
+				D6A223302B0BB79E008FBC87 /* ActionSheetBootcamp.swift */,
+				D6AB960A2B5C0B64004F8E5D /* ViewModel Bootcamp.swift */,
+				D6AB960E2B5C3348004F8E5D /* EnvironmentBootcamp.swift */,
+				D6F1BC852A9A209C004A2DDC /* Assets.xcassets */,
+				D6F1BC872A9A209C004A2DDC /* Preview Content */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		D6F1BC872A9A209C004A2DDC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1BC882A9A209C004A2DDC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D6F1BC8F2A9B46A2004A2DDC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D6F1BC902A9B46C3004A2DDC /* Box.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6F1BC7D2A9A209A004A2DDC /* TicTacToe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6F1BC8C2A9A209C004A2DDC /* Build configuration list for PBXNativeTarget "TicTacToe" */;
+			buildPhases = (
+				A366131944A29959DA2540C2 /* [CP] Check Pods Manifest.lock */,
+				D6AB96112B5D5605004F8E5D /* ShellScript */,
+				D6F1BC7A2A9A209A004A2DDC /* Sources */,
+				D6F1BC7B2A9A209A004A2DDC /* Frameworks */,
+				D6F1BC7C2A9A209A004A2DDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicTacToe;
+			productName = TicTacToe;
+			productReference = D6F1BC7E2A9A209A004A2DDC /* TicTacToe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6F1BC762A9A2099004A2DDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D6F1BC7D2A9A209A004A2DDC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = D6F1BC792A9A2099004A2DDC /* Build configuration list for PBXProject "TicTacToe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6F1BC752A9A2099004A2DDC;
+			packageReferences = (
+			);
+			productRefGroup = D6F1BC7F2A9A209A004A2DDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F1BC7D2A9A209A004A2DDC /* TicTacToe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6F1BC7C2A9A209A004A2DDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F1BC892A9A209C004A2DDC /* Preview Assets.xcassets in Resources */,
+				D6F1BC862A9A209C004A2DDC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A366131944A29959DA2540C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TicTacToe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6AB96112B5D5605004F8E5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6F1BC7A2A9A209A004A2DDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D617F86C2AA9CCBC002F7193 /* SettingsView.swift in Sources */,
+				D6BE123B2AAF880E00F18DDF /* TextBootcamp.swift in Sources */,
+				D6ABFF662AC9AE5D00C5EC95 /* SpacerBootcamp.swift in Sources */,
+				D67CC0332AD6FB65008C156F /* ConditionalBootcamp.swift in Sources */,
+				D6ABFF802ACDCA8C00C5EC95 /* SafeareaBootcamp.swift in Sources */,
+				D6A876DB2AD1312E00991C6E /* ButtonBootcamp.swift in Sources */,
+				D65774FA2ABA0D9400A91AD6 /* FrameBootcamp.swift in Sources */,
+				D6A903152AB21918003AABC7 /* ColorBootcamp.swift in Sources */,
+				D62A69792AF00FB4000657E0 /* ListBootcamp.swift in Sources */,
+				D6025FD82AB3669D00E6AE69 /* GradientsBootcamp.swift in Sources */,
+				D6ADC5B52AD5BF9400F7A8A5 /* BindingBootcamp.swift in Sources */,
+				D60B8AEC2AC48E300055D5FB /* PaddingBootcamp.swift in Sources */,
+				D6AB960B2B5C0B64004F8E5D /* ViewModel Bootcamp.swift in Sources */,
+				D67CC0352AD6FDCA008C156F /* AnimationBootcamp.swift in Sources */,
+				D6ABFF7C2ACB229900C5EC95 /* ScrollViewBootcamp.swift in Sources */,
+				D62209E92ADC488800851B25 /* AnimationCurvesOrTimingBootcamp.swift in Sources */,
+				D6753D8C2AD14311005953DC /* StateBootcamp.swift in Sources */,
+				D6FA124E2A9D00A7002C35EB /* ContentViewModel.swift in Sources */,
+				D6C977C72AB0C64000830A99 /* ShapeBootcamp.swift in Sources */,
+				D6ABFF682AC9CB8F00C5EC95 /* InitializerBootcamp.swift in Sources */,
+				D6A9F59C2AC3424A00F9FA02 /* StacksBootcamp.swift in Sources */,
+				D6CACD502ABB618100988AB7 /* BackgroudAndOverlayBootcamp.swift in Sources */,
+				D6E4A5BC2AE4324200F79153 /* TrasitionBootcamp.swift in Sources */,
+				D6F1BC912A9B46C3004A2DDC /* Box.swift in Sources */,
+				D6A223312B0BB79E008FBC87 /* ActionSheetBootcamp.swift in Sources */,
+				D6F1BC842A9A209A004A2DDC /* ContentView.swift in Sources */,
+				D6AB960F2B5C3348004F8E5D /* EnvironmentBootcamp.swift in Sources */,
+				D616F57E2AE8180B00DB110C /* NavigationViewBootcamp.swift in Sources */,
+				D61C23D72AF7E20700509835 /* AlertBootcamp.swift in Sources */,
+				D65774D02AB4B88000A91AD6 /* SystemIconBootcamp.swift in Sources */,
+				D6753D8E2AD1B38B005953DC /* ExtractedBootcamp.swift in Sources */,
+				D616F5702AE6C3D900DB110C /* SheetsBootcamp.swift in Sources */,
+				D65774D22AB613E200A91AD6 /* ImagesBootcamp.swift in Sources */,
+				D6F1BC822A9A209A004A2DDC /* TicTacToeApp.swift in Sources */,
+				D6753D952AD45ECC005953DC /* ExtractSubViewsBootcamp.swift in Sources */,
+				D6ABFF6A2AC9D7F700C5EC95 /* ForEachBootcamp.swift in Sources */,
+				D6ABFF7E2ACC73BD00C5EC95 /* GridViewBootcamp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D6F1BC8A2A9A209C004A2DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D6F1BC8B2A9A209C004A2DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6F1BC8D2A9A209C004A2DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB0656D05597111284CF37E4 /* Pods-TicTacToe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift UI Tutorial";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codesorbit.TicTacToe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6F1BC8E2A9A209C004A2DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43563D79024FBE157ECF6B52 /* Pods-TicTacToe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Swift UI Tutorial";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codesorbit.TicTacToe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F1BC792A9A2099004A2DDC /* Build configuration list for PBXProject "TicTacToe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F1BC8A2A9A209C004A2DDC /* Debug */,
+				D6F1BC8B2A9A209C004A2DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F1BC8C2A9A209C004A2DDC /* Build configuration list for PBXNativeTarget "TicTacToe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F1BC8D2A9A209C004A2DDC /* Debug */,
+				D6F1BC8E2A9A209C004A2DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6F1BC762A9A2099004A2DDC /* Project object */;
+}

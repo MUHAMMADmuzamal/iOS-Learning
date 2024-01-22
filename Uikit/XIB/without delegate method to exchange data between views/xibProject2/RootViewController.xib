@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController" customModule="xibProject2" customModuleProvider="target">
+            <connections>
+                <outlet property="email" destination="fWx-S6-SAC" id="t3C-Cf-8B4"/>
+                <outlet property="username" destination="Bwv-hx-qZ4" id="emo-rr-adg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwv-hx-qZ4">
+                    <rect key="frame" x="10" y="79" width="373" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-S6-SAC">
+                    <rect key="frame" x="10" y="133" width="373" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cai-HQ-Il1">
+                    <rect key="frame" x="147.33333333333334" y="237" width="100.33333333333334" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Add to list"/>
+                    <connections>
+                        <action selector="addToList:" destination="-1" eventType="touchUpInside" id="m9M-Jv-ax0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G28-YQ-WcF">
+                    <rect key="frame" x="104" y="336" width="188" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Show Collection View"/>
+                    <connections>
+                        <action selector="showCollectionView:" destination="-1" eventType="touchUpInside" id="iZT-0x-Nkq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGrayColor"/>
+            <constraints>
+                <constraint firstItem="cai-HQ-Il1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="3mQ-QN-kv9"/>
+                <constraint firstItem="fWx-S6-SAC" firstAttribute="top" secondItem="Bwv-hx-qZ4" secondAttribute="bottom" constant="20" id="9VW-5M-dyg"/>
+                <constraint firstItem="fWx-S6-SAC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="9in-et-5ji"/>
+                <constraint firstItem="Bwv-hx-qZ4" firstAttribute="leading" secondItem="fWx-S6-SAC" secondAttribute="leading" id="MiH-R0-9qT"/>
+                <constraint firstItem="cai-HQ-Il1" firstAttribute="top" secondItem="fWx-S6-SAC" secondAttribute="bottom" constant="70" id="W1F-E8-yFy"/>
+                <constraint firstItem="Bwv-hx-qZ4" firstAttribute="trailing" secondItem="fWx-S6-SAC" secondAttribute="trailing" id="bTg-Qr-34H"/>
+                <constraint firstItem="Bwv-hx-qZ4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dqf-bc-Ubg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fWx-S6-SAC" secondAttribute="trailing" constant="10" id="uWd-eV-nwE"/>
+            </constraints>
+            <point key="canvasLocation" x="-25" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

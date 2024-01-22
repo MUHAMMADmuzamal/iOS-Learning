@@ -1,0 +1,59 @@
+//
+//  SheetsBootcamp.swift
+//  TicTacToe
+//
+//  Created by Codes Orbit on 23/10/2023.
+//
+
+import SwiftUI
+
+struct SheetsBootcamp: View {
+    @State var showSheet: Bool = false
+    var body: some View {
+        ZStack{
+            Color.green.ignoresSafeArea()
+            
+    Button(action: {
+        showSheet.toggle()
+    }, label: {
+        Text("Button")
+            .foregroundColor(.green)
+            .font(.headline)
+            .padding(20)
+            .background(Color.white.cornerRadius(20))
+    })
+    .fullScreenCover(isPresented: $showSheet, content: {
+        SecondView()
+    })
+//    .sheet(isPresented: $showSheet, content: {
+            //DO NOT ADD CONDITIONAL LOGIC HERE IT WILL NOT WORK CORRECTLLY
+//        SecondView()
+//    })
+        }
+    }
+}
+
+struct SecondView: View{
+    @Environment(\.presentationMode) var presentationMode
+    var body: some View{
+        ZStack(alignment: .topLeading){
+            Color.red.ignoresSafeArea()
+            
+    Button(action: {
+        presentationMode.wrappedValue.dismiss()
+    }, label: {
+        Image(systemName: "xmark")
+            .foregroundColor(.white)
+            .font(.headline)
+            .padding(20)
+            
+    })
+        }
+    }
+}
+struct SheetsBootcamp_Previews: PreviewProvider {
+    static var previews: some View {
+        SheetsBootcamp()
+//        SecondView()
+    }
+}

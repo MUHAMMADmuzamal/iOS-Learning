@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="StackViewsPratice" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPL-m0-oBu">
+                    <rect key="frame" x="0.0" y="59" width="393" height="1107"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2H7-hW-d56">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eiv-s4-u0a">
+                                    <rect key="frame" x="76" y="142" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="we8-GK-Lh7">
+                                    <rect key="frame" x="76" y="302" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-os-uCn">
+                                    <rect key="frame" x="76" y="962" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="linkColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1200" id="XIn-d4-LYC"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2H7-hW-d56" firstAttribute="leading" secondItem="PPL-m0-oBu" secondAttribute="leading" id="0IC-ql-DQG"/>
+                        <constraint firstAttribute="trailing" secondItem="2H7-hW-d56" secondAttribute="trailing" id="4hg-yU-J38"/>
+                        <constraint firstItem="2H7-hW-d56" firstAttribute="centerX" secondItem="PPL-m0-oBu" secondAttribute="centerX" id="8hC-Li-z5z"/>
+                        <constraint firstItem="2H7-hW-d56" firstAttribute="top" secondItem="PPL-m0-oBu" secondAttribute="top" id="BDh-qH-2Km"/>
+                        <constraint firstAttribute="bottom" secondItem="2H7-hW-d56" secondAttribute="bottom" id="ElF-Hv-USt"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PPL-m0-oBu" secondAttribute="bottom" id="1cX-bV-f6S"/>
+                <constraint firstItem="2H7-hW-d56" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="SO2-IX-c9S"/>
+                <constraint firstItem="PPL-m0-oBu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f8b-BK-zcz"/>
+                <constraint firstItem="PPL-m0-oBu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rDN-k3-UTB"/>
+                <constraint firstAttribute="trailing" secondItem="PPL-m0-oBu" secondAttribute="trailing" id="xSe-wl-Sq2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="32.824427480916029" y="39.436619718309863"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

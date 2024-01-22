@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FoodDelivery" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="GGE-Lb-cmN" id="wF1-69-gfQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compostional Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSx-bJ-gdR">
+                    <rect key="frame" x="20" y="79" width="161" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GGE-Lb-cmN">
+                    <rect key="frame" x="0.0" y="110" width="393" height="708"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DhO-LJ-o3d">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mC4-ON-veU">
+                    <rect key="frame" x="267" y="72" width="106" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Table View"/>
+                    <connections>
+                        <action selector="tableViewButtonWith_sender:" destination="-1" eventType="touchUpInside" id="2g7-Qt-a4k"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GGE-Lb-cmN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3bu-8V-Rba"/>
+                <constraint firstItem="JSx-bJ-gdR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5e5-jc-u83"/>
+                <constraint firstItem="mC4-ON-veU" firstAttribute="centerY" secondItem="JSx-bJ-gdR" secondAttribute="centerY" id="bVG-Oy-oEQ"/>
+                <constraint firstItem="JSx-bJ-gdR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="cxs-bn-Pjn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GGE-Lb-cmN" secondAttribute="bottom" id="gDM-ED-xeo"/>
+                <constraint firstItem="GGE-Lb-cmN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lde-oZ-RQc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GGE-Lb-cmN" secondAttribute="trailing" id="phR-7v-iHW"/>
+                <constraint firstItem="GGE-Lb-cmN" firstAttribute="top" secondItem="JSx-bJ-gdR" secondAttribute="bottom" constant="10" id="phZ-gE-BaU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mC4-ON-veU" secondAttribute="trailing" constant="20" id="vHE-fN-Z2I"/>
+            </constraints>
+            <point key="canvasLocation" x="83" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
