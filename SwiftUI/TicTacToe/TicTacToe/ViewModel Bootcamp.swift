@@ -7,30 +7,28 @@
 
 import SwiftUI
 
-struct FruitModel: Identifiable{
+struct FruitModel: Identifiable {
     let id = UUID().uuidString
-    let name:String
-    let count:Int
+    let name: String
+    let count: Int
 }
 
-class FruitViewModel: ObservableObject{
-    @Published var fruitArray:[FruitModel] = []
-    @Published var isLoading:Bool = false
-    
-    init(){
+class FruitViewModel: ObservableObject {
+    @Published var fruitArray: [FruitModel] = []
+    @Published var isLoading: Bool = false
+    init() {
         getFruits()
     }
     func deleteFruit(indexSet: IndexSet) {
         fruitArray.remove(atOffsets: indexSet)
     }
-    
-    func getFruits(){
+    func getFruits() {
         let fruit1 = FruitModel(name: "watermelon", count: 99)
         let fruit2 = FruitModel(name: "Orange", count: 50)
         let fruit3 = FruitModel(name: "Banana", count: 1)
         let fruit4 = FruitModel(name: "Apple", count: 10)
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now()+2){
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             self.fruitArray.append(fruit1)
             self.fruitArray.append(fruit2)
             self.fruitArray.append(fruit3)
@@ -43,17 +41,16 @@ class FruitViewModel: ObservableObject{
 struct ViewModelBootcamp: View {
     // use this for subviews or passing to other screen
 //    @ObservedObject var fruitVM:FruitViewModel = FruitViewModel()
-    
     // use it when creating view
-    @StateObject var fruitVM:FruitViewModel = FruitViewModel()
+    @StateObject var fruitVM: FruitViewModel = FruitViewModel()
     var body: some View {
-        NavigationStack{
-            List{
-                if fruitVM.isLoading{
+        NavigationStack {
+            List {
+                if fruitVM.isLoading {
                     ProgressView()
-                }else{
+                }else {
                     ForEach(fruitVM.fruitArray, content: { fruit in
-                        HStack{
+                        HStack {
                             Text(String(fruit.count))
                                 .foregroundStyle(Color.red)
                             Text(fruit.name)
@@ -69,18 +66,17 @@ struct ViewModelBootcamp: View {
                 Image(systemName: "arrow.right")
             }))
         }
-        
     }
 }
 
-struct SecondScreen: View{
+struct SecondScreen: View {
     @ObservedObject var fruitVM: FruitViewModel
     @Environment(\.presentationMode) var presentationMode
-    var body: some View{
-        ZStack{
+    var body: some View {
+        ZStack {
             Color.green.ignoresSafeArea()
-            VStack{
-                ForEach(fruitVM.fruitArray){ fruit in
+            VStack {
+                ForEach(fruitVM.fruitArray) { fruit in
                     Text(fruit.name)
                 }
                 Button {

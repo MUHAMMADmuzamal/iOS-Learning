@@ -12,18 +12,19 @@ struct TicTacToeApp: App {
     var body: some Scene {
 #if os(iOS)
         WindowGroup {
-            TabView {
-//                ContentView()
+            AppStorageBootcamp()
+//            TabView {
+////                ContentView()
+////                    .tabItem {
+////                        Label("Journal", systemImage: "book")
+////                    }
+//                ButtonBootcamp()
+//                
+//                SettingsView()
 //                    .tabItem {
-//                        Label("Journal", systemImage: "book")
+//                        Label("Settings", systemImage: "gear")
 //                    }
-                ButtonBootcamp()
-                
-                SettingsView()
-                    .tabItem {
-                        Label("Settings", systemImage: "gear")
-                    }
-            }
+//            }
         }
 #elseif os(macOS)
         WindowGroup {
