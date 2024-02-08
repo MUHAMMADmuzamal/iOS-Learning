@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D622233D2B388F63003104AE /* HomeRentalAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D622233C2B388F63003104AE /* HomeRentalAppApp.swift */; };
+		D622233F2B388F63003104AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D622233E2B388F63003104AE /* ContentView.swift */; };
+		D62223412B388F66003104AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62223402B388F66003104AE /* Assets.xcassets */; };
+		D62223442B388F66003104AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62223432B388F66003104AE /* Preview Assets.xcassets */; };
+		D622234C2B388FAE003104AE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D622234B2B388FAE003104AE /* Theme.swift */; };
+		D622234F2B388FE1003104AE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D622234E2B388FE1003104AE /* Home.swift */; };
+		D62223522B3890D7003104AE /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D62223502B3890D5003104AE /* Raleway-Italic.ttf */; };
+		D62223532B3890D7003104AE /* Raleway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D62223512B3890D6003104AE /* Raleway.ttf */; };
+		D62223582B38926C003104AE /* LocationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62223572B38926C003104AE /* LocationBar.swift */; };
+		D62223642B3B2D13003104AE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62223632B3B2D13003104AE /* SearchBar.swift */; };
+		D6640B222B414F610060497A /* OptionsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640B212B414F610060497A /* OptionsBar.swift */; };
+		D6965E452B418AD700B76095 /* CardsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E442B418AD700B76095 /* CardsBar.swift */; };
+		D6965E482B418C8900B76095 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E472B418C8900B76095 /* CardModel.swift */; };
+		D6965E4C2B4311C100B76095 /* Font + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E4B2B4311C100B76095 /* Font + Extension.swift */; };
+		D6965E4E2B43120900B76095 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E4D2B43120900B76095 /* Color + Extension.swift */; };
+		D6965E502B43122900B76095 /* Gradient + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E4F2B43122900B76095 /* Gradient + Extension.swift */; };
+		D6965E532B45BBD200B76095 /* BottomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E522B45BBD200B76095 /* BottomList.swift */; };
+		D6965E552B45BBE000B76095 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E542B45BBE000B76095 /* ListRow.swift */; };
+		D6965E572B470FD900B76095 /* ListRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E562B470FD900B76095 /* ListRowModel.swift */; };
+		D6965E592B492CF300B76095 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E582B492CF300B76095 /* CGFloat + Extension.swift */; };
+		D6965E5B2B49C3F600B76095 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E5A2B49C3F500B76095 /* DetailView.swift */; };
+		D6965E5D2B4A9B6700B76095 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6965E5C2B4A9B6600B76095 /* DetailModel.swift */; };
+		D6AD97392B4C4EEB00BC6B88 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD97382B4C4EEB00BC6B88 /* SideBar.swift */; };
+		D6AD973B2B4C50AB00BC6B88 /* SideBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AD973A2B4C50AB00BC6B88 /* SideBarModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D62223392B388F62003104AE /* HomeRentalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeRentalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D622233C2B388F63003104AE /* HomeRentalAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRentalAppApp.swift; sourceTree = "<group>"; };
+		D622233E2B388F63003104AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D62223402B388F66003104AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D62223432B388F66003104AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D622234B2B388FAE003104AE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D622234E2B388FE1003104AE /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D62223502B3890D5003104AE /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		D62223512B3890D6003104AE /* Raleway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Raleway.ttf; sourceTree = "<group>"; };
+		D62223552B389128003104AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D62223572B38926C003104AE /* LocationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationBar.swift; sourceTree = "<group>"; };
+		D62223632B3B2D13003104AE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		D6640B212B414F610060497A /* OptionsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsBar.swift; sourceTree = "<group>"; };
+		D6965E442B418AD700B76095 /* CardsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsBar.swift; sourceTree = "<group>"; };
+		D6965E472B418C8900B76095 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		D6965E4B2B4311C100B76095 /* Font + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Font + Extension.swift"; path = "../../../../../../Font + Extension.swift"; sourceTree = "<group>"; };
+		D6965E4D2B43120900B76095 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		D6965E4F2B43122900B76095 /* Gradient + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient + Extension.swift"; sourceTree = "<group>"; };
+		D6965E522B45BBD200B76095 /* BottomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomList.swift; sourceTree = "<group>"; };
+		D6965E542B45BBE000B76095 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		D6965E562B470FD900B76095 /* ListRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowModel.swift; sourceTree = "<group>"; };
+		D6965E582B492CF300B76095 /* CGFloat + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
+		D6965E5A2B49C3F500B76095 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D6965E5C2B4A9B6600B76095 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		D6AD97382B4C4EEB00BC6B88 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		D6AD973A2B4C50AB00BC6B88 /* SideBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D62223362B388F62003104AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D62223302B388F62003104AE = {
+			isa = PBXGroup;
+			children = (
+				D622233B2B388F62003104AE /* HomeRentalApp */,
+				D622233A2B388F62003104AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D622233A2B388F62003104AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D62223392B388F62003104AE /* HomeRentalApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D622233B2B388F62003104AE /* HomeRentalApp */ = {
+			isa = PBXGroup;
+			children = (
+				D6965E492B43118D00B76095 /* Helpers */,
+				D62223552B389128003104AE /* Info.plist */,
+				D622234D2B388FD2003104AE /* Views */,
+				D622234A2B388F9A003104AE /* Resources */,
+				D622233C2B388F63003104AE /* HomeRentalAppApp.swift */,
+				D622233E2B388F63003104AE /* ContentView.swift */,
+				D62223422B388F66003104AE /* Preview Content */,
+			);
+			path = HomeRentalApp;
+			sourceTree = "<group>";
+		};
+		D62223422B388F66003104AE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D62223432B388F66003104AE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D622234A2B388F9A003104AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D622234B2B388FAE003104AE /* Theme.swift */,
+				D62223402B388F66003104AE /* Assets.xcassets */,
+				D62223542B3890E0003104AE /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D622234D2B388FD2003104AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6965E462B418C7900B76095 /* Models */,
+				D62223562B38924C003104AE /* Components */,
+				D622234E2B388FE1003104AE /* Home.swift */,
+				D6965E5A2B49C3F500B76095 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D62223542B3890E0003104AE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D62223502B3890D5003104AE /* Raleway-Italic.ttf */,
+				D62223512B3890D6003104AE /* Raleway.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D62223562B38924C003104AE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D6965E512B45BBB900B76095 /* BottomList */,
+				D62223572B38926C003104AE /* LocationBar.swift */,
+				D62223632B3B2D13003104AE /* SearchBar.swift */,
+				D6640B212B414F610060497A /* OptionsBar.swift */,
+				D6965E442B418AD700B76095 /* CardsBar.swift */,
+				D6AD97382B4C4EEB00BC6B88 /* SideBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D6965E462B418C7900B76095 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6965E472B418C8900B76095 /* CardModel.swift */,
+				D6965E562B470FD900B76095 /* ListRowModel.swift */,
+				D6965E5C2B4A9B6600B76095 /* DetailModel.swift */,
+				D6AD973A2B4C50AB00BC6B88 /* SideBarModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6965E492B43118D00B76095 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D6965E4A2B43119700B76095 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D6965E4A2B43119700B76095 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6965E4B2B4311C100B76095 /* Font + Extension.swift */,
+				D6965E4D2B43120900B76095 /* Color + Extension.swift */,
+				D6965E4F2B43122900B76095 /* Gradient + Extension.swift */,
+				D6965E582B492CF300B76095 /* CGFloat + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6965E512B45BBB900B76095 /* BottomList */ = {
+			isa = PBXGroup;
+			children = (
+				D6965E522B45BBD200B76095 /* BottomList.swift */,
+				D6965E542B45BBE000B76095 /* ListRow.swift */,
+			);
+			path = BottomList;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D62223382B388F62003104AE /* HomeRentalApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D62223472B388F66003104AE /* Build configuration list for PBXNativeTarget "HomeRentalApp" */;
+			buildPhases = (
+				D62223352B388F62003104AE /* Sources */,
+				D62223362B388F62003104AE /* Frameworks */,
+				D62223372B388F62003104AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeRentalApp;
+			productName = HomeRentalApp;
+			productReference = D62223392B388F62003104AE /* HomeRentalApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D62223312B388F62003104AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D62223382B388F62003104AE = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D62223342B388F62003104AE /* Build configuration list for PBXProject "HomeRentalApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D62223302B388F62003104AE;
+			productRefGroup = D622233A2B388F62003104AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D62223382B388F62003104AE /* HomeRentalApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D62223372B388F62003104AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62223442B388F66003104AE /* Preview Assets.xcassets in Resources */,
+				D62223532B3890D7003104AE /* Raleway.ttf in Resources */,
+				D62223412B388F66003104AE /* Assets.xcassets in Resources */,
+				D62223522B3890D7003104AE /* Raleway-Italic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D62223352B388F62003104AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6AD97392B4C4EEB00BC6B88 /* SideBar.swift in Sources */,
+				D62223582B38926C003104AE /* LocationBar.swift in Sources */,
+				D6965E4E2B43120900B76095 /* Color + Extension.swift in Sources */,
+				D6965E5B2B49C3F600B76095 /* DetailView.swift in Sources */,
+				D6AD973B2B4C50AB00BC6B88 /* SideBarModel.swift in Sources */,
+				D622234C2B388FAE003104AE /* Theme.swift in Sources */,
+				D622233F2B388F63003104AE /* ContentView.swift in Sources */,
+				D6965E572B470FD900B76095 /* ListRowModel.swift in Sources */,
+				D6965E4C2B4311C100B76095 /* Font + Extension.swift in Sources */,
+				D6965E532B45BBD200B76095 /* BottomList.swift in Sources */,
+				D6965E452B418AD700B76095 /* CardsBar.swift in Sources */,
+				D622234F2B388FE1003104AE /* Home.swift in Sources */,
+				D6965E482B418C8900B76095 /* CardModel.swift in Sources */,
+				D622233D2B388F63003104AE /* HomeRentalAppApp.swift in Sources */,
+				D6965E5D2B4A9B6700B76095 /* DetailModel.swift in Sources */,
+				D6640B222B414F610060497A /* OptionsBar.swift in Sources */,
+				D6965E592B492CF300B76095 /* CGFloat + Extension.swift in Sources */,
+				D62223642B3B2D13003104AE /* SearchBar.swift in Sources */,
+				D6965E552B45BBE000B76095 /* ListRow.swift in Sources */,
+				D6965E502B43122900B76095 /* Gradient + Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D62223452B388F66003104AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D62223462B388F66003104AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D62223482B388F66003104AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HomeRentalApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HomeRentalApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codesorbit.HomeRentalApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D62223492B388F66003104AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HomeRentalApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HomeRentalApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codesorbit.HomeRentalApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D62223342B388F62003104AE /* Build configuration list for PBXProject "HomeRentalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62223452B388F66003104AE /* Debug */,
+				D62223462B388F66003104AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D62223472B388F66003104AE /* Build configuration list for PBXNativeTarget "HomeRentalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62223482B388F66003104AE /* Debug */,
+				D62223492B388F66003104AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D62223312B388F62003104AE /* Project object */;
+}
