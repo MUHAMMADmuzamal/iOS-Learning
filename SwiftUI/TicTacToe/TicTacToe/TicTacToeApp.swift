@@ -12,7 +12,7 @@ struct TicTacToeApp: App {
     var body: some Scene {
 #if os(iOS)
         WindowGroup {
-            AppStorageBootcamp()
+            BackgroundThreadBootcamp()
 //            TabView {
 ////                ContentView()
 ////                    .tabItem {
