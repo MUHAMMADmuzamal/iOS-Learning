@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    var vm: HomeScreenVMProtocol = HomeScreenVM(
+        homeRepository: HomeRepository(
+            homeNetworkProvider:HomeNetworkProvider()))
     @State var currentWeatherSectionState: CurrentWeatherForecastModel = CurrentWeatherForecastModel(
         cityName: "Seongnam-si",
         temperature: 21,
@@ -112,6 +115,8 @@ struct HomeView: View {
                 )
                 .padding(.top, 300)
                 .padding(.bottom, 78)
+        }.onAppear {
+            vm.fetchWeatherData()
         }
     }
 }
