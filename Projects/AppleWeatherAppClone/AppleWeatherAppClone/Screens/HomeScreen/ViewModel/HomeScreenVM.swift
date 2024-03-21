@@ -6,17 +6,17 @@
 //
 
 import Foundation
-import Combine
+
 protocol HomeScreenVMProtocol {
-    func fetchWeatherData() async
+    func fetchWeatherData()
 }
 class HomeScreenVM: HomeScreenVMProtocol {
     var homeRepository: HomeRepositoryProtocol
     init(homeRepository: HomeRepositoryProtocol) {
         self.homeRepository = homeRepository
     }
-    func fetchWeatherData() async {
-        await self.homeRepository.getWeatherData(completion: { result in
+    func fetchWeatherData() {
+         self.homeRepository.getWeatherData(completion: { result in
             switch result {
             case .success(let model):
                 debugPrint(model)
