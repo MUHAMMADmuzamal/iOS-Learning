@@ -13,7 +13,7 @@ struct HomeView: View {
 //            homeNetworkProvider:HomeNetworkProvider())) 
     var vm: AsyncHomeScreenVMProtocol = AsyncHomeScreenVM(
         homeRepository: AsyncHomeRepository(
-            homeNetworkProvider:AsyncHomeNetworkProvider()))
+            homeNetworkProvider: AsyncHomeNetworkProvider()))
     @State var currentWeatherSectionState: CurrentWeatherForecastModel = CurrentWeatherForecastModel(
         cityName: "Seongnam-si",
         temperature: 21,
@@ -75,15 +75,22 @@ struct HomeView: View {
         ZStack {
             background
             ScrollView {
-                VStack {
-                    Spacer(minLength: 73)
+                VStack(alignment: .center) {
                     CurrentWeatherForecast(model: $currentWeatherSectionState)
-                    Spacer().frame(height: 44)
-                    HourlyForecast()
-                    Spacer().frame(height: 8)
-                    DaysForeCast(daysForeCastList: $daysForecastRowModelData)
+                        .padding(.top, 73)
+                        .padding(.bottom, 44)
+                    Group {
+                        HourlyForecast()
+                        DaysForeCast(daysForeCastList: $daysForecastRowModelData)
+                    }
+                    .padding(.bottom, 8)
+                    OtherComponents()
+                        .padding(.bottom, 100)
                 }
             }
+            .padding(.top, 60)
+            .scrollIndicators(.never)
+           
         }
         .ignoresSafeArea(.all)
     }
@@ -118,12 +125,13 @@ struct HomeView: View {
                 )
                 .padding(.top, 300)
                 .padding(.bottom, 78)
-        }.onAppear {
-//            vm.fetchWeatherData()
-            Task {
-                await vm.fetchWeatherData()
-            }
         }
+//        .onAppear {
+////            vm.fetchWeatherData()
+//            Task {
+//                await vm.fetchWeatherData()
+//            }
+//        }
     }
 }
 #Preview {

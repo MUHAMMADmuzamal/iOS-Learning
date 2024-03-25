@@ -9,7 +9,7 @@ import Foundation
 class AsyncNetworkProvider {
     private let session = URLSession.shared
     func request<T: Decodable>(_ api: APITarget) async -> Result<T, Error> {
-        do{
+        do {
             let response =  try await session.data(for: api.request)
             guard let response = response as? (Data, HTTPURLResponse),
                   (200...299).contains(response.1.statusCode) else {
@@ -21,7 +21,7 @@ class AsyncNetworkProvider {
             }
 
             return self.parseJson(response.0, ofType: T.self)
-        }catch{
+        }catch {
             return .failure(error)
         }
     }

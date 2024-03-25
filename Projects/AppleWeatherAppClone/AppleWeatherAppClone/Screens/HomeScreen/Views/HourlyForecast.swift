@@ -65,8 +65,10 @@ struct SingleForecast: View {
     var body: some View {
         VStack(alignment: .center, spacing: 24) {
             Text(time)
+                .font(.system(size: 17))
             Image(systemName: iconName)
             Text("\(temperature)°")
+                .font(.system(size: 22))
                 .padding(.leading, 5)
         }
     }

@@ -39,7 +39,7 @@ class NetworkProvider {
         do {
             let decodedData = try JSONDecoder().decode(type, from: jsonData)
             return .success(decodedData)
-        }catch {
+        } catch {
             return .failure(error)
         }
     }

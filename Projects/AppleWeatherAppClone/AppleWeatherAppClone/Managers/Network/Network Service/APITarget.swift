@@ -42,11 +42,9 @@ extension APITarget {
         var components = URLComponents(string: self.baseURL + self.path)!
         components.queryItems = self.queryParams
         var request = URLRequest(url: components.url!)
-        
         request.httpBody = self.bodyParams
         request.httpMethod = self.method.rawValue
         print(request)
-        
         self.headers?.forEach({ key, value in
             request.setValue(value, forHTTPHeaderField: key)
         })
