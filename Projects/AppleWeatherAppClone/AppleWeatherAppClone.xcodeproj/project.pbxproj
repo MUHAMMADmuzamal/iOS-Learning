@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		103ADC18E285F104BF85B4C8 /* Pods_AppleWeatherAppCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE760D43ABB76FBDBD62A95 /* Pods_AppleWeatherAppCloneTests.framework */; };
+		D60999C62BB1C5540024CDB2 /* SunRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60999C52BB1C5540024CDB2 /* SunRise.swift */; };
+		D60999C82BB343020024CDB2 /* RangeProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60999C72BB343010024CDB2 /* RangeProgressView.swift */; };
 		D65488192B9346B50076151A /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65488182B9346B50076151A /* ColorEx.swift */; };
 		D654881B2B93470A0076151A /* CurrentWeatherForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654881A2B93470A0076151A /* CurrentWeatherForecastModel.swift */; };
 		D654881E2B934C0E0076151A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654881D2B934C0E0076151A /* TabBar.swift */; };
@@ -78,6 +80,8 @@
 		7511EA1C2B497BFC5757F7A6 /* Pods_AppleWeatherAppClone_AppleWeatherAppCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleWeatherAppClone_AppleWeatherAppCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8212841589EE4DD99CDD2C0E /* Pods-AppleWeatherAppClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleWeatherAppClone.debug.xcconfig"; path = "Target Support Files/Pods-AppleWeatherAppClone/Pods-AppleWeatherAppClone.debug.xcconfig"; sourceTree = "<group>"; };
 		970CBC22761AC23A31FF5A12 /* Pods-AppleWeatherAppClone-AppleWeatherAppCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleWeatherAppClone-AppleWeatherAppCloneUITests.release.xcconfig"; path = "Target Support Files/Pods-AppleWeatherAppClone-AppleWeatherAppCloneUITests/Pods-AppleWeatherAppClone-AppleWeatherAppCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D60999C52BB1C5540024CDB2 /* SunRise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRise.swift; sourceTree = "<group>"; };
+		D60999C72BB343010024CDB2 /* RangeProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeProgressView.swift; sourceTree = "<group>"; };
 		D65488182B9346B50076151A /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
 		D654881A2B93470A0076151A /* CurrentWeatherForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherForecastModel.swift; sourceTree = "<group>"; };
 		D654881D2B934C0E0076151A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -384,6 +388,8 @@
 				D6589C582B8A044A003FDAE9 /* DayForeCastRow.swift */,
 				D6FD4A732BAED3300037000F /* BackgroundView.swift */,
 				D6FD4A752BAEDAB40037000F /* OtherComponents.swift */,
+				D60999C52BB1C5540024CDB2 /* SunRise.swift */,
+				D60999C72BB343010024CDB2 /* RangeProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -641,6 +647,7 @@
 				D6589C5E2B8A2A2A003FDAE9 /* HourlyModel.swift in Sources */,
 				D654881B2B93470A0076151A /* CurrentWeatherForecastModel.swift in Sources */,
 				D6589C3A2B879C3A003FDAE9 /* HomeView.swift in Sources */,
+				D60999C82BB343020024CDB2 /* RangeProgressView.swift in Sources */,
 				D66EF8BC2BAB5597000CA4CE /* HomeAPIService.swift in Sources */,
 				D65488202B9454920076151A /* CustomTabBar.swift in Sources */,
 				D654881E2B934C0E0076151A /* TabBar.swift in Sources */,
@@ -655,6 +662,7 @@
 				D6FD4A762BAEDAB40037000F /* OtherComponents.swift in Sources */,
 				D6589C532B89FAC9003FDAE9 /* CurrentWeatherForecast.swift in Sources */,
 				D6FD4A722BACA1A70037000F /* AsyncHomeRepository.swift in Sources */,
+				D60999C62BB1C5540024CDB2 /* SunRise.swift in Sources */,
 				D66EF8BE2BAB5754000CA4CE /* OtherOptionsScreen.swift in Sources */,
 				D6589C552B89FBB0003FDAE9 /* HourlyForecast.swift in Sources */,
 				D6589C122B879BC6003FDAE9 /* ContentView.swift in Sources */,

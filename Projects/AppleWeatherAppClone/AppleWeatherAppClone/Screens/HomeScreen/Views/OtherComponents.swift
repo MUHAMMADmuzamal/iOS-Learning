@@ -89,7 +89,7 @@ struct OtherComponents: View {
             VStack(alignment: .center) {
                 Text("6:28 AM")
                     .font(.system(size: 35))
-                Spacer().frame(minHeight: 35)
+                SunRise(dayColor: .blue, nightColor: .red, amplitude: 30)
                 Text("Sunset: 6:10 PM")
                     .font(.system(size: 18))
             }
@@ -179,3 +179,4 @@ struct OtherComponents: View {
         }
     }
 }
+
