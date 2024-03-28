@@ -1,4 +1,6 @@
 https://medium.com/@dmitrylupich/swift-combine-custom-publisher-6d1cc3dc248f
+https://www.kodeco.com/books/combine-asynchronous-programming-with-swift/v2.0/chapters/2-publishers-subscribers
 
+WWDC-19
 https://github.com/MUHAMMADmuzamal/Combine-URLSession-Publisher
 https://github.com/MUHAMMADmuzamal/Combine-UIKit
