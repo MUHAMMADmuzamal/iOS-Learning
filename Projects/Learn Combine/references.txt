@@ -1,0 +1,4 @@
+https://medium.com/@dmitrylupich/swift-combine-custom-publisher-6d1cc3dc248f
+
+https://github.com/MUHAMMADmuzamal/Combine-URLSession-Publisher
+https://github.com/MUHAMMADmuzamal/Combine-UIKit
