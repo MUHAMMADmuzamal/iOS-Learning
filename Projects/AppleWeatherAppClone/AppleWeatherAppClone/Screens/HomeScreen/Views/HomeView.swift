@@ -16,7 +16,7 @@ struct HomeView: View {
 //            homeNetworkProvider: AsyncHomeNetworkProvider())) 
     var vm: CombineHomeScreenVMProtocol = CombineHomeScreenVM(
         homeRepository: CombineHomeRepository(
-            homeNetworkProvider: CombineHomeNetworkProvider()))
+            homeNetworkProvider: CombineHomeNetworkProvider(networkMonitoringService: NetworkMonitoringService())))
     
     @State var currentWeatherSectionState: CurrentWeatherForecastModel = CurrentWeatherForecastModel(
         cityName: "Seongnam-si",

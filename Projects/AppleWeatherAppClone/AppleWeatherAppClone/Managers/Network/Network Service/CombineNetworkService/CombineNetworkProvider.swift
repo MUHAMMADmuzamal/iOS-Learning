@@ -10,9 +10,19 @@ import Combine
 
 class CombineNetworkProvider {
     private let session = URLSession.shared
+    private let networkMonitoringService: NetworkMonitoringService
+    
+    init(networkMonitoringService: NetworkMonitoringService) {
+        self.networkMonitoringService = networkMonitoringService
+    }
+    
     func request<T: Decodable>(_ api: APITarget) -> AnyPublisher<T, Error> {
         return session.dataTaskPublisher(for: api.request)
             .mapError { _ in
+                guard self.networkMonitoringService.isNetworkAvailable else {
+                    return NSError(domain:"network", code: 15)
+                }
+                
                 return NSError(domain: "Error", code: 11)
             }
             .flatMap { data, response -> AnyPublisher<T, Error> in
