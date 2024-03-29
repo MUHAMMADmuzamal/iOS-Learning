@@ -15,15 +15,18 @@ struct RangeProgressView: ProgressViewStyle {
                 Capsule()
                     .fill(.gray)
                 Capsule()
-                    .fill(RadialGradient(colors: [.red,.blue,.yellow,.orange,.green], center: .center, startRadius: 50, endRadius: 30))
-//                    .fill(LinearGradient(colors: [.red,.blue,.yellow,.orange,.green], startPoint: .leading, endPoint: .trailing ))
+                    .fill(LinearGradient(colors: [.red,.blue,.yellow,.orange,.green], startPoint: .leading, endPoint: .trailing ))
                     
                     .frame(width: geometry.size.width * fillWithScale)
                     .offset(x: geometry.size.width * range.lowerBound)
+                Circle()
+                    .strokeBorder(.green, lineWidth: 2.0)
+                    .background(Circle().fill(Color.white))
+                    .position(x: geometry.size.width * (configuration.fractionCompleted ?? 0.0), y: geometry.size.height / 2)
             }
         }
     }
-    var fillWithScale : Double {
+    var fillWithScale: Double {
         let normalRange = range.upperBound -  range.lowerBound
         return Double(normalRange)
     }

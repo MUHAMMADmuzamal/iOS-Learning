@@ -46,6 +46,10 @@
 		D66EF8BE2BAB5754000CA4CE /* OtherOptionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8BD2BAB5754000CA4CE /* OtherOptionsScreen.swift */; };
 		D66EF8C12BAC18CA000CA4CE /* AsyncNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8C02BAC18CA000CA4CE /* AsyncNetworkProvider.swift */; };
 		D68A3B4E2B9DD3AC00F83164 /* CampusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A3B4D2B9DD3AC00F83164 /* CampusView.swift */; };
+		D6A41A452BB68FD900807515 /* CombineHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A442BB68FD900807515 /* CombineHomeRepository.swift */; };
+		D6A41A472BB6902200807515 /* CombineHomeNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A462BB6902200807515 /* CombineHomeNetworkProvider.swift */; };
+		D6A41A492BB692A100807515 /* CombineHomeScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A482BB692A100807515 /* CombineHomeScreenVM.swift */; };
+		D6B6D2A12BB553A50012B31F /* CombineNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6D2A02BB553A50012B31F /* CombineNetworkProvider.swift */; };
 		D6FD4A6E2BACA1840037000F /* AsyncHomeScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD4A6D2BACA1840037000F /* AsyncHomeScreenVM.swift */; };
 		D6FD4A702BACA19A0037000F /* AsyncHomeNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD4A6F2BACA19A0037000F /* AsyncHomeNetworkProvider.swift */; };
 		D6FD4A722BACA1A70037000F /* AsyncHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD4A712BACA1A70037000F /* AsyncHomeRepository.swift */; };
@@ -121,6 +125,10 @@
 		D66EF8BD2BAB5754000CA4CE /* OtherOptionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherOptionsScreen.swift; sourceTree = "<group>"; };
 		D66EF8C02BAC18CA000CA4CE /* AsyncNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncNetworkProvider.swift; sourceTree = "<group>"; };
 		D68A3B4D2B9DD3AC00F83164 /* CampusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusView.swift; sourceTree = "<group>"; };
+		D6A41A442BB68FD900807515 /* CombineHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeRepository.swift; sourceTree = "<group>"; };
+		D6A41A462BB6902200807515 /* CombineHomeNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeNetworkProvider.swift; sourceTree = "<group>"; };
+		D6A41A482BB692A100807515 /* CombineHomeScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeScreenVM.swift; sourceTree = "<group>"; };
+		D6B6D2A02BB553A50012B31F /* CombineNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineNetworkProvider.swift; sourceTree = "<group>"; };
 		D6FD4A6D2BACA1840037000F /* AsyncHomeScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHomeScreenVM.swift; sourceTree = "<group>"; };
 		D6FD4A6F2BACA19A0037000F /* AsyncHomeNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHomeNetworkProvider.swift; sourceTree = "<group>"; };
 		D6FD4A712BACA1A70037000F /* AsyncHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHomeRepository.swift; sourceTree = "<group>"; };
@@ -285,6 +293,7 @@
 		D6589C512B89FA96003FDAE9 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D6A41A432BB68FB200807515 /* Combine */,
 				D6FD4A6C2BACA1430037000F /* Async */,
 				D66EF8992BA868A8000CA4CE /* ViewModel */,
 				D68A3B4A2B9DD33600F83164 /* Views */,
@@ -334,6 +343,7 @@
 		D66EF8A12BAAB30D000CA4CE /* Network Service */ = {
 			isa = PBXGroup;
 			children = (
+				D6B6D29F2BB5536A0012B31F /* CombineNetworkService */,
 				D66EF8BF2BAC18A8000CA4CE /* Async Network Service */,
 				D66EF8B02BAACBAE000CA4CE /* Models */,
 				D66EF8A22BAAB344000CA4CE /* HTTP Methods.swift */,
@@ -410,6 +420,24 @@
 				D68A3B4B2B9DD36500F83164 /* OtherOptionsScreen */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		D6A41A432BB68FB200807515 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				D6A41A442BB68FD900807515 /* CombineHomeRepository.swift */,
+				D6A41A462BB6902200807515 /* CombineHomeNetworkProvider.swift */,
+				D6A41A482BB692A100807515 /* CombineHomeScreenVM.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		D6B6D29F2BB5536A0012B31F /* CombineNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				D6B6D2A02BB553A50012B31F /* CombineNetworkProvider.swift */,
+			);
+			path = CombineNetworkService;
 			sourceTree = "<group>";
 		};
 		D6FD4A6C2BACA1430037000F /* Async */ = {
@@ -648,6 +676,7 @@
 				D654881B2B93470A0076151A /* CurrentWeatherForecastModel.swift in Sources */,
 				D6589C3A2B879C3A003FDAE9 /* HomeView.swift in Sources */,
 				D60999C82BB343020024CDB2 /* RangeProgressView.swift in Sources */,
+				D6A41A452BB68FD900807515 /* CombineHomeRepository.swift in Sources */,
 				D66EF8BC2BAB5597000CA4CE /* HomeAPIService.swift in Sources */,
 				D65488202B9454920076151A /* CustomTabBar.swift in Sources */,
 				D654881E2B934C0E0076151A /* TabBar.swift in Sources */,
@@ -670,14 +699,17 @@
 				D66EF8A32BAAB344000CA4CE /* HTTP Methods.swift in Sources */,
 				D66EF89D2BA86CEF000CA4CE /* ApiResponseModel.swift in Sources */,
 				D66EF8B22BAACBC1000CA4CE /* Error Model.swift in Sources */,
+				D6B6D2A12BB553A50012B31F /* CombineNetworkProvider.swift in Sources */,
 				D6FD4A702BACA19A0037000F /* AsyncHomeNetworkProvider.swift in Sources */,
 				D66EF8AB2BAAB54B000CA4CE /* NetworkProvider.swift in Sources */,
 				D6FD4A742BAED3300037000F /* BackgroundView.swift in Sources */,
 				D6589C102B879BC6003FDAE9 /* AppleWeatherAppCloneApp.swift in Sources */,
 				D6FD4A6E2BACA1840037000F /* AsyncHomeScreenVM.swift in Sources */,
 				D6589C572B8A0044003FDAE9 /* DaysForeCast.swift in Sources */,
+				D6A41A472BB6902200807515 /* CombineHomeNetworkProvider.swift in Sources */,
 				D6589C5C2B8A2A0F003FDAE9 /* DaysRowModel.swift in Sources */,
 				D68A3B4E2B9DD3AC00F83164 /* CampusView.swift in Sources */,
+				D6A41A492BB692A100807515 /* CombineHomeScreenVM.swift in Sources */,
 				D66EF8C12BAC18CA000CA4CE /* AsyncNetworkProvider.swift in Sources */,
 				D66EF8A92BAAB511000CA4CE /* NetworkMonitoringService.swift in Sources */,
 				D66EF8A72BAAB47E000CA4CE /* MediaTypeAPI.swift in Sources */,

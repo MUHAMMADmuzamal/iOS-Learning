@@ -11,9 +11,13 @@ struct HomeView: View {
 //    var vm: HomeScreenVMProtocol = HomeScreenVM(
 //        homeRepository: HomeRepository(
 //            homeNetworkProvider:HomeNetworkProvider())) 
-    var vm: AsyncHomeScreenVMProtocol = AsyncHomeScreenVM(
-        homeRepository: AsyncHomeRepository(
-            homeNetworkProvider: AsyncHomeNetworkProvider()))
+//    var vm: AsyncHomeScreenVMProtocol = AsyncHomeScreenVM(
+//        homeRepository: AsyncHomeRepository(
+//            homeNetworkProvider: AsyncHomeNetworkProvider())) 
+    var vm: CombineHomeScreenVMProtocol = CombineHomeScreenVM(
+        homeRepository: CombineHomeRepository(
+            homeNetworkProvider: CombineHomeNetworkProvider()))
+    
     @State var currentWeatherSectionState: CurrentWeatherForecastModel = CurrentWeatherForecastModel(
         cityName: "Seongnam-si",
         temperature: 21,
@@ -126,12 +130,12 @@ struct HomeView: View {
                 .padding(.top, 300)
                 .padding(.bottom, 78)
         }
-//        .onAppear {
-////            vm.fetchWeatherData()
+        .onAppear {
+            vm.fetchWeatherData()
 //            Task {
 //                await vm.fetchWeatherData()
 //            }
-//        }
+        }
     }
 }
 #Preview {
