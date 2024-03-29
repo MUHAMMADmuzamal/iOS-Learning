@@ -49,31 +49,9 @@ class CombineNetworkProvider {
     func parseJson<T: Decodable> (_ jsonData: Data, ofType type: T.Type) -> AnyPublisher<T, Error> {
         do {
             let decodedData: T = try JSONDecoder().decode(type, from: jsonData)
-            return Just(decodedData)
-                .setFailureType(to: Error.self)
-                .eraseToAnyPublisher()
+            return .just(decodedData)
         }catch {
             return Fail(error: NSError(domain:"error", code: 13)).eraseToAnyPublisher()
         }
     }
-}
-
-extension Publisher {
-    static func empty() -> AnyPublisher<Output, Failure> {
-        return Empty().eraseToAnyPublisher()
-    }
-
-    static func just(_ output: Output) -> AnyPublisher<Output, Failure> {
-        return Just(output)
-            .setFailureType(to: Failure.self)
-            .eraseToAnyPublisher()
-    }
-
-    static func fail(_ error: Failure) -> AnyPublisher<Output, Failure> {
-        return Fail(error: error).eraseToAnyPublisher()
-    }
-    
-    func flatMapLatest<T: Publisher>(_ transform: @escaping (Self.Output) -> T) -> Publishers.SwitchToLatest<T, Publishers.Map<Self, T>> where T.Failure == Self.Failure {
-          map(transform).switchToLatest()
-      }
 }

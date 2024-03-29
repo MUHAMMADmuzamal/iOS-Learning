@@ -41,7 +41,7 @@
 		D66EF8B42BAAE9FA000CA4CE /* DictionaryEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8B32BAAE9FA000CA4CE /* DictionaryEx.swift */; };
 		D66EF8B62BAAEABE000CA4CE /* HomeNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8B52BAAEABE000CA4CE /* HomeNetworkProvider.swift */; };
 		D66EF8B82BAAEACA000CA4CE /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8B72BAAEACA000CA4CE /* HomeRepository.swift */; };
-		D66EF8BA2BAAEC4D000CA4CE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8B92BAAEC4D000CA4CE /* APIService.swift */; };
+		D66EF8BA2BAAEC4D000CA4CE /* NetworkErrorsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8B92BAAEC4D000CA4CE /* NetworkErrorsType.swift */; };
 		D66EF8BC2BAB5597000CA4CE /* HomeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8BB2BAB5597000CA4CE /* HomeAPIService.swift */; };
 		D66EF8BE2BAB5754000CA4CE /* OtherOptionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8BD2BAB5754000CA4CE /* OtherOptionsScreen.swift */; };
 		D66EF8C12BAC18CA000CA4CE /* AsyncNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8C02BAC18CA000CA4CE /* AsyncNetworkProvider.swift */; };
@@ -49,6 +49,7 @@
 		D6A41A452BB68FD900807515 /* CombineHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A442BB68FD900807515 /* CombineHomeRepository.swift */; };
 		D6A41A472BB6902200807515 /* CombineHomeNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A462BB6902200807515 /* CombineHomeNetworkProvider.swift */; };
 		D6A41A492BB692A100807515 /* CombineHomeScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A482BB692A100807515 /* CombineHomeScreenVM.swift */; };
+		D6A41A4B2BB6D22300807515 /* PublisherEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A4A2BB6D22300807515 /* PublisherEX.swift */; };
 		D6B6D2A12BB553A50012B31F /* CombineNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6D2A02BB553A50012B31F /* CombineNetworkProvider.swift */; };
 		D6FD4A6E2BACA1840037000F /* AsyncHomeScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD4A6D2BACA1840037000F /* AsyncHomeScreenVM.swift */; };
 		D6FD4A702BACA19A0037000F /* AsyncHomeNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD4A6F2BACA19A0037000F /* AsyncHomeNetworkProvider.swift */; };
@@ -120,7 +121,7 @@
 		D66EF8B32BAAE9FA000CA4CE /* DictionaryEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEx.swift; sourceTree = "<group>"; };
 		D66EF8B52BAAEABE000CA4CE /* HomeNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkProvider.swift; sourceTree = "<group>"; };
 		D66EF8B72BAAEACA000CA4CE /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		D66EF8B92BAAEC4D000CA4CE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D66EF8B92BAAEC4D000CA4CE /* NetworkErrorsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorsType.swift; sourceTree = "<group>"; };
 		D66EF8BB2BAB5597000CA4CE /* HomeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIService.swift; sourceTree = "<group>"; };
 		D66EF8BD2BAB5754000CA4CE /* OtherOptionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherOptionsScreen.swift; sourceTree = "<group>"; };
 		D66EF8C02BAC18CA000CA4CE /* AsyncNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncNetworkProvider.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		D6A41A442BB68FD900807515 /* CombineHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeRepository.swift; sourceTree = "<group>"; };
 		D6A41A462BB6902200807515 /* CombineHomeNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeNetworkProvider.swift; sourceTree = "<group>"; };
 		D6A41A482BB692A100807515 /* CombineHomeScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeScreenVM.swift; sourceTree = "<group>"; };
+		D6A41A4A2BB6D22300807515 /* PublisherEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherEX.swift; sourceTree = "<group>"; };
 		D6B6D2A02BB553A50012B31F /* CombineNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineNetworkProvider.swift; sourceTree = "<group>"; };
 		D6FD4A6D2BACA1840037000F /* AsyncHomeScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHomeScreenVM.swift; sourceTree = "<group>"; };
 		D6FD4A6F2BACA19A0037000F /* AsyncHomeNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHomeNetworkProvider.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				D65488172B9346940076151A /* Foundation-Extensions */,
 				D65488162B9346850076151A /* SwiftUI-Extensions */,
+				D6A41A4A2BB6D22300807515 /* PublisherEX.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,7 +354,7 @@
 				D66EF8A62BAAB47E000CA4CE /* MediaTypeAPI.swift */,
 				D66EF8A82BAAB511000CA4CE /* NetworkMonitoringService.swift */,
 				D66EF8AA2BAAB54B000CA4CE /* NetworkProvider.swift */,
-				D66EF8B92BAAEC4D000CA4CE /* APIService.swift */,
+				D66EF8B92BAAEC4D000CA4CE /* NetworkErrorsType.swift */,
 			);
 			path = "Network Service";
 			sourceTree = "<group>";
@@ -682,7 +685,7 @@
 				D654881E2B934C0E0076151A /* TabBar.swift in Sources */,
 				D66EF8A52BAAB3A5000CA4CE /* APITarget.swift in Sources */,
 				D6589C592B8A044A003FDAE9 /* DayForeCastRow.swift in Sources */,
-				D66EF8BA2BAAEC4D000CA4CE /* APIService.swift in Sources */,
+				D66EF8BA2BAAEC4D000CA4CE /* NetworkErrorsType.swift in Sources */,
 				D66EF8AF2BAAB7F2000CA4CE /* APIConfiguration.swift in Sources */,
 				D65488192B9346B50076151A /* ColorEx.swift in Sources */,
 				D6FD4A782BB040FC0037000F /* FontEx.swift in Sources */,
@@ -709,6 +712,7 @@
 				D6A41A472BB6902200807515 /* CombineHomeNetworkProvider.swift in Sources */,
 				D6589C5C2B8A2A0F003FDAE9 /* DaysRowModel.swift in Sources */,
 				D68A3B4E2B9DD3AC00F83164 /* CampusView.swift in Sources */,
+				D6A41A4B2BB6D22300807515 /* PublisherEX.swift in Sources */,
 				D6A41A492BB692A100807515 /* CombineHomeScreenVM.swift in Sources */,
 				D66EF8C12BAC18CA000CA4CE /* AsyncNetworkProvider.swift in Sources */,
 				D66EF8A92BAAB511000CA4CE /* NetworkMonitoringService.swift in Sources */,
