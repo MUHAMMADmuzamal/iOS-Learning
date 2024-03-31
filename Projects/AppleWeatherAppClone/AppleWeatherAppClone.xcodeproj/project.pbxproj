@@ -46,6 +46,7 @@
 		D66EF8BE2BAB5754000CA4CE /* OtherOptionsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8BD2BAB5754000CA4CE /* OtherOptionsScreen.swift */; };
 		D66EF8C12BAC18CA000CA4CE /* AsyncNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EF8C02BAC18CA000CA4CE /* AsyncNetworkProvider.swift */; };
 		D68A3B4E2B9DD3AC00F83164 /* CampusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A3B4D2B9DD3AC00F83164 /* CampusView.swift */; };
+		D690CC1C2BB975C100AD347A /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690CC1B2BB975C100AD347A /* Wind.swift */; };
 		D6A41A452BB68FD900807515 /* CombineHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A442BB68FD900807515 /* CombineHomeRepository.swift */; };
 		D6A41A472BB6902200807515 /* CombineHomeNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A462BB6902200807515 /* CombineHomeNetworkProvider.swift */; };
 		D6A41A492BB692A100807515 /* CombineHomeScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A41A482BB692A100807515 /* CombineHomeScreenVM.swift */; };
@@ -126,6 +127,7 @@
 		D66EF8BD2BAB5754000CA4CE /* OtherOptionsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherOptionsScreen.swift; sourceTree = "<group>"; };
 		D66EF8C02BAC18CA000CA4CE /* AsyncNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncNetworkProvider.swift; sourceTree = "<group>"; };
 		D68A3B4D2B9DD3AC00F83164 /* CampusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusView.swift; sourceTree = "<group>"; };
+		D690CC1B2BB975C100AD347A /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		D6A41A442BB68FD900807515 /* CombineHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeRepository.swift; sourceTree = "<group>"; };
 		D6A41A462BB6902200807515 /* CombineHomeNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeNetworkProvider.swift; sourceTree = "<group>"; };
 		D6A41A482BB692A100807515 /* CombineHomeScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHomeScreenVM.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				D6FD4A752BAEDAB40037000F /* OtherComponents.swift */,
 				D60999C52BB1C5540024CDB2 /* SunRise.swift */,
 				D60999C72BB343010024CDB2 /* RangeProgressView.swift */,
+				D690CC1B2BB975C100AD347A /* Wind.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				D65488192B9346B50076151A /* ColorEx.swift in Sources */,
 				D6FD4A782BB040FC0037000F /* FontEx.swift in Sources */,
 				D66EF8B62BAAEABE000CA4CE /* HomeNetworkProvider.swift in Sources */,
+				D690CC1C2BB975C100AD347A /* Wind.swift in Sources */,
 				D66EF89B2BA868CE000CA4CE /* HomeScreenVM.swift in Sources */,
 				D6FD4A762BAEDAB40037000F /* OtherComponents.swift in Sources */,
 				D6589C532B89FAC9003FDAE9 /* CurrentWeatherForecast.swift in Sources */,

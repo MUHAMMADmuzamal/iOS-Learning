@@ -29,7 +29,8 @@ struct DayForeCastRow: View {
             .multilineTextAlignment(.leading)
     }
     var uvIndex: some View {
-        ProgressView(value: 1)
+        ProgressView(value: 0.5).progressViewStyle(RangeProgressView(range: 0.0...0.9))
+            .frame(height: 10)
     }
     var iconsPlusPercentage: some View {
         VStack(alignment: .center) {

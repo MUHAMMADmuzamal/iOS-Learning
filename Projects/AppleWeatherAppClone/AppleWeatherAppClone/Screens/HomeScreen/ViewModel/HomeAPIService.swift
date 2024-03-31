@@ -14,7 +14,7 @@ struct GetWeatherDataAPI: APITarget {
     var method: HTTPMethod
     var bodyParams: Data?
     var queryParams: [URLQueryItem]?
-    init() {
+    init(){
         baseURL = .baseUrl
         path = "forecast"
         headers = ["Content-type": "application/json"]

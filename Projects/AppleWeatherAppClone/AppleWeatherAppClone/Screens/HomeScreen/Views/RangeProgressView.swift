@@ -13,15 +13,20 @@ struct RangeProgressView: ProgressViewStyle {
         return GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 Capsule()
-                    .fill(.gray)
+                    .fill(.clear)
                 Capsule()
-                    .fill(LinearGradient(colors: [.red,.blue,.yellow,.orange,.green], startPoint: .leading, endPoint: .trailing ))
+                    .fill(LinearGradient(colors: [Color(hex: "#65DB7C"),
+                                                  Color(hex: "#F5E753"),
+                                                  Color(hex: "#E63A52"),
+                                                  Color(hex: "#E63A52"),
+                                                  Color(hex: "#B55DE0"),
+                                                 ], startPoint: .leading, endPoint: .trailing ))
                     
                     .frame(width: geometry.size.width * fillWithScale)
                     .offset(x: geometry.size.width * range.lowerBound)
                 Circle()
-                    .strokeBorder(.green, lineWidth: 2.0)
-                    .background(Circle().fill(Color.white))
+                    .strokeBorder(.black, lineWidth: 2.0)
+                    .background(Circle().fill(Color.white).padding(2))
                     .position(x: geometry.size.width * (configuration.fractionCompleted ?? 0.0), y: geometry.size.height / 2)
             }
         }
@@ -33,7 +38,10 @@ struct RangeProgressView: ProgressViewStyle {
 }
 
 #Preview {
-    VStack {
-        ProgressView(value: 0).progressViewStyle(RangeProgressView(range: 0.5...0.9)).frame(height: 10)
+    ZStack {
+        Color.blue
+        VStack {
+            ProgressView(value: 0.7).progressViewStyle(RangeProgressView(range: 0.5...0.9)).frame(height: 10)
+        }
     }
 }

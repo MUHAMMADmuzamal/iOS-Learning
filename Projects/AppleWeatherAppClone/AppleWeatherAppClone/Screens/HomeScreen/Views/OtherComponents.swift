@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct OtherComponents: View {
     var divider: some View {
@@ -13,9 +14,6 @@ struct OtherComponents: View {
             .overlay {
                 Color.white.opacity(0.2)
             }
-    }
-    var uvIndex: some View {
-        ProgressView(value: 1)
     }
     var airQuality: some View {
         BackgroundView(title: "AIR QUALITY", iconName: "aqi.medium") {
@@ -26,7 +24,8 @@ struct OtherComponents: View {
                 Text("Air quality is 56, which is the same as yesterday at about this time.")
                     .font(.system(size: 17))
                     .padding(.bottom, 10)
-                uvIndex
+                ProgressView(value: 0.7).progressViewStyle(RangeProgressView(range: 0.0...0.9))
+                    .frame(height: 10)
                     .padding(.bottom, 26)
                 divider
                 HStack {
@@ -46,13 +45,9 @@ struct OtherComponents: View {
     var temperature: some View {
         BackgroundView(title: "TEMPERATURE", iconName: "thermometer.low") {
             VStack(alignment: .leading) {
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(Color.orange)
-                    .overlay {
-                        Text("Map")
-                    }
-                    .foregroundStyle(Color.black)
+                Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 30.375321, longitude: 69.345116), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))))
                     .frame(height: 195)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 HStack {
                     Text("See More")
                         .font(.system(size: 17))
@@ -74,9 +69,8 @@ struct OtherComponents: View {
                     .font(.system(size: 36))
            Text("Low")
                     .font(.system(size: 22))
-            uvIndex
-                .padding(.bottom, 26)
-                .padding([.leading, .trailing], 15)
+            ProgressView(value: 0.3).progressViewStyle(RangeProgressView(range: 0.0...0.9)).frame(height: 10)
+                .padding(.bottom, 8)
            Text("Low for the rest of the day.")
                     .font(.system(size: 18))
             }
@@ -92,15 +86,6 @@ struct OtherComponents: View {
                 SunRise(dayColor: .blue, nightColor: .red, amplitude: 30)
                 Text("Sunset: 6:10 PM")
                     .font(.system(size: 18))
-            }
-            .padding(.bottom, 11)
-        }
-        .foregroundStyle(Color.white)
-    }
-    var wind: some View {
-        BackgroundView(title: "WIND", iconName: "wind") {
-            VStack(alignment: .center) {
-                Spacer().frame(minHeight: 114)
             }
             .padding(.bottom, 11)
         }
@@ -157,7 +142,7 @@ struct OtherComponents: View {
                     sunRise
                 }
                 GridRow {
-                    wind
+                    Wind()
                     rainFall
                 }
                 GridRow {
@@ -179,4 +164,3 @@ struct OtherComponents: View {
         }
     }
 }
-
