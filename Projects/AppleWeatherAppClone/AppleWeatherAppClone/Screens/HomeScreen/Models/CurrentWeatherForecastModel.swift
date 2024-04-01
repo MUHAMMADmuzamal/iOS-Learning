@@ -8,7 +8,7 @@
 import Foundation
 struct CurrentWeatherForecastModel {
     let cityName: String
-    let temperature: Int
+    var temperature: Int
     let weatherType: String
     let highTemperature: Int
     let lowTemperature: Int

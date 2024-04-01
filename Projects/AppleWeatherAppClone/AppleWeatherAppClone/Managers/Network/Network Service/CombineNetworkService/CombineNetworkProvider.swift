@@ -23,11 +23,11 @@ class CombineNetworkProvider {
                     return NSError(domain:"network", code: 15)
                 }
                 
-                return NSError(domain: "Error", code: 11)
+                return NSError(domain: "API Error", code: 11)
             }
             .flatMap { data, response -> AnyPublisher<T, Error> in
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    return Fail(error: NSError(domain:"error", code: 12)).eraseToAnyPublisher()
+                    return Fail(error: NSError(domain:"HTTP Response Error ", code: 12)).eraseToAnyPublisher()
                 }
                 
                 if 200 ..< 300 ~= httpResponse.statusCode {
@@ -51,7 +51,7 @@ class CombineNetworkProvider {
             let decodedData: T = try JSONDecoder().decode(type, from: jsonData)
             return .just(decodedData)
         }catch {
-            return Fail(error: NSError(domain:"error", code: 13)).eraseToAnyPublisher()
+            return Fail(error: NSError(domain:"json decoding Error", code: 13)).eraseToAnyPublisher()
         }
     }
 }

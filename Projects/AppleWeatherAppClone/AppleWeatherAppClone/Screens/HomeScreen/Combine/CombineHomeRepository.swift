@@ -22,6 +22,7 @@ class CombineHomeRepository: CombineHomeRepositoryProtocol {
                 return .success(data)
             }
             .catch({ error -> AnyPublisher<Result<WeatherData, Error>, Never> in
+                print("Failure in Repo")
                 return .just(.failure(error))
             }).eraseToAnyPublisher()
     }
