@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct GraphVisualizerScreen: View {
+struct GraphVisualizerScreenView: View {
     var body: some View {
         Text("Graph")
     }
 }
 
 #Preview {
-    GraphVisualizerScreen()
+    GraphVisualizerScreenView()
 }

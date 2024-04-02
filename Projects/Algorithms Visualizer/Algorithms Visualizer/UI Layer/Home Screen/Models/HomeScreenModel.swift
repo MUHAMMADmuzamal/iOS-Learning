@@ -30,10 +30,10 @@ extension HomeScreenModel {
         HomeScreenModel(data: [
             Sections(sectionTitle: "Graph", sectionRows: [], subSection: [
                 Sections(sectionTitle: "Weighted", sectionRows: [
-                    SectionRow(rowImage: "A*-icon", rowTitle: "A*", navigateTo: GraphVisualizerScreen())
+                    SectionRow(rowImage: "A*-icon", rowTitle: "A*", navigateTo: GraphVisualizerScreenView())
                     ], subSection: nil),
                 Sections(sectionTitle: "Non Weighted", sectionRows: [
-                    SectionRow(rowImage: "dfs-icon", rowTitle: "DFS", navigateTo: GraphVisualizerScreen())
+                    SectionRow(rowImage: "dfs-icon", rowTitle: "DFS", navigateTo: GraphVisualizerScreenView())
                     ], subSection: nil)
             ])
         ])
