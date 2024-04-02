@@ -11,6 +11,8 @@
 		D656B9F22BBBD4C900810FD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656B9F12BBBD4C900810FD2 /* ContentView.swift */; };
 		D656B9F42BBBD4CC00810FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D656B9F32BBBD4CC00810FD2 /* Assets.xcassets */; };
 		D656B9F72BBBD4CC00810FD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D656B9F62BBBD4CC00810FD2 /* Preview Assets.xcassets */; };
+		D656BA032BBBDA8D00810FD2 /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA022BBBDA8D00810FD2 /* HomeScreenModel.swift */; };
+		D656BA062BBBE23100810FD2 /* GraphVisualizerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA052BBBE23100810FD2 /* GraphVisualizerScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		D656B9F12BBBD4C900810FD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D656B9F32BBBD4CC00810FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D656B9F62BBBD4CC00810FD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D656BA022BBBDA8D00810FD2 /* HomeScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
+		D656BA052BBBE23100810FD2 /* GraphVisualizerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVisualizerScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		D656B9FD2BBBD4D800810FD2 /* UI Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D656BA042BBBE20000810FD2 /* Graph Visualizer Screen */,
 				D656B9FF2BBBD4F700810FD2 /* Home Screen */,
 				D656B9F12BBBD4C900810FD2 /* ContentView.swift */,
 				D656B9EF2BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift */,
@@ -87,8 +92,33 @@
 		D656B9FF2BBBD4F700810FD2 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				D656BA012BBBDA7700810FD2 /* Models */,
+				D656BA002BBBDA6E00810FD2 /* Views */,
 			);
 			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		D656BA002BBBDA6E00810FD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D656BA012BBBDA7700810FD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D656BA022BBBDA8D00810FD2 /* HomeScreenModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D656BA042BBBE20000810FD2 /* Graph Visualizer Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D656BA052BBBE23100810FD2 /* GraphVisualizerScreen.swift */,
+			);
+			path = "Graph Visualizer Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +193,8 @@
 			files = (
 				D656B9F22BBBD4C900810FD2 /* ContentView.swift in Sources */,
 				D656B9F02BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift in Sources */,
+				D656BA062BBBE23100810FD2 /* GraphVisualizerScreen.swift in Sources */,
+				D656BA032BBBDA8D00810FD2 /* HomeScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
