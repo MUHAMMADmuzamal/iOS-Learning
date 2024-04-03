@@ -9,7 +9,24 @@ import SwiftUI
 
 struct HomeScreenView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationSplitView {
+            List(HomeScreenModel.dataSource.data) { sections in
+                ForEach(sections.subSection ?? []) { section in
+                    Section(header: Text(section.sectionTitle)) {
+                        ForEach(section.sectionRows) { row in
+                            NavigationLink {
+                                GraphVisualizerScreenView()
+                                } label: {
+                               AlgorithmListRow(model: row)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle(Text("Algorithms Visualizer"))
+        } detail: {
+               Text("Select a Algorithm")
+           }
     }
 }
 

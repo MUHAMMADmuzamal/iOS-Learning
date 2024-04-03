@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+protocol AlgorithmStrategy {
+    
+}
+class DepthFirstSearchStrategy: AlgorithmStrategy {
+    
+}
+class AStarStrategy: AlgorithmStrategy {
+    
+}
 struct HomeScreenModel {
     let data: [Sections]
 }
@@ -22,18 +31,18 @@ struct SectionRow: Identifiable {
     var id: String = UUID().uuidString
     let rowImage: String
     let rowTitle: String
-    let navigateTo: any View
+    let strategy: AlgorithmStrategy
 }
 
 extension HomeScreenModel {
-    var dataSource: HomeScreenModel {
+    static var dataSource: HomeScreenModel {
         HomeScreenModel(data: [
             Sections(sectionTitle: "Graph", sectionRows: [], subSection: [
                 Sections(sectionTitle: "Weighted", sectionRows: [
-                    SectionRow(rowImage: "A*-icon", rowTitle: "A*", navigateTo: GraphVisualizerScreenView())
+                    SectionRow(rowImage: "tree", rowTitle: "A Star", strategy: AStarStrategy())
                     ], subSection: nil),
                 Sections(sectionTitle: "Non Weighted", sectionRows: [
-                    SectionRow(rowImage: "dfs-icon", rowTitle: "DFS", navigateTo: GraphVisualizerScreenView())
+                    SectionRow(rowImage: "tree", rowTitle: "Depth First Search", strategy: DepthFirstSearchStrategy())
                     ], subSection: nil)
             ])
         ])

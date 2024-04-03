@@ -14,6 +14,7 @@
 		D656BA032BBBDA8D00810FD2 /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA022BBBDA8D00810FD2 /* HomeScreenModel.swift */; };
 		D656BA062BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA052BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift */; };
 		D656BA082BBBE83D00810FD2 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA072BBBE83D00810FD2 /* HomeScreenView.swift */; };
+		D656BA0A2BBC329400810FD2 /* AlgorithmListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA092BBC329400810FD2 /* AlgorithmListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D656BA022BBBDA8D00810FD2 /* HomeScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
 		D656BA052BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVisualizerScreenGraphVisualizerScreenView.swift; sourceTree = "<group>"; };
 		D656BA072BBBE83D00810FD2 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		D656BA092BBC329400810FD2 /* AlgorithmListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D656BA072BBBE83D00810FD2 /* HomeScreenView.swift */,
+				D656BA092BBC329400810FD2 /* AlgorithmListRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				D656B9F22BBBD4C900810FD2 /* ContentView.swift in Sources */,
 				D656BA082BBBE83D00810FD2 /* HomeScreenView.swift in Sources */,
+				D656BA0A2BBC329400810FD2 /* AlgorithmListRow.swift in Sources */,
 				D656B9F02BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift in Sources */,
 				D656BA062BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift in Sources */,
 				D656BA032BBBDA8D00810FD2 /* HomeScreenModel.swift in Sources */,
