@@ -9,7 +9,13 @@ import SwiftUI
 
 struct GraphVisualizerScreenView: View {
     var body: some View {
-        Text("Graph")
+        ZStack {
+            VStack {
+                TitleBarView()
+                MatrixView()
+            }
+        }
+        .padding()
     }
 }
 

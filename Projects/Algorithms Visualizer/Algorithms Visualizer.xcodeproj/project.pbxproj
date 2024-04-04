@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63CAC0E2BBD43AE00897E2F /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */; };
+		D63CAC102BBD43FA00897E2F /* TitleBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */; };
+		D63CAC122BBD448400897E2F /* GraphVisualizerScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */; };
+		D63CAC142BBD512200897E2F /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC132BBD512200897E2F /* Node.swift */; };
+		D63CAC162BBD5B8400897E2F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D63CAC152BBD5B8400897E2F /* Colors.xcassets */; };
+		D63CAC192BBD5CE200897E2F /* colorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC182BBD5CE200897E2F /* colorEx.swift */; };
+		D63CAC1B2BBDCC4C00897E2F /* MatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC1A2BBDCC4C00897E2F /* MatrixView.swift */; };
+		D63CAC2F2BBDCF7900897E2F /* MatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC1A2BBDCC4C00897E2F /* MatrixView.swift */; };
+		D63CAC302BBDCFBC00897E2F /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC132BBD512200897E2F /* Node.swift */; };
+		D63CAC312BBDCFBF00897E2F /* TitleBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */; };
+		D63CAC322BBDCFC100897E2F /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */; };
+		D63CAC332BBDCFC400897E2F /* GraphVisualizerScreenGraphVisualizerScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA052BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift */; };
+		D63CAC342BBDCFC700897E2F /* GraphVisualizerScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */; };
+		D63CAC352BBDCFCA00897E2F /* colorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC182BBD5CE200897E2F /* colorEx.swift */; };
+		D63CAC362BBDCFCE00897E2F /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA022BBBDA8D00810FD2 /* HomeScreenModel.swift */; };
+		D63CAC372BBDCFD100897E2F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA072BBBE83D00810FD2 /* HomeScreenView.swift */; };
+		D63CAC382BBDCFD700897E2F /* AlgorithmListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656BA092BBC329400810FD2 /* AlgorithmListRow.swift */; };
+		D63CAC392BBDCFDA00897E2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656B9F12BBBD4C900810FD2 /* ContentView.swift */; };
 		D656B9F02BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656B9EF2BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift */; };
 		D656B9F22BBBD4C900810FD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656B9F12BBBD4C900810FD2 /* ContentView.swift */; };
 		D656B9F42BBBD4CC00810FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D656B9F32BBBD4CC00810FD2 /* Assets.xcassets */; };
@@ -18,6 +36,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
+		D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarComponent.swift; sourceTree = "<group>"; };
+		D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVisualizerScreenModels.swift; sourceTree = "<group>"; };
+		D63CAC132BBD512200897E2F /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		D63CAC152BBD5B8400897E2F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D63CAC182BBD5CE200897E2F /* colorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorEx.swift; sourceTree = "<group>"; };
+		D63CAC1A2BBDCC4C00897E2F /* MatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixView.swift; sourceTree = "<group>"; };
+		D63CAC202BBDCF6800897E2F /* Algorithms Visualizer mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algorithms Visualizer mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D656B9EC2BBBD4C900810FD2 /* Algorithms Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algorithms Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D656B9EF2BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithms_VisualizerApp.swift; sourceTree = "<group>"; };
 		D656B9F12BBBD4C900810FD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D63CAC1D2BBDCF6800897E2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D656B9E92BBBD4C900810FD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D63CAC0C2BBD42F600897E2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D63CAC172BBD5CC300897E2F /* UI-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D63CAC182BBD5CE200897E2F /* colorEx.swift */,
+			);
+			path = "UI-Extensions";
+			sourceTree = "<group>";
+		};
 		D656B9E32BBBD4C900810FD2 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D656B9EC2BBBD4C900810FD2 /* Algorithms Visualizer.app */,
+				D63CAC202BBDCF6800897E2F /* Algorithms Visualizer mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +126,7 @@
 		D656B9FD2BBBD4D800810FD2 /* UI Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D63CAC172BBD5CC300897E2F /* UI-Extensions */,
 				D656BA042BBBE20000810FD2 /* Graph Visualizer Screen */,
 				D656B9FF2BBBD4F700810FD2 /* Home Screen */,
 				D656B9F12BBBD4C900810FD2 /* ContentView.swift */,
@@ -89,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D656B9F32BBBD4CC00810FD2 /* Assets.xcassets */,
+				D63CAC152BBD5B8400897E2F /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -122,7 +174,12 @@
 		D656BA042BBBE20000810FD2 /* Graph Visualizer Screen */ = {
 			isa = PBXGroup;
 			children = (
+				D63CAC0C2BBD42F600897E2F /* Models */,
 				D656BA052BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift */,
+				D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */,
+				D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */,
+				D63CAC132BBD512200897E2F /* Node.swift */,
+				D63CAC1A2BBDCC4C00897E2F /* MatrixView.swift */,
 			);
 			path = "Graph Visualizer Screen";
 			sourceTree = "<group>";
@@ -130,6 +187,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D63CAC1F2BBDCF6800897E2F /* Algorithms Visualizer mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D63CAC2C2BBDCF6C00897E2F /* Build configuration list for PBXNativeTarget "Algorithms Visualizer mac" */;
+			buildPhases = (
+				D63CAC1C2BBDCF6800897E2F /* Sources */,
+				D63CAC1D2BBDCF6800897E2F /* Frameworks */,
+				D63CAC1E2BBDCF6800897E2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Algorithms Visualizer mac";
+			productName = "Algorithms Visualizer mac";
+			productReference = D63CAC202BBDCF6800897E2F /* Algorithms Visualizer mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D656B9EB2BBBD4C900810FD2 /* Algorithms Visualizer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D656B9FA2BBBD4CC00810FD2 /* Build configuration list for PBXNativeTarget "Algorithms Visualizer" */;
@@ -157,6 +231,9 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					D63CAC1F2BBDCF6800897E2F = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					D656B9EB2BBBD4C900810FD2 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -176,15 +253,24 @@
 			projectRoot = "";
 			targets = (
 				D656B9EB2BBBD4C900810FD2 /* Algorithms Visualizer */,
+				D63CAC1F2BBDCF6800897E2F /* Algorithms Visualizer mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D63CAC1E2BBDCF6800897E2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D656B9EA2BBBD4C900810FD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63CAC162BBD5B8400897E2F /* Colors.xcassets in Resources */,
 				D656B9F72BBBD4CC00810FD2 /* Preview Assets.xcassets in Resources */,
 				D656B9F42BBBD4CC00810FD2 /* Assets.xcassets in Resources */,
 			);
@@ -193,22 +279,100 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D63CAC1C2BBDCF6800897E2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D63CAC362BBDCFCE00897E2F /* HomeScreenModel.swift in Sources */,
+				D63CAC352BBDCFCA00897E2F /* colorEx.swift in Sources */,
+				D63CAC342BBDCFC700897E2F /* GraphVisualizerScreenModels.swift in Sources */,
+				D63CAC322BBDCFC100897E2F /* TitleBarView.swift in Sources */,
+				D63CAC2F2BBDCF7900897E2F /* MatrixView.swift in Sources */,
+				D63CAC372BBDCFD100897E2F /* HomeScreenView.swift in Sources */,
+				D63CAC382BBDCFD700897E2F /* AlgorithmListRow.swift in Sources */,
+				D63CAC312BBDCFBF00897E2F /* TitleBarComponent.swift in Sources */,
+				D63CAC392BBDCFDA00897E2F /* ContentView.swift in Sources */,
+				D63CAC332BBDCFC400897E2F /* GraphVisualizerScreenGraphVisualizerScreenView.swift in Sources */,
+				D63CAC302BBDCFBC00897E2F /* Node.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D656B9E82BBBD4C900810FD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D656B9F22BBBD4C900810FD2 /* ContentView.swift in Sources */,
+				D63CAC142BBD512200897E2F /* Node.swift in Sources */,
 				D656BA082BBBE83D00810FD2 /* HomeScreenView.swift in Sources */,
 				D656BA0A2BBC329400810FD2 /* AlgorithmListRow.swift in Sources */,
 				D656B9F02BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift in Sources */,
+				D63CAC102BBD43FA00897E2F /* TitleBarComponent.swift in Sources */,
+				D63CAC122BBD448400897E2F /* GraphVisualizerScreenModels.swift in Sources */,
+				D63CAC0E2BBD43AE00897E2F /* TitleBarView.swift in Sources */,
 				D656BA062BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift in Sources */,
+				D63CAC192BBD5CE200897E2F /* colorEx.swift in Sources */,
 				D656BA032BBBDA8D00810FD2 /* HomeScreenModel.swift in Sources */,
+				D63CAC1B2BBDCC4C00897E2F /* MatrixView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D63CAC2D2BBDCF6C00897E2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Algorithms Visualizer mac/Algorithms_Visualizer_mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Algorithms Visualizer mac/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codesorbit.Algorithms-Visualizer-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D63CAC2E2BBDCF6C00897E2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Algorithms Visualizer mac/Algorithms_Visualizer_mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Algorithms Visualizer mac/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codesorbit.Algorithms-Visualizer-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		D656B9F82BBBD4CC00810FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -336,6 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Algorithms Visualizer/Preview Content\"";
+				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -343,6 +508,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,6 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Algorithms Visualizer/Preview Content\"";
+				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -371,6 +538,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +555,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D63CAC2C2BBDCF6C00897E2F /* Build configuration list for PBXNativeTarget "Algorithms Visualizer mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D63CAC2D2BBDCF6C00897E2F /* Debug */,
+				D63CAC2E2BBDCF6C00897E2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D656B9E72BBBD4C900810FD2 /* Build configuration list for PBXProject "Algorithms Visualizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
