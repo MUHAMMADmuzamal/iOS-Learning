@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D615BFD62BBE75C100F4036C /* MatrixVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615BFD52BBE75C100F4036C /* MatrixVM.swift */; };
 		D63CAC0E2BBD43AE00897E2F /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */; };
 		D63CAC102BBD43FA00897E2F /* TitleBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */; };
 		D63CAC122BBD448400897E2F /* GraphVisualizerScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D615BFD52BBE75C100F4036C /* MatrixVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixVM.swift; sourceTree = "<group>"; };
 		D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
 		D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarComponent.swift; sourceTree = "<group>"; };
 		D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVisualizerScreenModels.swift; sourceTree = "<group>"; };
@@ -54,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D615BFD42BBE75A700F4036C /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				D63CAC1A2BBDCC4C00897E2F /* MatrixView.swift */,
+				D615BFD52BBE75C100F4036C /* MatrixVM.swift */,
+			);
+			path = Matrix;
+			sourceTree = "<group>";
+		};
 		D63CAC0C2BBD42F600897E2F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,12 +165,12 @@
 		D656BA042BBBE20000810FD2 /* Graph Visualizer Screen */ = {
 			isa = PBXGroup;
 			children = (
+				D615BFD42BBE75A700F4036C /* Matrix */,
 				D63CAC0C2BBD42F600897E2F /* Models */,
 				D656BA052BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift */,
 				D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */,
 				D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */,
 				D63CAC132BBD512200897E2F /* Node.swift */,
-				D63CAC1A2BBDCC4C00897E2F /* MatrixView.swift */,
 			);
 			path = "Graph Visualizer Screen";
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 				D63CAC102BBD43FA00897E2F /* TitleBarComponent.swift in Sources */,
 				D63CAC122BBD448400897E2F /* GraphVisualizerScreenModels.swift in Sources */,
 				D63CAC0E2BBD43AE00897E2F /* TitleBarView.swift in Sources */,
+				D615BFD62BBE75C100F4036C /* MatrixVM.swift in Sources */,
 				D656BA062BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift in Sources */,
 				D63CAC192BBD5CE200897E2F /* colorEx.swift in Sources */,
 				D656BA032BBBDA8D00810FD2 /* HomeScreenModel.swift in Sources */,
@@ -305,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -362,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
