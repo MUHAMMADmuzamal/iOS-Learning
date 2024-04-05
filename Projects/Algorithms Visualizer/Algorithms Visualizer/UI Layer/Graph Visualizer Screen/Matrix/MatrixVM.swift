@@ -8,7 +8,7 @@
 import Foundation
 
 enum NodesEnum: Int {
-    case startNode = 1, targetNode, visitedNode1, visitedNode2, unVisitedNode, shortestPathNode, wallNode, bombNode
+    case startNode = 1, targetNode, visitedNode1, visitedNode2, unVisitedNode, shortestPathNode, wallNode, bombNode, weightNode
     
 }
 
@@ -19,4 +19,13 @@ class MatrixVM: ObservableObject {
         matrix[26][14] = NodesEnum.targetNode.rawValue
     }
     
+    func randomFill(){
+        for i in self.matrix.indices {
+            for j in matrix[i].indices {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.matrix[i][j] = Int.random(in: 1...8)
+                }
+            }
+        }
+    }
 }

@@ -9,15 +9,18 @@ import SwiftUI
 
 struct MatrixView: View {
     @StateObject var matrixVM = MatrixVM()
+    @Binding var selectedNode: NodesEnum
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(matrixVM.matrix.indices, id: \.self) { rowIndex in
-                HStack(spacing: 0) {
-                    ForEach(matrixVM.matrix[rowIndex].indices, id: \.self) { colIndex in
-                        getNodeView(matrixVM.matrix[rowIndex][colIndex])
-                            .onTapGesture {
-                                cellDidTap(on: (rowIndex, colIndex), newNode: .wallNode)
-                            }
+        ZStack {
+            Grid(alignment: .center, horizontalSpacing: 0, verticalSpacing: 0) {
+                ForEach(matrixVM.matrix.indices, id: \.self) { rowIndex in
+                    GridRow {
+                        ForEach(matrixVM.matrix[rowIndex].indices, id: \.self) { colIndex in
+                            getNodeView(matrixVM.matrix[rowIndex][colIndex])
+                                .onTapGesture {
+                                    cellDidTap(on: (rowIndex, colIndex), newNode: selectedNode)
+                                }
+                        }
                     }
                 }
             }
@@ -32,19 +35,21 @@ struct MatrixView: View {
         case .targetNode:
             return Node(model:  TargetNode(borderColor: .borderColor))
         case .visitedNode1:
-            return Node(model:  VisitedNode1())
+            return Node(model:  VisitedNode1(borderColor: .borderColor))
         case .visitedNode2:
-            return Node(model:  VisitedNode2())
+            return Node(model:  VisitedNode2(borderColor: .borderColor))
         case .unVisitedNode:
-            return Node(model:  UnVisitedNode())
+            return Node(model:  UnVisitedNode(borderColor: .borderColor))
         case .shortestPathNode:
-            return Node(model:  ShortestPathNode())
+            return Node(model:  ShortestPathNode(borderColor: .borderColor))
         case .none:
-            return Node(model:  UnVisitedNode())
+            return Node(model:  UnVisitedNode(borderColor: .borderColor))
         case .wallNode:
-            return Node(model:  WallNode())
+            return Node(model:  WallNode(borderColor: .borderColor))
         case .bombNode:
-            return Node(model:  BombNode())
+            return Node(model:  BombNode(borderColor: .borderColor))
+        case .weightNode:
+            return Node(model: WeightNode(borderColor: .borderColor))
         }
     }
     
@@ -57,5 +62,5 @@ struct MatrixView: View {
 }
 
 #Preview {
-    MatrixView()
+    MatrixView( selectedNode: .constant(.wallNode))
 }

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct GraphVisualizerScreenView: View {
+    @State var selectedNode: NodesEnum = .wallNode
     var body: some View {
         ZStack {
             VStack {
-                TitleBarView()
-                MatrixView()
+                TitleBarView(selectedNode: $selectedNode)
+                MatrixView(selectedNode: $selectedNode)
             }
         }
         .padding()
