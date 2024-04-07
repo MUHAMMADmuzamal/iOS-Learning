@@ -15,6 +15,7 @@ struct TitleBarComponent: View {
                 .frame(width: 20, height: 20)
             Text(model.text)
         }
+        .border(model.isSelected ? Color.borderColor : Color.clear)
     }
 }
 

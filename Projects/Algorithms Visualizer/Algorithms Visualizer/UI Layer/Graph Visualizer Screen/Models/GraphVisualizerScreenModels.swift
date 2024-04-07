@@ -13,56 +13,56 @@ protocol NodeProtocol {
 }
 
 struct StartNode: NodeProtocol {
-    var borderColor: Color? = nil
+    var borderColor: Color?
     var imageName: String? = "start-node"
-    var color: Color? = nil
+    var color: Color?
 }
 
 struct TargetNode: NodeProtocol {
-    var borderColor: Color? = nil
+    var borderColor: Color?
     var imageName: String? = "circle"
-    var color: Color? = nil
+    var color: Color?
 }
 
 struct BombNode: NodeProtocol {
-    var borderColor: Color? = nil
+    var borderColor: Color?
     var imageName: String? = "bomb"
-    var color: Color? = nil
+    var color: Color?
 }
 
 struct WeightNode: NodeProtocol {
-    var borderColor: Color? = nil
+    var borderColor: Color?
     var imageName: String? = "weight"
-    var color: Color? = nil
+    var color: Color?
 }
 
 struct WallNode: NodeProtocol {
-    var borderColor: Color? = nil
-    var imageName: String? = nil
+    var borderColor: Color?
+    var imageName: String?
     var color: Color? = .wallColor
 }
 
 struct UnVisitedNode: NodeProtocol {
     var borderColor: Color? = .borderColor
-    var imageName: String? = nil
+    var imageName: String?
     var color: Color? = .unVisitedColor
 }
 
 struct VisitedNode1: NodeProtocol {
-    var borderColor: Color? = nil
-    var imageName: String? = nil
+    var borderColor: Color?
+    var imageName: String?
     var color: Color? = .visited1Color
 }
 
 struct VisitedNode2: NodeProtocol {
-    var borderColor: Color? = nil
-    var imageName: String? = nil
+    var borderColor: Color?
+    var imageName: String?
     var color: Color? = .visited2Color
 }
 
 struct ShortestPathNode: NodeProtocol {
-    var borderColor: Color? = nil
-    var imageName: String? = nil
+    var borderColor: Color?
+    var imageName: String?
     var color: Color? = .shortestPathColor
 }
 
@@ -70,10 +70,11 @@ struct TitleBarComponentModel: Identifiable {
     let id = UUID().uuidString
     let node: NodeProtocol
     let text: String
+    var isSelected: Bool = false
 }
 
 struct TitleBarModel {
-    let data:[TitleBarComponentModel] = [
+     var data:[TitleBarComponentModel] = [
         TitleBarComponentModel(node: StartNode(), text: "Start Node"),
         TitleBarComponentModel(node: TargetNode(), text: "Target Node"),
         TitleBarComponentModel(node: BombNode(), text: "Bomb Node"),

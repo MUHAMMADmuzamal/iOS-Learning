@@ -21,10 +21,9 @@ struct AlgorithmListRow: View {
 #Preview {
     AlgorithmListRow(model: SectionRow(
         rowImage: "tree",
-        rowTitle: "A*" ,
+        rowTitle: "A*",
         strategy: DepthFirstSearchStrategy()))
     .background(Color.red)
     .frame(height: 100)
     .previewLayout(.sizeThatFits)
-    
 }

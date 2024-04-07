@@ -10,6 +10,7 @@ import SwiftUI
 struct MatrixView: View {
     @StateObject var matrixVM = MatrixVM()
     @Binding var selectedNode: NodesEnum
+
     var body: some View {
         ZStack {
             Grid(alignment: .center, horizontalSpacing: 0, verticalSpacing: 0) {
@@ -22,6 +23,11 @@ struct MatrixView: View {
                                 }
                         }
                     }
+                }
+            }
+            .onAppear {
+                Task {
+                    await matrixVM.bfs(start: (matrixVM.startNodeLocation.row, matrixVM.startNodeLocation.col))
                 }
             }
         }
@@ -53,10 +59,10 @@ struct MatrixView: View {
         }
     }
     
-    func cellDidTap(on location: (x:Int, y: Int), newNode: NodesEnum){
-        let node = NodesEnum(rawValue: self.matrixVM.matrix[location.x][location.y])
+    func cellDidTap(on location: (row:Int, col: Int), newNode: NodesEnum){
+        let node = NodesEnum(rawValue: self.matrixVM.matrix[location.row][location.col])
         if node != .startNode && node != .targetNode {
-            self.matrixVM.matrix[location.x][location.y] = newNode.rawValue
+            self.matrixVM.addNode(row: location.row, col: location.col, node: newNode)
         }
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct GraphVisualizerScreenView: View {
     @State var selectedNode: NodesEnum = .wallNode
     var body: some View {

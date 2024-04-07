@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Algorithms_VisualizerApp: App {
+struct AlgorithmsVisualizerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

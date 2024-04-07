@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551AD1001EB058EE12C7AB11 /* Pods_Algorithms_Visualizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE2B0B869F3DAB6D716C749 /* Pods_Algorithms_Visualizer.framework */; };
 		D615BFD62BBE75C100F4036C /* MatrixVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615BFD52BBE75C100F4036C /* MatrixVM.swift */; };
 		D63CAC0E2BBD43AE00897E2F /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */; };
 		D63CAC102BBD43FA00897E2F /* TitleBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */; };
@@ -26,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49F710A3A5D37C1789DF2AE3 /* Pods-Algorithms Visualizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algorithms Visualizer.debug.xcconfig"; path = "Target Support Files/Pods-Algorithms Visualizer/Pods-Algorithms Visualizer.debug.xcconfig"; sourceTree = "<group>"; };
+		7B9A5B56DA2699FB957734B3 /* Pods-Algorithms Visualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algorithms Visualizer.release.xcconfig"; path = "Target Support Files/Pods-Algorithms Visualizer/Pods-Algorithms Visualizer.release.xcconfig"; sourceTree = "<group>"; };
+		9FE2B0B869F3DAB6D716C749 /* Pods_Algorithms_Visualizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithms_Visualizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D615BFD52BBE75C100F4036C /* MatrixVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixVM.swift; sourceTree = "<group>"; };
 		D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
 		D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarComponent.swift; sourceTree = "<group>"; };
@@ -50,12 +54,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551AD1001EB058EE12C7AB11 /* Pods_Algorithms_Visualizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33A34C8A029C68C5FB2C294C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FE2B0B869F3DAB6D716C749 /* Pods_Algorithms_Visualizer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C71EBA1A542910B1B1E5E877 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49F710A3A5D37C1789DF2AE3 /* Pods-Algorithms Visualizer.debug.xcconfig */,
+				7B9A5B56DA2699FB957734B3 /* Pods-Algorithms Visualizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D615BFD42BBE75A700F4036C /* Matrix */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +108,8 @@
 			children = (
 				D656B9EE2BBBD4C900810FD2 /* Algorithms Visualizer */,
 				D656B9ED2BBBD4C900810FD2 /* Products */,
+				C71EBA1A542910B1B1E5E877 /* Pods */,
+				33A34C8A029C68C5FB2C294C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +206,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D656B9FA2BBBD4CC00810FD2 /* Build configuration list for PBXNativeTarget "Algorithms Visualizer" */;
 			buildPhases = (
+				68BB3DC2C6E7769628060790 /* [CP] Check Pods Manifest.lock */,
+				D615BFF92BC1394900F4036C /* ShellScript */,
 				D656B9E82BBBD4C900810FD2 /* Sources */,
 				D656B9E92BBBD4C900810FD2 /* Frameworks */,
 				D656B9EA2BBBD4C900810FD2 /* Resources */,
@@ -240,6 +266,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68BB3DC2C6E7769628060790 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Algorithms Visualizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D615BFF92BC1394900F4036C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D656B9E82BBBD4C900810FD2 /* Sources */ = {
@@ -386,6 +454,7 @@
 		};
 		D656B9FB2BBBD4CC00810FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F710A3A5D37C1789DF2AE3 /* Pods-Algorithms Visualizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -394,6 +463,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Algorithms Visualizer/Preview Content\"";
 				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -416,6 +486,7 @@
 		};
 		D656B9FC2BBBD4CC00810FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9A5B56DA2699FB957734B3 /* Pods-Algorithms Visualizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -424,6 +495,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Algorithms Visualizer/Preview Content\"";
 				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

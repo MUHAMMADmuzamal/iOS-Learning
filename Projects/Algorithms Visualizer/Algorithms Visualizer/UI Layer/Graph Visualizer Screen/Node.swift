@@ -11,7 +11,7 @@ struct Node: View {
     let model: NodeProtocol
     var body: some View {
         Rectangle()
-            .stroke(model.borderColor ?? .white ,lineWidth: 1.0)
+            .stroke(model.borderColor ?? .white, lineWidth: 1.0)
             .background(model.color ?? .white)
             .overlay {
             if model.imageName != nil {
