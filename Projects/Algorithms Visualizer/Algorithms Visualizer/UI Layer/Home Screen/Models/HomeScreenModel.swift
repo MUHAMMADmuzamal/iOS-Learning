@@ -7,15 +7,7 @@
 
 import SwiftUI
 
-protocol AlgorithmStrategy {
-    
-}
-class DepthFirstSearchStrategy: AlgorithmStrategy {
-    
-}
-class AStarStrategy: AlgorithmStrategy {
-    
-}
+
 struct HomeScreenModel {
     let data: [Sections]
 }
@@ -42,7 +34,7 @@ extension HomeScreenModel {
                     SectionRow(rowImage: "tree", rowTitle: "A Star", strategy: AStarStrategy())
                     ], subSection: nil),
                 Sections(sectionTitle: "Non Weighted", sectionRows: [
-                    SectionRow(rowImage: "tree", rowTitle: "Depth First Search", strategy: DepthFirstSearchStrategy())
+                    SectionRow(rowImage: "tree", rowTitle: "Breath First Search", strategy: BreathFirstSearchStrategy())
                     ], subSection: nil)
             ])
         ])

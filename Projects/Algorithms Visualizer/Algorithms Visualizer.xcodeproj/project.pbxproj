@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		551AD1001EB058EE12C7AB11 /* Pods_Algorithms_Visualizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE2B0B869F3DAB6D716C749 /* Pods_Algorithms_Visualizer.framework */; };
 		D615BFD62BBE75C100F4036C /* MatrixVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615BFD52BBE75C100F4036C /* MatrixVM.swift */; };
+		D615BFFB2BC2C78A00F4036C /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615BFFA2BC2C78A00F4036C /* ArrayEx.swift */; };
+		D615BFFE2BC2EA9800F4036C /* DfsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615BFFD2BC2EA9800F4036C /* DfsStrategy.swift */; };
+		D615C0002BC2EAA500F4036C /* BfsStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615BFFF2BC2EAA500F4036C /* BfsStrategy.swift */; };
+		D615C0022BC2EACE00F4036C /* AlgorithmStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615C0012BC2EACE00F4036C /* AlgorithmStrategyProtocol.swift */; };
+		D615C0042BC2EAF200F4036C /* AStarStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615C0032BC2EAF200F4036C /* AStarStrategy.swift */; };
 		D63CAC0E2BBD43AE00897E2F /* TitleBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */; };
 		D63CAC102BBD43FA00897E2F /* TitleBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */; };
 		D63CAC122BBD448400897E2F /* GraphVisualizerScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */; };
@@ -31,6 +36,11 @@
 		7B9A5B56DA2699FB957734B3 /* Pods-Algorithms Visualizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algorithms Visualizer.release.xcconfig"; path = "Target Support Files/Pods-Algorithms Visualizer/Pods-Algorithms Visualizer.release.xcconfig"; sourceTree = "<group>"; };
 		9FE2B0B869F3DAB6D716C749 /* Pods_Algorithms_Visualizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithms_Visualizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D615BFD52BBE75C100F4036C /* MatrixVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixVM.swift; sourceTree = "<group>"; };
+		D615BFFA2BC2C78A00F4036C /* ArrayEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
+		D615BFFD2BC2EA9800F4036C /* DfsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfsStrategy.swift; sourceTree = "<group>"; };
+		D615BFFF2BC2EAA500F4036C /* BfsStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BfsStrategy.swift; sourceTree = "<group>"; };
+		D615C0012BC2EACE00F4036C /* AlgorithmStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmStrategyProtocol.swift; sourceTree = "<group>"; };
+		D615C0032BC2EAF200F4036C /* AStarStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStarStrategy.swift; sourceTree = "<group>"; };
 		D63CAC0D2BBD43AE00897E2F /* TitleBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarView.swift; sourceTree = "<group>"; };
 		D63CAC0F2BBD43FA00897E2F /* TitleBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarComponent.swift; sourceTree = "<group>"; };
 		D63CAC112BBD448400897E2F /* GraphVisualizerScreenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVisualizerScreenModels.swift; sourceTree = "<group>"; };
@@ -87,6 +97,17 @@
 			path = Matrix;
 			sourceTree = "<group>";
 		};
+		D615BFFC2BC2E9DE00F4036C /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				D615BFFD2BC2EA9800F4036C /* DfsStrategy.swift */,
+				D615BFFF2BC2EAA500F4036C /* BfsStrategy.swift */,
+				D615C0012BC2EACE00F4036C /* AlgorithmStrategyProtocol.swift */,
+				D615C0032BC2EAF200F4036C /* AStarStrategy.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
 		D63CAC0C2BBD42F600897E2F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				D63CAC182BBD5CE200897E2F /* colorEx.swift */,
+				D615BFFA2BC2C78A00F4036C /* ArrayEx.swift */,
 			);
 			path = "UI-Extensions";
 			sourceTree = "<group>";
@@ -189,6 +211,7 @@
 		D656BA042BBBE20000810FD2 /* Graph Visualizer Screen */ = {
 			isa = PBXGroup;
 			children = (
+				D615BFFC2BC2E9DE00F4036C /* Strategies */,
 				D615BFD42BBE75A700F4036C /* Matrix */,
 				D63CAC0C2BBD42F600897E2F /* Models */,
 				D656BA052BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift */,
@@ -320,12 +343,17 @@
 				D656BA0A2BBC329400810FD2 /* AlgorithmListRow.swift in Sources */,
 				D656B9F02BBBD4C900810FD2 /* Algorithms_VisualizerApp.swift in Sources */,
 				D63CAC102BBD43FA00897E2F /* TitleBarComponent.swift in Sources */,
+				D615BFFE2BC2EA9800F4036C /* DfsStrategy.swift in Sources */,
 				D63CAC122BBD448400897E2F /* GraphVisualizerScreenModels.swift in Sources */,
 				D63CAC0E2BBD43AE00897E2F /* TitleBarView.swift in Sources */,
+				D615BFFB2BC2C78A00F4036C /* ArrayEx.swift in Sources */,
+				D615C0002BC2EAA500F4036C /* BfsStrategy.swift in Sources */,
 				D615BFD62BBE75C100F4036C /* MatrixVM.swift in Sources */,
+				D615C0022BC2EACE00F4036C /* AlgorithmStrategyProtocol.swift in Sources */,
 				D656BA062BBBE23100810FD2 /* GraphVisualizerScreenGraphVisualizerScreenView.swift in Sources */,
 				D63CAC192BBD5CE200897E2F /* colorEx.swift in Sources */,
 				D656BA032BBBDA8D00810FD2 /* HomeScreenModel.swift in Sources */,
+				D615C0042BC2EAF200F4036C /* AStarStrategy.swift in Sources */,
 				D63CAC1B2BBDCC4C00897E2F /* MatrixView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
