@@ -9,6 +9,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // Staging.xcconfig
-APP_BUNDLE_IDENTIFIER = com.app.codesorbit.StreamCast.staging
-APP_NAME = StreamCast Staging
+PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.StreamCast.staging
+PRODUCT_NAME = StreamCast Staging
 APP_ICON_NAME = AppIcon.staging

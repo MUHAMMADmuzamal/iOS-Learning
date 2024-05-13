@@ -9,6 +9,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // Production.xcconfig
-APP_BUNDLE_IDENTIFIER = com.app.codesorbit.StreamCast
-APP_NAME = StreamCast
+PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.StreamCast
+PRODUCT_NAME = StreamCast
 APP_ICON_NAME = AppIcon
