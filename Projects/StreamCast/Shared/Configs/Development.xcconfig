@@ -1,0 +1,22 @@
+//
+//  Development.xcconfig
+//  StreamCast
+//
+//  Created by Codes Orbit on 13/05/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Development.xcconfig
+APP_BUNDLE_IDENTIFIER = com.app.codesorbit.StreamCast.development
+APP_NAME = StreamCast Development
+APP_ICON_NAME = AppIcon.development
+// Staging.xcconfig
+APP_BUNDLE_IDENTIFIER = com.app.codesorbit.StreamCast.staging
+APP_NAME = StreamCast Staging
+APP_ICON_NAME = AppIcon.staging
+// Production.xcconfig
+APP_BUNDLE_IDENTIFIER = com.app.codesorbit.StreamCast
+APP_NAME = StreamCast
+APP_ICON_NAME = AppIcon
