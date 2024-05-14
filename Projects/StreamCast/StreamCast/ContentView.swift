@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-
+//https://liquidcoder.com/course/streamcast
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
