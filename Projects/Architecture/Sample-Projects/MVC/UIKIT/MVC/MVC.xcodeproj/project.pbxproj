@@ -37,6 +37,13 @@
 		D6B675EE2BFCC11900641F48 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B675ED2BFCC11900641F48 /* DependenciesHolder.swift */; };
 		D6B675F02BFCC12A00641F48 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B675EF2BFCC12A00641F48 /* Router.swift */; };
 		D6B6762D2BFF0A7200641F48 /* Publisher-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6762C2BFF0A7200641F48 /* Publisher-Extension.swift */; };
+		D6E4A0F52BFF1F1A004573BB /* MotalTransitionWithNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0EE2BFF1F1A004573BB /* MotalTransitionWithNavigation.swift */; };
+		D6E4A0F62BFF1F1A004573BB /* ReplacePushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0EF2BFF1F1A004573BB /* ReplacePushTransition.swift */; };
+		D6E4A0F72BFF1F1A004573BB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F02BFF1F1A004573BB /* Animator.swift */; };
+		D6E4A0F82BFF1F1A004573BB /* RootTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F12BFF1F1A004573BB /* RootTransition.swift */; };
+		D6E4A0F92BFF1F1A004573BB /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F22BFF1F1A004573BB /* ModalTransition.swift */; };
+		D6E4A0FA2BFF1F1A004573BB /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F32BFF1F1A004573BB /* Transition.swift */; };
+		D6E4A0FB2BFF1F1A004573BB /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F42BFF1F1A004573BB /* PushTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +84,13 @@
 		D6B675ED2BFCC11900641F48 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
 		D6B675EF2BFCC12A00641F48 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D6B6762C2BFF0A7200641F48 /* Publisher-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher-Extension.swift"; sourceTree = "<group>"; };
+		D6E4A0EE2BFF1F1A004573BB /* MotalTransitionWithNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotalTransitionWithNavigation.swift; sourceTree = "<group>"; };
+		D6E4A0EF2BFF1F1A004573BB /* ReplacePushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplacePushTransition.swift; sourceTree = "<group>"; };
+		D6E4A0F02BFF1F1A004573BB /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		D6E4A0F12BFF1F1A004573BB /* RootTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTransition.swift; sourceTree = "<group>"; };
+		D6E4A0F22BFF1F1A004573BB /* ModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
+		D6E4A0F32BFF1F1A004573BB /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		D6E4A0F42BFF1F1A004573BB /* PushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
 		E1F5D628467D5A67F97C7925 /* Pods-MVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVC.release.xcconfig"; path = "Target Support Files/Pods-MVC/Pods-MVC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,19 +266,12 @@
 		D6B675D32BFCB67100641F48 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				D6B675D42BFCB67C00641F48 /* Transition */,
+				D6E4A0ED2BFF1F1A004573BB /* Transition */,
 				D6B675D52BFCB6AE00641F48 /* InjectorProtocol.swift */,
 				D6B675ED2BFCC11900641F48 /* DependenciesHolder.swift */,
 				D6B675EF2BFCC12A00641F48 /* Router.swift */,
 			);
 			path = Routing;
-			sourceTree = "<group>";
-		};
-		D6B675D42BFCB67C00641F48 /* Transition */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Transition;
 			sourceTree = "<group>";
 		};
 		D6B675D72BFCC0C700641F48 /* Network Service */ = {
@@ -321,6 +328,20 @@
 				D6B6762C2BFF0A7200641F48 /* Publisher-Extension.swift */,
 			);
 			path = Combine;
+			sourceTree = "<group>";
+		};
+		D6E4A0ED2BFF1F1A004573BB /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A0EE2BFF1F1A004573BB /* MotalTransitionWithNavigation.swift */,
+				D6E4A0EF2BFF1F1A004573BB /* ReplacePushTransition.swift */,
+				D6E4A0F02BFF1F1A004573BB /* Animator.swift */,
+				D6E4A0F12BFF1F1A004573BB /* RootTransition.swift */,
+				D6E4A0F22BFF1F1A004573BB /* ModalTransition.swift */,
+				D6E4A0F32BFF1F1A004573BB /* Transition.swift */,
+				D6E4A0F42BFF1F1A004573BB /* PushTransition.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		DC2AB11C368BAF76DB33040F /* Pods */ = {
@@ -456,24 +477,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E4A0FA2BFF1F1A004573BB /* Transition.swift in Sources */,
+				D6E4A0F92BFF1F1A004573BB /* ModalTransition.swift in Sources */,
 				D6B675D62BFCB6AE00641F48 /* InjectorProtocol.swift in Sources */,
 				D6B675E72BFCC0C700641F48 /* NetworkProvider.swift in Sources */,
 				D68BC1C22BF4A46800C1E26A /* RootView.swift in Sources */,
 				D6B675EC2BFCC0C700641F48 /* NetworkErrorsType.swift in Sources */,
 				D6B675EE2BFCC11900641F48 /* DependenciesHolder.swift in Sources */,
 				D68BC1CF2BF4BECF00C1E26A /* RootBuilder.swift in Sources */,
+				D6E4A0F52BFF1F1A004573BB /* MotalTransitionWithNavigation.swift in Sources */,
 				D6B675E52BFCC0C700641F48 /* AsyncNetworkProvider.swift in Sources */,
 				D68BC1BD2BF49CB900C1E26A /* HomeView.swift in Sources */,
 				D6B675E62BFCC0C700641F48 /* CombineNetworkProvider.swift in Sources */,
 				D68BC1CD2BF4BC9F00C1E26A /* SplashBuilder.swift in Sources */,
 				D6B6762D2BFF0A7200641F48 /* Publisher-Extension.swift in Sources */,
+				D6E4A0F72BFF1F1A004573BB /* Animator.swift in Sources */,
+				D6E4A0F82BFF1F1A004573BB /* RootTransition.swift in Sources */,
 				D6B675E92BFCC0C700641F48 /* APITarget.swift in Sources */,
 				D6B675EB2BFCC0C700641F48 /* MediaTypeAPI.swift in Sources */,
 				D6B675F02BFCC12A00641F48 /* Router.swift in Sources */,
 				D68BC1D42BF4C3FB00C1E26A /* UIView + Extension.swift in Sources */,
 				D6B675EA2BFCC0C700641F48 /* NetworkMonitoringService.swift in Sources */,
 				D68BC1CA2BF4BA0400C1E26A /* SplashView.swift in Sources */,
+				D6E4A0FB2BFF1F1A004573BB /* PushTransition.swift in Sources */,
 				D68BC1A42BF49A8E00C1E26A /* AppDelegate.swift in Sources */,
+				D6E4A0F62BFF1F1A004573BB /* ReplacePushTransition.swift in Sources */,
 				D68BC1A62BF49A8E00C1E26A /* SceneDelegate.swift in Sources */,
 				D6B675E42BFCC0C700641F48 /* Error Model.swift in Sources */,
 				D6B675E82BFCC0C700641F48 /* HTTP Methods.swift in Sources */,
