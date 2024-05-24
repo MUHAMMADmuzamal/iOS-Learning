@@ -14,6 +14,8 @@
 		D6B6760F2BFCC29A00641F48 /* BikeShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6760E2BFCC29A00641F48 /* BikeShoppingAppTests.swift */; };
 		D6B676192BFCC29A00641F48 /* BikeShoppingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B676182BFCC29A00641F48 /* BikeShoppingAppUITests.swift */; };
 		D6B6761B2BFCC29A00641F48 /* BikeShoppingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6761A2BFCC29A00641F48 /* BikeShoppingAppUITestsLaunchTests.swift */; };
+		D6E4A1032BFF5651004573BB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1022BFF5651004573BB /* TabBar.swift */; };
+		D6E4A1052BFF5B0E004573BB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E4A1042BFF5B0E004573BB /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		D6B676142BFCC29A00641F48 /* BikeShoppingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeShoppingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B676182BFCC29A00641F48 /* BikeShoppingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeShoppingAppUITests.swift; sourceTree = "<group>"; };
 		D6B6761A2BFCC29A00641F48 /* BikeShoppingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeShoppingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6E4A1022BFF5651004573BB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		D6E4A1042BFF5B0E004573BB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 		D6B675FC2BFCC29600641F48 /* BikeShoppingApp */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4A0FE2BFF5627004573BB /* Views */,
 				D6B675FD2BFCC29600641F48 /* BikeShoppingAppApp.swift */,
 				D6B675FF2BFCC29600641F48 /* ContentView.swift */,
 				D6B676012BFCC29900641F48 /* Assets.xcassets */,
+				D6E4A1042BFF5B0E004573BB /* Colors.xcassets */,
 				D6B676032BFCC29900641F48 /* Preview Content */,
 			);
 			path = BikeShoppingApp;
@@ -125,6 +131,38 @@
 				D6B6761A2BFCC29A00641F48 /* BikeShoppingAppUITestsLaunchTests.swift */,
 			);
 			path = BikeShoppingAppUITests;
+			sourceTree = "<group>";
+		};
+		D6E4A0FE2BFF5627004573BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A1012BFF5635004573BB /* TabBarView */,
+				D6E4A0FF2BFF5627004573BB /* RootView */,
+				D6E4A1002BFF5627004573BB /* NavBarView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D6E4A0FF2BFF5627004573BB /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		D6E4A1002BFF5627004573BB /* NavBarView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavBarView;
+			sourceTree = "<group>";
+		};
+		D6E4A1012BFF5635004573BB /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A1022BFF5651004573BB /* TabBar.swift */,
+			);
+			path = TabBarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +271,7 @@
 			files = (
 				D6B676052BFCC29900641F48 /* Preview Assets.xcassets in Resources */,
 				D6B676022BFCC29900641F48 /* Assets.xcassets in Resources */,
+				D6E4A1052BFF5B0E004573BB /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E4A1032BFF5651004573BB /* TabBar.swift in Sources */,
 				D6B676002BFCC29600641F48 /* ContentView.swift in Sources */,
 				D6B675FE2BFCC29600641F48 /* BikeShoppingAppApp.swift in Sources */,
 			);
