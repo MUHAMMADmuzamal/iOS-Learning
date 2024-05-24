@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    private var injector: Container!
+    private var dependenciesHolder: DependenciesHolder!
+    
     var window: UIWindow?
 
 
@@ -19,7 +23,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         let windowScene:UIWindowScene = scene as! UIWindowScene;
         self.window = UIWindow(windowScene: windowScene)
-        let rootViewController = UINavigationController(rootViewController: SplashBuilder.build())
+        
+        self.dependenciesHolder = DependenciesHolder()
+        self.injector = dependenciesHolder.injector()
+        
+//        self.notificationService = injector.resolve(NotificationsService.self)!
+//        let rootViewController = UINavigationController(rootViewController: SplashBuilder.build(injector: injector)) 
+        
+        let rootViewController = SplashBuilder.build(injector: injector)
         self.window!.rootViewController = rootViewController
         self.window!.makeKeyAndVisible()
     }

@@ -44,6 +44,10 @@
 		D6E4A0F92BFF1F1A004573BB /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F22BFF1F1A004573BB /* ModalTransition.swift */; };
 		D6E4A0FA2BFF1F1A004573BB /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F32BFF1F1A004573BB /* Transition.swift */; };
 		D6E4A0FB2BFF1F1A004573BB /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A0F42BFF1F1A004573BB /* PushTransition.swift */; };
+		D6E4A1072C005A97004573BB /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1062C005A97004573BB /* SplashRouter.swift */; };
+		D6E4A1092C005AB4004573BB /* RootRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1082C005AB4004573BB /* RootRoute.swift */; };
+		D6E4A10B2C005ABF004573BB /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A10A2C005ABF004573BB /* RootRouter.swift */; };
+		D6E4A10D2C005F6A004573BB /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A10C2C005F6A004573BB /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +95,10 @@
 		D6E4A0F22BFF1F1A004573BB /* ModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
 		D6E4A0F32BFF1F1A004573BB /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		D6E4A0F42BFF1F1A004573BB /* PushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
+		D6E4A1062C005A97004573BB /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		D6E4A1082C005AB4004573BB /* RootRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRoute.swift; sourceTree = "<group>"; };
+		D6E4A10A2C005ABF004573BB /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		D6E4A10C2C005F6A004573BB /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		E1F5D628467D5A67F97C7925 /* Pods-MVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVC.release.xcconfig"; path = "Target Support Files/Pods-MVC/Pods-MVC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +198,8 @@
 				D68BC1C02BF4A46800C1E26A /* RootView.swift */,
 				D68BC1C12BF4A46800C1E26A /* RootView.xib */,
 				D68BC1CE2BF4BECF00C1E26A /* RootBuilder.swift */,
+				D6E4A1082C005AB4004573BB /* RootRoute.swift */,
+				D6E4A10A2C005ABF004573BB /* RootRouter.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -200,6 +210,8 @@
 				D68BC1C82BF4BA0400C1E26A /* SplashView.swift */,
 				D68BC1C92BF4BA0400C1E26A /* SplashView.xib */,
 				D68BC1CC2BF4BC9F00C1E26A /* SplashBuilder.swift */,
+				D6E4A1062C005A97004573BB /* SplashRouter.swift */,
+				D6E4A10C2C005F6A004573BB /* SplashViewModel.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -502,6 +514,7 @@
 				D68BC1C22BF4A46800C1E26A /* RootView.swift in Sources */,
 				D6B675EC2BFCC0C700641F48 /* NetworkErrorsType.swift in Sources */,
 				D6B675EE2BFCC11900641F48 /* DependenciesHolder.swift in Sources */,
+				D6E4A10D2C005F6A004573BB /* SplashViewModel.swift in Sources */,
 				D68BC1CF2BF4BECF00C1E26A /* RootBuilder.swift in Sources */,
 				D6E4A0F52BFF1F1A004573BB /* MotalTransitionWithNavigation.swift in Sources */,
 				D6B675E52BFCC0C700641F48 /* AsyncNetworkProvider.swift in Sources */,
@@ -514,14 +527,17 @@
 				D6B675E92BFCC0C700641F48 /* APITarget.swift in Sources */,
 				D6B675EB2BFCC0C700641F48 /* MediaTypeAPI.swift in Sources */,
 				D6B675F02BFCC12A00641F48 /* Router.swift in Sources */,
+				D6E4A1092C005AB4004573BB /* RootRoute.swift in Sources */,
 				D68BC1D42BF4C3FB00C1E26A /* UIView + Extension.swift in Sources */,
 				D6B675EA2BFCC0C700641F48 /* NetworkMonitoringService.swift in Sources */,
+				D6E4A1072C005A97004573BB /* SplashRouter.swift in Sources */,
 				D68BC1CA2BF4BA0400C1E26A /* SplashView.swift in Sources */,
 				D6E4A0FB2BFF1F1A004573BB /* PushTransition.swift in Sources */,
 				D68BC1A42BF49A8E00C1E26A /* AppDelegate.swift in Sources */,
 				D6E4A0F62BFF1F1A004573BB /* ReplacePushTransition.swift in Sources */,
 				D68BC1A62BF49A8E00C1E26A /* SceneDelegate.swift in Sources */,
 				D6B675E42BFCC0C700641F48 /* Error Model.swift in Sources */,
+				D6E4A10B2C005ABF004573BB /* RootRouter.swift in Sources */,
 				D6B675E82BFCC0C700641F48 /* HTTP Methods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

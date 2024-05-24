@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Swinject
+
 class RootBuilder {
-    static func build() -> RootView{
+    static func build(injector: Container) -> RootView{
         let vc = RootView.instantiateView(name: .root)
         return vc
     }

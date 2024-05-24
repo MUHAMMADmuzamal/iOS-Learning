@@ -7,8 +7,10 @@
 
 import UIKit
 
-class SplashView: UIViewController,  ViewIdentifiable {
+class SplashView: UIViewController, ViewIdentifiable {
 
+    var viewModel: SplashViewModelType!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,8 +18,9 @@ class SplashView: UIViewController,  ViewIdentifiable {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-            self.navigationController?.pushViewController(RootBuilder.build(), animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){ [weak self] in
+//            self.navigationController?.pushViewController(RootBuilder.build(), animated: true)
+            self?.viewModel.navigateToRoot()
         }
     }
 
