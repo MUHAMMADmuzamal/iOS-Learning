@@ -65,16 +65,30 @@ struct TabBar: View {
                     ForEach(Tabs.allCases, id: \.rawValue){ tab in
                         Spacer()
                         ZStack {
-                            tab.icon
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundStyle(tab == selectedTab ? Color.white : Color.white.opacity(0.6))
-                                .frame(width: 25, height: 20)
+                            if tab == selectedTab {
+                                
+                                Parallelogram(depth: 5)
+                                    .fill(tab.selectedColor)
+                                    .overlay(content: {
+                                        tab.icon
+                                            .resizable()
+                                            .scaledToFit()
+                                            .foregroundStyle(Color.white)
+                                            .frame(width: 25, height: 20)
+                                    })
+                                    .frame(width: 60, height: 60)
+                                    .offset(y: -15)
+                                
+                            }else {
+                                tab.icon
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundStyle(Color.white.opacity(0.6))
+                                    .frame(width: 25, height: 20)
+                            }
+                            
                                 
                         }
-                        .frame(width: 40, height: 40, alignment: .center)
-                        .background(tab == selectedTab ? tab.selectedColor : tab.unSelectedColor)
-                            
                         Spacer()
                     }
                 }
@@ -87,8 +101,59 @@ struct TabBar: View {
 #Preview {
     VStack {
         Spacer()
-        TabBar(selectedTab: .constant(.location))
+        Parallelogram(depth: 20)
+            .stroke(lineWidth: 5)
+            .frame(width: 160, height: 160)
+        Spacer()
+        TabBar(selectedTab: .constant(.home))
             .frame(height: 103)
             .padding(.bottom, -1)
     }.ignoresSafeArea()
+}
+
+
+struct Parallelogram: Shape {
+    
+    var depth: CGFloat
+    var cornerRadius: CGFloat = 10
+    var flipped: Bool = false
+    
+    func path(in rect: CGRect) -> Path {
+        Path { p in
+            if flipped {
+                // Bottom-left corner
+                p.move(to: CGPoint(x: 0, y: cornerRadius))
+                p.addQuadCurve(to: CGPoint(x: cornerRadius, y: 0), control: CGPoint(x: 0, y: 0))
+                
+                // Top-right corner
+                p.addLine(to: CGPoint(x: rect.width - cornerRadius, y: depth))
+                p.addQuadCurve(to: CGPoint(x: rect.width, y: depth + cornerRadius), control: CGPoint(x: rect.width, y: depth))
+                
+                // Bottom-right corner
+                p.addLine(to: CGPoint(x: rect.width, y: rect.height - cornerRadius))
+                p.addQuadCurve(to: CGPoint(x: rect.width - cornerRadius, y: rect.height), control: CGPoint(x: rect.width, y: rect.height))
+                
+                // Top-left corner
+                p.addLine(to: CGPoint(x: cornerRadius, y: rect.height - depth))
+                p.addQuadCurve(to: CGPoint(x: 0, y: rect.height - depth - cornerRadius), control: CGPoint(x: 0, y: rect.height - depth))
+            } else {
+                // Top-left corner
+                p.move(to: CGPoint(x: 0, y: depth + cornerRadius))
+                p.addQuadCurve(to: CGPoint(x: cornerRadius, y: depth), control: CGPoint(x: 0, y: depth))
+                
+                // Top-right corner
+                p.addLine(to: CGPoint(x: rect.width - cornerRadius, y: 0))
+                p.addQuadCurve(to: CGPoint(x: rect.width, y: cornerRadius), control: CGPoint(x: rect.width, y: 0))
+                
+                // Bottom-right corner
+                p.addLine(to: CGPoint(x: rect.width, y: rect.height - depth - cornerRadius))
+                p.addQuadCurve(to: CGPoint(x: rect.width - cornerRadius, y: rect.height - depth), control: CGPoint(x: rect.width, y: rect.height - depth))
+                
+                // Bottom-left corner
+                p.addLine(to: CGPoint(x: cornerRadius, y: rect.height))
+                p.addQuadCurve(to: CGPoint(x: 0, y: rect.height - cornerRadius), control: CGPoint(x: 0, y: rect.height))
+            }
+            p.closeSubpath()
+        }
+    }
 }
