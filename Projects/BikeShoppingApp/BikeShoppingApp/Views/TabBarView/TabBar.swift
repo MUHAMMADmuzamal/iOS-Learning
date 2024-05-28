@@ -33,13 +33,62 @@ enum Tabs: String, CaseIterable {
 struct TabBar: View {
     @Binding var selectedTab: Tabs
     var body: some View {
-        ZStack {
-            
+        ZStack(alignment: .center) {
+            //BackGround
+            GeometryReader { proxy in
+                let startPoint = CGPoint(x: 0, y: proxy.size.height * 0.2)
+                let endPoint = CGPoint(x: proxy.size.width, y: 0)
+                Path { path in
+                    path.move(to: startPoint)
+                    path.addLine(to: endPoint)
+                    path.addLine(to: CGPoint(x: proxy.size.width, y: proxy.size.height))
+                    path.addLine(to: CGPoint(x: 0, y: proxy.size.height))
+                    path.addLine(to: startPoint)
+                    path.closeSubpath()
+                    
+                }
+                .fill(LinearGradient.tabBarLinearGradient)
+                .fill(LinearGradient.tabBarLinearGradient2)
+                .overlay {
+                    Path { path in
+                        path.move(to: startPoint)
+                        path.addLine(to: endPoint)
+                        path.addLine(to: CGPoint(x: proxy.size.width, y: proxy.size.height))
+                    }
+                    .stroke(
+                        LinearGradient.tabStrokeLinearGradient.opacity(0.2),
+                        lineWidth: 5.0)
+                }
                 
+                //Icons
+                HStack{
+                    ForEach(Tabs.allCases, id: \.rawValue){ tab in
+                        Spacer()
+                        ZStack {
+                            tab.icon
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundStyle(tab == selectedTab ? Color.white : Color.white.opacity(0.6))
+                                .frame(width: 25, height: 20)
+                                
+                        }
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .background(tab == selectedTab ? tab.selectedColor : tab.unSelectedColor)
+                            
+                        Spacer()
+                    }
+                }
+                .padding(.top, 20)
+            }
         }
     }
 }
 
 #Preview {
-    TabBar(selectedTab: .constant(.location))
+    VStack {
+        Spacer()
+        TabBar(selectedTab: .constant(.location))
+            .frame(height: 103)
+            .padding(.bottom, -1)
+    }.ignoresSafeArea()
 }

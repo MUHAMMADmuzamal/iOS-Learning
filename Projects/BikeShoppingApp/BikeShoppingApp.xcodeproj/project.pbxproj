@@ -16,6 +16,8 @@
 		D6B6761B2BFCC29A00641F48 /* BikeShoppingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B6761A2BFCC29A00641F48 /* BikeShoppingAppUITestsLaunchTests.swift */; };
 		D6E4A1032BFF5651004573BB /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1022BFF5651004573BB /* TabBar.swift */; };
 		D6E4A1052BFF5B0E004573BB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E4A1042BFF5B0E004573BB /* Colors.xcassets */; };
+		D6E4A10F2C00A926004573BB /* Color-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A10E2C00A926004573BB /* Color-extension.swift */; };
+		D6E4A1112C00A9F3004573BB /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1102C00A9F3004573BB /* GradientExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		D6B6761A2BFCC29A00641F48 /* BikeShoppingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeShoppingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D6E4A1022BFF5651004573BB /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D6E4A1042BFF5B0E004573BB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D6E4A10E2C00A926004573BB /* Color-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-extension.swift"; sourceTree = "<group>"; };
+		D6E4A1102C00A9F3004573BB /* GradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				D6B676012BFCC29900641F48 /* Assets.xcassets */,
 				D6E4A1042BFF5B0E004573BB /* Colors.xcassets */,
 				D6B676032BFCC29900641F48 /* Preview Content */,
+				D6E4A10E2C00A926004573BB /* Color-extension.swift */,
+				D6E4A1102C00A9F3004573BB /* GradientExtension.swift */,
 			);
 			path = BikeShoppingApp;
 			sourceTree = "<group>";
@@ -297,6 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E4A1032BFF5651004573BB /* TabBar.swift in Sources */,
+				D6E4A1112C00A9F3004573BB /* GradientExtension.swift in Sources */,
+				D6E4A10F2C00A926004573BB /* Color-extension.swift in Sources */,
 				D6B676002BFCC29600641F48 /* ContentView.swift in Sources */,
 				D6B675FE2BFCC29600641F48 /* BikeShoppingAppApp.swift in Sources */,
 			);
