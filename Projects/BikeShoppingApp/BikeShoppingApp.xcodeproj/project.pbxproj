@@ -18,6 +18,8 @@
 		D6E4A1052BFF5B0E004573BB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E4A1042BFF5B0E004573BB /* Colors.xcassets */; };
 		D6E4A10F2C00A926004573BB /* Color-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A10E2C00A926004573BB /* Color-extension.swift */; };
 		D6E4A1112C00A9F3004573BB /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1102C00A9F3004573BB /* GradientExtension.swift */; };
+		D6E4A1142C074278004573BB /* Parallelogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1132C074278004573BB /* Parallelogram.swift */; };
+		D6E4A1162C074415004573BB /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1152C074415004573BB /* Tabs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		D6E4A1042BFF5B0E004573BB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D6E4A10E2C00A926004573BB /* Color-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-extension.swift"; sourceTree = "<group>"; };
 		D6E4A1102C00A9F3004573BB /* GradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtension.swift; sourceTree = "<group>"; };
+		D6E4A1132C074278004573BB /* Parallelogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parallelogram.swift; sourceTree = "<group>"; };
+		D6E4A1152C074415004573BB /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 		D6E4A0FE2BFF5627004573BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4A1122C074230004573BB /* HelperViews */,
 				D6E4A1012BFF5635004573BB /* TabBarView */,
 				D6E4A0FF2BFF5627004573BB /* RootView */,
 				D6E4A1002BFF5627004573BB /* NavBarView */,
@@ -167,8 +172,17 @@
 			isa = PBXGroup;
 			children = (
 				D6E4A1022BFF5651004573BB /* TabBar.swift */,
+				D6E4A1152C074415004573BB /* Tabs.swift */,
 			);
 			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		D6E4A1122C074230004573BB /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A1132C074278004573BB /* Parallelogram.swift */,
+			);
+			path = HelperViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,9 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E4A1162C074415004573BB /* Tabs.swift in Sources */,
 				D6E4A1032BFF5651004573BB /* TabBar.swift in Sources */,
 				D6E4A1112C00A9F3004573BB /* GradientExtension.swift in Sources */,
 				D6E4A10F2C00A926004573BB /* Color-extension.swift in Sources */,
+				D6E4A1142C074278004573BB /* Parallelogram.swift in Sources */,
 				D6B676002BFCC29600641F48 /* ContentView.swift in Sources */,
 				D6B675FE2BFCC29600641F48 /* BikeShoppingAppApp.swift in Sources */,
 			);
