@@ -21,6 +21,7 @@
 		D6E4A1142C074278004573BB /* Parallelogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1132C074278004573BB /* Parallelogram.swift */; };
 		D6E4A1162C074415004573BB /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1152C074415004573BB /* Tabs.swift */; };
 		D6E4A1182C0745D2004573BB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1172C0745D2004573BB /* RootView.swift */; };
+		D6E4A11B2C0746F8004573BB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A11A2C0746F8004573BB /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		D6E4A1132C074278004573BB /* Parallelogram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parallelogram.swift; sourceTree = "<group>"; };
 		D6E4A1152C074415004573BB /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		D6E4A1172C0745D2004573BB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D6E4A11A2C0746F8004573BB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		D6E4A0FE2BFF5627004573BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4A1192C0746DE004573BB /* HomeView */,
 				D6E4A1122C074230004573BB /* HelperViews */,
 				D6E4A1012BFF5635004573BB /* TabBarView */,
 				D6E4A0FF2BFF5627004573BB /* RootView */,
@@ -186,6 +189,14 @@
 				D6E4A1132C074278004573BB /* Parallelogram.swift */,
 			);
 			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		D6E4A1192C0746DE004573BB /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A11A2C0746F8004573BB /* Home.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +334,7 @@
 				D6E4A1162C074415004573BB /* Tabs.swift in Sources */,
 				D6E4A1032BFF5651004573BB /* TabBar.swift in Sources */,
 				D6E4A1112C00A9F3004573BB /* GradientExtension.swift in Sources */,
+				D6E4A11B2C0746F8004573BB /* Home.swift in Sources */,
 				D6E4A10F2C00A926004573BB /* Color-extension.swift in Sources */,
 				D6E4A1142C074278004573BB /* Parallelogram.swift in Sources */,
 				D6B676002BFCC29600641F48 /* ContentView.swift in Sources */,
