@@ -18,5 +18,7 @@ extension LinearGradient {
     static var homeBackgroundLinearGradient = LinearGradient(stops: [.init(color: Color("skyblueE9"), location: 0), .init(color: Color("purpleED"), location: 1)], startPoint: .topLeading, endPoint: .bottomTrailing)
     
     static var homeTopSectionBackgroundLinearGradient = LinearGradient(stops: [.init(color: Color.gray54, location: 0), .init(color: Color.gray34, location: 1)], startPoint: .topLeading, endPoint: .bottomTrailing)
+    
+    static var priceCardImageBackgroundLinearGradient = LinearGradient(stops: [.init(color: Color(hex: "#363E51"), location: 0), .init(color: Color(hex: "#4C5770"), location: 1)], startPoint: .topLeading, endPoint: .bottomTrailing)
 
 }

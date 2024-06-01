@@ -23,6 +23,7 @@
 		D6E4A1182C0745D2004573BB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1172C0745D2004573BB /* RootView.swift */; };
 		D6E4A11B2C0746F8004573BB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A11A2C0746F8004573BB /* Home.swift */; };
 		D6E4A11E2C0AFF39004573BB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A11D2C0AFF39004573BB /* DetailView.swift */; };
+		D6E4A1212C0B7AE9004573BB /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E4A1202C0B7AE9004573BB /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D6E4A1172C0745D2004573BB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D6E4A11A2C0746F8004573BB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D6E4A11D2C0AFF39004573BB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D6E4A1202C0B7AE9004573BB /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		D6E4A0FE2BFF5627004573BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D6E4A11F2C0B7ACE004573BB /* CartView */,
 				D6E4A11C2C0AFF26004573BB /* DetailView */,
 				D6E4A1192C0746DE004573BB /* HomeView */,
 				D6E4A1122C074230004573BB /* HelperViews */,
@@ -208,6 +211,14 @@
 				D6E4A11D2C0AFF39004573BB /* DetailView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		D6E4A11F2C0B7ACE004573BB /* CartView */ = {
+			isa = PBXGroup;
+			children = (
+				D6E4A1202C0B7AE9004573BB /* CartView.swift */,
+			);
+			path = CartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 				D6E4A11E2C0AFF39004573BB /* DetailView.swift in Sources */,
 				D6E4A1112C00A9F3004573BB /* GradientExtension.swift in Sources */,
 				D6E4A11B2C0746F8004573BB /* Home.swift in Sources */,
+				D6E4A1212C0B7AE9004573BB /* CartView.swift in Sources */,
 				D6E4A10F2C00A926004573BB /* Color-extension.swift in Sources */,
 				D6E4A1142C074278004573BB /* Parallelogram.swift in Sources */,
 				D6B676002BFCC29600641F48 /* ContentView.swift in Sources */,
