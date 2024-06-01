@@ -10,22 +10,54 @@ import SwiftUI
 struct Home: View {
     var body: some View {
         ZStack {
+            
             Color.gray3B
+                .ignoresSafeArea()
             BackGroundShape()
                 .fill(LinearGradient.homeBackgroundLinearGradient)
-            VStack {
-                TopSection()
-                    .frame(height: 250)
-                    .padding([.leading, .trailing], 20)
-                    .padding(.top, 92)
-                
-                MiddleSection()
-                    .padding(.top, -15)
-                Spacer()
+            
+            VStack(spacing: 0) {
+                NavBar()
+                ScrollView(.vertical) {
+                    VStack {
+                        TopSection()
+                            .frame(height: 250)
+                            .padding([.leading, .trailing], 20)
+                            .padding(.top, 42)
+                        
+                        MiddleSection()
+                            .padding(.top, -15)
+                        LastSection()
+                        Spacer()
+                    }
+                    .padding(.bottom, 120)
+                }
             }
         }
-        .ignoresSafeArea()
-        
+    }
+}
+
+struct NavBar: View {
+    var body: some View {
+        HStack {
+            Text("Choose Your Bike")
+                .font(.system(size: 20, weight: .bold, design: .default))
+            Spacer()
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(LinearGradient.tabStrokeLinearGradient.opacity(0.2), lineWidth: 2)
+                .fill(LinearGradient.homeBackgroundLinearGradient)
+                .frame(width: 40, height: 40)
+                
+                .shadow(color: Color(hex:"#2B3445").opacity(0.5), radius: 30, x: 0, y: -20)
+                .shadow(color: Color(hex:"#10141C"), radius: 30, x: 0, y: 20)
+                .overlay {
+                    Image(systemName: "magnifyingglass")
+                        
+                }
+           
+        }
+        .foregroundStyle(.white)
+        .padding([.leading ,.trailing],20)
     }
 }
 
@@ -35,9 +67,13 @@ struct TopSection: View {
     var body: some View {
         ZStack(alignment: .top) {
             TopSectionBackGroundShape()
-                .stroke(LinearGradient.tabStrokeLinearGradient.opacity(0.2), lineWidth: 2)
-                .fill(LinearGradient.homeTopSectionBackgroundLinearGradient.opacity(0.6))
-                
+//                .stroke(LinearGradient.tabStrokeLinearGradient.opacity(0.2), lineWidth: 2)
+
+                .fill(LinearGradient.homeTopSectionBackgroundLinearGradient.opacity(0.1))
+                .overlay(
+                    CustomBlurView(style: .systemUltraThinMaterialDark)  // Use your desired blur effect style
+                                        .clipShape(TopSectionBackGroundShape())
+                                )
                 
             
             VStack(alignment: .leading) {
@@ -122,6 +158,8 @@ struct MiddleSection: View {
                 .stroke(LinearGradient.tabStrokeLinearGradient.opacity(0.2), lineWidth: 2)
                 .fill(LinearGradient.homeBackgroundLinearGradient)
                 .frame(width: 50, height: 50)
+                .shadow(color: Color(hex:"#2B3445").opacity(0.5), radius: 30, x: 0, y: -20)
+                .shadow(color: Color(hex:"#10141C"), radius: 30, x: 0, y: 20)
                 .overlay {
                     Text("All")
                         .foregroundStyle(.white)
@@ -134,6 +172,8 @@ struct MiddleSection: View {
                     Image("electric-bicycle")
                 }
                 .frame(width: 50, height: 50)
+                .shadow(color: Color(hex:"#2B3445").opacity(0.5), radius: 30, x: 0, y: -20)
+                .shadow(color: Color(hex:"#10141C"), radius: 30, x: 0, y: 20)
                 .padding(.bottom, 15)
             
             Spacer()
@@ -144,6 +184,8 @@ struct MiddleSection: View {
                     Image("road")
                 }
                 .frame(width: 50, height: 50)
+                .shadow(color: Color(hex:"#2B3445").opacity(0.5), radius: 30, x: 0, y: -20)
+                .shadow(color: Color(hex:"#10141C"), radius: 30, x: 0, y: 20)
                 .padding(.bottom, 30)
             Spacer()
             RoundedRectangle(cornerRadius: 10)
@@ -172,7 +214,84 @@ struct MiddleSection: View {
 
 struct LastSection: View {
     var body: some View {
-        Text("Last Section")
+        
+        Grid(alignment: .top, horizontalSpacing: 20, verticalSpacing: 0) {
+            
+            GridRow {
+                LastSectionCard(imageName: "bicycle-1", title: "Road Bike", description: "PEUGEOT - LR01", price: "$ 1,999.99", selected: true)
+                    .scaleEffect(CGSize(width: 1.1, height: 1.1))
+                    
+                LastSectionCard(imageName: "bicycle-1", title: "Road Bike", description: "PEUGEOT - LR01", price: "$ 1,999.99", selected: false)
+            }
+            GridRow {
+                LastSectionCard(imageName: "bicycle-1", title: "Road Bike", description: "PEUGEOT - LR01", price: "$ 1,999.99", selected: false)
+                    
+                LastSectionCard(imageName: "bicycle-1", title: "Road Bike", description: "PEUGEOT - LR01", price: "$ 1,999.99", selected: false)
+                
+            }
+        }
+    }
+}
+
+struct LastSectionCard: View {
+    let imageName: String
+    let title: String
+    let description: String
+    let price: String
+    let selected: Bool
+    var body: some View {
+        Parallelogram(depth: 20, cornerRadius: 20)
+            .stroke(LinearGradient.tabStrokeLinearGradient.opacity(0.2), lineWidth: 2)
+            .fill(LinearGradient.homeTopSectionBackgroundLinearGradient.opacity(0.6))
+            .frame(width: 165, height:  219)
+            .padding(.bottom, 31)
+            .shadow(color: selected ? Color(hex:"#2B3445").opacity(0.5) : .clear, radius: 40, x: 0, y: -20)
+            .shadow(color: selected ? Color(hex:"#10141C"): .clear, radius: 60, x: 0, y: 20)
+            .shadow(color: selected ? .clear : Color(hex:"#526C8F"), radius: 100, x: 0, y: 20)
+            .overlay {
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image("heart")
+                            .foregroundStyle(.white)
+                            .frame(width: 24, height: 24)
+                    }
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 121, height: 88, alignment: .center)
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(title)
+                        Text(description)
+                            .font(.system(size: 15, weight: .bold, design: .default))
+                            .foregroundStyle(.white)
+                        Text(price)
+                           
+                    }
+                    .frame(height: 63)
+                    .font(.system(size: 13, weight: .medium, design: .default))
+                    .foregroundStyle(Color.white.opacity(0.6))
+                    
+                    Spacer()
+                }
+                .padding([.leading, .trailing], 17)
+                .padding(.top, 22)
+            }
+        
+    }
+}
+
+struct CustomBlurView: UIViewRepresentable {
+    var style: UIBlurEffect.Style
+    
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        return blurView
+    }
+    
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: style)
     }
 }
 
