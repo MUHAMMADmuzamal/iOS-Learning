@@ -67,13 +67,17 @@ struct TopSection: View {
     var body: some View {
         ZStack(alignment: .top) {
             TopSectionBackGroundShape()
-//                .stroke(LinearGradient.tabStrokeLinearGradient.opacity(0.2), lineWidth: 2)
-
-                .fill(LinearGradient.homeTopSectionBackgroundLinearGradient.opacity(0.1))
-                .overlay(
-                    CustomBlurView(style: .systemUltraThinMaterialDark)  // Use your desired blur effect style
-                                        .clipShape(TopSectionBackGroundShape())
-                                )
+                .fill(LinearGradient.homeTopSectionBackgroundLinearGradient.opacity(0.6))
+                .background {
+                    TopSectionBackGroundShape()
+                        
+                        .fill(Material.ultraThinMaterial)
+                        .shadow(color: .black.opacity(0.1), radius: 5, x: 5, y: 5)
+                }
+                .overlay {
+                    TopSectionBackGroundShape()
+                        .stroke(LinearGradient.tabStrokeLinearGradient.opacity(0.2))
+                }
                 
             
             VStack(alignment: .leading) {
