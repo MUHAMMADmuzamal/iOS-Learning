@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkForPermissions()
+//        checkForPermissions() // for local notifications
         // Do any additional setup after loading the view.
     }
 
