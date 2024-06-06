@@ -8,12 +8,20 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        FirebaseApp.configure()
+//        Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound, .badge]) { success, error in
+//            guard success else {
+//                return
+//            }
+//            print("Successfully registry APN")
+//        }
+//        application.registerForRemoteNotifications()
         return true
     }
 

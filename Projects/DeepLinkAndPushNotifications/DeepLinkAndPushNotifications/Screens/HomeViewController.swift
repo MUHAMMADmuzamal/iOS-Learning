@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class HomeViewController: UIViewController {
 
@@ -13,7 +14,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        checkForPermissions()
         // Do any additional setup after loading the view.
     }
 
@@ -32,6 +33,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     //https://www.youtube.com/watch?v=mECd0gik6AQ
     //https://www.youtube.com/watch?v=WmM4ryGcmSg
+    //https://www.youtube.com/watch?v=JuqQUP0pnZY
     func handleDeepLink(_ deepLink: DeepLink) {
         label.text = "DeepLink: " + deepLink.rawValue
 //        switch deepLink {
@@ -45,4 +47,50 @@ extension HomeViewController {
     }
     
     
+    func checkForPermissions() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { setting in
+            switch setting.authorizationStatus {
+            case .notDetermined:
+                return notificationCenter.requestAuthorization(options: [.alert,.sound, .badge]) { didAllow, error in
+                    if didAllow {
+                        self.disPatchNotifications()
+                    }
+                }
+            case .denied:
+                return
+            case .authorized:
+                self.disPatchNotifications()
+            default:
+                return
+            }
+        }
+    }
+    
+    func disPatchNotifications() {
+        let identifier = "my-morning-notification"
+        let notificationCenter = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        content.title = "Test"
+        content.sound = .default
+        content.body = "Just testing"
+        
+        let isDaily = false // For testing, do not repeat daily
+        
+        let date = Date().addingTimeInterval(10)
+        let dateComponent = Calendar.current.dateComponents([.year, .month, .hour, .minute, .second], from: date)
+
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: isDaily)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
+        notificationCenter.add(request) { error in
+            if let error = error {
+                print("Error adding notification request: \(error.localizedDescription)")
+            } else {
+                print("Notification scheduled: \(identifier)")
+            }
+        }
+    }
 }
