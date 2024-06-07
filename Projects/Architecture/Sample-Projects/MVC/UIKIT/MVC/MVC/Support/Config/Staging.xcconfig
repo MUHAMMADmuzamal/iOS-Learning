@@ -1,0 +1,12 @@
+//
+//  Staging.xcconfig
+//  MVC
+//
+//  Created by Codes Orbit on 15/05/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+PRODUCT_BUNDLE_IDENTIFIER = com.codesorbit.MVC.staging
+PRODUCT_NAME = MVC Staging
+APP_ICON_NAME = AppIcon.staging
