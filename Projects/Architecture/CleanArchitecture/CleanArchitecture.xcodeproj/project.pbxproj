@@ -575,6 +575,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CleanArchitecture/Preview Content\"";
 				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -608,6 +609,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CleanArchitecture/Preview Content\"";
 				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -785,6 +787,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CleanArchitecture/Preview Content\"";
 				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
