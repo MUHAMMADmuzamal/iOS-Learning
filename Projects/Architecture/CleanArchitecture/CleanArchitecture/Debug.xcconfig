@@ -1,0 +1,12 @@
+//
+//  Debug.xcconfig
+//  CleanArchitecture
+//
+//  Created by Codes Orbit on 11/06/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+PRODUCT_BUNDLE_IDENTIFIER = com.codesOrbit.cleanArchitecture.debug
+PRODUCT_NAME = Clean Architecture Debug
+APP_ICON_NAME = AppIcon.debug
