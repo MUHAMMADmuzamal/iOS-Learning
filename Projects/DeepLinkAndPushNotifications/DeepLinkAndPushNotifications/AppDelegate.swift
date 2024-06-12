@@ -56,4 +56,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             print("Firebase Token: \(token)")
         }
     }
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if let incomingURL = userActivity.webpageURL {
+            let urlString = incomingURL.absoluteString
+            // Handle the URL as needed
+            print("Universal Link: \(urlString)")
+            // For example, navigate to a specific view controller
+        }
+        return true
+    }
 }
