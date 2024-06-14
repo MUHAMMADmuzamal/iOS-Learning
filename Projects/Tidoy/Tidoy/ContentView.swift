@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  CleanArchitecture
+//  Tidoy
 //
-//  Created by Codes Orbit on 11/06/2024.
+//  Created by Codes Orbit on 14/06/2024.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Image("apple")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")

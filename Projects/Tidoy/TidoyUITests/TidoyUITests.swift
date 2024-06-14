@@ -1,13 +1,13 @@
 //
-//  CleanArchitectureUITests.swift
-//  CleanArchitectureUITests
+//  TidoyUITests.swift
+//  TidoyUITests
 //
-//  Created by Codes Orbit on 11/06/2024.
+//  Created by Codes Orbit on 14/06/2024.
 //
 
 import XCTest
 
-final class CleanArchitectureUITests: XCTestCase {
+final class TidoyUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

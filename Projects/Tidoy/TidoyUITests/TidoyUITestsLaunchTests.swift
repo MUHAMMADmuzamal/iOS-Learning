@@ -1,13 +1,13 @@
 //
-//  CleanArchitectureUITestsLaunchTests.swift
-//  CleanArchitectureUITests
+//  TidoyUITestsLaunchTests.swift
+//  TidoyUITests
 //
-//  Created by Codes Orbit on 11/06/2024.
+//  Created by Codes Orbit on 14/06/2024.
 //
 
 import XCTest
 
-final class CleanArchitectureUITestsLaunchTests: XCTestCase {
+final class TidoyUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

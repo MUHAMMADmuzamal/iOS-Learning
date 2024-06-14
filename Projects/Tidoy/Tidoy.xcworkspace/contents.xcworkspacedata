@@ -2,10 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Modules/Onboarding/Onboarding.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CleanArchitecture.xcodeproj">
+      location = "group:Tidoy.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
