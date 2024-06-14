@@ -6,16 +6,12 @@
 //
 
 import SwiftUI
+import Onboarding
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image("apple")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        SplashScreen()
+            .frame(width: 200, height: 200, alignment: .center)
     }
 }
 

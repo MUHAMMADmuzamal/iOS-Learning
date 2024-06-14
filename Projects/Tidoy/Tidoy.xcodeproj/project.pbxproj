@@ -17,6 +17,8 @@
 		D66FD4F72C1C67B8007D9F52 /* TidoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4F62C1C67B8007D9F52 /* TidoyTests.swift */; };
 		D66FD5012C1C67B8007D9F52 /* TidoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5002C1C67B8007D9F52 /* TidoyUITests.swift */; };
 		D66FD5032C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5022C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift */; };
+		D66FD5352C1C6A9E007D9F52 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66FD5342C1C6A9E007D9F52 /* Onboarding.framework */; };
+		D66FD5362C1C6A9E007D9F52 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D66FD5342C1C6A9E007D9F52 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,20 @@
 			remoteInfo = Tidoy;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D66FD5372C1C6A9E007D9F52 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D66FD5362C1C6A9E007D9F52 /* Onboarding.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		13C5CDE2AC3E8E0C40A66735 /* Pods-Tidoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy.release.xcconfig"; path = "Target Support Files/Pods-Tidoy/Pods-Tidoy.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +72,7 @@
 		D66FD4FC2C1C67B8007D9F52 /* TidoyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidoyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD5002C1C67B8007D9F52 /* TidoyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyUITests.swift; sourceTree = "<group>"; };
 		D66FD5022C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D66FD5342C1C6A9E007D9F52 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */,
+				D66FD5352C1C6A9E007D9F52 /* Onboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +120,7 @@
 		67B65A5E91C6FB3491D622ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D66FD5342C1C6A9E007D9F52 /* Onboarding.framework */,
 				2872C5D23B387E9E3F50C213 /* Pods_Tidoy.framework */,
 				B243A6A990AC37C061E57654 /* Pods_Tidoy_TidoyUITests.framework */,
 				82161D800FABECA810DF8355 /* Pods_TidoyTests.framework */,
@@ -179,6 +198,7 @@
 				D66FD4DF2C1C67B2007D9F52 /* Frameworks */,
 				D66FD4E02C1C67B2007D9F52 /* Resources */,
 				D66FD50F2C1C6975007D9F52 /* ShellScript */,
+				D66FD5372C1C6A9E007D9F52 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
