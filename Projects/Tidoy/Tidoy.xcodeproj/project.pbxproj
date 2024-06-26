@@ -17,6 +17,7 @@
 		D66FD4F72C1C67B8007D9F52 /* TidoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4F62C1C67B8007D9F52 /* TidoyTests.swift */; };
 		D66FD5012C1C67B8007D9F52 /* TidoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5002C1C67B8007D9F52 /* TidoyUITests.swift */; };
 		D66FD5032C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5022C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift */; };
+		D68A52742C2C2F8F00F69181 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */; };
 		D6DEF46B2C2AD6EB00428AC0 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6DEF46E2C2AD7A500428AC0 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		D66FD5662C1C72BA007D9F52 /* Tidoy.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.debug.xcconfig; sourceTree = "<group>"; };
 		D66FD5672C1C72F9007D9F52 /* Tidoy.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.release.xcconfig; sourceTree = "<group>"; };
 		D66FD5682C1C730C007D9F52 /* Tidoy.staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.staging.xcconfig; sourceTree = "<group>"; };
+		D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 		D66FD4E42C1C67B2007D9F52 /* Tidoy */ = {
 			isa = PBXGroup;
 			children = (
+				D68A52722C2C2F8300F69181 /* Screens */,
 				D66FD5652C1C729D007D9F52 /* Configurations */,
 				D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */,
 				D66FD4E72C1C67B2007D9F52 /* ContentView.swift */,
@@ -208,6 +211,14 @@
 				D66FD5682C1C730C007D9F52 /* Tidoy.staging.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		D68A52722C2C2F8300F69181 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A52742C2C2F8F00F69181 /* Launch Screen.storyboard in Resources */,
 				D66FD4ED2C1C67B7007D9F52 /* Preview Assets.xcassets in Resources */,
 				D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */,
 			);
@@ -550,7 +562,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -680,7 +692,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -810,7 +822,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
