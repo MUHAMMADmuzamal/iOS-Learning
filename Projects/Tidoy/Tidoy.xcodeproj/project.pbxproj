@@ -18,8 +18,23 @@
 		D66FD5012C1C67B8007D9F52 /* TidoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5002C1C67B8007D9F52 /* TidoyUITests.swift */; };
 		D66FD5032C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5022C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift */; };
 		D68A52742C2C2F8F00F69181 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */; };
-		D6DEF46B2C2AD6EB00428AC0 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D6DEF46E2C2AD7A500428AC0 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */; };
+		D68A53312C3EA12D00F69181 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68A53302C3EA12D00F69181 /* Colors.xcassets */; };
+		D68A533F2C3FBE3D00F69181 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53382C3FBE3A00F69181 /* Manrope-ExtraLight.ttf */; };
+		D68A53402C3FBE3D00F69181 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53382C3FBE3A00F69181 /* Manrope-ExtraLight.ttf */; };
+		D68A53412C3FBE3D00F69181 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53392C3FBE3A00F69181 /* Manrope-Light.ttf */; };
+		D68A53422C3FBE3D00F69181 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53392C3FBE3A00F69181 /* Manrope-Light.ttf */; };
+		D68A53432C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533A2C3FBE3B00F69181 /* Manrope-ExtraBold.ttf */; };
+		D68A53442C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533A2C3FBE3B00F69181 /* Manrope-ExtraBold.ttf */; };
+		D68A53452C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533B2C3FBE3B00F69181 /* Manrope-Medium.ttf */; };
+		D68A53462C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533B2C3FBE3B00F69181 /* Manrope-Medium.ttf */; };
+		D68A53472C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533C2C3FBE3C00F69181 /* Manrope-Bold.ttf */; };
+		D68A53482C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533C2C3FBE3C00F69181 /* Manrope-Bold.ttf */; };
+		D68A53492C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */; };
+		D68A534A2C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */; };
+		D68A534B2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */; };
+		D68A534C2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */; };
+		D68A534E2C3FBED100F69181 /* ManropeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A534D2C3FBED100F69181 /* ManropeFont.swift */; };
+		D68A534F2C3FBED100F69181 /* ManropeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A534D2C3FBED100F69181 /* ManropeFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,20 +53,6 @@
 			remoteInfo = Tidoy;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		D6DEF46C2C2AD6EB00428AC0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D6DEF46B2C2AD6EB00428AC0 /* Onboarding.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		13C5CDE2AC3E8E0C40A66735 /* Pods-Tidoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy.release.xcconfig"; path = "Target Support Files/Pods-Tidoy/Pods-Tidoy.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +82,16 @@
 		D66FD5672C1C72F9007D9F52 /* Tidoy.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.release.xcconfig; sourceTree = "<group>"; };
 		D66FD5682C1C730C007D9F52 /* Tidoy.staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.staging.xcconfig; sourceTree = "<group>"; };
 		D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D68A53302C3EA12D00F69181 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D68A53372C3EBBB400F69181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D68A53382C3FBE3A00F69181 /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		D68A53392C3FBE3A00F69181 /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		D68A533A2C3FBE3B00F69181 /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D68A533B2C3FBE3B00F69181 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		D68A533C2C3FBE3C00F69181 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		D68A534D2C3FBED100F69181 /* ManropeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManropeFont.swift; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DEF46E2C2AD7A500428AC0 /* Onboarding.framework in Frameworks */,
 				3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,11 +178,12 @@
 		D66FD4E42C1C67B2007D9F52 /* Tidoy */ = {
 			isa = PBXGroup;
 			children = (
+				D68A53372C3EBBB400F69181 /* Info.plist */,
+				D68A53322C3EBB3A00F69181 /* Resources */,
 				D68A52722C2C2F8300F69181 /* Screens */,
 				D66FD5652C1C729D007D9F52 /* Configurations */,
 				D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */,
 				D66FD4E72C1C67B2007D9F52 /* ContentView.swift */,
-				D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */,
 				D66FD4EB2C1C67B7007D9F52 /* Preview Content */,
 			);
 			path = Tidoy;
@@ -216,9 +227,50 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */,
+				D68A532F2C3EA0C400F69181 /* Onboarding */,
+				D68A532E2C3EA0B200F69181 /* LaunchScreen */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		D68A532E2C3EA0B200F69181 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		D68A532F2C3EA0C400F69181 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D68A53322C3EBB3A00F69181 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D68A53332C3EBB5700F69181 /* Fonts */,
+				D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */,
+				D68A53302C3EA12D00F69181 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D68A53332C3EBB5700F69181 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D68A533C2C3FBE3C00F69181 /* Manrope-Bold.ttf */,
+				D68A533A2C3FBE3B00F69181 /* Manrope-ExtraBold.ttf */,
+				D68A53382C3FBE3A00F69181 /* Manrope-ExtraLight.ttf */,
+				D68A53392C3FBE3A00F69181 /* Manrope-Light.ttf */,
+				D68A533B2C3FBE3B00F69181 /* Manrope-Medium.ttf */,
+				D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */,
+				D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */,
+				D68A534D2C3FBED100F69181 /* ManropeFont.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +285,6 @@
 				D66FD4DF2C1C67B2007D9F52 /* Frameworks */,
 				D66FD4E02C1C67B2007D9F52 /* Resources */,
 				D66FD50F2C1C6975007D9F52 /* ShellScript */,
-				D6DEF46C2C2AD6EB00428AC0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,9 +381,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A53492C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */,
 				D68A52742C2C2F8F00F69181 /* Launch Screen.storyboard in Resources */,
+				D68A534B2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */,
+				D68A53312C3EA12D00F69181 /* Colors.xcassets in Resources */,
 				D66FD4ED2C1C67B7007D9F52 /* Preview Assets.xcassets in Resources */,
 				D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */,
+				D68A53412C3FBE3D00F69181 /* Manrope-Light.ttf in Resources */,
+				D68A533F2C3FBE3D00F69181 /* Manrope-ExtraLight.ttf in Resources */,
+				D68A53452C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */,
+				D68A53472C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */,
+				D68A53432C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +406,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A53442C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */,
+				D68A53482C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */,
+				D68A53422C3FBE3D00F69181 /* Manrope-Light.ttf in Resources */,
+				D68A53462C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */,
+				D68A534A2C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */,
+				D68A53402C3FBE3D00F69181 /* Manrope-ExtraLight.ttf in Resources */,
+				D68A534C2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +511,7 @@
 			files = (
 				D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
+				D68A534E2C3FBED100F69181 /* ManropeFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +529,7 @@
 			files = (
 				D66FD5032C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift in Sources */,
 				D66FD5012C1C67B8007D9F52 /* TidoyUITests.swift in Sources */,
+				D68A534F2C3FBED100F69181 /* ManropeFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +627,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tidoy/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -689,6 +758,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tidoy/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -819,6 +889,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tidoy/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

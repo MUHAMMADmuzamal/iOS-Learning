@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
-import Onboarding
 
 struct ContentView: View {
     var body: some View {
-        SplashScreen()
-            .frame(width: 200, height: 200, alignment: .center)
+        HStack {
+            Text("Hello")
+                .font(.custom("Manrope", size: 30))
+                .fontWeight(.bold)
+                .foregroundStyle(.successMain)   
+            
+            Text("Hello")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundStyle(.successMain)
+        }
+            
     }
 }
 
