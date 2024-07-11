@@ -1,21 +1,11 @@
 //
-//  ManropeFont.swift
+//  Font + Extension.swift
 //  Tidoy
 //
 //  Created by Codes Orbit on 11/07/2024.
 //
 
 import SwiftUI
-
-extension String {
-    static let manropeBold          = "Manrope-Bold"
-    static let manropeSemiBold      = "Manrope-SemiBold"
-    static let manropeExtraBold     = "Manrope-ExtraBold"
-    static let manropeExtraLight    = "Manrope-ExtraLight"
-    static let manropeLight         = "Manrope-Light"
-    static let manropeMedium        = "Manrope-Medium"
-    static let manropeRegular       = "Manrope-Regular"
-}
 
 extension Font {
     // Heading
@@ -29,7 +19,7 @@ extension Font {
     // Body Large
     static let bodyLargeSemiBold = getFont(.manropeSemiBold, 18)
     static let bodyLargeMedium = getFont(.manropeMedium, 18)
-    static let bodyLargeRegular = getFont(.manropeRegular, 18) 
+    static let bodyLargeRegular = getFont(.manropeRegular, 18)
     
     // Body Medium
     static let bodyMediumSemiBold = getFont(.manropeSemiBold, 16)
@@ -52,7 +42,6 @@ extension Font {
     static let body2XSmallRegular = getFont(.manropeRegular, 10)
     
 }
-
 
 extension Font {
     static func getFont(_ name: String, _ size: CGFloat) -> Font {

@@ -11,16 +11,17 @@ struct ContentView: View {
     var body: some View {
         HStack {
             Text("Hello")
-                .font(.custom("Manrope", size: 30))
-                .fontWeight(.bold)
-                .foregroundStyle(.successMain)   
+                .font(.heading6)
+                .foregroundStyle(.successMain)
+                .padding(.trailing, .padding40)
             
             Text("Hello")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
                 .foregroundStyle(.successMain)
+                
         }
-            
+       
     }
 }
 

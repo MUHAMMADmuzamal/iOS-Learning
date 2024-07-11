@@ -33,8 +33,12 @@
 		D68A534A2C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */; };
 		D68A534B2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */; };
 		D68A534C2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */; };
-		D68A534E2C3FBED100F69181 /* ManropeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A534D2C3FBED100F69181 /* ManropeFont.swift */; };
-		D68A534F2C3FBED100F69181 /* ManropeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A534D2C3FBED100F69181 /* ManropeFont.swift */; };
+		D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53522C3FC98500F69181 /* Font + Extension.swift */; };
+		D68A53542C3FC98500F69181 /* Font + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53522C3FC98500F69181 /* Font + Extension.swift */; };
+		D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53552C3FC99100F69181 /* String + Extension.swift */; };
+		D68A53572C3FC99100F69181 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53552C3FC99100F69181 /* String + Extension.swift */; };
+		D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
+		D68A535A2C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +95,9 @@
 		D68A533C2C3FBE3C00F69181 /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
-		D68A534D2C3FBED100F69181 /* ManropeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManropeFont.swift; sourceTree = "<group>"; };
+		D68A53522C3FC98500F69181 /* Font + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Extension.swift"; sourceTree = "<group>"; };
+		D68A53552C3FC99100F69181 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,8 +184,9 @@
 		D66FD4E42C1C67B2007D9F52 /* Tidoy */ = {
 			isa = PBXGroup;
 			children = (
-				D68A53372C3EBBB400F69181 /* Info.plist */,
 				D68A53322C3EBB3A00F69181 /* Resources */,
+				D68A53502C3FC94100F69181 /* Helpers */,
+				D68A53372C3EBBB400F69181 /* Info.plist */,
 				D68A52722C2C2F8300F69181 /* Screens */,
 				D66FD5652C1C729D007D9F52 /* Configurations */,
 				D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */,
@@ -268,9 +275,26 @@
 				D68A533B2C3FBE3B00F69181 /* Manrope-Medium.ttf */,
 				D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */,
 				D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */,
-				D68A534D2C3FBED100F69181 /* ManropeFont.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D68A53502C3FC94100F69181 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D68A53512C3FC96A00F69181 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D68A53512C3FC96A00F69181 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D68A53522C3FC98500F69181 /* Font + Extension.swift */,
+				D68A53552C3FC99100F69181 /* String + Extension.swift */,
+				D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,9 +533,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
+				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */,
+				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
-				D68A534E2C3FBED100F69181 /* ManropeFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,9 +553,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68A535A2C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
+				D68A53542C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D66FD5032C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift in Sources */,
+				D68A53572C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D66FD5012C1C67B8007D9F52 /* TidoyUITests.swift in Sources */,
-				D68A534F2C3FBED100F69181 /* ManropeFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
