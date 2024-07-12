@@ -10,6 +10,8 @@
 		21F1D8DB4AF7B625BC88BC61 /* Pods_TidoyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82161D800FABECA810DF8355 /* Pods_TidoyTests.framework */; };
 		3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872C5D23B387E9E3F50C213 /* Pods_Tidoy.framework */; };
 		CE570FEC0E72E3AB07A9ED04 /* Pods_Tidoy_TidoyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B243A6A990AC37C061E57654 /* Pods_Tidoy_TidoyUITests.framework */; };
+		D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */; };
+		D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F0C2C415C5000F55756 /* SplashScreen.swift */; };
 		D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */; };
 		D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E72C1C67B2007D9F52 /* ContentView.swift */; };
 		D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		AD087384E26224D2081F9FA4 /* Pods-TidoyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidoyTests.debug.xcconfig"; path = "Target Support Files/Pods-TidoyTests/Pods-TidoyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B243A6A990AC37C061E57654 /* Pods_Tidoy_TidoyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidoy_TidoyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0929F3BA5611A2734ECB213 /* Pods-TidoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidoyTests.release.xcconfig"; path = "Target Support Files/Pods-TidoyTests/Pods-TidoyTests.release.xcconfig"; sourceTree = "<group>"; };
+		D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		D61A8F0C2C415C5000F55756 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashScreen.swift; path = Tidoy/Screens/SplashScreen.swift; sourceTree = SOURCE_ROOT; };
 		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E72C1C67B2007D9F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +163,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D61A8F0B2C415C3C00F55756 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D61A8F0C2C415C5000F55756 /* SplashScreen.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		D66FD4D92C1C67B2007D9F52 = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +246,8 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D68A532F2C3EA0C400F69181 /* Onboarding */,
+				D61A8F0B2C415C3C00F55756 /* SplashScreen */,
+				D68A532F2C3EA0C400F69181 /* OnboardingFlow */,
 				D68A532E2C3EA0B200F69181 /* LaunchScreen */,
 			);
 			path = Screens;
@@ -248,11 +261,12 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		D68A532F2C3EA0C400F69181 /* Onboarding */ = {
+		D68A532F2C3EA0C400F69181 /* OnboardingFlow */ = {
 			isa = PBXGroup;
 			children = (
+				D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */,
 			);
-			path = Onboarding;
+			path = OnboardingFlow;
 			sourceTree = "<group>";
 		};
 		D68A53322C3EBB3A00F69181 /* Resources */ = {
@@ -535,6 +549,8 @@
 			files = (
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
+				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
+				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
 				D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
