@@ -12,6 +12,8 @@
 		CE570FEC0E72E3AB07A9ED04 /* Pods_Tidoy_TidoyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B243A6A990AC37C061E57654 /* Pods_Tidoy_TidoyUITests.framework */; };
 		D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */; };
 		D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F0C2C415C5000F55756 /* SplashScreen.swift */; };
+		D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F112C417BEF00F55756 /* OnboardingCarousel.swift */; };
+		D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F132C417C0200F55756 /* OnboardingCarouselCard.swift */; };
 		D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */; };
 		D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E72C1C67B2007D9F52 /* ContentView.swift */; };
 		D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		C0929F3BA5611A2734ECB213 /* Pods-TidoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidoyTests.release.xcconfig"; path = "Target Support Files/Pods-TidoyTests/Pods-TidoyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		D61A8F0C2C415C5000F55756 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashScreen.swift; path = Tidoy/Screens/SplashScreen.swift; sourceTree = SOURCE_ROOT; };
+		D61A8F112C417BEF00F55756 /* OnboardingCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCarousel.swift; sourceTree = "<group>"; };
+		D61A8F132C417C0200F55756 /* OnboardingCarouselCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCarouselCard.swift; sourceTree = "<group>"; };
 		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E72C1C67B2007D9F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +173,31 @@
 				D61A8F0C2C415C5000F55756 /* SplashScreen.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		D61A8F0E2C417AA300F55756 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D61A8F0F2C417AB700F55756 /* Carousels */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D61A8F0F2C417AB700F55756 /* Carousels */ = {
+			isa = PBXGroup;
+			children = (
+				D61A8F102C417BCE00F55756 /* OnboardingCarousel */,
+			);
+			path = Carousels;
+			sourceTree = "<group>";
+		};
+		D61A8F102C417BCE00F55756 /* OnboardingCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				D61A8F112C417BEF00F55756 /* OnboardingCarousel.swift */,
+				D61A8F132C417C0200F55756 /* OnboardingCarouselCard.swift */,
+			);
+			path = OnboardingCarousel;
 			sourceTree = "<group>";
 		};
 		D66FD4D92C1C67B2007D9F52 = {
@@ -296,6 +325,7 @@
 		D68A53502C3FC94100F69181 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D61A8F0E2C417AA300F55756 /* Components */,
 				D68A53512C3FC96A00F69181 /* Extensions */,
 			);
 			path = Helpers;
@@ -548,9 +578,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
+				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
+				D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */,
 				D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
