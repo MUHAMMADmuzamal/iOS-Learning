@@ -16,7 +16,7 @@ struct OnboardingCarouselCardModel {
 struct OnboardingCarouselCard: View {
     var  model: OnboardingCarouselCardModel
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Image(model.image)
                 .resizable()
                 .scaledToFit()
