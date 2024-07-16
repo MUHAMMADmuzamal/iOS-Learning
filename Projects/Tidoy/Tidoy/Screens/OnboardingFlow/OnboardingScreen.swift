@@ -25,13 +25,12 @@ struct OnboardingScreen: View {
     @State private var index: Int = 0
     var body: some View {
         VStack {
-            Text("\(index)")
             OnboardingCarousel(dataSource: dataSource, index: $index)
             HStack(spacing: 12) {
                 SecondaryButton(title: "Skip", action: {})
                     .frame(width: 63)
                 PrimaryButton(title: "Next", rightIcon: Image(systemName: "arrow.right")) {
-                    index = index != dataSource.count - 1  ? index + 1 : 0
+                    index = index != dataSource.count - 1 ? index + 1 : 0
                 }
                     .frame(width: 236)
             }

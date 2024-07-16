@@ -15,6 +15,8 @@ struct OnboardingCarouselCardModel {
 
 struct OnboardingCarouselCard: View {
     var  model: OnboardingCarouselCardModel
+    @State private var rotate: CGFloat = 0
+    
     var body: some View {
         VStack(alignment: .leading) {
             Image(model.image)
@@ -36,7 +38,7 @@ struct OnboardingCarouselCard: View {
                     }
                 }
                 .clipShape(RoundedRectangle(cornerRadius: .cornerRadiusM))
-                
+                .rotationEffect(Angle(degrees: rotate))
             VStack(alignment: .leading) {
                 Text(model.title)
                     .font(.heading4)
@@ -47,6 +49,14 @@ struct OnboardingCarouselCard: View {
             }
         }
         .padding(.horizontal, .padding16)
+        .onAppear {
+            withAnimation(.bouncy) {
+                rotate = 360
+            }
+        }
+        .onDisappear {
+            rotate = 0
+        }
     }
 }
 
