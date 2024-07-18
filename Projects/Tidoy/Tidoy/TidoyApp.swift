@@ -11,7 +11,7 @@ import SwiftUI
 struct TidoyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingScreen()
         }
     }
 }

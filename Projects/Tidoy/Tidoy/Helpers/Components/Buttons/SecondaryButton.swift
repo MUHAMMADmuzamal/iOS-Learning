@@ -57,6 +57,9 @@ struct SecondaryButton: View {
                     Text(title)
                         .font(.bodySmallSemiBold)
                         .foregroundStyle(disabled ? .text50 : .text100)
+                        .popover(isPresented: /*@START_MENU_TOKEN@*/.constant(false)/*@END_MENU_TOKEN@*/) {
+                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Popover Content@*/Text("Popover Content")/*@END_MENU_TOKEN@*/
+                        }
                 }
                 rightIcon
                     
@@ -81,6 +84,8 @@ struct SecondaryButton: View {
         SecondaryButton(rightIcon: Image(systemName: "wifi")) {}
         SecondaryButton(title: "Button", leftIcon: Image(systemName: "plus.circle")) {}
         SecondaryButton(title: "Button", rightIcon: Image(systemName: "wifi")) {}
+        SecondaryButton(title: "Skip") {}
+            .frame(width: 63, height: 56)
         SecondaryButton(title: "Disabled",
                       leftIcon: Image(systemName: "plus.circle"), rightIcon: Image(systemName: "wifi"),
                       disabled: .constant(true),

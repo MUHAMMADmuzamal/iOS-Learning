@@ -23,19 +23,23 @@ struct OnboardingScreen: View {
            subTitle: "A stress-free Holiday? Trust your Holiday accommodation to Tidoy!")
     ]
     @State private var index: Int = 0
+    private var dataSourceLength: Int { dataSource.count}
     var body: some View {
         VStack {
             OnboardingCarousel(dataSource: dataSource, index: $index)
             HStack(spacing: 12) {
-                SecondaryButton(title: "Skip", action: {})
-                    .frame(width: 63)
-                PrimaryButton(title: "Next", rightIcon: Image(systemName: "arrow.right")) {
-                    index = index != dataSource.count - 1 ? index + 1 : 0
+                if index != dataSourceLength - 1 {
+                    SecondaryButton(title: "Skip", action: {})
+                        .frame(width: 63)
                 }
-                    .frame(width: 236)
+              
+                PrimaryButton(title: index == dataSourceLength - 1 ? "Get Started" : "Next", rightIcon: Image(systemName: "arrow.right")) {
+                    index = index != dataSourceLength - 1 ? index + 1 : dataSourceLength - 1
+                }
             }
             .frame(height: 58)
             .padding(.horizontal, 32)
+//            .padding(.vertical, 0)
         }
     }
 }
