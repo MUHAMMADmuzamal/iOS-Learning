@@ -18,6 +18,7 @@
 		D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F192C4547FB00F55756 /* SecondaryButton.swift */; };
 		D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F1B2C45520D00F55756 /* TertiaryButton.swift */; };
 		D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F1E2C47BD8E00F55756 /* LoginView.swift */; };
+		D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62161E62C4C1488003C3389 /* RoundedTextField.swift */; };
 		D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */; };
 		D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E72C1C67B2007D9F52 /* ContentView.swift */; };
 		D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		D61A8F192C4547FB00F55756 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		D61A8F1B2C45520D00F55756 /* TertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryButton.swift; sourceTree = "<group>"; };
 		D61A8F1E2C47BD8E00F55756 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D62161E62C4C1488003C3389 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E72C1C67B2007D9F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D62161E52C4C144B003C3389 /* TextField */,
 				D61A8F152C42C6B900F55756 /* Buttons */,
 				D61A8F0F2C417AB700F55756 /* Carousels */,
 			);
@@ -225,6 +228,14 @@
 				D61A8F1E2C47BD8E00F55756 /* LoginView.swift */,
 			);
 			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		D62161E52C4C144B003C3389 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				D62161E62C4C1488003C3389 /* RoundedTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		D66FD4D92C1C67B2007D9F52 = {
@@ -616,6 +627,7 @@
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
 				D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */,
 				D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */,
+				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
 			);
