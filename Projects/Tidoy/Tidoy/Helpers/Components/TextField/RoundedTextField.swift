@@ -8,197 +8,144 @@
 import SwiftUI
 
 struct RoundedTextField: View {
-    private enum StateOfTextField {
-        case defaultState, hover, focus, fill, disable, error
-        
-        var labelColor: Color {
-            switch self {
-                
-            case .error:
-                return .textDanger
-            default:
-                return .text100
-            }
-        }
-        
-        var textColor: Color {
-            switch self {
-                
-            case .defaultState:
-                return .text60
-            case .hover:
-                return .text60
-            case .focus:
-                return .text100
-            case .fill:
-                return .text100
-            case .disable:
-                return .text60
-            case .error:
-                return .textDanger
-            }
-        }
-        
-        var placeholderColor: Color {
-            switch self {
-                
-            case .defaultState:
-                return .text60
-            case .hover:
-                return .text60
-            case .focus:
-                return .text100
-            case .fill:
-                return .text100
-            case .disable:
-                return .text60
-            case .error:
-                return .textDanger
-            }
-        }
-        
-        var borderColor: Color {
-            switch self {
-                
-            case .defaultState:
-                return .stroke40
-            case .hover:
-                return .stroke60
-            case .focus:
-                return .strokeFocus
-            case .fill:
-                return .stroke40
-            case .disable:
-                return .stroke40
-            case .error:
-                return .strokeDanger
-            }
-        }
-        
-        var hintTextColor: Color {
-            switch self {
-                
-            case .defaultState:
-                return .text100
-            case .hover:
-                return .text60
-            case .focus:
-                return .text100
-            case .fill:
-                return .text100
-            case .disable:
-                return .text60
-            case .error:
-                return .textDanger
-            }
-        }
-        
-        var iconColor: Color {
-            switch self {
-                
-            case .defaultState:
-                return .icon60
-            case .hover:
-                return .icon60
-            case .focus:
-                return .icon100
-            case .fill:
-                return .icon100
-            case .disable:
-                return .icon60
-            case .error:
-                return .iconDanger
-            }
-        }
-        
-        var backgroundColor: Color {
-            switch self {
-                
-            case .disable:
-                return .background20
-            case .error:
-                return .backgroundDanger
-            default:
-                return .background10Input
-            }
-        }
-    }
+    @ObservedObject private var viewModel: RoundedTextFieldViewModel
+    @Binding var state: StateOfTextField
     
-    @Binding var text: String
-    @Binding var label: String
-    @Binding var hintText: String
-    @Binding var placeholderText: String
+    var label: String
+    var hintText: String
+    var placeholderText: String
     var leftImage: Image?
     var rightImage: Image?
     
-    init(text: Binding<String>,
-         label: Binding<String>,
-         hintText: Binding<String>,
-         placeholderText: Binding<String>,
+    init(fieldType: TextFieldTypeProtocol,
+         label: String,
+         hintText: String,
+         placeholderText: String,
+         state: Binding<StateOfTextField>,
          leftImage: Image? = nil,
          rightImage: Image? = nil) {
         
-        self._text = text
-        self._label = label
-        self._hintText = hintText
-        self._placeholderText = placeholderText
+        self.viewModel = RoundedTextFieldViewModel(fieldType: fieldType, state: state.wrappedValue)
+        self._state = state
+        self.label = label
+        self.hintText = hintText
+        self.placeholderText = placeholderText
         self.leftImage = leftImage
         self.rightImage = rightImage
     }
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(label)
+                .foregroundColor(viewModel.state.labelColor)
             HStack(spacing: .padding4) {
-                leftImage
-                    .frame(width: 24, height: 24)
-                TextField("", text: $text)
-                    .background {
-                        if text.isEmpty {
-                            HStack {
-                                Text(placeholderText)
-                                Spacer()
-                            }
-                        }
+                if let leftImage = leftImage {
+                    leftImage
+                        .foregroundColor(viewModel.state.textColor)
+                        .frame(width: 24, height: 24)
+                }
+                TextField("", text: $viewModel.text)
+                    .onChange(of: viewModel.text) {
+                        viewModel.validate()
                     }
-                rightImage
-                    .frame(width: 24, height: 24)
+                    .onTapGesture {
+                        viewModel.onFocusChange(isFocused: true)
+                    }
+                    .onHover { isHovering in
+                        viewModel.onHover(isHovering: isHovering)
+                    }
+                    .foregroundColor(viewModel.state.textColor)
+                    .background {
+                        if viewModel.text.isEmpty {
+                             HStack {
+                                 Text(placeholderText)
+                                 Spacer()
+                             }
+                         }
+                    }
+                if let rightImage = rightImage {
+                    rightImage
+                        .foregroundColor(viewModel.state.textColor)
+                        .frame(width: 24, height: 24)
+                }
             }
             .foregroundStyle(.icon60)
                 .padding(.all, .padding12)
                 .background {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(.stroke40, lineWidth: 1.0)
+                        .stroke(viewModel.state.borderColor, lineWidth: 1.0)
                 }
             Text(hintText)
                 .font(.bodyXSmallRegular)
+                .foregroundColor(viewModel.state.labelColor)
         }
-        .font(.bodySmallMedium)
-        .foregroundStyle(.text100)
-        .padding(.horizontal, 2)    }
+        .padding(.horizontal, 2)
+        .disabled(viewModel.state == .disable)
+        .onChange(of: viewModel.state) { newState in
+            state = newState
+        }
+    }
+    
+    func setState(_ newState: StateOfTextField) -> some View {
+        self.state = newState
+        self.viewModel.state = newState
+        return self
+    }
 }
 
 #Preview {
-    @State var text = ""
-    return VStack {
-        RoundedTextField(text: $text,
-                         label: .constant("Label"),
-                         hintText: .constant("This is a hint text to help user"),
-                         placeholderText: .constant("Placeholder"),
-                         leftImage: Image(systemName: "plus.circle"),
-                         rightImage: Image(systemName: "plus.circle"))  
-        RoundedTextField(text: $text,
-                         label: .constant("Label"),
-                         hintText: .constant("This is a hint text to help user"),
-                         placeholderText: .constant("Placeholder"),
-                         leftImage: Image(systemName: "plus.circle"))
-        RoundedTextField(text: $text,
-                         label: .constant("Label"),
-                         hintText: .constant("This is a hint text to help user"),
-                         placeholderText: .constant("Placeholder"),
-                         rightImage: Image(systemName: "plus.circle"))
-        RoundedTextField(text: $text,
-                         label: .constant("Label"),
-                         hintText: .constant("This is a hint text to help user"),
-                         placeholderText: .constant("Placeholder"))
+        return VStack {
+            RoundedTextField(fieldType: UserNameTextField(),
+                             label: "Username",
+                             hintText: "Enter your username",
+                             placeholderText: "Placeholder", 
+                             state: .constant(.defaultState),
+                             leftImage: Image(systemName: "person"),
+                             rightImage: Image(systemName: "checkmark"))
+            RoundedTextField(fieldType: UserNameTextField(),
+                             label: "Username",
+                             hintText: "Enter your username",
+                             placeholderText: "Placeholder", 
+                             state: .constant(.fill),
+                             leftImage: Image(systemName: "person"),
+                             rightImage: Image(systemName: "checkmark"))
+            .setState(.error)
+        }
+}
+
+enum StateOfTextField {
+    case defaultState, hover, focus, fill, disable, error
+    
+    var labelColor: Color {
+        switch self {
+        case .error:
+            return .red
+        default:
+            return .black
+        }
+    }
+    
+    var textColor: Color {
+        switch self {
+        case .defaultState, .hover, .disable:
+            return .gray
+        case .focus, .fill:
+            return .black
+        case .error:
+            return .red
+        }
+    }
+    
+    var borderColor: Color {
+        switch self {
+        case .defaultState, .fill, .disable:
+            return .gray
+        case .hover:
+            return .blue
+        case .focus:
+            return .green
+        case .error:
+            return .red
+        }
     }
 }

@@ -49,6 +49,7 @@
 		D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 		D68A535A2C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 		D699879C2C67C45500A96E9A /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699879B2C67C45500A96E9A /* TextFieldType.swift */; };
+		D69987B62C6C844B00A96E9A /* RoundedTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		D68A53552C3FC99100F69181 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
 		D699879B2C67C45500A96E9A /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
+		D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldViewModel.swift; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -237,6 +239,7 @@
 			children = (
 				D62161E62C4C1488003C3389 /* RoundedTextField.swift */,
 				D699879B2C67C45500A96E9A /* TextFieldType.swift */,
+				D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69987B62C6C844B00A96E9A /* RoundedTextFieldViewModel.swift in Sources */,
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
