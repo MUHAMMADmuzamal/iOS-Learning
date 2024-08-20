@@ -50,6 +50,10 @@
 		D68A535A2C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 		D699879C2C67C45500A96E9A /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699879B2C67C45500A96E9A /* TextFieldType.swift */; };
 		D69987B62C6C844B00A96E9A /* RoundedTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */; };
+		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
+		D69987BA2C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B92C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift */; };
+		D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA712C7496B20063D7F6 /* CountryListView.swift */; };
+		D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +124,10 @@
 		D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
 		D699879B2C67C45500A96E9A /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldViewModel.swift; sourceTree = "<group>"; };
+		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
+		D69987B92C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextFieldViewModel.swift; sourceTree = "<group>"; };
+		D6C9DA712C7496B20063D7F6 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVM.swift; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,6 +200,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6C9DA702C7496770063D7F6 /* CountryListView */,
 				D62161E52C4C144B003C3389 /* TextField */,
 				D61A8F152C42C6B900F55756 /* Buttons */,
 				D61A8F0F2C417AB700F55756 /* Carousels */,
@@ -240,6 +249,8 @@
 				D62161E62C4C1488003C3389 /* RoundedTextField.swift */,
 				D699879B2C67C45500A96E9A /* TextFieldType.swift */,
 				D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */,
+				D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */,
+				D69987B92C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -384,6 +395,15 @@
 				D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6C9DA702C7496770063D7F6 /* CountryListView */ = {
+			isa = PBXGroup;
+			children = (
+				D6C9DA712C7496B20063D7F6 /* CountryListView.swift */,
+				D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */,
+			);
+			path = CountryListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,17 +646,21 @@
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
+				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
 				D61A8F182C42C6F300F55756 /* PrimaryButton.swift in Sources */,
 				D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */,
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
+				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
 				D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */,
 				D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */,
 				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D699879C2C67C45500A96E9A /* TextFieldType.swift in Sources */,
+				D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */,
+				D69987BA2C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
