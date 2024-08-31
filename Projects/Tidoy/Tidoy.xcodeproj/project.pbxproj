@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21F1D8DB4AF7B625BC88BC61 /* Pods_TidoyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82161D800FABECA810DF8355 /* Pods_TidoyTests.framework */; };
 		3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872C5D23B387E9E3F50C213 /* Pods_Tidoy.framework */; };
-		CE570FEC0E72E3AB07A9ED04 /* Pods_Tidoy_TidoyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B243A6A990AC37C061E57654 /* Pods_Tidoy_TidoyUITests.framework */; };
 		D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */; };
 		D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F0C2C415C5000F55756 /* SplashScreen.swift */; };
 		D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F112C417BEF00F55756 /* OnboardingCarousel.swift */; };
@@ -23,31 +21,19 @@
 		D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E72C1C67B2007D9F52 /* ContentView.swift */; };
 		D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */; };
 		D66FD4ED2C1C67B7007D9F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */; };
-		D66FD4F72C1C67B8007D9F52 /* TidoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4F62C1C67B8007D9F52 /* TidoyTests.swift */; };
-		D66FD5012C1C67B8007D9F52 /* TidoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5002C1C67B8007D9F52 /* TidoyUITests.swift */; };
-		D66FD5032C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD5022C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift */; };
 		D68A52742C2C2F8F00F69181 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A52732C2C2F8F00F69181 /* Launch Screen.storyboard */; };
 		D68A53312C3EA12D00F69181 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68A53302C3EA12D00F69181 /* Colors.xcassets */; };
 		D68A533F2C3FBE3D00F69181 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53382C3FBE3A00F69181 /* Manrope-ExtraLight.ttf */; };
-		D68A53402C3FBE3D00F69181 /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53382C3FBE3A00F69181 /* Manrope-ExtraLight.ttf */; };
 		D68A53412C3FBE3D00F69181 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53392C3FBE3A00F69181 /* Manrope-Light.ttf */; };
-		D68A53422C3FBE3D00F69181 /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A53392C3FBE3A00F69181 /* Manrope-Light.ttf */; };
 		D68A53432C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533A2C3FBE3B00F69181 /* Manrope-ExtraBold.ttf */; };
-		D68A53442C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533A2C3FBE3B00F69181 /* Manrope-ExtraBold.ttf */; };
 		D68A53452C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533B2C3FBE3B00F69181 /* Manrope-Medium.ttf */; };
-		D68A53462C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533B2C3FBE3B00F69181 /* Manrope-Medium.ttf */; };
 		D68A53472C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533C2C3FBE3C00F69181 /* Manrope-Bold.ttf */; };
-		D68A53482C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533C2C3FBE3C00F69181 /* Manrope-Bold.ttf */; };
 		D68A53492C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */; };
-		D68A534A2C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533D2C3FBE3C00F69181 /* Manrope-SemiBold.ttf */; };
 		D68A534B2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */; };
-		D68A534C2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68A533E2C3FBE3C00F69181 /* Manrope-Regular.ttf */; };
 		D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53522C3FC98500F69181 /* Font + Extension.swift */; };
-		D68A53542C3FC98500F69181 /* Font + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53522C3FC98500F69181 /* Font + Extension.swift */; };
 		D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53552C3FC99100F69181 /* String + Extension.swift */; };
-		D68A53572C3FC99100F69181 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53552C3FC99100F69181 /* String + Extension.swift */; };
 		D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
-		D68A535A2C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
+		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
 		D699879C2C67C45500A96E9A /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699879B2C67C45500A96E9A /* TextFieldType.swift */; };
 		D69987B62C6C844B00A96E9A /* RoundedTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
@@ -55,23 +41,6 @@
 		D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA712C7496B20063D7F6 /* CountryListView.swift */; };
 		D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D66FD4F32C1C67B8007D9F52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D66FD4DA2C1C67B2007D9F52 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D66FD4E12C1C67B2007D9F52;
-			remoteInfo = Tidoy;
-		};
-		D66FD4FD2C1C67B8007D9F52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D66FD4DA2C1C67B2007D9F52 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D66FD4E12C1C67B2007D9F52;
-			remoteInfo = Tidoy;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		13C5CDE2AC3E8E0C40A66735 /* Pods-Tidoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy.release.xcconfig"; path = "Target Support Files/Pods-Tidoy/Pods-Tidoy.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,11 +69,6 @@
 		D66FD4E72C1C67B2007D9F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D66FD4F22C1C67B8007D9F52 /* TidoyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidoyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D66FD4F62C1C67B8007D9F52 /* TidoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyTests.swift; sourceTree = "<group>"; };
-		D66FD4FC2C1C67B8007D9F52 /* TidoyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidoyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D66FD5002C1C67B8007D9F52 /* TidoyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyUITests.swift; sourceTree = "<group>"; };
-		D66FD5022C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D66FD5342C1C6A9E007D9F52 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD5662C1C72BA007D9F52 /* Tidoy.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.debug.xcconfig; sourceTree = "<group>"; };
 		D66FD5672C1C72F9007D9F52 /* Tidoy.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.release.xcconfig; sourceTree = "<group>"; };
@@ -122,6 +86,7 @@
 		D68A53522C3FC98500F69181 /* Font + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Extension.swift"; sourceTree = "<group>"; };
 		D68A53552C3FC99100F69181 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
+		D690E4892C836EDB003FAE23 /* CountryListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListModel.swift; sourceTree = "<group>"; };
 		D699879B2C67C45500A96E9A /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldViewModel.swift; sourceTree = "<group>"; };
 		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
@@ -138,22 +103,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D66FD4EF2C1C67B8007D9F52 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21F1D8DB4AF7B625BC88BC61 /* Pods_TidoyTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D66FD4F92C1C67B8007D9F52 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE570FEC0E72E3AB07A9ED04 /* Pods_Tidoy_TidoyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				D66FD4E42C1C67B2007D9F52 /* Tidoy */,
-				D66FD4F52C1C67B8007D9F52 /* TidoyTests */,
-				D66FD4FF2C1C67B8007D9F52 /* TidoyUITests */,
 				D66FD4E32C1C67B2007D9F52 /* Products */,
 				0AC5D90B46AD4773AB95F32E /* Pods */,
 				67B65A5E91C6FB3491D622ED /* Frameworks */,
@@ -271,8 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */,
-				D66FD4F22C1C67B8007D9F52 /* TidoyTests.xctest */,
-				D66FD4FC2C1C67B8007D9F52 /* TidoyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,23 +243,6 @@
 				D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D66FD4F52C1C67B8007D9F52 /* TidoyTests */ = {
-			isa = PBXGroup;
-			children = (
-				D66FD4F62C1C67B8007D9F52 /* TidoyTests.swift */,
-			);
-			path = TidoyTests;
-			sourceTree = "<group>";
-		};
-		D66FD4FF2C1C67B8007D9F52 /* TidoyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D66FD5002C1C67B8007D9F52 /* TidoyUITests.swift */,
-				D66FD5022C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift */,
-			);
-			path = TidoyUITests;
 			sourceTree = "<group>";
 		};
 		D66FD5652C1C729D007D9F52 /* Configurations */ = {
@@ -400,6 +328,7 @@
 		D6C9DA702C7496770063D7F6 /* CountryListView */ = {
 			isa = PBXGroup;
 			children = (
+				D690E4892C836EDB003FAE23 /* CountryListModel.swift */,
 				D6C9DA712C7496B20063D7F6 /* CountryListView.swift */,
 				D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */,
 			);
@@ -428,44 +357,6 @@
 			productReference = D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D66FD4F12C1C67B8007D9F52 /* TidoyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D66FD5092C1C67B8007D9F52 /* Build configuration list for PBXNativeTarget "TidoyTests" */;
-			buildPhases = (
-				7AA6504E5D8AF304C024A1AE /* [CP] Check Pods Manifest.lock */,
-				D66FD4EE2C1C67B8007D9F52 /* Sources */,
-				D66FD4EF2C1C67B8007D9F52 /* Frameworks */,
-				D66FD4F02C1C67B8007D9F52 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D66FD4F42C1C67B8007D9F52 /* PBXTargetDependency */,
-			);
-			name = TidoyTests;
-			productName = TidoyTests;
-			productReference = D66FD4F22C1C67B8007D9F52 /* TidoyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D66FD4FB2C1C67B8007D9F52 /* TidoyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D66FD50C2C1C67B8007D9F52 /* Build configuration list for PBXNativeTarget "TidoyUITests" */;
-			buildPhases = (
-				DCB726484979CD4722AAA9EB /* [CP] Check Pods Manifest.lock */,
-				D66FD4F82C1C67B8007D9F52 /* Sources */,
-				D66FD4F92C1C67B8007D9F52 /* Frameworks */,
-				D66FD4FA2C1C67B8007D9F52 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D66FD4FE2C1C67B8007D9F52 /* PBXTargetDependency */,
-			);
-			name = TidoyUITests;
-			productName = TidoyUITests;
-			productReference = D66FD4FC2C1C67B8007D9F52 /* TidoyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -478,14 +369,6 @@
 				TargetAttributes = {
 					D66FD4E12C1C67B2007D9F52 = {
 						CreatedOnToolsVersion = 15.2;
-					};
-					D66FD4F12C1C67B8007D9F52 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = D66FD4E12C1C67B2007D9F52;
-					};
-					D66FD4FB2C1C67B8007D9F52 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = D66FD4E12C1C67B2007D9F52;
 					};
 				};
 			};
@@ -503,8 +386,6 @@
 			projectRoot = "";
 			targets = (
 				D66FD4E12C1C67B2007D9F52 /* Tidoy */,
-				D66FD4F12C1C67B8007D9F52 /* TidoyTests */,
-				D66FD4FB2C1C67B8007D9F52 /* TidoyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -525,27 +406,6 @@
 				D68A53452C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */,
 				D68A53472C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */,
 				D68A53432C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D66FD4F02C1C67B8007D9F52 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D66FD4FA2C1C67B8007D9F52 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D68A53442C3FBE3D00F69181 /* Manrope-ExtraBold.ttf in Resources */,
-				D68A53482C3FBE3D00F69181 /* Manrope-Bold.ttf in Resources */,
-				D68A53422C3FBE3D00F69181 /* Manrope-Light.ttf in Resources */,
-				D68A53462C3FBE3D00F69181 /* Manrope-Medium.ttf in Resources */,
-				D68A534A2C3FBE3D00F69181 /* Manrope-SemiBold.ttf in Resources */,
-				D68A53402C3FBE3D00F69181 /* Manrope-ExtraLight.ttf in Resources */,
-				D68A534C2C3FBE3D00F69181 /* Manrope-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,28 +434,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7AA6504E5D8AF304C024A1AE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TidoyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D66FD50F2C1C6975007D9F52 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -612,28 +450,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		DCB726484979CD4722AAA9EB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tidoy-TidoyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -655,6 +471,7 @@
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
 				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
 				D66FD4E82C1C67B2007D9F52 /* ContentView.swift in Sources */,
+				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */,
 				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
@@ -665,40 +482,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D66FD4EE2C1C67B8007D9F52 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D66FD4F72C1C67B8007D9F52 /* TidoyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D66FD4F82C1C67B8007D9F52 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D68A535A2C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
-				D68A53542C3FC98500F69181 /* Font + Extension.swift in Sources */,
-				D66FD5032C1C67B8007D9F52 /* TidoyUITestsLaunchTests.swift in Sources */,
-				D68A53572C3FC99100F69181 /* String + Extension.swift in Sources */,
-				D66FD5012C1C67B8007D9F52 /* TidoyUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D66FD4F42C1C67B8007D9F52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D66FD4E12C1C67B2007D9F52 /* Tidoy */;
-			targetProxy = D66FD4F32C1C67B8007D9F52 /* PBXContainerItemProxy */;
-		};
-		D66FD4FE2C1C67B8007D9F52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D66FD4E12C1C67B2007D9F52 /* Tidoy */;
-			targetProxy = D66FD4FD2C1C67B8007D9F52 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D66FD5042C1C67B8007D9F52 /* Debug */ = {
@@ -799,46 +583,6 @@
 			};
 			name = Debug;
 		};
-		D66FD50A2C1C67B8007D9F52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD087384E26224D2081F9FA4 /* Pods-TidoyTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YBC6QZE5G7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.TidoyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tidoy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tidoy";
-			};
-			name = Debug;
-		};
-		D66FD50D2C1C67B8007D9F52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E5F472D6EF731278EF47801 /* Pods-Tidoy-TidoyUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YBC6QZE5G7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.TidoyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tidoy;
-			};
-			name = Debug;
-		};
 		D66FD5692C1C73AB007D9F52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13C5CDE2AC3E8E0C40A66735 /* Pods-Tidoy.release.xcconfig */;
@@ -927,46 +671,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D66FD56B2C1C73AB007D9F52 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0929F3BA5611A2734ECB213 /* Pods-TidoyTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YBC6QZE5G7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.TidoyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tidoy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tidoy";
-			};
-			name = Release;
-		};
-		D66FD56C2C1C73AB007D9F52 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53B7ED3DC4BC2534D96C4821 /* Pods-Tidoy-TidoyUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YBC6QZE5G7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.TidoyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tidoy;
 			};
 			name = Release;
 		};
@@ -1061,46 +765,6 @@
 			};
 			name = Staging;
 		};
-		D6DEF4712C2AD95C00428AC0 /* Staging */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78A3F7FDB885E08429C2EB71 /* Pods-TidoyTests.staging.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YBC6QZE5G7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.TidoyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tidoy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tidoy";
-			};
-			name = Staging;
-		};
-		D6DEF4722C2AD95C00428AC0 /* Staging */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 959BBC7006024E68BD2CE14D /* Pods-Tidoy-TidoyUITests.staging.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YBC6QZE5G7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.codesorbit.TidoyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Tidoy;
-			};
-			name = Staging;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1120,26 +784,6 @@
 				D66FD5072C1C67B8007D9F52 /* Debug */,
 				D66FD56A2C1C73AB007D9F52 /* Release */,
 				D6DEF4702C2AD95C00428AC0 /* Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		D66FD5092C1C67B8007D9F52 /* Build configuration list for PBXNativeTarget "TidoyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D66FD50A2C1C67B8007D9F52 /* Debug */,
-				D66FD56B2C1C73AB007D9F52 /* Release */,
-				D6DEF4712C2AD95C00428AC0 /* Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		D66FD50C2C1C67B8007D9F52 /* Build configuration list for PBXNativeTarget "TidoyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D66FD50D2C1C67B8007D9F52 /* Debug */,
-				D66FD56C2C1C73AB007D9F52 /* Release */,
-				D6DEF4722C2AD95C00428AC0 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
