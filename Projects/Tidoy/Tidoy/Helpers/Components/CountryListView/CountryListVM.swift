@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class CountryListVM {
+class CountryListVM: ObservableObject {
     let countryDictionary: [String: (code: String, flag: String)] = [
         "Afghanistan": (code: "+93", flag: "🇦🇫"),
         "Albania": (code: "+355", flag: "🇦🇱"),
@@ -243,19 +243,24 @@ class CountryListVM {
         "Zimbabwe": (code: "+263", flag: "🇿🇼")
     ]
     
-    func getCountryList() -> [String: (code: String, flag: String)] {
-        return countryDictionary
+    @Published var selectedCountry: CountryModel? = nil
+    
+    func getCountryList() -> [CountryModel] {
+        let list = countryDictionary.map { dict in
+            CountryModel(name: dict.key.capitalized, code: dict.value.code, flag: dict.value.flag)
+        }
+        return list
     }
     
-    func searchCountry(name: String) -> [(name: String, code: String, flag: String)] {
+    func searchCountry(name: String) -> [CountryModel] {
         if countryDictionary[name] == nil {
-            var listOfCountries = countryDictionary.first { (key: String, value: (code: String, flag: String)) in
+            let listOfCountries = countryDictionary.first { (key: String, value: (code: String, flag: String)) in
                 key.lowercased().contains(name.lowercased())
             }.map { dict in
-                [(name: dict.key.capitalized  , code: dict.value.code, flag: dict.value.flag)]
+                [CountryModel(name: dict.key.capitalized, code: dict.value.code, flag: dict.value.flag)]
             }
             return listOfCountries ?? []
         }
-        return [(name: name.capitalized  , code: countryDictionary[name]!.code, flag: countryDictionary[name]!.flag)]
+        return [CountryModel(name: name.capitalized, code: countryDictionary[name]!.code, flag: countryDictionary[name]!.flag)]
     }
 }
