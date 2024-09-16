@@ -11,17 +11,21 @@ struct HomeView: View {
     
     @EnvironmentObject private var homeViewModel: HomeViewModel
     
-    @State private var showPortfolio: Bool = false
+    @State private var showPortfolio: Bool = false // animate to right
+    @State private var showPortfolioView: Bool = false // new sheet
     
     var body: some View {
         ZStack {
             // background layer
             Color.theme.background
                 .ignoresSafeArea()
-            
+                
             // content layer
             VStack {
                 homeHeader
+                
+                HomeStatsView(showPortfolio: $showPortfolio)
+                SearchBarView(searchText: $homeViewModel.searchText)
                 
                 columnTitles
                 
@@ -43,6 +47,10 @@ struct HomeView: View {
                 
                 Spacer(minLength: 0)
             }
+            .sheet(isPresented: $showPortfolioView, content: {
+                PortfolioView()
+                    .environmentObject(homeViewModel)
+            })
         }
     }
 }
@@ -62,6 +70,11 @@ extension HomeView {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none, value: showPortfolio)
+                .onTapGesture {
+                    if showPortfolio {
+                        showPortfolioView.toggle()
+                    }
+                }
                 .background {
                     CircleButtonAnimationView(animate: $showPortfolio)
                 }
