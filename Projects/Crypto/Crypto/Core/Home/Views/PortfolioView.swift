@@ -34,7 +34,12 @@ struct PortfolioView: View {
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    tralingNavBarButton
+                    trailingNavBarButton
+                }
+            }
+            .onChange(of: homeViewModel.searchText) { oldValue, newValue in
+                if newValue.isEmpty {
+                    removeSelectedCoin()
                 }
             }
         }
@@ -51,13 +56,13 @@ extension PortfolioView {
     private var coinLogoList: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10 ){
-                ForEach(homeViewModel.allCoins) { coin in
+                ForEach(homeViewModel.searchText.isEmpty ? homeViewModel.portfolioCoins : homeViewModel.allCoins) { coin in
                     CoinLogoView(coin: coin)
                         .frame(width: 75)
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background {
@@ -98,7 +103,7 @@ extension PortfolioView {
         .font(.headline)
     }
     
-    private var tralingNavBarButton: some View {
+    private var trailingNavBarButton: some View {
         HStack(spacing: 10) {
             Image(systemName: "checkmark")
                 .opacity(showCheckMark ? 1.0 : 0.0)
@@ -114,15 +119,23 @@ extension PortfolioView {
     }
     
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else { return }
+        guard 
+            let coin = selectedCoin,
+            let amount = Double(quantityText) else { return }
         
+        //save to core data
+        homeViewModel.updatePortfolio(coin: coin, amount: amount)
+        
+        //show check mark
         withAnimation(.easeIn) {
             showCheckMark = true
             removeSelectedCoin()
         }
         
+        //hide keyboard
         UIApplication.shared.endEditing()
         
+        //hide checkmark
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             withAnimation(.easeOut) {
                 showCheckMark = false
@@ -133,6 +146,17 @@ extension PortfolioView {
     private func removeSelectedCoin() {
         selectedCoin = nil
         homeViewModel.searchText = ""
+    }
+    
+    private func updateSelectedCoin(coin: CoinModel) {
+        selectedCoin = coin
+        if let portfolioCoin = homeViewModel.portfolioCoins.first(where: {$0.id == coin.id }),
+            let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        }else {
+            quantityText = ""
+        }
+        
     }
     
     private func getCurrentValue() -> Double {
