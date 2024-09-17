@@ -17,6 +17,8 @@ class HomeViewModel: ObservableObject {
     
     @Published var searchText: String = ""
     
+    @Published var isLoading: Bool = false
+    
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
     private let portfolioDataService = PortfolioDataService()
@@ -42,29 +44,33 @@ class HomeViewModel: ObservableObject {
                 self?.allCoins = returnedCoins
             }.store(in: &cancelBag)
         
-        //update market data
-        marketDataService.$marketData
-            .map(mapGlobalMarketData)
-            .sink { [weak self] returnedStats in
-                self?.statistics = returnedStats
-            }.store(in: &cancelBag)
-        
         // update portfolio coins
         $allCoins
             .combineLatest(portfolioDataService.$savedEntities)
-            .map { (coinModels, portfolioEntities)-> [CoinModel] in
-                coinModels.compactMap { (coin) -> CoinModel? in
-                    guard let entity = portfolioEntities.first(where: {$0.coinId == coin.id}) else { return nil}
-                    return coin.updateHoldings(amount: entity.amount)
-                }
-            }
+            .map(mapAllCoinsToPortfolioCoins)
             .sink {[weak self] (returnedCoins) in
                 self?.portfolioCoins = returnedCoins
+            }.store(in: &cancelBag)
+        
+        //update market data
+        marketDataService.$marketData
+            .combineLatest($portfolioCoins)
+            .map(mapGlobalMarketData)
+            .sink { [weak self] returnedStats in
+                self?.statistics = returnedStats
+                self?.isLoading = false
             }.store(in: &cancelBag)
     }
     
     func updatePortfolio(coin: CoinModel, amount: Double) {
         portfolioDataService.updatePortfolio(coin: coin, amount: amount)
+    }
+    
+    func reloadData() {
+        isLoading = true
+        coinDataService.getCoins()
+        marketDataService.getData()
+        HapticManager.notification(type: .success)
     }
     
     private func filterCoins(text: String, cons:[CoinModel]) -> [CoinModel] {
@@ -80,7 +86,14 @@ class HomeViewModel: ObservableObject {
         })
     }
     
-    private func mapGlobalMarketData(marketDataModel: MarketDataModel?) -> [StatisticModel] {
+    private func mapAllCoinsToPortfolioCoins(allCoins: [CoinModel], portfolioEntities: [PortfolioEntity]) -> [CoinModel] {
+        allCoins.compactMap { (coin) -> CoinModel? in
+            guard let entity = portfolioEntities.first(where: {$0.coinId == coin.id}) else { return nil}
+            return coin.updateHoldings(amount: entity.amount)
+        }
+    }
+    
+    private func mapGlobalMarketData(marketDataModel: MarketDataModel?, portfolioCons:[CoinModel]) -> [StatisticModel] {
         var stats: [StatisticModel] = []
         guard let data = marketDataModel else {
             return stats
@@ -91,7 +104,23 @@ class HomeViewModel: ObservableObject {
         
         let btcDominance = StatisticModel(title: "BTC Dominace", value: data.btcDominance)
         
-        let portfolio =  StatisticModel(title: "Portfoilo", value: "$0.00", percentageChange: 0)
+        
+        let portfolioValue = portfolioCons.map({$0.currentHoldingsValue}).reduce(0, +)
+        
+        let previousValue = 
+            portfolioCons
+                .map { coin -> Double in
+                    let currentValue = coin.currentHoldingsValue
+                    let percentChange = (coin.priceChangePercentage24H ?? 0) / 100
+                    let perviousValue = currentValue / (1 + percentChange)
+                    return perviousValue
+                }
+                .reduce(0, +)
+        
+        let percentageChange = ((portfolioValue - previousValue) / previousValue) * 100
+        
+        let portfolio =  StatisticModel(title: "Portfoilo", value: "\(portfolioValue.asCurrencyWith2Decimals())", percentageChange: percentageChange)
+        
         stats.append(contentsOf: [
             marketCap,
             volume,

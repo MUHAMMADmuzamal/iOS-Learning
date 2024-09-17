@@ -41,6 +41,9 @@ struct HomeView: View {
                                 .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
                         }
                     }
+                    .refreshable {
+                        homeViewModel.reloadData()
+                    }
                     .listStyle(PlainListStyle())
                     .transition(.move(edge: .trailing))
                 }
@@ -115,6 +118,15 @@ extension HomeView {
             }
             Text("Price")
                 .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            
+            Button(action: {
+                withAnimation(.linear(duration: 2.0)) {
+                    homeViewModel.reloadData()
+                }
+            }, label: {
+                Image(systemName: "goforward")
+            })
+            .rotationEffect(Angle(degrees: homeViewModel.isLoading ? 360 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundStyle(Color.theme.secondaryText)
