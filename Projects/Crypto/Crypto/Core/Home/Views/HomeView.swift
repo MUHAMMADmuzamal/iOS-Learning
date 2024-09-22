@@ -14,6 +14,9 @@ struct HomeView: View {
     @State private var showPortfolio: Bool = false // animate to right
     @State private var showPortfolioView: Bool = false // new sheet
     
+    @State private var selectedCoin: CoinModel? = nil
+    @State private var showDetailView: Bool = false
+    
     var body: some View {
         ZStack {
             // background layer
@@ -39,6 +42,9 @@ struct HomeView: View {
                         ForEach(homeViewModel.portfolioCoins) { model in
                             CoinRowView(coin: model, showHoldingColumn: true)
                                 .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                                .onTapGesture {
+                                    segue(coin: model)
+                                }
                         }
                     }
                     .refreshable {
@@ -54,6 +60,9 @@ struct HomeView: View {
                 PortfolioView()
                     .environmentObject(homeViewModel)
             })
+        }
+        .navigationDestination(isPresented: $showDetailView) {
+            DetailLoadingView(coin: $selectedCoin)
         }
     }
 }
@@ -104,20 +113,65 @@ extension HomeView {
             ForEach(homeViewModel.allCoins) { model in
                 CoinRowView(coin: model, showHoldingColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        segue(coin: model)
+                    }
             }
         }
         .listStyle(PlainListStyle())
     }
     
+    private func segue(coin: CoinModel) {
+        selectedCoin = coin
+        showDetailView.toggle()
+    }
+    
     private var columnTitles: some View {
         HStack {
-            Text("Coin")
+            HStack(spacing: 4) {
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .opacity(
+                        homeViewModel.sortOption == .rankReversed ||
+                        homeViewModel.sortOption == .rank ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: homeViewModel.sortOption == .rank ? 0 : 180))
+            }
+            .onTapGesture {
+                withAnimation(.default) {
+                    homeViewModel.sortOption = homeViewModel.sortOption == .rank ? .rankReversed : .rank
+                }
+            }
+            
             Spacer()
             if showPortfolio {
-                Text("Holdings")
+                HStack(spacing: 4) {
+                    Text("Holdings")
+                    Image(systemName: "chevron.down")
+                        .opacity(
+                            homeViewModel.sortOption == .holding ||
+                            homeViewModel.sortOption == .holdingReversed ? 1.0 : 0.0)
+                        .rotationEffect(Angle(degrees: homeViewModel.sortOption == .holding ? 0 : 180))
+                }
+                .onTapGesture {
+                    withAnimation(.default) {
+                        homeViewModel.sortOption = homeViewModel.sortOption == .holding ? .holdingReversed : .holding
+                    }
+                }
             }
-            Text("Price")
-                .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            HStack(spacing: 4) {
+                Text("Price")
+                Image(systemName: "chevron.down")
+                    .opacity(
+                        homeViewModel.sortOption == .price ||
+                        homeViewModel.sortOption == .priceReversed ? 1.0 : 0.0)
+                    .rotationEffect(Angle(degrees: homeViewModel.sortOption == .price ? 0 : 180))
+            }
+            .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            .onTapGesture {
+                withAnimation(.default) {
+                    homeViewModel.sortOption = homeViewModel.sortOption == .price ? .priceReversed : .price
+                }
+            }
             
             Button(action: {
                 withAnimation(.linear(duration: 2.0)) {
