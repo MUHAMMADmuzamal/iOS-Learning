@@ -13,6 +13,7 @@ struct HomeView: View {
     
     @State private var showPortfolio: Bool = false // animate to right
     @State private var showPortfolioView: Bool = false // new sheet
+    @State private var showSettingView: Bool = false // new sheet
     
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailView: Bool = false
@@ -59,6 +60,8 @@ struct HomeView: View {
             .sheet(isPresented: $showPortfolioView, content: {
                 PortfolioView()
                     .environmentObject(homeViewModel)
+            }).sheet(isPresented: $showSettingView, content: {
+                SettingsView()
             })
         }
         .navigationDestination(isPresented: $showDetailView) {
@@ -85,6 +88,8 @@ extension HomeView {
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()
+                    }else {
+                        showSettingView.toggle()
                     }
                 }
                 .background {
