@@ -39,19 +39,13 @@ struct HomeView: View {
                 }
                 
                 if showPortfolio {
-                    List {
-                        ForEach(homeViewModel.portfolioCoins) { model in
-                            CoinRowView(coin: model, showHoldingColumn: true)
-                                .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-                                .onTapGesture {
-                                    segue(coin: model)
-                                }
+                    ZStack(alignment: .top) {
+                        if homeViewModel.portfolioCoins.isEmpty && homeViewModel.searchText.isEmpty {
+                            portfolioEmptyText
+                        }else {
+                            portfolioCoinsList
                         }
                     }
-                    .refreshable {
-                        homeViewModel.reloadData()
-                    }
-                    .listStyle(PlainListStyle())
                     .transition(.move(edge: .trailing))
                 }
                 
@@ -121,9 +115,36 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: model)
                     }
+                    .background(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
+    }  
+    
+    private var portfolioCoinsList: some View {
+        List {
+            ForEach(homeViewModel.portfolioCoins) { model in
+                CoinRowView(coin: model, showHoldingColumn: true)
+                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        segue(coin: model)
+                    }
+                    .background(Color.theme.background)
+            }
+        }
+        .refreshable {
+            homeViewModel.reloadData()
+        }
+        .listStyle(PlainListStyle())
+    }    
+    
+    private var portfolioEmptyText: some View {
+        Text("You have't added to your portfolio yet click plus button to get started.")
+            .font(.callout)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
+            .foregroundStyle(Color.theme.accent)
     }
     
     private func segue(coin: CoinModel) {
