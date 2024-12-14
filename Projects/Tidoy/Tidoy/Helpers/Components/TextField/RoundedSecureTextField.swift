@@ -1,33 +1,34 @@
 //
-//  RoundedTextField.swift
+//  RoundedSecureTextField.swift
 //  Tidoy
 //
-//  Created by Codes Orbit on 20/07/2024.
+//  Created by Codes Orbit on 05/10/2024.
 //
 
 import SwiftUI
 
-struct RoundedTextField: View {
+struct RoundedSecureTextField: View {
     @ObservedObject private var viewModel: RoundedTextFieldViewModel
     @Binding var state: StateOfTextField
+    @State var showPassword: Bool = false
     
     var label: String
     var hintText: String
     var placeholderText: String
     var leftImage: Image?
     var rightImage: Image?
-    var isSecureField: Bool
+    var rightImage2: Image?
     var leftImageTapAction: (() -> Void)?
     var rightImageTapAction: (() -> Void)?
     
     init(fieldType: TextFieldTypeProtocol,
-         isSecureField: Bool = false,
          label: String,
          hintText: String,
          placeholderText: String,
          state: Binding<StateOfTextField>,
          leftImage: Image? = nil,
          rightImage: Image? = nil,
+         rightImage2: Image? = nil,
          leftImageTapAction: (() -> Void)? = nil,
          rightImageTapAction: (() -> Void)? = nil) {
         
@@ -38,7 +39,7 @@ struct RoundedTextField: View {
         self.placeholderText = placeholderText
         self.leftImage = leftImage
         self.rightImage = rightImage
-        self.isSecureField = isSecureField
+        self.rightImage2 = rightImage2
         self.leftImageTapAction = leftImageTapAction
         self.rightImageTapAction = rightImageTapAction
     }
@@ -57,9 +58,9 @@ struct RoundedTextField: View {
                         }
                 }
                 VStack {
-                    if isSecureField {
+                    if showPassword {
                         SecureField("", text: $viewModel.text)
-                    }else {
+                    } else {
                         TextField("", text: $viewModel.text)
                     }
                 }
@@ -81,11 +82,13 @@ struct RoundedTextField: View {
                              }
                          }
                     }
-                if let rightImage = rightImage {
-                    rightImage
+                if let rightImage = rightImage, let rightImage2 = rightImage2  {
+                    let showPassImage = showPassword ? rightImage : rightImage2
+                    showPassImage
                         .foregroundColor(viewModel.state.textColor)
                         .frame(width: 24, height: 24)
                         .onTapGesture {
+                            showPassword.toggle()
                             rightImageTapAction?()
                         }
                 }
@@ -96,16 +99,13 @@ struct RoundedTextField: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(viewModel.state.borderColor, lineWidth: 1.0)
                 }
-            if viewModel.state == .error {
-                Text(hintText)
-                    .font(.bodyXSmallRegular)
-                    .foregroundColor(viewModel.state.labelColor)
-            }
-            
+            Text(hintText)
+                .font(.bodyXSmallRegular)
+                .foregroundColor(viewModel.state.labelColor)
         }
         .padding(.horizontal, 2)
         .disabled(viewModel.state == .disable)
-        .onChange(of: viewModel.state) { _ , newState in
+        .onChange(of: viewModel.state) { newState in
             state = newState
         }
     }
@@ -118,59 +118,8 @@ struct RoundedTextField: View {
 }
 
 #Preview {
-        return VStack {
-            RoundedTextField(fieldType: UserNameTextField(),
-                             label: "Username",
-                             hintText: "Enter your username",
-                             placeholderText: "Placeholder", 
-                             state: .constant(.defaultState),
-                             leftImage: Image(systemName: "person"),
-                             rightImage: Image(systemName: "checkmark"))
-            RoundedTextField(fieldType: UserNameTextField(),
-                             isSecureField: true,
-                             label: "Username",
-                             hintText: "Enter your username",
-                             placeholderText: "Placeholder", 
-                             state: .constant(.fill),
-                             leftImage: Image(systemName: "person"),
-                             rightImage: Image(systemName: "checkmark"))
-            .setState(.error)
-        }
-}
-
-enum StateOfTextField {
-    case defaultState, hover, focus, fill, disable, error
-    
-    var labelColor: Color {
-        switch self {
-        case .error:
-            return .red
-        default:
-            return .black
-        }
-    }
-    
-    var textColor: Color {
-        switch self {
-        case .defaultState, .hover, .disable:
-            return .gray
-        case .focus, .fill:
-            return .black
-        case .error:
-            return .red
-        }
-    }
-    
-    var borderColor: Color {
-        switch self {
-        case .defaultState, .fill, .disable:
-            return .gray
-        case .hover:
-            return .blue
-        case .focus:
-            return .green
-        case .error:
-            return .red
-        }
-    }
+    RoundedSecureTextField(fieldType: UserNameTextField(), label: "hi", hintText: "pass", placeholderText: "placeHolder", state: .constant(.defaultState),
+    rightImage: Image(systemName: "eye"),
+                           
+    rightImage2: Image(systemName: "eye.slash"))
 }

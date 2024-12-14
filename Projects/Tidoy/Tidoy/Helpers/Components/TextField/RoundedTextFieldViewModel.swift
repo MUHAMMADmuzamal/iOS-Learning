@@ -9,7 +9,7 @@ import Foundation
 
 class RoundedTextFieldViewModel: ObservableObject {
     
-    @Published var text: String = ""
+    @Published var text: String = "helllo"
     @Published var state: StateOfTextField
     private let fieldType: TextFieldTypeProtocol
     

@@ -12,67 +12,110 @@ enum LoginMethod: Int {
     case phoneNumber
 }
 struct LoginView: View {
-    @State private var loginMethod: LoginMethod = .email
+    @State private var loginMethod: LoginMethod = .phoneNumber
     @State private var emailFieldText: String = ""
     @State private var passwordFieldText: String = ""
+    @State private var showCountrySheet: Bool = false
     
     let textFieldsHeight: CGFloat = 48.0
     
-    var heading: some View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            heading
+            selectionBar
+            TabView(selection: $loginMethod) {
+                loginWithEmailSection.tag(LoginMethod.email)
+                loginWithPhoneNumberSection.tag(LoginMethod.phoneNumber)
+            }
+            .frame(height: loginMethod == .phoneNumber ? 180 : 250)
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .padding(.top, .padding12)
+            bottomSection
+            Spacer()
+        }
+        .padding(.horizontal, 16)
+        .sheet(isPresented: $showCountrySheet, content: {
+            CountryListView()
+                .presentationDetents([.medium, .large])
+                .presentationBackground(.clear)
+                
+        })
+        
+    }
+    
+    func updateLoginMethod(to method: LoginMethod) {
+        withAnimation(.smooth) {
+            loginMethod = method
+        }
+    }
+}
+
+#Preview {
+    LoginView()
+}
+
+extension LoginView {
+   private var heading: some View {
         Text("Welcome to Tidoy 👋")
             .font(.heading6)
             .foregroundStyle(.text100)
     }
     
-    var selectionBar: some View {
-        RoundedRectangle(cornerRadius: 25)
-            .foregroundStyle(.background20)
-            .frame(height: 50)
-            .overlay {
-                HStack {
-                    RoundedRectangle(cornerRadius: 21.0)
-                        .foregroundStyle(loginMethod == .email ? .background100 : .background20)
-                        .overlay {
+    private var selectionBar: some View {
+        GeometryReader { geometry in
+            ZStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .foregroundStyle(.background20)
+                    
+                    .overlay {
+                        HStack {
+                            RoundedRectangle(cornerRadius: 21.0)
+                                .foregroundStyle(.background100)
+                                .frame(width: geometry.size.width / 2 ,height: 42)
+                                .padding(.leading, loginMethod == .email ? 5 : (geometry.size.width / 2) - 5)
+                            Spacer()
+                        }
+                    }
+                    .overlay {
+                        HStack {
                             Text("Username")
                                 .foregroundStyle(loginMethod == .email ? .text10 : .text100)
-                        }
-                        .onTapGesture {
-                            updateLoginMethod(to: .email)
-                        }
-                        
-                    RoundedRectangle(cornerRadius: 21.0)
-                        .foregroundStyle(loginMethod == .phoneNumber ? .background100 : .background20)
-                        .overlay {
+                                .frame(maxWidth: .infinity)
+                                .onTapGesture {
+                                    updateLoginMethod(to: .email)
+                                }
+                            Spacer()
                             Text("Phone Number")
                                 .foregroundStyle(loginMethod == .email ? .text100 : .text10)
+                                .frame(maxWidth: .infinity)
+                                .onTapGesture {
+                                    updateLoginMethod(to: .phoneNumber)
+                                }
+
                         }
-                        .onTapGesture {
-                            updateLoginMethod(to: .phoneNumber)
-                        }
+                        .font(.bodySmallMedium)
+                        .padding(.all, 4)
                 }
-                .font(.bodySmallMedium)
-                .padding(.all, 4)
             }
+        }
+        .frame(height: 50)
     }
     
-    var loginWithEmailSection: some View {
+    private var loginWithEmailSection: some View {
         VStack(alignment: .leading) {
-            Text("Username")
-            TextField("ex: johndoe", text: $emailFieldText)
-                .frame(height: textFieldsHeight)
-                .padding(.horizontal)
-                .background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(lineWidth: 1.0)
-                }
-            Text("Password")
-            SecureField("Password", text: $passwordFieldText)
-                .frame(height: textFieldsHeight)
-                .padding(.horizontal)
-                .background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(lineWidth: 1.0)
-                }
+            RoundedTextField(fieldType: UserNameTextField(),
+                             label: "Username",
+                             hintText: "Enter your username",
+                             placeholderText: "ex: Johnedeo",
+                             state: .constant(.defaultState))
+            RoundedSecureTextField(
+                fieldType: UserNameTextField(),
+                label: "Password",
+                hintText: "Enter your username",
+                placeholderText: "Password",
+                state: .constant(.defaultState),
+                rightImage: Image(systemName: "eye"),
+                rightImage2: Image(systemName: "eye.slash"))
             HStack {
                 Text("Need a help?")
                 Spacer()
@@ -88,14 +131,22 @@ struct LoginView: View {
         .padding(.horizontal, 2)
     }
     
-    var loginWithPhoneNumberSection: some View {
-        Text("Phone")
+    private var loginWithPhoneNumberSection: some View {
+        VStack {
+            PhoneNumberTextField(
+                fieldType: PhoneTypeTextField(),
+                label: "Phone Number",
+                hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
+                placeholderText: "ex : 81234567890"){
+                    self.showCountrySheet.toggle()
+                }
+        }
     }
     
-    var bottomSection: some View {
+    private var bottomSection: some View {
         VStack {
             PrimaryButton(title: "Login") { }
-            
+            Spacer()
             Divider()
                 .foregroundStyle(.background30)
                 .frame(height: 26)
@@ -108,7 +159,7 @@ struct LoginView: View {
                             .foregroundStyle(.text60)
                             .font(.bodyXSmallSemiBold)
                     }
-            }
+                }
                 .padding(.top, 32)
             
             HStack(spacing: .padding12) {
@@ -145,30 +196,4 @@ struct LoginView: View {
             .padding(.top, .padding80)
         }
     }
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            heading
-            selectionBar
-            TabView(selection: $loginMethod) {
-                loginWithEmailSection.tag(LoginMethod.email)
-                loginWithPhoneNumberSection.tag(LoginMethod.phoneNumber)
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .padding(.top, .padding12)
-            bottomSection
-            Spacer()
-        }
-        .padding(.horizontal, 16)
-    }
-    
-    func updateLoginMethod(to method: LoginMethod) {
-        withAnimation(.easeInOut) {
-            loginMethod = method
-        }
-    }
-}
-
-#Preview {
-    LoginView()
 }

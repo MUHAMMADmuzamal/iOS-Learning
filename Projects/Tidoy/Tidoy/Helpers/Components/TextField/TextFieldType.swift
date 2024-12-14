@@ -23,3 +23,10 @@ struct AgeTextField: TextFieldTypeProtocol {
         return age <= 100
     }
 }
+
+struct PhoneTypeTextField: TextFieldTypeProtocol {
+    func isValid(for text: String) -> Bool {
+        let phone = Int(text) ?? 0
+        return phone <= 11
+    }
+}
