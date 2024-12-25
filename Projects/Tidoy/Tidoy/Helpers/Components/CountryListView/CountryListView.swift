@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CountryListView: View {
     @StateObject var viewModel: CountryListVM = CountryListVM()
-    
+    let action: ((CountryModel?) -> Void)
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -30,6 +30,7 @@ struct CountryListView: View {
                                        isSelected: viewModel.isSelected(country: country))
                             .onTapGesture {
                                 viewModel.selectedCountry(country: country)
+                                action(viewModel.selectedCountry)
                             }
                     }
                 }
@@ -162,5 +163,7 @@ struct CountryListRow: View {
 }
 
 #Preview {
-    CountryListView()
+    CountryListView { country in
+        print(country?.name)
+    }
 }

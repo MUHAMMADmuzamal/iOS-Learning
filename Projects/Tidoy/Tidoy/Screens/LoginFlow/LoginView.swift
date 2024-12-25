@@ -16,6 +16,7 @@ struct LoginView: View {
     @State private var emailFieldText: String = ""
     @State private var passwordFieldText: String = ""
     @State private var showCountrySheet: Bool = false
+    @State private var selectedCountry: CountryModel = CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
     
     let textFieldsHeight: CGFloat = 48.0
     
@@ -35,7 +36,9 @@ struct LoginView: View {
         }
         .padding(.horizontal, 16)
         .sheet(isPresented: $showCountrySheet, content: {
-            CountryListView()
+            CountryListView(){ country in
+                selectedCountry = country ?? CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
+            }
                 .presentationDetents([.medium, .large])
                 .presentationBackground(.clear)
                 
@@ -137,7 +140,8 @@ extension LoginView {
                 fieldType: PhoneTypeTextField(),
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
-                placeholderText: "ex : 81234567890"){
+                placeholderText: "ex : 81234567890", 
+                selectedCountry: selectedCountry) {
                     self.showCountrySheet.toggle()
                 }
         }

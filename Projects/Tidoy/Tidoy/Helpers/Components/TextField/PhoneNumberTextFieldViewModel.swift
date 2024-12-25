@@ -12,13 +12,13 @@ class PhoneNumberTextFieldViewModel: ObservableObject {
     @Published var state: StateOfTextField
     private let fieldType: TextFieldTypeProtocol
     
-    @Published var selectedCountry: (name: String, code: String, flag: String)
+    @Published var selectedCountry: CountryModel
     @Published var isTapOnIcon: Bool = false
     
-    init(fieldType: TextFieldTypeProtocol, state: StateOfTextField = .defaultState) {
+    init(fieldType: TextFieldTypeProtocol, state: StateOfTextField = .defaultState, selectedCountry: CountryModel) {
         self.fieldType = fieldType
         self.state = state
-        self.selectedCountry = (name: "Pakistan", code: "+92", flag: "🇵🇰")
+        self.selectedCountry = selectedCountry
     }
     
     func validate() {

@@ -19,9 +19,10 @@ struct PhoneNumberTextField: View {
          label: String,
          hintText: String,
          placeholderText: String,
+         selectedCountry: CountryModel,
          action: (() -> Void)? = nil) {
         
-        self.viewModel = PhoneNumberTextFieldViewModel(fieldType: fieldType)
+        self.viewModel = PhoneNumberTextFieldViewModel(fieldType: fieldType, selectedCountry: selectedCountry)
         self.label = label
         self.hintText = hintText
         self.placeholderText = placeholderText
@@ -87,11 +88,11 @@ struct PhoneNumberTextField: View {
         PhoneNumberTextField(fieldType: UserNameTextField(),
                              label: "Phone Number",
                              hintText: "Enter your username",
-                             placeholderText: "ex: 3465944619")
+                             placeholderText: "ex: 3465944619", selectedCountry: CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰"))
         PhoneNumberTextField(fieldType: UserNameTextField(),
                              label: "Phone Number",
                              hintText: "Enter your username",
-                             placeholderText: "ex: +923465944619")
+                             placeholderText: "ex: +923465944619", selectedCountry: CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰"))
         .setState(.error)
     }
 
