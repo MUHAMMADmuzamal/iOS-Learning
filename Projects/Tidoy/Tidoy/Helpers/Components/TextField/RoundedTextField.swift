@@ -47,6 +47,7 @@ struct RoundedTextField: View {
         VStack(alignment: .leading) {
             Text(label)
                 .foregroundColor(viewModel.state.labelColor)
+                .padding(.bottom, 4)
             HStack(spacing: .padding4) {
                 if let leftImage = leftImage {
                     leftImage

@@ -43,6 +43,7 @@
 		D69987B62C6C844B00A96E9A /* RoundedTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
 		D69987BA2C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B92C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift */; };
+		D6C67A142D20535800166EF1 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C67A132D20535800166EF1 /* SignupView.swift */; };
 		D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA712C7496B20063D7F6 /* CountryListView.swift */; };
 		D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */; };
 		D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E24F492D1C457900CCDD4F /* ConfirmNumberView.swift */; };
@@ -103,6 +104,7 @@
 		D69987B52C6C844B00A96E9A /* RoundedTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextFieldViewModel.swift; sourceTree = "<group>"; };
 		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
 		D69987B92C6D05CC00A96E9A /* PhoneNumberTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextFieldViewModel.swift; sourceTree = "<group>"; };
+		D6C67A132D20535800166EF1 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		D6C9DA712C7496B20063D7F6 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVM.swift; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +295,7 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D6C67A112D20533500166EF1 /* Signup */,
 				D61A8F1D2C47BD4D00F55756 /* LoginFlow */,
 				D61A8F0B2C415C3C00F55756 /* SplashScreen */,
 				D68A532F2C3EA0C400F69181 /* OnboardingFlow */,
@@ -359,6 +362,14 @@
 				D617331B2CA95D280046CEE2 /* UIAppliction + Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6C67A112D20533500166EF1 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				D6C67A132D20535800166EF1 /* SignupView.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		D6C9DA702C7496770063D7F6 /* CountryListView */ = {
@@ -515,6 +526,7 @@
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
+				D6C67A142D20535800166EF1 /* SignupView.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
 				D61A8F182C42C6F300F55756 /* PrimaryButton.swift in Sources */,
 				D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */,

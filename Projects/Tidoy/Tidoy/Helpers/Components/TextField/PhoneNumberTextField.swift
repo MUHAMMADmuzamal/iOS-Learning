@@ -33,6 +33,7 @@ struct PhoneNumberTextField: View {
         VStack(alignment: .leading) {
             Text(label)
                 .foregroundColor(viewModel.state.labelColor)
+                .padding(.bottom, 4)
             HStack(spacing: .padding4) {
                 HStack {
                     Text(viewModel.selectedCountry.flag)
