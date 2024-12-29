@@ -9,20 +9,22 @@ import SwiftUI
 
 struct PhoneNumberTextField: View {
     @ObservedObject private var viewModel: PhoneNumberTextFieldViewModel
-    
+    @Binding private var text: String
     var label: String
     var hintText: String
     var placeholderText: String
     var action: (() -> Void)?
     
     init(fieldType: TextFieldTypeProtocol,
+         text: Binding<String>,
          label: String,
          hintText: String,
          placeholderText: String,
          selectedCountry: CountryModel,
          action: (() -> Void)? = nil) {
         
-        self.viewModel = PhoneNumberTextFieldViewModel(fieldType: fieldType, selectedCountry: selectedCountry)
+        self.viewModel = PhoneNumberTextFieldViewModel(fieldType: fieldType, selectedCountry: selectedCountry, text: text.wrappedValue)
+        self._text = text
         self.label = label
         self.hintText = hintText
         self.placeholderText = placeholderText
@@ -86,11 +88,11 @@ struct PhoneNumberTextField: View {
 
 #Preview {
     return VStack {
-        PhoneNumberTextField(fieldType: UserNameTextField(),
+        PhoneNumberTextField(fieldType: UserNameTextField(), text: .constant(""),
                              label: "Phone Number",
                              hintText: "Enter your username",
                              placeholderText: "ex: 3465944619", selectedCountry: CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰"))
-        PhoneNumberTextField(fieldType: UserNameTextField(),
+        PhoneNumberTextField(fieldType: UserNameTextField(), text: .constant("1234567890"),
                              label: "Phone Number",
                              hintText: "Enter your username",
                              placeholderText: "ex: +923465944619", selectedCountry: CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰"))

@@ -9,13 +9,14 @@ import Foundation
 
 class RoundedTextFieldViewModel: ObservableObject {
     
-    @Published var text: String = "helllo"
+    @Published var text: String = ""
     @Published var state: StateOfTextField
     private let fieldType: TextFieldTypeProtocol
     
-    init(fieldType: TextFieldTypeProtocol, state: StateOfTextField = .defaultState) {
+    init(fieldType: TextFieldTypeProtocol, state: StateOfTextField = .defaultState, text: String) {
         self.fieldType = fieldType
         self.state = state
+        self.text = text
     }
     
     func validate() {

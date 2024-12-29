@@ -13,7 +13,19 @@ protocol TextFieldTypeProtocol {
 
 struct UserNameTextField: TextFieldTypeProtocol {
     func isValid(for text: String) -> Bool {
+        text.count <= 5
+    }
+}
+
+struct EmailTextField: TextFieldTypeProtocol {
+    func isValid(for text: String) -> Bool {
         text.count <= 50
+    }
+}
+
+struct PasswordTextField: TextFieldTypeProtocol {
+    func isValid(for text: String) -> Bool {
+        text.count < 8
     }
 }
 

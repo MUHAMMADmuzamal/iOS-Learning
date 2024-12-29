@@ -13,6 +13,7 @@ enum LoginMethod: Int {
 }
 struct LoginView: View {
     @State private var loginMethod: LoginMethod = .phoneNumber
+    @State private var phoneNumberFieldText: String = ""
     @State private var emailFieldText: String = ""
     @State private var passwordFieldText: String = ""
     @State private var showCountrySheet: Bool = false
@@ -107,12 +108,14 @@ extension LoginView {
     private var loginWithEmailSection: some View {
         VStack(alignment: .leading) {
             RoundedTextField(fieldType: UserNameTextField(),
+                             text: $emailFieldText,
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
                              state: .constant(.defaultState))
             RoundedSecureTextField(
-                fieldType: UserNameTextField(),
+                fieldType: UserNameTextField(), 
+                text: $passwordFieldText,
                 label: "Password",
                 hintText: "Enter your username",
                 placeholderText: "Password",
@@ -137,7 +140,8 @@ extension LoginView {
     private var loginWithPhoneNumberSection: some View {
         VStack {
             PhoneNumberTextField(
-                fieldType: PhoneTypeTextField(),
+                fieldType: PhoneTypeTextField(), 
+                text: $passwordFieldText,
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
                 placeholderText: "ex : 81234567890", 

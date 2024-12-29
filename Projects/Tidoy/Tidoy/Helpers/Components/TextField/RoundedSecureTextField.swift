@@ -10,6 +10,7 @@ import SwiftUI
 struct RoundedSecureTextField: View {
     @ObservedObject private var viewModel: RoundedTextFieldViewModel
     @Binding var state: StateOfTextField
+    @Binding var text: String
     @State var showPassword: Bool = false
     
     var label: String
@@ -22,6 +23,7 @@ struct RoundedSecureTextField: View {
     var rightImageTapAction: (() -> Void)?
     
     init(fieldType: TextFieldTypeProtocol,
+         text: Binding<String>,
          label: String,
          hintText: String,
          placeholderText: String,
@@ -32,8 +34,9 @@ struct RoundedSecureTextField: View {
          leftImageTapAction: (() -> Void)? = nil,
          rightImageTapAction: (() -> Void)? = nil) {
         
-        self.viewModel = RoundedTextFieldViewModel(fieldType: fieldType, state: state.wrappedValue)
+        self.viewModel = RoundedTextFieldViewModel(fieldType: fieldType, state: state.wrappedValue, text: text.wrappedValue)
         self._state = state
+        self._text = text
         self.label = label
         self.hintText = hintText
         self.placeholderText = placeholderText
@@ -119,7 +122,7 @@ struct RoundedSecureTextField: View {
 }
 
 #Preview {
-    RoundedSecureTextField(fieldType: UserNameTextField(), label: "hi", hintText: "pass", placeholderText: "placeHolder", state: .constant(.defaultState),
+    RoundedSecureTextField(fieldType: UserNameTextField(), text: .constant("helolo"), label: "hi", hintText: "pass", placeholderText: "placeHolder", state: .constant(.defaultState),
     rightImage: Image(systemName: "eye"),
                            
     rightImage2: Image(systemName: "eye.slash"))

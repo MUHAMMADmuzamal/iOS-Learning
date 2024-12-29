@@ -10,6 +10,7 @@ import SwiftUI
 struct RoundedTextField: View {
     @ObservedObject private var viewModel: RoundedTextFieldViewModel
     @Binding var state: StateOfTextField
+    @Binding var text: String
     
     var label: String
     var hintText: String
@@ -22,6 +23,7 @@ struct RoundedTextField: View {
     
     init(fieldType: TextFieldTypeProtocol,
          isSecureField: Bool = false,
+         text: Binding<String>,
          label: String,
          hintText: String,
          placeholderText: String,
@@ -31,8 +33,9 @@ struct RoundedTextField: View {
          leftImageTapAction: (() -> Void)? = nil,
          rightImageTapAction: (() -> Void)? = nil) {
         
-        self.viewModel = RoundedTextFieldViewModel(fieldType: fieldType, state: state.wrappedValue)
+        self.viewModel = RoundedTextFieldViewModel(fieldType: fieldType, state: state.wrappedValue, text: text.wrappedValue)
         self._state = state
+        self._text = text
         self.label = label
         self.hintText = hintText
         self.placeholderText = placeholderText
@@ -59,13 +62,14 @@ struct RoundedTextField: View {
                 }
                 VStack {
                     if isSecureField {
-                        SecureField("", text: $viewModel.text)
+                        SecureField("", text: $text)
                     }else {
-                        TextField("", text: $viewModel.text)
+                        TextField("", text: $text)
                     }
                 }
-                .onChange(of: viewModel.text) {
-                        viewModel.validate()
+                .onChange(of: text) {
+                    viewModel.text = text
+                    viewModel.validate()
                     }
                     .onTapGesture {
                         viewModel.onFocusChange(isFocused: true)
@@ -121,18 +125,19 @@ struct RoundedTextField: View {
 #Preview {
         return VStack {
             RoundedTextField(fieldType: UserNameTextField(),
-                             label: "Username",
+                             text: .constant("hello"), label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "Placeholder", 
                              state: .constant(.defaultState),
                              leftImage: Image(systemName: "person"),
                              rightImage: Image(systemName: "checkmark"))
             RoundedTextField(fieldType: UserNameTextField(),
-                             isSecureField: true,
+                             isSecureField: true, 
+                             text: .constant("hi"),
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "Placeholder", 
-                             state: .constant(.fill),
+                             state: .constant(.defaultState),
                              leftImage: Image(systemName: "person"),
                              rightImage: Image(systemName: "checkmark"))
             .setState(.error)
