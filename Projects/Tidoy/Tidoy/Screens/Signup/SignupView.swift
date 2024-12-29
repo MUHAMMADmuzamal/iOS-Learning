@@ -17,11 +17,24 @@ struct SignupView: View {
                 .padding(.bottom, 24)
             formSection
                 .padding(.bottom, 34)
-            PrimaryButton(title: "Login") { }
+            PrimaryButton(title: "Register") { }
                 .padding(.bottom, 20)
-            footerSection
+            HStack() {
+                Spacer()
+                footerSection
+                Spacer()
+            }
+                
         }
         .padding(.horizontal, 16)
+        .sheet(isPresented: $showCountrySheet, content: {
+            CountryListView(){ country in
+                selectedCountry = country ?? CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
+            }
+                .presentationDetents([.medium, .large])
+                .presentationBackground(.clear)
+                
+        })
     }
     
     private var heading: some View {

@@ -13,7 +13,7 @@ protocol TextFieldTypeProtocol {
 
 struct UserNameTextField: TextFieldTypeProtocol {
     func isValid(for text: String) -> Bool {
-        text.count <= 5
+        text.count <= 50
     }
 }
 
