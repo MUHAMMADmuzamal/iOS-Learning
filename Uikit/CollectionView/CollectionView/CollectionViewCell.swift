@@ -9,12 +9,10 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet private var label: UILabel!
-    var height = 50.0
+    @IBOutlet private var height: NSLayoutConstraint!
+    @IBOutlet private var width: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        self.height = self.frame.height
     }
     
     static var identifier: String {
@@ -25,8 +23,9 @@ class CollectionViewCell: UICollectionViewCell {
     }
 
     
-    func config(count: Int) {
-        
-//        self.label.text = "\(self.frame.height)-\(self.frame.width)"
+    func config(heightValue: CGFloat, widthValue: CGFloat ) {
+        self.height.constant = heightValue
+        self.width.constant =  widthValue
+        print(heightValue, widthValue)
     }
 }
