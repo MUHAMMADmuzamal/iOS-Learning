@@ -34,18 +34,12 @@ extension CompositionalLayoutCollectionViewController {
     
     private func setupGrid() {
         setupCollectionView()
-        updateCollectionView(with: [
-            1,2,3,4,5,6,7,8,9,10,
-            11,12,13,14,15,16,17,18,19,20,
-            21,22,23,24,25,26,27,28,29,30,
-            31,32,33,34,35,36,37,38,39,40,
-            41,42,43,44,45,46,47,48,49,50,
-        ])
+        updateCollectionView(with: Array(1...50))
     }
     private func setupCollectionView() {
         self.collectionView.register(CompositionalLayoutCollectionViewCell.nib, forCellWithReuseIdentifier: CompositionalLayoutCollectionViewCell.identifier)
         self.collectionView.dataSource = datasource
-        self.collectionView.setCollectionViewLayout(self.setupLayout(), animated: true)
+        self.collectionView.setCollectionViewLayout(self.setupItemInsetsLayout(), animated: true)
     }
     
     private func configureDatasource() -> UICollectionViewDiffableDataSource<Sections, Int> {
@@ -66,7 +60,7 @@ extension CompositionalLayoutCollectionViewController {
         
     }
     
-    private func setupLayout() -> UICollectionViewCompositionalLayout {
+    private func setupGridLayout() -> UICollectionViewCompositionalLayout {
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2),
                                               heightDimension: .fractionalHeight(1.0))
@@ -80,6 +74,28 @@ extension CompositionalLayoutCollectionViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 5
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        return layout
+    }
+}
+
+//MARK: Item insets
+extension CompositionalLayoutCollectionViewController {
+    private func setupItemInsetsLayout() -> UICollectionViewCompositionalLayout {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2),
+                                              heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(0.2))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                       subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         
