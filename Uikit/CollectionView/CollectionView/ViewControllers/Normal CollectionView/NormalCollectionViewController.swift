@@ -1,16 +1,19 @@
 //
-//  ViewController.swift
+//  NormalCollectionViewController.swift
 //  CollectionView
 //
-//  Created by Codes Orbit on 22/12/2024.
+//  Created by Codes Orbit on 04/01/2025.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class NormalCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    static var identifier: String {
+        String(describing: self)
+    }
     var dataSource:[(CGFloat, CGFloat)] = []
 
     override func viewDidLoad() {
