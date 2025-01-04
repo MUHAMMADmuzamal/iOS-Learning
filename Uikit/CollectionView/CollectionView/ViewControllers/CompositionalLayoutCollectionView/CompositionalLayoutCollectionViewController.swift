@@ -39,7 +39,7 @@ extension CompositionalLayoutCollectionViewController {
     private func setupCollectionView() {
         self.collectionView.register(CompositionalLayoutCollectionViewCell.nib, forCellWithReuseIdentifier: CompositionalLayoutCollectionViewCell.identifier)
         self.collectionView.dataSource = datasource
-        self.collectionView.setCollectionViewLayout(self.setupItemInsetsLayout(), animated: true)
+        self.collectionView.setCollectionViewLayout(self.setupTwoColumnLayout(), animated: true)
     }
     
     private func configureDatasource() -> UICollectionViewDiffableDataSource<Sections, Int> {
@@ -94,6 +94,27 @@ extension CompositionalLayoutCollectionViewController {
                                                heightDimension: .fractionalHeight(0.2))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        return layout
+    }
+}
+
+//MARK: Two Column
+extension CompositionalLayoutCollectionViewController {
+    private func setupTwoColumnLayout() -> UICollectionViewCompositionalLayout {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2),
+                                              heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(0.2))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item , count: 2)
         
         let section = NSCollectionLayoutSection(group: group)
         
