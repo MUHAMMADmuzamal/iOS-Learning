@@ -23,7 +23,7 @@ class CompositionalLayoutCollectionViewCell: UICollectionViewCell {
         UINib(nibName: self.identifier, bundle: nil)
     }
 
-    func config(count: Int) {
-        self.label.text = "\(count)"
+    func config(text: String) {
+        self.label.text = text
     }
 }
