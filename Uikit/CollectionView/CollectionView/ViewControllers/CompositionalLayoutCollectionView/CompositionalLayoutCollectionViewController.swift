@@ -22,6 +22,8 @@ class CompositionalLayoutCollectionViewController: UIViewController {
         case section2
         case section3
         case section4
+        case section5
+        case section6
     }
 
     override func viewDidLoad() {
@@ -62,6 +64,8 @@ extension CompositionalLayoutCollectionViewController {
             Array(11...20),
             Array(21...30),
             Array(31...40),
+            Array(41...50),
+            Array(51...60),
         ]
         Sections.allCases.forEach { section in
             snapShot.appendSections([section])
@@ -153,10 +157,18 @@ extension CompositionalLayoutCollectionViewController {
                 return self.section2Layout()
             case .section3:
                 return self.section3Layout()
+            case .section4:
+                return self.multiItemInVerticalGroupSectionLayout()
+            case .section5:
+                return self.multiItemInHorizontalGroupSectionLayout()
             default:
                 return self.defaultSectionLayout()
             }
         }
+        let configuration = UICollectionViewCompositionalLayoutConfiguration()
+        configuration.scrollDirection = .vertical
+        
+        layout.configuration = configuration
         return layout
     }
     
@@ -204,18 +216,71 @@ extension CompositionalLayoutCollectionViewController {
     
     private func defaultSectionLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2),
-                                              heightDimension: .fractionalHeight(1.0))
+                                              heightDimension: .fractionalHeight(0.5))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 1, bottom: 1, trailing: 1)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.1))
+                                               heightDimension: .fractionalHeight(1.0))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item, item])
         
         
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 20
-        section.orthogonalScrollingBehavior = .paging
+        section.orthogonalScrollingBehavior = .none // With orthogonalScrollingBehavior = .paging, the section will scroll horizontally, even if the group layout is vertical.
+        return section
+    }  
+    
+    private func multiItemInVerticalGroupSectionLayout() -> NSCollectionLayoutSection {
+        
+        let item1Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(0.4))
+        let item1 = NSCollectionLayoutItem(layoutSize: item1Size)
+        item1.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+
+        let item2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(0.2))
+        let item2 = NSCollectionLayoutItem(layoutSize: item2Size)
+        item2.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+
+        let item3Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(0.4))
+        let item3 = NSCollectionLayoutItem(layoutSize: item3Size)
+        item3.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+
+        // Create a vertical group with spacing
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(1.0))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item1, item2, item3])
+
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 20
+        section.orthogonalScrollingBehavior = .continuous
+        return section
+    }
+    
+    private func multiItemInHorizontalGroupSectionLayout() -> NSCollectionLayoutSection {
+        
+        let item1Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3),
+                                               heightDimension: .fractionalHeight(1.0))
+        let item1 = NSCollectionLayoutItem(layoutSize: item1Size)
+        item1.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+
+        let item2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2),
+                                               heightDimension: .fractionalHeight(1.0))
+        let item2 = NSCollectionLayoutItem(layoutSize: item2Size)
+        item2.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+
+        // Create a horizontal group with spacing
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalHeight(1.0))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item1, item2])
+
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 20
+        section.orthogonalScrollingBehavior = .continuous
         return section
     }
 }
