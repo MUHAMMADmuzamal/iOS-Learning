@@ -13,6 +13,10 @@
 		D60C045A2D1842BD0027CDE8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D60C04592D1842BD0027CDE8 /* Base */; };
 		D60C04632D1843600027CDE8 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60C04622D1843600027CDE8 /* CollectionViewCell.xib */; };
 		D60C04642D1843600027CDE8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C04612D1843600027CDE8 /* CollectionViewCell.swift */; };
+		D685A6682D33C2BA001E931F /* DifferentHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685A6672D33C2BA001E931F /* DifferentHeightCell.xib */; };
+		D685A6692D33C2BA001E931F /* DifferentHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685A6662D33C2BA001E931F /* DifferentHeightCell.swift */; };
+		D685A66D2D33C612001E931F /* CollectionViewListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685A66C2D33C612001E931F /* CollectionViewListController.xib */; };
+		D685A66E2D33C612001E931F /* CollectionViewListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685A66B2D33C612001E931F /* CollectionViewListController.swift */; };
 		D6984F652D29476D0082E0F1 /* NormalCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6984F642D29476D0082E0F1 /* NormalCollectionViewController.xib */; };
 		D6984F662D29476D0082E0F1 /* NormalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6984F632D29476D0082E0F1 /* NormalCollectionViewController.swift */; };
 		D6984F6A2D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6984F692D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.xib */; };
@@ -30,6 +34,10 @@
 		D60C045B2D1842BD0027CDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D60C04612D1843600027CDE8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D60C04622D1843600027CDE8 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		D685A6662D33C2BA001E931F /* DifferentHeightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentHeightCell.swift; sourceTree = "<group>"; };
+		D685A6672D33C2BA001E931F /* DifferentHeightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DifferentHeightCell.xib; sourceTree = "<group>"; };
+		D685A66B2D33C612001E931F /* CollectionViewListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewListController.swift; sourceTree = "<group>"; };
+		D685A66C2D33C612001E931F /* CollectionViewListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewListController.xib; sourceTree = "<group>"; };
 		D6984F632D29476D0082E0F1 /* NormalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCollectionViewController.swift; sourceTree = "<group>"; };
 		D6984F642D29476D0082E0F1 /* NormalCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalCollectionViewController.xib; sourceTree = "<group>"; };
 		D6984F682D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutCollectionViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,33 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		D685A6652D33C291001E931F /* DifferentHeight Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D685A6662D33C2BA001E931F /* DifferentHeightCell.swift */,
+				D685A6672D33C2BA001E931F /* DifferentHeightCell.xib */,
+			);
+			path = "DifferentHeight Cell";
+			sourceTree = "<group>";
+		};
+		D685A66A2D33C5EB001E931F /* ListController */ = {
+			isa = PBXGroup;
+			children = (
+				D685A66F2D33C618001E931F /* Cells */,
+				D685A66B2D33C612001E931F /* CollectionViewListController.swift */,
+				D685A66C2D33C612001E931F /* CollectionViewListController.xib */,
+			);
+			path = ListController;
+			sourceTree = "<group>";
+		};
+		D685A66F2D33C618001E931F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D685A6652D33C291001E931F /* DifferentHeight Cell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D6984F5F2D2937660082E0F1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +136,7 @@
 		D6984F672D2948990082E0F1 /* CompositionalLayoutCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				D685A66A2D33C5EB001E931F /* ListController */,
 				D6984F702D294A670082E0F1 /* Cells */,
 				D6984F682D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.swift */,
 				D6984F692D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.xib */,
@@ -175,6 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D685A66D2D33C612001E931F /* CollectionViewListController.xib in Resources */,
+				D685A6682D33C2BA001E931F /* DifferentHeightCell.xib in Resources */,
 				D6984F6A2D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.xib in Resources */,
 				D60C04572D1842BD0027CDE8 /* Assets.xcassets in Resources */,
 				D60C045A2D1842BD0027CDE8 /* Base in Resources */,
@@ -192,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6984F6F2D294A610082E0F1 /* CompositionalLayoutCollectionViewCell.swift in Sources */,
+				D685A6692D33C2BA001E931F /* DifferentHeightCell.swift in Sources */,
 				D60C044E2D1842BB0027CDE8 /* AppDelegate.swift in Sources */,
 				D60C04642D1843600027CDE8 /* CollectionViewCell.swift in Sources */,
+				D685A66E2D33C612001E931F /* CollectionViewListController.swift in Sources */,
 				D6984F6B2D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.swift in Sources */,
 				D60C04502D1842BB0027CDE8 /* SceneDelegate.swift in Sources */,
 				D6984F662D29476D0082E0F1 /* NormalCollectionViewController.swift in Sources */,
