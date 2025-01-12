@@ -54,7 +54,7 @@ class CollectionViewListController: UIViewController {
     }
     
     private func listLayout() -> UICollectionViewCompositionalLayout {
-        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        let config = UICollectionLayoutListConfiguration(appearance: .plain)
         return UICollectionViewCompositionalLayout.list(using: config)
     }
 }
