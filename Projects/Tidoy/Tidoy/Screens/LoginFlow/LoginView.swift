@@ -17,6 +17,9 @@ struct LoginView: View {
     @State private var emailFieldText: String = ""
     @State private var passwordFieldText: String = ""
     @State private var showCountrySheet: Bool = false
+    @State private var emailFieldState: StateOfTextField = .defaultState
+    @State private var passwordFieldState: StateOfTextField = .defaultState
+    @State private var phoneNumberFieldState: StateOfTextField = .defaultState
     @State private var selectedCountry: CountryModel = CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
     
     let textFieldsHeight: CGFloat = 48.0
@@ -107,21 +110,23 @@ extension LoginView {
     
     private var loginWithEmailSection: some View {
         VStack(alignment: .leading) {
-            RoundedTextField(fieldType: UserNameTextField(),
-                             text: $emailFieldText,
+            RoundedTextField(text: $emailFieldText,
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
-                             state: .constant(.defaultState))
+                             state: $emailFieldState, validation: { text in
+                emailFieldState =  text.isEmpty ? .error : .defaultState
+            } )
             RoundedSecureTextField(
-                fieldType: UserNameTextField(), 
                 text: $passwordFieldText,
                 label: "Password",
                 hintText: "Enter your username",
                 placeholderText: "Password",
-                state: .constant(.defaultState),
+                state: $passwordFieldState,
                 rightImage: Image(systemName: "eye"),
-                rightImage2: Image(systemName: "eye.slash"))
+                rightImage2: Image(systemName: "eye.slash"), validation: {text in
+                    passwordFieldState = text.isEmpty ? .error : .defaultState
+                })
             HStack {
                 Text("Need a help?")
                 Spacer()
@@ -140,14 +145,16 @@ extension LoginView {
     private var loginWithPhoneNumberSection: some View {
         VStack {
             PhoneNumberTextField(
-                fieldType: PhoneTypeTextField(), 
                 text: $passwordFieldText,
+                state: $phoneNumberFieldState,
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
                 placeholderText: "ex : 81234567890", 
-                selectedCountry: selectedCountry) {
+                selectedCountry: $selectedCountry, action: {
                     self.showCountrySheet.toggle()
-                }
+                }, validation: { text in
+                    phoneNumberFieldState = text.isEmpty ? .error : .disable
+                })
         }
     }
     

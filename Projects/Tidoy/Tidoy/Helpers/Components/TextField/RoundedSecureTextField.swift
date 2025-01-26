@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RoundedSecureTextField: View {
-    @ObservedObject private var viewModel: RoundedTextFieldViewModel
     @Binding var state: StateOfTextField
     @Binding var text: String
     @State var showPassword: Bool = false
@@ -21,9 +20,9 @@ struct RoundedSecureTextField: View {
     var rightImage2: Image?
     var leftImageTapAction: (() -> Void)?
     var rightImageTapAction: (() -> Void)?
+    var validation: ((String) -> Void)?
     
-    init(fieldType: TextFieldTypeProtocol,
-         text: Binding<String>,
+    init(text: Binding<String>,
          label: String,
          hintText: String,
          placeholderText: String,
@@ -32,9 +31,9 @@ struct RoundedSecureTextField: View {
          rightImage: Image? = nil,
          rightImage2: Image? = nil,
          leftImageTapAction: (() -> Void)? = nil,
-         rightImageTapAction: (() -> Void)? = nil) {
+         rightImageTapAction: (() -> Void)? = nil,
+         validation: ((String) -> Void)?) {
         
-        self.viewModel = RoundedTextFieldViewModel(fieldType: fieldType, state: state.wrappedValue, text: text.wrappedValue)
         self._state = state
         self._text = text
         self.label = label
@@ -45,17 +44,18 @@ struct RoundedSecureTextField: View {
         self.rightImage2 = rightImage2
         self.leftImageTapAction = leftImageTapAction
         self.rightImageTapAction = rightImageTapAction
+        self.validation = validation
     }
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(label)
-                .foregroundColor(viewModel.state.labelColor)
+                .foregroundColor(state.labelColor)
                 .padding(.bottom, 4)
             HStack(spacing: .padding4) {
                 if let leftImage = leftImage {
                     leftImage
-                        .foregroundColor(viewModel.state.textColor)
+                        .foregroundColor(state.textColor)
                         .frame(width: 24, height: 24)
                         .onTapGesture {
                             leftImageTapAction?()
@@ -63,23 +63,17 @@ struct RoundedSecureTextField: View {
                 }
                 VStack {
                     if showPassword {
-                        SecureField("", text: $viewModel.text)
+                        SecureField("", text: $text)
                     } else {
-                        TextField("", text: $viewModel.text)
+                        TextField("", text: $text)
                     }
                 }
-                .onChange(of: viewModel.text) {
-                        viewModel.validate()
+                .onChange(of: text) {
+                        validation?(text)
                     }
-                    .onTapGesture {
-                        viewModel.onFocusChange(isFocused: true)
-                    }
-                    .onHover { isHovering in
-                        viewModel.onHover(isHovering: isHovering)
-                    }
-                    .foregroundColor(viewModel.state.textColor)
+                    .foregroundColor(state.textColor)
                     .background {
-                        if viewModel.text.isEmpty {
+                        if text.isEmpty {
                              HStack {
                                  Text(placeholderText)
                                  Spacer()
@@ -89,7 +83,7 @@ struct RoundedSecureTextField: View {
                 if let rightImage = rightImage, let rightImage2 = rightImage2  {
                     let showPassImage = showPassword ? rightImage : rightImage2
                     showPassImage
-                        .foregroundColor(viewModel.state.textColor)
+                        .foregroundColor(state.textColor)
                         .frame(width: 24, height: 24)
                         .onTapGesture {
                             showPassword.toggle()
@@ -101,29 +95,23 @@ struct RoundedSecureTextField: View {
                 .padding(.all, .padding12)
                 .background {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(viewModel.state.borderColor, lineWidth: 1.0)
+                        .stroke(state.borderColor, lineWidth: 1.0)
                 }
             Text(hintText)
                 .font(.bodyXSmallRegular)
-                .foregroundColor(viewModel.state.labelColor)
+                .foregroundColor(state.labelColor)
         }
         .padding(.horizontal, 2)
-        .disabled(viewModel.state == .disable)
-        .onChange(of: viewModel.state) { newState in
+        .disabled(state == .disable)
+        .onChange(of: state) { newState in
             state = newState
         }
-    }
-    
-    func setState(_ newState: StateOfTextField) -> some View {
-        self.state = newState
-        self.viewModel.state = newState
-        return self
     }
 }
 
 #Preview {
-    RoundedSecureTextField(fieldType: UserNameTextField(), text: .constant("helolo"), label: "hi", hintText: "pass", placeholderText: "placeHolder", state: .constant(.defaultState),
+    RoundedSecureTextField( text: .constant("helolo"), label: "hi", hintText: "pass", placeholderText: "placeHolder", state: .constant(.defaultState),
     rightImage: Image(systemName: "eye"),
                            
-    rightImage2: Image(systemName: "eye.slash"))
+                            rightImage2: Image(systemName: "eye.slash"), validation: nil)
 }

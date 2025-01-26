@@ -37,7 +37,7 @@ struct SignupView: View {
 
                     .padding(.bottom, 20)
                 
-                HStack() {
+                HStack {
                     Spacer()
                     footerSection
                     Spacer()
@@ -68,46 +68,52 @@ struct SignupView: View {
     
     private var formSection: some View {
         VStack {
-            RoundedTextField(fieldType: UserNameTextField(),
-                             text: $userName, 
+            RoundedTextField(text: $userName,
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
-                             state: $userNameFieldState)
-            RoundedTextField(fieldType: EmailTextField(),
-                             text: $email, label: "Email",
+                             state: $userNameFieldState, validation: { text in
+                userNameFieldState = text.count > 5 ? .error : .defaultState
+            })
+            RoundedTextField(text: $email, label: "Email",
                              hintText: "Enter your email",
                              placeholderText: "ex: Johnedeo@gmail.com",
-                             state: $emailFieldState)
+                             state: $emailFieldState, validation: { text in
+                emailFieldState = text.isEmpty ? .error : .defaultState
+            })
             
             PhoneNumberTextField(
-                fieldType: PhoneTypeTextField(), 
-                text: $phoneNumber,
+                text: $phoneNumber, 
+                state: $phoneNumberFieldState,
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
                 placeholderText: "ex : 81234567890",
-                selectedCountry: selectedCountry) {
+                selectedCountry: $selectedCountry, action: {
                     self.showCountrySheet.toggle()
-                }
+                }, validation: { text in
+                    phoneNumberFieldState = text.isEmpty ? .error : .defaultState
+                })
             
             RoundedSecureTextField(
-                fieldType: PasswordTextField(), 
                 text: $password,
                 label: "Password",
                 hintText: "Enter your username",
                 placeholderText: "Password",
                 state: $passwordFieldState,
                 rightImage: Image(systemName: "eye"),
-                rightImage2: Image(systemName: "eye.slash"))
+                rightImage2: Image(systemName: "eye.slash"), validation: {text in
+                    passwordFieldState = text.isEmpty ? .error : .defaultState
+                })
             RoundedSecureTextField(
-                fieldType: PasswordTextField(),
                 text: $confirmPassword,
                 label: "Confirm Password",
                 hintText: "Enter your username",
                 placeholderText: "Password",
                 state: $confirmPasswordFieldState,
                 rightImage: Image(systemName: "eye"),
-                rightImage2: Image(systemName: "eye.slash"))
+                rightImage2: Image(systemName: "eye.slash"), validation: {text in
+                    confirmPasswordFieldState = text.isEmpty ? .error : .defaultState
+                })
         }
     }
     
