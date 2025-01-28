@@ -122,7 +122,7 @@ class HeaderFooterCollectionViewViewController: UIViewController {
             layoutSize: headerFooterSize,
             elementKind: HeaderFooterCollectionViewViewController.sectionFooterElementKind, alignment: .bottom)
         section.boundarySupplementaryItems = [sectionHeader, sectionFooter]
-        
+        sectionHeader.pinToVisibleBounds = true
         let layout = UICollectionViewCompositionalLayout(section: section)
         
         return layout

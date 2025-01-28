@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,6 +25,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="GEA-Mn-zFd" secondAttribute="trailing" id="Hz5-Hm-7T8"/>
                 <constraint firstAttribute="bottom" secondItem="GEA-Mn-zFd" secondAttribute="bottom" constant="2" id="e8B-gf-7Kq"/>
@@ -33,4 +35,9 @@
             <point key="canvasLocation" x="99" y="21"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
