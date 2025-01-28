@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         
         // Create a ViewController object with provided xib file name.
-        let rootViewController = UINavigationController(rootViewController: CollectionViewListController(nibName: CollectionViewListController.identifier, bundle : nil))
+        let rootViewController = UINavigationController(rootViewController: HeaderFooterCollectionViewViewController(nibName: HeaderFooterCollectionViewViewController.identifier, bundle : nil))
         
         // Set above root view controller object as the scene's window's root view controller.
         self.window!.rootViewController = rootViewController
