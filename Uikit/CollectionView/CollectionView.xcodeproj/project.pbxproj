@@ -27,6 +27,8 @@
 		D6AB9AD32D48A78E00EB40C7 /* HeaderFooterCollectionViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AB9AD12D48A78E00EB40C7 /* HeaderFooterCollectionViewViewController.xib */; };
 		D6AB9AE32D48C50300EB40C7 /* HeaderFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AB9AE12D48C50300EB40C7 /* HeaderFooterCell.swift */; };
 		D6AB9AE42D48C50300EB40C7 /* HeaderFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6AB9AE22D48C50300EB40C7 /* HeaderFooterCell.xib */; };
+		D6ECCA322D48E96600A3295E /* OrthogonalSectionVIewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6ECCA312D48E96600A3295E /* OrthogonalSectionVIewController.xib */; };
+		D6ECCA332D48E96600A3295E /* OrthogonalSectionVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ECCA302D48E96600A3295E /* OrthogonalSectionVIewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		D6AB9AD12D48A78E00EB40C7 /* HeaderFooterCollectionViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderFooterCollectionViewViewController.xib; sourceTree = "<group>"; };
 		D6AB9AE12D48C50300EB40C7 /* HeaderFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFooterCell.swift; sourceTree = "<group>"; };
 		D6AB9AE22D48C50300EB40C7 /* HeaderFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderFooterCell.xib; sourceTree = "<group>"; };
+		D6ECCA302D48E96600A3295E /* OrthogonalSectionVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthogonalSectionVIewController.swift; sourceTree = "<group>"; };
+		D6ECCA312D48E96600A3295E /* OrthogonalSectionVIewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrthogonalSectionVIewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		D6984F672D2948990082E0F1 /* CompositionalLayoutCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				D6ECCA2F2D48DC0200A3295E /* OrthogonalSections */,
 				D6AB9ACF2D48A76600EB40C7 /* HeaderFooterCollectionView */,
 				D685A66A2D33C5EB001E931F /* ListController */,
 				D6984F702D294A670082E0F1 /* Cells */,
@@ -187,6 +192,15 @@
 				D6AB9AE22D48C50300EB40C7 /* HeaderFooterCell.xib */,
 			);
 			path = HeaderFooter;
+			sourceTree = "<group>";
+		};
+		D6ECCA2F2D48DC0200A3295E /* OrthogonalSections */ = {
+			isa = PBXGroup;
+			children = (
+				D6ECCA302D48E96600A3295E /* OrthogonalSectionVIewController.swift */,
+				D6ECCA312D48E96600A3295E /* OrthogonalSectionVIewController.xib */,
+			);
+			path = OrthogonalSections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,7 @@
 				D685A66D2D33C612001E931F /* CollectionViewListController.xib in Resources */,
 				D685A6682D33C2BA001E931F /* DifferentHeightCell.xib in Resources */,
 				D6984F6A2D2948CA0082E0F1 /* CompositionalLayoutCollectionViewController.xib in Resources */,
+				D6ECCA322D48E96600A3295E /* OrthogonalSectionVIewController.xib in Resources */,
 				D60C04572D1842BD0027CDE8 /* Assets.xcassets in Resources */,
 				D60C045A2D1842BD0027CDE8 /* Base in Resources */,
 				D6AB9AE42D48C50300EB40C7 /* HeaderFooterCell.xib in Resources */,
@@ -277,6 +292,7 @@
 				D6AB9AE32D48C50300EB40C7 /* HeaderFooterCell.swift in Sources */,
 				D6984F662D29476D0082E0F1 /* NormalCollectionViewController.swift in Sources */,
 				D6AB9AD22D48A78E00EB40C7 /* HeaderFooterCollectionViewViewController.swift in Sources */,
+				D6ECCA332D48E96600A3295E /* OrthogonalSectionVIewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
