@@ -83,6 +83,7 @@ class OrthogonalSectionVIewController: UIViewController {
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
         
+        // we can update badge location size. example. update size so badge show at top x 0, y =0 , width = .fractionalWidth 1
         let badgeAnchor = NSCollectionLayoutAnchor(edges: [.top, .trailing], fractionalOffset: CGPoint(x: 0.3, y: -0.3))
         let badgeSize = NSCollectionLayoutSize(widthDimension: .absolute(20),
                                               heightDimension: .absolute(20))
