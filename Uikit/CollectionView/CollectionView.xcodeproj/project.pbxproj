@@ -13,6 +13,8 @@
 		D60C045A2D1842BD0027CDE8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D60C04592D1842BD0027CDE8 /* Base */; };
 		D60C04632D1843600027CDE8 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60C04622D1843600027CDE8 /* CollectionViewCell.xib */; };
 		D60C04642D1843600027CDE8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C04612D1843600027CDE8 /* CollectionViewCell.swift */; };
+		D65103222D4B7B5D00190A30 /* SectionBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65103202D4B7B5D00190A30 /* SectionBackgroundView.swift */; };
+		D65103232D4B7B5D00190A30 /* SectionBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65103212D4B7B5D00190A30 /* SectionBackgroundView.xib */; };
 		D685A6682D33C2BA001E931F /* DifferentHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685A6672D33C2BA001E931F /* DifferentHeightCell.xib */; };
 		D685A6692D33C2BA001E931F /* DifferentHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685A6662D33C2BA001E931F /* DifferentHeightCell.swift */; };
 		D685A66D2D33C612001E931F /* CollectionViewListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685A66C2D33C612001E931F /* CollectionViewListController.xib */; };
@@ -40,6 +42,8 @@
 		D60C045B2D1842BD0027CDE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D60C04612D1843600027CDE8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D60C04622D1843600027CDE8 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		D65103202D4B7B5D00190A30 /* SectionBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBackgroundView.swift; sourceTree = "<group>"; };
+		D65103212D4B7B5D00190A30 /* SectionBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionBackgroundView.xib; sourceTree = "<group>"; };
 		D685A6662D33C2BA001E931F /* DifferentHeightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentHeightCell.swift; sourceTree = "<group>"; };
 		D685A6672D33C2BA001E931F /* DifferentHeightCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DifferentHeightCell.xib; sourceTree = "<group>"; };
 		D685A66B2D33C612001E931F /* CollectionViewListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewListController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 				D60C045B2D1842BD0027CDE8 /* Info.plist */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		D651031F2D4B7B2D00190A30 /* SectionBackground */ = {
+			isa = PBXGroup;
+			children = (
+				D65103202D4B7B5D00190A30 /* SectionBackgroundView.swift */,
+				D65103212D4B7B5D00190A30 /* SectionBackgroundView.xib */,
+			);
+			path = SectionBackground;
 			sourceTree = "<group>";
 		};
 		D685A6652D33C291001E931F /* DifferentHeight Cell */ = {
@@ -197,6 +210,7 @@
 		D6ECCA2F2D48DC0200A3295E /* OrthogonalSections */ = {
 			isa = PBXGroup;
 			children = (
+				D651031F2D4B7B2D00190A30 /* SectionBackground */,
 				D6ECCA302D48E96600A3295E /* OrthogonalSectionVIewController.swift */,
 				D6ECCA312D48E96600A3295E /* OrthogonalSectionVIewController.xib */,
 			);
@@ -271,6 +285,7 @@
 				D60C04632D1843600027CDE8 /* CollectionViewCell.xib in Resources */,
 				D6984F6E2D294A610082E0F1 /* CompositionalLayoutCollectionViewCell.xib in Resources */,
 				D6984F652D29476D0082E0F1 /* NormalCollectionViewController.xib in Resources */,
+				D65103232D4B7B5D00190A30 /* SectionBackgroundView.xib in Resources */,
 				D6AB9AD32D48A78E00EB40C7 /* HeaderFooterCollectionViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +299,7 @@
 			files = (
 				D6984F6F2D294A610082E0F1 /* CompositionalLayoutCollectionViewCell.swift in Sources */,
 				D685A6692D33C2BA001E931F /* DifferentHeightCell.swift in Sources */,
+				D65103222D4B7B5D00190A30 /* SectionBackgroundView.swift in Sources */,
 				D60C044E2D1842BB0027CDE8 /* AppDelegate.swift in Sources */,
 				D60C04642D1843600027CDE8 /* CollectionViewCell.swift in Sources */,
 				D685A66E2D33C612001E931F /* CollectionViewListController.swift in Sources */,

@@ -9,6 +9,8 @@ import UIKit
 
 class OrthogonalSectionVIewController: UIViewController {
     
+    static let sectionBackgroundDecorationElementKind = "section-background-element-kind"
+    
     static var identifier: String {
         String(describing: self)
     }
@@ -70,14 +72,14 @@ class OrthogonalSectionVIewController: UIViewController {
             heightDimension: .fractionalHeight(1.0)
         )
         let leadingItem = NSCollectionLayoutItem(layoutSize: leadingItemSize)
-        leadingItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        leadingItem.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
 
         let trailingItemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalHeight(0.5) // Each item is half of the trailingGroup height
         )
         let trailingItem = NSCollectionLayoutItem(layoutSize: trailingItemSize)
-        trailingItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        trailingItem.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
 
         // Define trailing group size correctly
         let trailingGroupSize = NSCollectionLayoutSize(
@@ -102,7 +104,18 @@ class OrthogonalSectionVIewController: UIViewController {
         let section = NSCollectionLayoutSection(group: container)
         section.orthogonalScrollingBehavior = .continuous
 
+        
+        let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(
+            elementKind: OrthogonalSectionVIewController.sectionBackgroundDecorationElementKind)
+        sectionBackgroundDecoration.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0)
+        section.decorationItems = [sectionBackgroundDecoration]
+
         let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        layout.register(
+            SectionBackgroundView.self,
+            forDecorationViewOfKind: OrthogonalSectionVIewController.sectionBackgroundDecorationElementKind)
+        
         return layout
     }
 }
