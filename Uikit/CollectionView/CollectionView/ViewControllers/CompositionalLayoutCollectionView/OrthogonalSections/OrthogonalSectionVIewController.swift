@@ -11,6 +11,8 @@ class OrthogonalSectionVIewController: UIViewController {
     
     static let sectionBackgroundDecorationElementKind = "section-background-element-kind"
     
+    static let badgeElementKind = "badge-element-kind"
+    
     static var identifier: String {
         String(describing: self)
     }
@@ -45,6 +47,19 @@ class OrthogonalSectionVIewController: UIViewController {
             cell?.config(text: "\(indexPath.item)")
             return cell ?? UICollectionViewCell()
         }
+        
+        let supplementaryRegistration = UICollectionView.SupplementaryRegistration
+        <BadgeView>(elementKind: OrthogonalSectionVIewController.badgeElementKind) {
+            (badgeView, string, indexPath) in
+            
+            badgeView.config("\(indexPath.item)")
+            badgeView.isHidden = indexPath.item == 1
+        }
+        
+        datasource.supplementaryViewProvider = {
+            return self.collectionView.dequeueConfiguredReusableSupplementary(using: supplementaryRegistration, for: $2)
+        }
+        
         return datasource
     }
     
@@ -67,11 +82,20 @@ class OrthogonalSectionVIewController: UIViewController {
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
+        
+        let badgeAnchor = NSCollectionLayoutAnchor(edges: [.top, .trailing], fractionalOffset: CGPoint(x: 0.3, y: -0.3))
+        let badgeSize = NSCollectionLayoutSize(widthDimension: .absolute(20),
+                                              heightDimension: .absolute(20))
+        let badge = NSCollectionLayoutSupplementaryItem(
+            layoutSize: badgeSize,
+            elementKind: OrthogonalSectionVIewController.badgeElementKind,
+            containerAnchor: badgeAnchor)
+        
         let leadingItemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.7),
             heightDimension: .fractionalHeight(1.0)
         )
-        let leadingItem = NSCollectionLayoutItem(layoutSize: leadingItemSize)
+        let leadingItem = NSCollectionLayoutItem(layoutSize: leadingItemSize, supplementaryItems: [badge])
         leadingItem.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
 
         let trailingItemSize = NSCollectionLayoutSize(
