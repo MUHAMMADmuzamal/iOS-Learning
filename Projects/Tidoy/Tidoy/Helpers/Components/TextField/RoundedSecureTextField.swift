@@ -8,44 +8,21 @@
 import SwiftUI
 
 struct RoundedSecureTextField: View {
-    @Binding var state: StateOfTextField
-    @Binding var text: String
+    
+    
     @State var showPassword: Bool = false
     
+    @Binding var text: String
     var label: String
     var hintText: String
     var placeholderText: String
+    @Binding var state: StateOfTextField
     var leftImage: Image?
     var rightImage: Image?
     var rightImage2: Image?
     var leftImageTapAction: (() -> Void)?
     var rightImageTapAction: (() -> Void)?
-    var validation: ((String) -> Void)?
-    
-    init(text: Binding<String>,
-         label: String,
-         hintText: String,
-         placeholderText: String,
-         state: Binding<StateOfTextField>,
-         leftImage: Image? = nil,
-         rightImage: Image? = nil,
-         rightImage2: Image? = nil,
-         leftImageTapAction: (() -> Void)? = nil,
-         rightImageTapAction: (() -> Void)? = nil,
-         validation: ((String) -> Void)?) {
-        
-        self._state = state
-        self._text = text
-        self.label = label
-        self.hintText = hintText
-        self.placeholderText = placeholderText
-        self.leftImage = leftImage
-        self.rightImage = rightImage
-        self.rightImage2 = rightImage2
-        self.leftImageTapAction = leftImageTapAction
-        self.rightImageTapAction = rightImageTapAction
-        self.validation = validation
-    }
+    var validatable: Validatable
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -69,7 +46,7 @@ struct RoundedSecureTextField: View {
                     }
                 }
                 .onChange(of: text) {
-                        validation?(text)
+                    state = validatable.validate(text) ? .defaultState : .error
                     }
                     .foregroundColor(state.textColor)
                     .background {
@@ -103,15 +80,17 @@ struct RoundedSecureTextField: View {
         }
         .padding(.horizontal, 2)
         .disabled(state == .disable)
-        .onChange(of: state) { newState in
-            state = newState
-        }
     }
 }
 
 #Preview {
-    RoundedSecureTextField( text: .constant("helolo"), label: "hi", hintText: "pass", placeholderText: "placeHolder", state: .constant(.defaultState),
-    rightImage: Image(systemName: "eye"),
-                           
-                            rightImage2: Image(systemName: "eye.slash"), validation: nil)
+    RoundedSecureTextField( 
+        text: .constant("helolo"), 
+        label: "hi",
+        hintText: "pass",
+        placeholderText: "placeHolder",
+        state: .constant(.defaultState),
+        rightImage: Image(systemName: "eye"),
+        rightImage2: Image(systemName: "eye.slash"),
+        validatable: PasswordValidator())
 }

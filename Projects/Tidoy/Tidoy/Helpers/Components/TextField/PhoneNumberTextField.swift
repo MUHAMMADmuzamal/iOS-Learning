@@ -9,34 +9,16 @@ import SwiftUI
 
 struct PhoneNumberTextField: View {
 
-    @Binding private var text: String
-    @Binding private var state: StateOfTextField
-    @Binding private var selectedCountry: CountryModel
     @State private var isTapOnIcon: Bool = false
+    
+    @Binding var text: String
+    @Binding var state: StateOfTextField
     var label: String
     var hintText: String
     var placeholderText: String
+    @Binding var selectedCountry: CountryModel
     var action: (() -> Void)?
-    var validation: ((String) -> Void)?
-    
-    init(text: Binding<String>,
-         state: Binding<StateOfTextField>,
-         label: String,
-         hintText: String,
-         placeholderText: String,
-         selectedCountry: Binding<CountryModel>,
-         action: (() -> Void)? = nil,
-         validation: ((String) -> Void)?) {
-        
-        self._text = text
-        self._state = state
-        self.label = label
-        self.hintText = hintText
-        self.placeholderText = placeholderText
-        self._selectedCountry = selectedCountry
-        self.action = action
-        self.validation = validation
-    }
+    var validatable: Validatable
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -55,7 +37,7 @@ struct PhoneNumberTextField: View {
                 }
                 TextField("", text: $text)
                     .onChange(of: text) {
-                        validation?(text)
+                        state = validatable.validate(text) ? .defaultState : .error
                     }
                     .foregroundColor(state.textColor)
                     .background {
@@ -85,15 +67,21 @@ struct PhoneNumberTextField: View {
 
 #Preview {
     return VStack {
-        PhoneNumberTextField( text: .constant(""), state: .constant(.defaultState),
-                             label: "Phone Number",
-                             hintText: "Enter your username",
-                             placeholderText: "ex: 3465944619", selectedCountry: .constant(CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")), validation: nil)
-        PhoneNumberTextField(text: .constant("1234567890"), state: .constant(.defaultState),
-                             label: "Phone Number",
-                             hintText: "Enter your username",
-                             placeholderText: "ex: +923465944619", selectedCountry: .constant(CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")),
-                             validation: nil)
+        PhoneNumberTextField(
+            text: .constant(""),
+            state: .constant(.defaultState),
+            label: "Phone Number",
+            hintText: "Enter your username",
+            placeholderText: "ex: 3465944619",
+            selectedCountry: .constant(CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")),
+            validatable: PhoneNumberValidator())
+        PhoneNumberTextField(
+            text: .constant("1234567890"),
+            state: .constant(.defaultState),
+            label: "Phone Number",
+            hintText: "Enter your username",
+            placeholderText: "ex: +923465944619", selectedCountry: .constant(CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")),
+            validatable: PhoneNumberValidator())
     }
 
 }

@@ -20,6 +20,9 @@
 		D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F1B2C45520D00F55756 /* TertiaryButton.swift */; };
 		D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F1E2C47BD8E00F55756 /* LoginView.swift */; };
 		D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62161E62C4C1488003C3389 /* RoundedTextField.swift */; };
+		D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CCD2D52109600B0A17A /* TextFieldState.swift */; };
+		D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */; };
+		D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */; };
 		D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6487A0B2CA8339200AB9376 /* SearchField.swift */; };
 		D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6487A0D2CA8467E00AB9376 /* CountryListConstant.swift */; };
 		D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */; };
@@ -72,6 +75,9 @@
 		D61A8F1B2C45520D00F55756 /* TertiaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryButton.swift; sourceTree = "<group>"; };
 		D61A8F1E2C47BD8E00F55756 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D62161E62C4C1488003C3389 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		D63A6CCD2D52109600B0A17A /* TextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldState.swift; sourceTree = "<group>"; };
+		D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableProtocol.swift; sourceTree = "<group>"; };
+		D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationImplementation.swift; sourceTree = "<group>"; };
 		D6487A0B2CA8339200AB9376 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 		D6487A0D2CA8467E00AB9376 /* CountryListConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListConstant.swift; sourceTree = "<group>"; };
 		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,12 +222,23 @@
 		D62161E52C4C144B003C3389 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				D63A6CCF2D547F3400B0A17A /* Validations */,
 				D62161E62C4C1488003C3389 /* RoundedTextField.swift */,
 				D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */,
 				D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */,
 				D6E24F4B2D1C4FA400CCDD4F /* SingleDigitTextField.swift */,
+				D63A6CCD2D52109600B0A17A /* TextFieldState.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		D63A6CCF2D547F3400B0A17A /* Validations */ = {
+			isa = PBXGroup;
+			children = (
+				D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */,
+				D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */,
+			);
+			path = Validations;
 			sourceTree = "<group>";
 		};
 		D6487A0A2CA8338300AB9376 /* SearchField */ = {
@@ -508,6 +525,7 @@
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
+				D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */,
 				D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */,
 				D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
@@ -518,6 +536,7 @@
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
 				D6C67A142D20535800166EF1 /* SignupView.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
+				D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */,
 				D61A8F182C42C6F300F55756 /* PrimaryButton.swift in Sources */,
 				D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */,
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
@@ -531,6 +550,7 @@
 				D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */,
 				D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
+				D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

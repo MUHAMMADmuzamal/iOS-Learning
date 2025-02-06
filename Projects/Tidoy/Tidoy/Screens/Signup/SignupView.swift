@@ -47,7 +47,7 @@ struct SignupView: View {
             .sheet(isPresented: $showCountrySheet, onDismiss: {
                 showCountrySheet = false
             }, content: {
-                CountryListView(){ country in
+                CountryListView { country in
                     selectedCountry = country ?? CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
                 }
                 .presentationDetents([.medium, .large])
@@ -72,15 +72,12 @@ struct SignupView: View {
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
-                             state: $userNameFieldState, validation: { text in
-                userNameFieldState = text.count > 5 ? .error : .defaultState
-            })
+                             state: $userNameFieldState, 
+                             validatable: UsernameValidator())
             RoundedTextField(text: $email, label: "Email",
                              hintText: "Enter your email",
                              placeholderText: "ex: Johnedeo@gmail.com",
-                             state: $emailFieldState, validation: { text in
-                emailFieldState = text.isEmpty ? .error : .defaultState
-            })
+                             state: $emailFieldState, validatable: EmailValidator())
             
             PhoneNumberTextField(
                 text: $phoneNumber, 
@@ -90,9 +87,8 @@ struct SignupView: View {
                 placeholderText: "ex : 81234567890",
                 selectedCountry: $selectedCountry, action: {
                     self.showCountrySheet.toggle()
-                }, validation: { text in
-                    phoneNumberFieldState = text.isEmpty ? .error : .defaultState
-                })
+                },
+            validatable: PhoneNumberValidator())
             
             RoundedSecureTextField(
                 text: $password,
@@ -101,9 +97,8 @@ struct SignupView: View {
                 placeholderText: "Password",
                 state: $passwordFieldState,
                 rightImage: Image(systemName: "eye"),
-                rightImage2: Image(systemName: "eye.slash"), validation: {text in
-                    passwordFieldState = text.isEmpty ? .error : .defaultState
-                })
+                rightImage2: Image(systemName: "eye.slash"),
+                validatable: PasswordValidator())
             RoundedSecureTextField(
                 text: $confirmPassword,
                 label: "Confirm Password",
@@ -111,9 +106,8 @@ struct SignupView: View {
                 placeholderText: "Password",
                 state: $confirmPasswordFieldState,
                 rightImage: Image(systemName: "eye"),
-                rightImage2: Image(systemName: "eye.slash"), validation: {text in
-                    confirmPasswordFieldState = text.isEmpty ? .error : .defaultState
-                })
+                rightImage2: Image(systemName: "eye.slash"),
+                validatable: PasswordValidator())
         }
     }
     

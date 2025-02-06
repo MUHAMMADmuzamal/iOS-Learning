@@ -114,9 +114,8 @@ extension LoginView {
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
-                             state: $emailFieldState, validation: { text in
-                emailFieldState =  text.isEmpty ? .error : .defaultState
-            } )
+                             state: $emailFieldState,
+                             validatable: EmailValidator())
             RoundedSecureTextField(
                 text: $passwordFieldText,
                 label: "Password",
@@ -124,9 +123,8 @@ extension LoginView {
                 placeholderText: "Password",
                 state: $passwordFieldState,
                 rightImage: Image(systemName: "eye"),
-                rightImage2: Image(systemName: "eye.slash"), validation: {text in
-                    passwordFieldState = text.isEmpty ? .error : .defaultState
-                })
+                rightImage2: Image(systemName: "eye.slash"),
+                validatable: PasswordValidator())
             HStack {
                 Text("Need a help?")
                 Spacer()
@@ -152,9 +150,8 @@ extension LoginView {
                 placeholderText: "ex : 81234567890", 
                 selectedCountry: $selectedCountry, action: {
                     self.showCountrySheet.toggle()
-                }, validation: { text in
-                    phoneNumberFieldState = text.isEmpty ? .error : .disable
-                })
+                },
+            validatable: PhoneNumberValidator())
         }
     }
     
