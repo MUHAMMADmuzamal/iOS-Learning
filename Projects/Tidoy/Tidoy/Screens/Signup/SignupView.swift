@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignupView: View {
-    @State private var selectedCountry: CountryModel = CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
+    @State private var selectedCountry: CountryModel = .defaultCountry
     @State private var showCountrySheet: Bool = false
     
     @State private var userNameFieldState: StateOfTextField = .defaultState
@@ -48,7 +48,7 @@ struct SignupView: View {
                 showCountrySheet = false
             }, content: {
                 CountryListView { country in
-                    selectedCountry = country ?? CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
+                    selectedCountry = country ?? .defaultCountry
                 }
                 .presentationDetents([.medium, .large])
                 .presentationBackground(.clear)

@@ -20,7 +20,7 @@ struct LoginView: View {
     @State private var emailFieldState: StateOfTextField = .defaultState
     @State private var passwordFieldState: StateOfTextField = .defaultState
     @State private var phoneNumberFieldState: StateOfTextField = .defaultState
-    @State private var selectedCountry: CountryModel = CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
+    @State private var selectedCountry: CountryModel = .defaultCountry
     
     let textFieldsHeight: CGFloat = 48.0
     

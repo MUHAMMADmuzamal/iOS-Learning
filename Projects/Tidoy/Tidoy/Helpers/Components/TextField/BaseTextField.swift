@@ -1,14 +1,13 @@
 //
-//  RoundedTextField.swift
+//  BaseTextField.swift
 //  Tidoy
 //
-//  Created by Codes Orbit on 20/07/2024.
+//  Created by Codes Orbit on 07/02/2025.
 //
 
 import SwiftUI
 
-struct RoundedTextField: View {
-    
+struct BaseTextField: View {
     @Binding var text: String
     var label: String
     var hintText: String
@@ -76,27 +75,14 @@ struct RoundedTextField: View {
         .padding(.horizontal, 2)
         .disabled(state == .disable)
     }
-
 }
 
 #Preview {
-        return VStack {
-            RoundedTextField(text: .constant("hello"),
-                             label: "Username",
-                             hintText: "Enter your username",
-                             placeholderText: "Placeholder",
-                             state: .constant(.defaultState),
-                             leftImage:Image(systemName: "person"),
-                             rightImage: Image(systemName: "checkmark"),
-                             leftImageTapAction: nil, 
-                             validatable: UsernameValidator())
-            RoundedTextField(text: .constant("hi"),
-                             label: "Username",
-                             hintText: "Enter your username",
-                             placeholderText: "Placeholder", 
-                             state: .constant(.defaultState),
-                             leftImage: Image(systemName: "person"),
-                             rightImage: Image(systemName: "checkmark"),
-                             validatable: UsernameValidator())
-        }
+    BaseTextField(
+        text: .constant("hi"),
+        label: "hello",
+        hintText: "hi",
+        placeholderText: "placeholder",
+        state: .constant(.defaultState),
+        validatable: UsernameValidator())
 }

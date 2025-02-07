@@ -12,3 +12,7 @@ struct CountryModel: Hashable {
     let code: String
     let flag: String
 }
+
+extension CountryModel {
+    static let defaultCountry = CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
+}

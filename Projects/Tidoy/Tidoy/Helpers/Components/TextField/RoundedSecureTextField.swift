@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RoundedSecureTextField: View {
     
-    
     @State var showPassword: Bool = false
     
     @Binding var text: String
@@ -46,8 +45,7 @@ struct RoundedSecureTextField: View {
                     }
                 }
                 .onChange(of: text) {
-                    state = validatable.validate(text) ? .defaultState : .error
-                    }
+                    state = validatable.validate(text) ? .defaultState : .error }
                     .foregroundColor(state.textColor)
                     .background {
                         if text.isEmpty {
@@ -57,7 +55,7 @@ struct RoundedSecureTextField: View {
                              }
                          }
                     }
-                if let rightImage = rightImage, let rightImage2 = rightImage2  {
+                if let rightImage = rightImage, let rightImage2 = rightImage2 {
                     let showPassImage = showPassword ? rightImage : rightImage2
                     showPassImage
                         .foregroundColor(state.textColor)

@@ -28,11 +28,11 @@ struct UsernameValidator: Validatable {
 
 struct PhoneNumberValidator: Validatable {
     func validate(_ text: String) -> Bool {
-        // Define a regex pattern for phone numbers (basic international format)
-        let pattern = #"^\+?[1-9]\d{1,14}$"#
-        
-        // Check if the text matches the pattern
-        return text.range(of: pattern, options: .regularExpression) != nil
+        // Regular expression for basic phone number validation
+        // Supports formats like: +1234567890, 123-456-7890, (123) 456-7890, etc.
+        let phoneRegex = "^\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}$"
+        let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return !text.isEmpty && phonePredicate.evaluate(with: text)
     }
 }
 
