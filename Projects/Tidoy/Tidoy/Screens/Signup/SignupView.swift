@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SignupView: View {
+    
+    @EnvironmentObject var coordinator: AppCoordinator
+    private var router = SignupRouter()
+    
     @State private var selectedCountry: CountryModel = .defaultCountry
     @State private var showCountrySheet: Bool = false
     
@@ -25,7 +29,6 @@ struct SignupView: View {
     @State private var phoneNumber: String = ""
     
     var body: some View {
-        
         ScrollView {
             VStack(alignment: .leading) {
                 heading
@@ -34,7 +37,7 @@ struct SignupView: View {
                 formSection
                     .padding(.bottom, 34)
                 PrimaryButton(title: "Register", disabled: $isDisabledRegisterButton ) { }
-
+                
                     .padding(.bottom, 20)
                 
                 HStack {
@@ -55,8 +58,11 @@ struct SignupView: View {
                 
             })
             .onChange(of: formStates) { _ in
-                        isDisabledRegisterButton = formStates.contains(.error)
-                    }
+                isDisabledRegisterButton = formStates.contains(.error)
+            }
+        }
+        .navigationDestination(for: AnyRoute.self) { route in
+            route.destinationView()
         }
     }
     
@@ -72,7 +78,7 @@ struct SignupView: View {
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
-                             state: $userNameFieldState, 
+                             state: $userNameFieldState,
                              validatable: UsernameValidator())
             RoundedTextField(text: $email, label: "Email",
                              hintText: "Enter your email",
@@ -80,7 +86,7 @@ struct SignupView: View {
                              state: $emailFieldState, validatable: EmailValidator())
             
             PhoneNumberTextField(
-                text: $phoneNumber, 
+                text: $phoneNumber,
                 state: $phoneNumberFieldState,
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
@@ -88,7 +94,7 @@ struct SignupView: View {
                 selectedCountry: $selectedCountry, action: {
                     self.showCountrySheet.toggle()
                 },
-            validatable: PhoneNumberValidator())
+                validatable: PhoneNumberValidator())
             
             RoundedSecureTextField(
                 text: $password,
@@ -120,14 +126,18 @@ struct SignupView: View {
                 .underline()
                 .foregroundStyle(.primaryMain)
                 .font(.bodyXSmallSemiBold)
+                .onTapGesture {
+                    router.navigate(to: LoginRoute(), coordinator: coordinator)
+                }
         }
     }
     
     private var formStates: [StateOfTextField] {
-            [userNameFieldState, emailFieldState, passwordFieldState, confirmPasswordFieldState, phoneNumberFieldState]
-        }
+        [userNameFieldState, emailFieldState, passwordFieldState, confirmPasswordFieldState, phoneNumberFieldState]
+    }
 }
 
 #Preview {
     SignupView()
+        .environmentObject(AppCoordinator())
 }

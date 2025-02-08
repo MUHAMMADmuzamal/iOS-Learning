@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingCarouselCardModel {
-    let image: String
-    let title: String
-    let subTitle: String
-}
+
 
 struct OnboardingCarouselCard: View {
     var  model: OnboardingCarouselCardModel

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct TidoyApp: App {
+    @StateObject var coordinator = AppCoordinator()
     var body: some Scene {
         WindowGroup {
-            OnboardingScreen()
+            NavigationStack(path: $coordinator.path) {
+                SplashScreen()
+                    .environmentObject(coordinator)
+            }
         }
     }
 }

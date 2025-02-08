@@ -8,16 +8,32 @@
 import SwiftUI
 
 struct SplashScreen: View {
+    @EnvironmentObject var coordinator: AppCoordinator
+    private var router = SplashRouter()
+    
     var body: some View {
         ZStack {
-            Image("imgSplashScreen")
+            Image("splashScreenImg")
                 .resizable()
                 .scaledToFill()
         }
         .ignoresSafeArea(.all)
+        .navigationDestination(for: OnboardingRoute.self) { route in
+            route.destinationView()
+        }
+        .navigationDestination(for: AnyRoute.self) { route in
+            route.destinationView()
+        }
+        .onAppear {
+            router.navigate(to: OnboardingRoute(), coordinator: coordinator)
+        }
     }
 }
 
 #Preview {
-    SplashScreen()
+    @StateObject var coordinator = AppCoordinator()
+    return  NavigationStack(path: $coordinator.path) {
+        SplashScreen()
+            .environmentObject(coordinator)
+    }
 }

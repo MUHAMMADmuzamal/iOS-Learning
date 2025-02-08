@@ -12,6 +12,10 @@ enum LoginMethod: Int {
     case phoneNumber
 }
 struct LoginView: View {
+    
+    @EnvironmentObject var coordinator: AppCoordinator
+    private var router = LoginRouter()
+    
     @State private var loginMethod: LoginMethod = .phoneNumber
     @State private var phoneNumberFieldText: String = ""
     @State private var emailFieldText: String = ""
@@ -39,13 +43,16 @@ struct LoginView: View {
             Spacer()
         }
         .padding(.horizontal, 16)
+        .navigationDestination(for: AnyRoute.self) { route in
+            route.destinationView()
+        }
         .sheet(isPresented: $showCountrySheet, content: {
             CountryListView(){ country in
                 selectedCountry = country ?? CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
             }
-                .presentationDetents([.medium, .large])
-                .presentationBackground(.clear)
-                
+            .presentationDetents([.medium, .large])
+            .presentationBackground(.clear)
+            
         })
         
     }
@@ -57,12 +64,8 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
-}
-
 extension LoginView {
-   private var heading: some View {
+    private var heading: some View {
         Text("Welcome to Tidoy 👋")
             .font(.heading6)
             .foregroundStyle(.text100)
@@ -73,7 +76,7 @@ extension LoginView {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .foregroundStyle(.background20)
-                    
+                
                     .overlay {
                         HStack {
                             RoundedRectangle(cornerRadius: 21.0)
@@ -98,11 +101,11 @@ extension LoginView {
                                 .onTapGesture {
                                     updateLoginMethod(to: .phoneNumber)
                                 }
-
+                            
                         }
                         .font(.bodySmallMedium)
                         .padding(.all, 4)
-                }
+                    }
             }
         }
         .frame(height: 50)
@@ -147,11 +150,11 @@ extension LoginView {
                 state: $phoneNumberFieldState,
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
-                placeholderText: "ex : 81234567890", 
+                placeholderText: "ex : 81234567890",
                 selectedCountry: $selectedCountry, action: {
                     self.showCountrySheet.toggle()
                 },
-            validatable: PhoneNumberValidator())
+                validatable: PhoneNumberValidator())
         }
     }
     
@@ -163,14 +166,14 @@ extension LoginView {
                 .foregroundStyle(.background30)
                 .frame(height: 26)
                 .overlay {
-                RoundedRectangle(cornerRadius: 13)
-                    .fill(.background30)
-                    .frame(width: 47)
-                    .overlay {
-                        Text("OR")
-                            .foregroundStyle(.text60)
-                            .font(.bodyXSmallSemiBold)
-                    }
+                    RoundedRectangle(cornerRadius: 13)
+                        .fill(.background30)
+                        .frame(width: 47)
+                        .overlay {
+                            Text("OR")
+                                .foregroundStyle(.text60)
+                                .font(.bodyXSmallSemiBold)
+                        }
                 }
                 .padding(.top, 32)
             
@@ -204,8 +207,16 @@ extension LoginView {
                     .underline()
                     .foregroundStyle(.primaryMain)
                     .font(.bodyXSmallSemiBold)
+                    .onTapGesture {
+                        router.navigate(to: SignupRoute(), coordinator: coordinator)
+                    }
             }
             .padding(.top, .padding80)
         }
     }
+}
+
+#Preview {
+    LoginView()
+        .environmentObject(AppCoordinator())
 }
