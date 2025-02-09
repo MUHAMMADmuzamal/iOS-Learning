@@ -20,17 +20,16 @@ struct OnboardingScreen: View {
             OnboardingCarousel(dataSource: dataSource, index: $index)
             HStack(spacing: 12) {
                 if index != dataSourceLength - 1 {
-                    SecondaryButton(title: "Skip", action: {})
-                        .frame(width: 63)
+                    SecondaryButton(title: "Skip", action: {
+                        displayNext(skip: true)
+                    })
+                    .frame(width: 63)
                 }
                 
                 PrimaryButton(title: index == dataSourceLength - 1 ?
                               "Get Started" : "Next",
                               rightIcon: Image(systemName: "arrow.right")) {
-                    index += 1
-                    if index == dataSourceLength {
-                        router.navigateSignup(coordinator: coordinator)
-                    }
+                    displayNext()
                 }
             }
             .frame(height: 58)
@@ -41,6 +40,17 @@ struct OnboardingScreen: View {
         }
         .navigationDestination(for: SignupRoute.self) { route in
             route.destinationView()
+        }
+    }
+    
+    func displayNext(skip: Bool = false) {
+        if skip {
+            index = dataSourceLength
+        }else {
+            index += 1
+        }
+        if index == dataSourceLength {
+            router.navigateSignup(coordinator: coordinator)
         }
     }
 }
