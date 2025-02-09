@@ -8,7 +8,7 @@
 import Foundation
 
 final class OnboardingRouter {
-    func navigate(to route: some Route, coordinator: AppCoordinator) {
-        coordinator.path.append(route)
+    func navigateSignup(coordinator: AppCoordinator) {
+        coordinator.path.append(AnyRoute(SignupRoute()))
     }
 }

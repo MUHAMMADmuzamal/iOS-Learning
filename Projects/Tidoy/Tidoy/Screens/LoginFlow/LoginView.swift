@@ -208,7 +208,7 @@ extension LoginView {
                     .foregroundStyle(.primaryMain)
                     .font(.bodyXSmallSemiBold)
                     .onTapGesture {
-                        router.navigate(to: SignupRoute(), coordinator: coordinator)
+                        router.navigateToSignUp(coordinator: coordinator)
                     }
             }
             .padding(.top, .padding80)

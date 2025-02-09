@@ -61,9 +61,9 @@ struct SignupView: View {
                 isDisabledRegisterButton = formStates.contains(.error)
             }
         }
-        .navigationDestination(for: AnyRoute.self) { route in
-            route.destinationView()
-        }
+//        .navigationDestination(for: AnyRoute.self) { route in
+//            route.destinationView()
+//        }
     }
     
     private var heading: some View {
@@ -127,7 +127,7 @@ struct SignupView: View {
                 .foregroundStyle(.primaryMain)
                 .font(.bodyXSmallSemiBold)
                 .onTapGesture {
-                    router.navigate(to: LoginRoute(), coordinator: coordinator)
+                    router.navigateSignIn(coordinator: coordinator)
                 }
         }
     }

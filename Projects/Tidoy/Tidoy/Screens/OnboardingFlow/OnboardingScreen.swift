@@ -29,7 +29,7 @@ struct OnboardingScreen: View {
                               rightIcon: Image(systemName: "arrow.right")) {
                     index += 1
                     if index == dataSourceLength {
-                        router.navigate(to: SignupRoute(), coordinator: coordinator)
+                        router.navigateSignup(coordinator: coordinator)
                     }
                 }
             }
@@ -39,7 +39,7 @@ struct OnboardingScreen: View {
         .onAppear {
             index = 0
         }
-        .navigationDestination(for: AnyRoute.self) { route in
+        .navigationDestination(for: SignupRoute.self) { route in
             route.destinationView()
         }
     }

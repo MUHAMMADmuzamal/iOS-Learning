@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignupRoute: Route, Hashable {
+struct SignupRoute: Route {
     func destinationView() -> some View {
         return SignupView()
     }

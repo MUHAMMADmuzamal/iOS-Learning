@@ -8,7 +8,7 @@
 import Foundation
 
 final class SplashRouter {
-    func navigate(to route: some Route, coordinator: AppCoordinator) {
-        coordinator.path.append(route)
+    func navigateOnboarding( coordinator: AppCoordinator) {
+        coordinator.path.append(AnyRoute(OnboardingRoute()))
     }
 }

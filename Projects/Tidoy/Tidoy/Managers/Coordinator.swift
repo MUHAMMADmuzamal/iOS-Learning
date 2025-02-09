@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-protocol Route: Hashable {
-    associatedtype Destination: View
-    @ViewBuilder func destinationView() -> Destination
-}
-
 class AppCoordinator: ObservableObject {
     @Published var path = NavigationPath()
     

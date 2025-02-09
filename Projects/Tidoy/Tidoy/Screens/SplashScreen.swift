@@ -12,20 +12,19 @@ struct SplashScreen: View {
     private var router = SplashRouter()
     
     var body: some View {
-        ZStack {
-            Image("splashScreenImg")
-                .resizable()
-                .scaledToFill()
-        }
-        .ignoresSafeArea(.all)
-        .navigationDestination(for: OnboardingRoute.self) { route in
-            route.destinationView()
-        }
-        .navigationDestination(for: AnyRoute.self) { route in
-            route.destinationView()
-        }
-        .onAppear {
-            router.navigate(to: OnboardingRoute(), coordinator: coordinator)
+        NavigationStack(path: $coordinator.path) {
+            ZStack {
+                Image("splashScreenImg")
+                    .resizable()
+                    .scaledToFill()
+            }
+            .ignoresSafeArea(.all)
+            .navigationDestination(for: AnyRoute.self) { route in
+                route.destinationView()
+            }
+            .onAppear {
+                router.navigateOnboarding(coordinator: coordinator)
+            }
         }
     }
 }
@@ -34,6 +33,6 @@ struct SplashScreen: View {
     @StateObject var coordinator = AppCoordinator()
     return  NavigationStack(path: $coordinator.path) {
         SplashScreen()
-            .environmentObject(coordinator)
     }
+    .environmentObject(coordinator)
 }
