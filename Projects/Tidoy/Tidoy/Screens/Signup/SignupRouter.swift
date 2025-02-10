@@ -9,6 +9,6 @@ import Foundation
 
 final class SignupRouter {
     func navigateSignIn(coordinator: AppCoordinator) {
-        coordinator.path.append(AnyRoute(SignupRoute()))
+        coordinator.displaySignup = false
     }
 }

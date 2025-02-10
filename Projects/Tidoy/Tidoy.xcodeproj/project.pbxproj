@@ -25,11 +25,12 @@
 		D63179502D578F50005A6791 /* SignupRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631794F2D578F50005A6791 /* SignupRoute.swift */; };
 		D63179522D57900F005A6791 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179512D57900F005A6791 /* LoginRouter.swift */; };
 		D63179542D579015005A6791 /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179532D579015005A6791 /* LoginRoute.swift */; };
-		D63179562D579FE2005A6791 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179552D579FE2005A6791 /* SplashRouter.swift */; };
 		D63179582D57A158005A6791 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179572D57A158005A6791 /* OnboardingRouter.swift */; };
 		D631795A2D57A165005A6791 /* OnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179592D57A165005A6791 /* OnboardingRoute.swift */; };
 		D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631795D2D57A26F005A6791 /* OnboardingCarouselModel.swift */; };
 		D63179672D58EED3005A6791 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179662D58EED3005A6791 /* Route.swift */; };
+		D63179692D59D167005A6791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179682D59D167005A6791 /* RootView.swift */; };
+		D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631796B2D59D2C9005A6791 /* HomeView.swift */; };
 		D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CCD2D52109600B0A17A /* TextFieldState.swift */; };
 		D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */; };
 		D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */; };
@@ -89,11 +90,12 @@
 		D631794F2D578F50005A6791 /* SignupRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRoute.swift; sourceTree = "<group>"; };
 		D63179512D57900F005A6791 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		D63179532D579015005A6791 /* LoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
-		D63179552D579FE2005A6791 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		D63179572D57A158005A6791 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		D63179592D57A165005A6791 /* OnboardingRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRoute.swift; sourceTree = "<group>"; };
 		D631795D2D57A26F005A6791 /* OnboardingCarouselModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCarouselModel.swift; sourceTree = "<group>"; };
 		D63179662D58EED3005A6791 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		D63179682D59D167005A6791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D631796B2D59D2C9005A6791 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D63A6CCD2D52109600B0A17A /* TextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldState.swift; sourceTree = "<group>"; };
 		D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableProtocol.swift; sourceTree = "<group>"; };
 		D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationImplementation.swift; sourceTree = "<group>"; };
@@ -184,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				D61A8F0C2C415C5000F55756 /* SplashScreen.swift */,
-				D63179552D579FE2005A6791 /* SplashRouter.swift */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -263,6 +264,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		D631796A2D59D2BB005A6791 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D631796B2D59D2C9005A6791 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		D63A6CCF2D547F3400B0A17A /* Validations */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +317,7 @@
 				D68A52722C2C2F8300F69181 /* Screens */,
 				D66FD5652C1C729D007D9F52 /* Configurations */,
 				D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */,
+				D63179682D59D167005A6791 /* RootView.swift */,
 				D66FD4EB2C1C67B7007D9F52 /* Preview Content */,
 			);
 			path = Tidoy;
@@ -334,6 +344,7 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D631796A2D59D2BB005A6791 /* Home */,
 				D6C67A112D20533500166EF1 /* Signup */,
 				D61A8F1D2C47BD4D00F55756 /* LoginFlow */,
 				D61A8F0B2C415C3C00F55756 /* SplashScreen */,
@@ -572,6 +583,7 @@
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D631794E2D578E4E005A6791 /* SignupRouter.swift in Sources */,
+				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
 				D6C67A142D20535800166EF1 /* SignupView.swift in Sources */,
@@ -589,9 +601,9 @@
 				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
 				D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
-				D63179562D579FE2005A6791 /* SplashRouter.swift in Sources */,
 				D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */,
 				D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */,
+				D63179692D59D167005A6791 /* RootView.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
 				D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */,
 				D63179672D58EED3005A6791 /* Route.swift in Sources */,

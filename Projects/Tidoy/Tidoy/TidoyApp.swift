@@ -13,7 +13,7 @@ struct TidoyApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $coordinator.path) {
-                SplashScreen()
+                RootView()
             }
             .environmentObject(coordinator)
         }

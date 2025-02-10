@@ -160,7 +160,9 @@ extension LoginView {
     
     private var bottomSection: some View {
         VStack {
-            PrimaryButton(title: "Login") { }
+            PrimaryButton(title: "Login") {
+                coordinator.isLoggedIn = true
+            }
             Spacer()
             Divider()
                 .foregroundStyle(.background30)

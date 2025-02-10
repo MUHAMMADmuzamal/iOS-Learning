@@ -9,6 +9,6 @@ import Foundation
 
 final class OnboardingRouter {
     func navigateSignup(coordinator: AppCoordinator) {
-        coordinator.path.append(AnyRoute(SignupRoute()))
+        coordinator.hasCompletedOnboarding = true
     }
 }

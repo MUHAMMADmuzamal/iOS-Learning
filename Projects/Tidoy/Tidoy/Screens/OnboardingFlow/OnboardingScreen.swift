@@ -46,7 +46,7 @@ struct OnboardingScreen: View {
     func displayNext(skip: Bool = false) {
         if skip {
             index = dataSourceLength
-        }else {
+        } else {
             index += 1
         }
         if index == dataSourceLength {
