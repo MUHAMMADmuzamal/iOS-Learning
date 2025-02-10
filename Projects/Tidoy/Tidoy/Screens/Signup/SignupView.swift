@@ -9,8 +9,11 @@ import SwiftUI
 
 struct SignupView: View {
     
-    @EnvironmentObject var coordinator: AppCoordinator
-    private var router = SignupRouter()
+    private var router: SignupRouterProtocol!
+    
+    init (router: SignupRouterProtocol) {
+        self.router = router
+    }
     
     @State private var selectedCountry: CountryModel = .defaultCountry
     @State private var showCountrySheet: Bool = false
@@ -57,13 +60,10 @@ struct SignupView: View {
                 .presentationBackground(.clear)
                 
             })
-            .onChange(of: formStates) { _ in
+            .onChange(of: formStates) {
                 isDisabledRegisterButton = formStates.contains(.error)
             }
         }
-//        .navigationDestination(for: AnyRoute.self) { route in
-//            route.destinationView()
-//        }
     }
     
     private var heading: some View {
@@ -127,7 +127,7 @@ struct SignupView: View {
                 .foregroundStyle(.primaryMain)
                 .font(.bodyXSmallSemiBold)
                 .onTapGesture {
-                    router.navigateSignIn(coordinator: coordinator)
+                    router.navigateToSignIn()
                 }
         }
     }
@@ -138,6 +138,5 @@ struct SignupView: View {
 }
 
 #Preview {
-    SignupView()
-        .environmentObject(AppCoordinator())
+    SignupView(router: SignupRouterRouter(coordinator: AppCoordinator()))
 }

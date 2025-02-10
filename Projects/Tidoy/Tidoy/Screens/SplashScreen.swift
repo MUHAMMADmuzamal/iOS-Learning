@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SplashScreen: View {
-    @EnvironmentObject var coordinator: AppCoordinator
     
     var onFinish: () -> Void
     

@@ -8,7 +8,25 @@
 import SwiftUI
 
 struct OnboardingRoute: Route {
+    let coordinator: AppCoordinator
+    let router: OnboardingRouterProtocol
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+        self.router = OnboardingRouter(coordinator: coordinator)
+    }
+    
     func destinationView() -> some View {
-        OnboardingScreen()
+        OnboardingScreen(router: router)
+    }
+}
+
+extension OnboardingRoute {
+    static func == (lhs: OnboardingRoute, rhs: OnboardingRoute) -> Bool {
+        lhs.hashValue == rhs.hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine("OnboardingRoute")
     }
 }

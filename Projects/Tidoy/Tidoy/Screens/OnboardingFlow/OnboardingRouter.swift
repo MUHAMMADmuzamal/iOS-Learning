@@ -7,8 +7,18 @@
 
 import Foundation
 
-final class OnboardingRouter {
-    func navigateSignup(coordinator: AppCoordinator) {
+protocol OnboardingRouterProtocol: RouterProtocol {
+    func navigateToSignup()
+}
+
+final class OnboardingRouter: OnboardingRouterProtocol {
+    var coordinator: AppCoordinator
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    func navigateToSignup() {
         coordinator.hasCompletedOnboarding = true
     }
 }

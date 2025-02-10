@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct RootView: View {
-    @EnvironmentObject var coordinator: AppCoordinator
+    @StateObject var coordinator = AppCoordinator()
     @State private var isLoading = true
 
     var body: some View {
-        if isLoading {
-            SplashScreen {
-                withAnimation {
-                    isLoading = false
+        NavigationStack(path: $coordinator.path) {
+            if isLoading {
+                SplashScreen {
+                    withAnimation {
+                        isLoading = false
+                    }
                 }
-            }
-        } else {
-            if !coordinator.hasCompletedOnboarding {
-                OnboardingScreen()
-            } else if coordinator.displaySignup {
-                SignupView()
             } else {
-                if !coordinator.isLoggedIn {
-                   LoginView()
-               } else {
-                   HomeView()
-               }
+                if !coordinator.hasCompletedOnboarding {
+                    OnboardingScreen(router: OnboardingRouter(coordinator: coordinator))
+                } else if coordinator.displaySignup {
+                    SignupView(router: SignupRouterRouter(coordinator: coordinator))
+                } else {
+                    if !coordinator.isLoggedIn {
+                        LoginView(router: LoginRouter(coordinator: coordinator))
+                   } else {
+                       HomeView(router: HomeRouter(coordinator: coordinator))
+                           .navigationDestination(for: AnyRoute.self) { route in
+                               route.destinationView()
+                           }
+                   }
+                }
             }
         }
     }

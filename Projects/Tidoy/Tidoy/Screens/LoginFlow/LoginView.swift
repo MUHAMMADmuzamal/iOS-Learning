@@ -13,8 +13,11 @@ enum LoginMethod: Int {
 }
 struct LoginView: View {
     
-    @EnvironmentObject var coordinator: AppCoordinator
-    private var router = LoginRouter()
+    private var router: LoginRouterProtocol!
+    
+    init(router: LoginRouterProtocol) {
+        self.router = router
+    }
     
     @State private var loginMethod: LoginMethod = .phoneNumber
     @State private var phoneNumberFieldText: String = ""
@@ -43,11 +46,8 @@ struct LoginView: View {
             Spacer()
         }
         .padding(.horizontal, 16)
-        .navigationDestination(for: AnyRoute.self) { route in
-            route.destinationView()
-        }
         .sheet(isPresented: $showCountrySheet, content: {
-            CountryListView(){ country in
+            CountryListView { country in
                 selectedCountry = country ?? CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")
             }
             .presentationDetents([.medium, .large])
@@ -161,7 +161,7 @@ extension LoginView {
     private var bottomSection: some View {
         VStack {
             PrimaryButton(title: "Login") {
-                coordinator.isLoggedIn = true
+                router.navigateToHome()
             }
             Spacer()
             Divider()
@@ -210,7 +210,7 @@ extension LoginView {
                     .foregroundStyle(.primaryMain)
                     .font(.bodyXSmallSemiBold)
                     .onTapGesture {
-                        router.navigateToSignUp(coordinator: coordinator)
+                        router.navigateToSignUp()
                     }
             }
             .padding(.top, .padding80)
@@ -219,6 +219,5 @@ extension LoginView {
 }
 
 #Preview {
-    LoginView()
-        .environmentObject(AppCoordinator())
+    LoginView(router: LoginRouter(coordinator: AppCoordinator()))
 }

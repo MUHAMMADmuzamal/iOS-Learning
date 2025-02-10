@@ -13,6 +13,10 @@ class AppCoordinator: ObservableObject {
     @Published var displaySignup: Bool = true
     @Published var hasCompletedOnboarding: Bool = false
     
+    func navigate(to route: some Route) {
+        path.append(AnyRoute(route))
+    }
+    
     func goBack() {
         if !path.isEmpty {
             path.removeLast()

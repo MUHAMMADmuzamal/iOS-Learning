@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct HomeView: View {
+    private var router: HomeRouterProtocol!
+    
+    init(router: HomeRouterProtocol) {
+        self.router = router
+    }
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Hello, World! Home ")
+            Button {
+                router.navigateToNotification()
+            } label: {
+                Text("Display Notification screen. ")
+            }
+        }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(router: HomeRouter(coordinator: AppCoordinator()))
 }

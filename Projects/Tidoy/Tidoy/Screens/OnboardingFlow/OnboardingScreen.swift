@@ -9,8 +9,11 @@ import SwiftUI
 
 struct OnboardingScreen: View {
     
-    @EnvironmentObject var coordinator: AppCoordinator
-    private var router = OnboardingRouter()
+    private var router: OnboardingRouterProtocol!
+    
+    init(router: OnboardingRouterProtocol) {
+        self.router = router
+    }
     
     private let dataSource = OnboardingCarouselCardModel.data
     @State private var index: Int = 0
@@ -38,9 +41,6 @@ struct OnboardingScreen: View {
         .onAppear {
             index = 0
         }
-        .navigationDestination(for: SignupRoute.self) { route in
-            route.destinationView()
-        }
     }
     
     func displayNext(skip: Bool = false) {
@@ -50,12 +50,11 @@ struct OnboardingScreen: View {
             index += 1
         }
         if index == dataSourceLength {
-            router.navigateSignup(coordinator: coordinator)
+            router.navigateToSignup()
         }
     }
 }
 
 #Preview {
-    OnboardingScreen()
-        .environmentObject(AppCoordinator())
+    OnboardingScreen(router: OnboardingRouter(coordinator: AppCoordinator()))
 }

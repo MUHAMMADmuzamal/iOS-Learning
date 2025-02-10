@@ -31,6 +31,13 @@
 		D63179672D58EED3005A6791 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179662D58EED3005A6791 /* Route.swift */; };
 		D63179692D59D167005A6791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179682D59D167005A6791 /* RootView.swift */; };
 		D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631796B2D59D2C9005A6791 /* HomeView.swift */; };
+		D63179782D5A4DAB005A6791 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179772D5A4DAB005A6791 /* NotificationView.swift */; };
+		D631797C2D5A4DBD005A6791 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631797B2D5A4DBD005A6791 /* HomeRouter.swift */; };
+		D631797E2D5A4F0F005A6791 /* NotificationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631797D2D5A4F0F005A6791 /* NotificationRoute.swift */; };
+		D63179812D5A579C005A6791 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179802D5A579C005A6791 /* MessagesView.swift */; };
+		D63179832D5A57CE005A6791 /* MessagesRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179822D5A57CE005A6791 /* MessagesRoute.swift */; };
+		D63179852D5A57FA005A6791 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179842D5A57FA005A6791 /* NotificationRouter.swift */; };
+		D63179872D5A5846005A6791 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179862D5A5846005A6791 /* Router.swift */; };
 		D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CCD2D52109600B0A17A /* TextFieldState.swift */; };
 		D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */; };
 		D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */; };
@@ -96,6 +103,13 @@
 		D63179662D58EED3005A6791 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		D63179682D59D167005A6791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D631796B2D59D2C9005A6791 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D63179772D5A4DAB005A6791 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D631797B2D5A4DBD005A6791 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		D631797D2D5A4F0F005A6791 /* NotificationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRoute.swift; sourceTree = "<group>"; };
+		D63179802D5A579C005A6791 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		D63179822D5A57CE005A6791 /* MessagesRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesRoute.swift; sourceTree = "<group>"; };
+		D63179842D5A57FA005A6791 /* NotificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRouter.swift; sourceTree = "<group>"; };
+		D63179862D5A5846005A6791 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D63A6CCD2D52109600B0A17A /* TextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldState.swift; sourceTree = "<group>"; };
 		D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableProtocol.swift; sourceTree = "<group>"; };
 		D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationImplementation.swift; sourceTree = "<group>"; };
@@ -260,6 +274,7 @@
 			children = (
 				D631794B2D578B65005A6791 /* Coordinator.swift */,
 				D63179662D58EED3005A6791 /* Route.swift */,
+				D63179862D5A5846005A6791 /* Router.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -268,8 +283,28 @@
 			isa = PBXGroup;
 			children = (
 				D631796B2D59D2C9005A6791 /* HomeView.swift */,
+				D631797B2D5A4DBD005A6791 /* HomeRouter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		D63179742D5A4D8A005A6791 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				D63179772D5A4DAB005A6791 /* NotificationView.swift */,
+				D63179842D5A57FA005A6791 /* NotificationRouter.swift */,
+				D631797D2D5A4F0F005A6791 /* NotificationRoute.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		D631797F2D5A5788005A6791 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				D63179802D5A579C005A6791 /* MessagesView.swift */,
+				D63179822D5A57CE005A6791 /* MessagesRoute.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		D63A6CCF2D547F3400B0A17A /* Validations */ = {
@@ -344,6 +379,8 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D631797F2D5A5788005A6791 /* Messages */,
+				D63179742D5A4D8A005A6791 /* Notifications */,
 				D631796A2D59D2BB005A6791 /* Home */,
 				D6C67A112D20533500166EF1 /* Signup */,
 				D61A8F1D2C47BD4D00F55756 /* LoginFlow */,
@@ -576,6 +613,7 @@
 				D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */,
 				D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */,
 				D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */,
+				D63179832D5A57CE005A6791 /* MessagesRoute.swift in Sources */,
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D63179522D57900F005A6791 /* LoginRouter.swift in Sources */,
@@ -587,14 +625,18 @@
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
 				D6C67A142D20535800166EF1 /* SignupView.swift in Sources */,
+				D63179782D5A4DAB005A6791 /* NotificationView.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
 				D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */,
+				D631797E2D5A4F0F005A6791 /* NotificationRoute.swift in Sources */,
+				D63179852D5A57FA005A6791 /* NotificationRouter.swift in Sources */,
 				D631795A2D57A165005A6791 /* OnboardingRoute.swift in Sources */,
 				D63179502D578F50005A6791 /* SignupRoute.swift in Sources */,
 				D61A8F182C42C6F300F55756 /* PrimaryButton.swift in Sources */,
 				D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */,
 				D63179542D579015005A6791 /* LoginRoute.swift in Sources */,
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
+				D63179872D5A5846005A6791 /* Router.swift in Sources */,
 				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */,
@@ -603,7 +645,9 @@
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */,
 				D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */,
+				D631797C2D5A4DBD005A6791 /* HomeRouter.swift in Sources */,
 				D63179692D59D167005A6791 /* RootView.swift in Sources */,
+				D63179812D5A579C005A6791 /* MessagesView.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
 				D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */,
 				D63179672D58EED3005A6791 /* Route.swift in Sources */,
