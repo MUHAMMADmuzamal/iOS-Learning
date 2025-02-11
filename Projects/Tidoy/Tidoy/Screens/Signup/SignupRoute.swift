@@ -11,10 +11,6 @@ struct SignupRoute: Route {
     
     let router: SignupRouterProtocol
     
-    init(router: SignupRouterProtocol) {
-        self.router = router
-    }
-    
     func destinationView() -> some View {
         return SignupView(router: router)
     }

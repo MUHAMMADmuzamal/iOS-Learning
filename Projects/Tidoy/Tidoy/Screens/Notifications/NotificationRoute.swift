@@ -11,10 +11,6 @@ struct NotificationRoute: Route {
 
     let router: NotificationRouterProtocol
     
-    init(router: NotificationRouterProtocol) {
-        self.router = router
-    }
-    
     func destinationView() -> some View {
         return NotificationView(router: router)
     }

@@ -11,9 +11,6 @@ struct LoginRoute: Route {
     
     let router: LoginRouterProtocol
     
-    init(router: LoginRouterProtocol) {
-        self.router = router
-    }
     func destinationView() -> some View {
         LoginView(router: router)
     }

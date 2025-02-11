@@ -19,6 +19,6 @@ final class HomeRouter: HomeRouterProtocol {
     }
     
     func navigateToNotification() {
-        coordinator.navigate(to: NotificationRoute(router: NotificationRouter(coordinator: coordinator)))
+        coordinator.navigate(to: NotificationBuilder.build(coordinator: coordinator))
     }
 }

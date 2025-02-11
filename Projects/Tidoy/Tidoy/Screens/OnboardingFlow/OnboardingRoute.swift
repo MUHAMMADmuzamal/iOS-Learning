@@ -10,10 +10,6 @@ import SwiftUI
 struct OnboardingRoute: Route {
     let router: OnboardingRouterProtocol
     
-    init(router: OnboardingRouterProtocol) {
-        self.router = router
-    }
-    
     func destinationView() -> some View {
         OnboardingScreen(router: router)
     }
