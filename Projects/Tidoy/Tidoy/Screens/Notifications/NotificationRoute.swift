@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct NotificationRoute: Route {
-    
-    let coordinator: AppCoordinator
+
     let router: NotificationRouterProtocol
     
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-        self.router = NotificationRouter(coordinator: coordinator)
+    init(router: NotificationRouterProtocol) {
+        self.router = router
     }
     
     func destinationView() -> some View {

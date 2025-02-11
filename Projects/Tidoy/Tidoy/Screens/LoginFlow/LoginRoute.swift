@@ -9,12 +9,10 @@ import SwiftUI
 
 struct LoginRoute: Route {
     
-    let coordinator: AppCoordinator
     let router: LoginRouterProtocol
     
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-        self.router = LoginRouter(coordinator: coordinator)
+    init(router: LoginRouterProtocol) {
+        self.router = router
     }
     func destinationView() -> some View {
         LoginView(router: router)

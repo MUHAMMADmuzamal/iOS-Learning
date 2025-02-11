@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct OnboardingRoute: Route {
-    let coordinator: AppCoordinator
     let router: OnboardingRouterProtocol
     
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-        self.router = OnboardingRouter(coordinator: coordinator)
+    init(router: OnboardingRouterProtocol) {
+        self.router = router
     }
     
     func destinationView() -> some View {

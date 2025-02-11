@@ -9,12 +9,10 @@ import SwiftUI
 
 struct SignupRoute: Route {
     
-    let coordinator: AppCoordinator
     let router: SignupRouterProtocol
     
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-        self.router = SignupRouterRouter(coordinator: coordinator)
+    init(router: SignupRouterProtocol) {
+        self.router = router
     }
     
     func destinationView() -> some View {
