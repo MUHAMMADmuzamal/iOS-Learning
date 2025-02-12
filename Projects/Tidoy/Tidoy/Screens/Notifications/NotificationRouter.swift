@@ -7,16 +7,11 @@
 
 import Foundation
 
-protocol NotificationRouterProtocol: RouterProtocol {
+protocol NotificationRouterProtocol {
     func navigateToMessages()
 }
 
-final class NotificationRouter: NotificationRouterProtocol {
-    var coordinator: AppCoordinator
-    
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-    }
+final class NotificationRouter: Router, NotificationRouterProtocol {
     
     func navigateToMessages() {
         coordinator.navigate(to: MessagesRoute())

@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
+import Swinject
 
 struct NotificationRoute: Route {
-
-    let router: NotificationRouterProtocol
-    
+    let injector: Container
     func destinationView() -> some View {
-        return NotificationView(router: router)
+        return NotificationBuilder.build(injector: self.injector)
     }
 }
 

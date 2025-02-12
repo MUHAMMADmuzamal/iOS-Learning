@@ -7,5 +7,7 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+//#include "Target Support Files/Pods-Tidoy/Pods-Tidoy.staging.xcconfig"
+
 PRODUCT_BUNDLE_IDENTIFIER = com.codesOrbit.Tidoy.staging
 PRODUCT_NAME = Tidoy.staging

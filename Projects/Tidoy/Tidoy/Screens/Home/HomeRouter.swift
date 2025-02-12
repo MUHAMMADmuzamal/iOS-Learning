@@ -6,19 +6,15 @@
 //
 
 import Foundation
+import Swinject
 
 protocol HomeRouterProtocol: RouterProtocol {
     func navigateToNotification()
 }
 
-final class HomeRouter: HomeRouterProtocol {
-    var coordinator: AppCoordinator
-    
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-    }
+final class HomeRouter: Router, HomeRouterProtocol {
     
     func navigateToNotification() {
-        coordinator.navigate(to: NotificationBuilder.build(coordinator: coordinator))
+        coordinator.navigate(to: NotificationRoute(injector: self.injector))
     }
 }

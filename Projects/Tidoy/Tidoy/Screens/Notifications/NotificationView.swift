@@ -27,5 +27,5 @@ struct NotificationView: View {
 }
 
 #Preview {
-    NotificationView(router: NotificationRouter(coordinator: AppCoordinator()))
+    NotificationView(router: NotificationRouter(injector: DependenciesHolder().injector(), coordinator: AppCoordinator()))
 }

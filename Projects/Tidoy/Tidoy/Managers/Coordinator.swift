@@ -7,7 +7,17 @@
 
 import SwiftUI
 
-class AppCoordinator: ObservableObject {
+protocol AppCoordinatorProtocol {
+    var path: NavigationPath { get set }
+    var isLoggedIn: Bool { get set }
+    var displaySignup: Bool { get set }
+    var hasCompletedOnboarding: Bool { get set }
+    
+    func navigate(to route: some Route)
+    func goBack()
+}
+
+class AppCoordinator: AppCoordinatorProtocol, ObservableObject {
     @Published var path = NavigationPath()
     @Published var isLoggedIn: Bool = false
     @Published var displaySignup: Bool = true

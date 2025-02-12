@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TidoyApp: App {
+    let injector = DependenciesHolder().injector()
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView(injector: injector, coordinator: AppCoordinator())
         }
     }
 }

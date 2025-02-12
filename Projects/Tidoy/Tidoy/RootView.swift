@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Swinject
 
 struct RootView: View {
-    @StateObject var coordinator = AppCoordinator()
+    let injector: Container
+    @StateObject var coordinator: AppCoordinator
     @State private var isLoading = true
 
     var body: some View {
@@ -21,14 +23,14 @@ struct RootView: View {
                 }
             } else {
                 if !coordinator.hasCompletedOnboarding {
-                    OnboardingScreen(router: OnboardingRouter(coordinator: coordinator))
+                    OnboardingScreen(router: OnboardingRouter(injector: self.injector, coordinator: coordinator))
                 } else if coordinator.displaySignup {
-                    SignupView(router: SignupRouterRouter(coordinator: coordinator))
+                    SignupView(router: SignupRouterRouter(injector: self.injector, coordinator: coordinator))
                 } else {
                     if !coordinator.isLoggedIn {
-                        LoginView(router: LoginRouter(coordinator: coordinator))
+                        LoginView(router: LoginRouter(injector: self.injector, coordinator: coordinator))
                    } else {
-                       HomeView(router: HomeRouter(coordinator: coordinator))
+                       HomeView(router: HomeRouter(injector: self.injector, coordinator: coordinator))
                            .navigationDestination(for: AnyRoute.self) { route in
                                route.destinationView()
                            }
@@ -40,5 +42,5 @@ struct RootView: View {
 }
 
 #Preview {
-    RootView()
+    RootView(injector: DependenciesHolder().injector(), coordinator: AppCoordinator())
 }

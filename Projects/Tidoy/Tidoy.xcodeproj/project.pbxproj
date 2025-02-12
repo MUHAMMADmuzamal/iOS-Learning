@@ -61,6 +61,8 @@
 		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
+		D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */; };
+		D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */; };
 		D6C67A142D20535800166EF1 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C67A132D20535800166EF1 /* SignupView.swift */; };
 		D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA712C7496B20063D7F6 /* CountryListView.swift */; };
 		D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */; };
@@ -140,6 +142,8 @@
 		D690E4892C836EDB003FAE23 /* CountryListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListModel.swift; sourceTree = "<group>"; };
 		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
 		D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
+		D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
+		D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
 		D6C67A132D20535800166EF1 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		D6C9DA712C7496B20063D7F6 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVM.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				D631794B2D578B65005A6791 /* Coordinator.swift */,
 				D63179662D58EED3005A6791 /* Route.swift */,
 				D63179862D5A5846005A6791 /* Router.swift */,
+				D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */,
+				D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				D66FD4DF2C1C67B2007D9F52 /* Frameworks */,
 				D66FD4E02C1C67B2007D9F52 /* Resources */,
 				D66FD50F2C1C6975007D9F52 /* ShellScript */,
+				8D76AF6A8B01C624A1C25C44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -584,6 +591,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8D76AF6A8B01C624A1C25C44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tidoy/Pods-Tidoy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tidoy/Pods-Tidoy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tidoy/Pods-Tidoy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D66FD50F2C1C6975007D9F52 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -617,6 +641,7 @@
 				D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */,
 				D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */,
 				D63179832D5A57CE005A6791 /* MessagesRoute.swift in Sources */,
+				D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */,
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D63179522D57900F005A6791 /* LoginRouter.swift in Sources */,
@@ -641,6 +666,7 @@
 				D63179542D579015005A6791 /* LoginRoute.swift in Sources */,
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
 				D63179872D5A5846005A6791 /* Router.swift in Sources */,
+				D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */,
 				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */,

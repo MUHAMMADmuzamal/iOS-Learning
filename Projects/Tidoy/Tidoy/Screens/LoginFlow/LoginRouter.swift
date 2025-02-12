@@ -7,17 +7,12 @@
 
 import Foundation
 
-protocol LoginRouterProtocol: RouterProtocol {
+protocol LoginRouterProtocol {
     func navigateToSignUp()
     func navigateToHome()
 }
 
-final class LoginRouter: LoginRouterProtocol {
-    var coordinator: AppCoordinator
-    
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-    }
+final class LoginRouter: Router, LoginRouterProtocol {
     
     func navigateToSignUp() {
         coordinator.displaySignup = true

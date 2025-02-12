@@ -7,13 +7,5 @@ target 'Tidoy' do
 
   # Pods for Tidoy
   pod 'SwiftLint'
-  target 'TidoyTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'TidoyUITests' do
-    # Pods for testing
-  end
-
+  pod 'Swinject'
 end

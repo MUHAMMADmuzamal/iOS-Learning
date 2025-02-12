@@ -6,7 +6,18 @@
 //
 
 import Foundation
+import Swinject
 
-protocol RouterProtocol {
-    var coordinator: AppCoordinator { get set }
+protocol RouterProtocol: InjectorProtocol {
+    var coordinator: AppCoordinatorProtocol { get set }
+}
+
+class Router: RouterProtocol {
+    var injector: Container
+    var coordinator: AppCoordinatorProtocol
+    
+    init(injector: Container, coordinator: AppCoordinatorProtocol) {
+        self.injector = injector
+        self.coordinator = coordinator
+    }
 }

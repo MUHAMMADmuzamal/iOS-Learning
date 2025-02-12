@@ -219,5 +219,5 @@ extension LoginView {
 }
 
 #Preview {
-    LoginView(router: LoginRouter(coordinator: AppCoordinator()))
+    LoginView(router: LoginRouter(injector: DependenciesHolder().injector(), coordinator: AppCoordinator()))
 }
