@@ -27,5 +27,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(router: HomeRouter(injector: DependenciesHolder().injector(), coordinator: AppCoordinator()))
+    HomeView(router: HomeRouter(injector: DependenciesHolder().injector()))
 }

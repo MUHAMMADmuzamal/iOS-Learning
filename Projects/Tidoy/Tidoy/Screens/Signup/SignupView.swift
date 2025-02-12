@@ -138,5 +138,5 @@ struct SignupView: View {
 }
 
 #Preview {
-    SignupView(router: SignupRouterRouter(injector: DependenciesHolder().injector(), coordinator: AppCoordinator()))
+    SignupView(router: SignupRouterRouter(injector: DependenciesHolder().injector()))
 }

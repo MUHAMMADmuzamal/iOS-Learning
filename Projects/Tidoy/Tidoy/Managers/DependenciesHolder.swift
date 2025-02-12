@@ -10,9 +10,9 @@ import Swinject
 class DependenciesHolder {
     func injector() -> Container {
         let container = Container()
-        container.register(AppCoordinatorProtocol.self) { resolver in
+        container.register(AppCoordinator.self) { resolver in
             AppCoordinator()
-        }
+        }.inObjectScope(.container)
         return container
     }
 }

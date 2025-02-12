@@ -16,8 +16,8 @@ class Router: RouterProtocol {
     var injector: Container
     var coordinator: AppCoordinatorProtocol
     
-    init(injector: Container, coordinator: AppCoordinatorProtocol) {
+    init(injector: Container) {
         self.injector = injector
-        self.coordinator = coordinator
+        self.coordinator = injector.resolve(AppCoordinator.self)!
     }
 }

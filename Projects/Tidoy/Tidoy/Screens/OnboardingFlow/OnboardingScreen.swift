@@ -56,5 +56,5 @@ struct OnboardingScreen: View {
 }
 
 #Preview {
-    OnboardingScreen(router: OnboardingRouter(injector: DependenciesHolder().injector(), coordinator: AppCoordinator()))
+    OnboardingScreen(router: OnboardingRouter(injector: DependenciesHolder().injector()))
 }

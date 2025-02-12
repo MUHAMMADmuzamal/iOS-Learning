@@ -10,9 +10,13 @@ import Swinject
 
 struct RootView: View {
     let injector: Container
-    @StateObject var coordinator: AppCoordinator
+    @ObservedObject var coordinator: AppCoordinator
     @State private var isLoading = true
 
+    init(injector: Container) {
+        self.injector = injector
+        self.coordinator = injector.resolve(AppCoordinator.self)!
+    }
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             if isLoading {
@@ -23,14 +27,14 @@ struct RootView: View {
                 }
             } else {
                 if !coordinator.hasCompletedOnboarding {
-                    OnboardingScreen(router: OnboardingRouter(injector: self.injector, coordinator: coordinator))
+                    OnboardingScreen(router: OnboardingRouter(injector: self.injector))
                 } else if coordinator.displaySignup {
-                    SignupView(router: SignupRouterRouter(injector: self.injector, coordinator: coordinator))
+                    SignupView(router: SignupRouterRouter(injector: self.injector))
                 } else {
                     if !coordinator.isLoggedIn {
-                        LoginView(router: LoginRouter(injector: self.injector, coordinator: coordinator))
+                        LoginView(router: LoginRouter(injector: self.injector))
                    } else {
-                       HomeView(router: HomeRouter(injector: self.injector, coordinator: coordinator))
+                       HomeView(router: HomeRouter(injector: self.injector))
                            .navigationDestination(for: AnyRoute.self) { route in
                                route.destinationView()
                            }
@@ -42,5 +46,5 @@ struct RootView: View {
 }
 
 #Preview {
-    RootView(injector: DependenciesHolder().injector(), coordinator: AppCoordinator())
+    RootView(injector: DependenciesHolder().injector())
 }
