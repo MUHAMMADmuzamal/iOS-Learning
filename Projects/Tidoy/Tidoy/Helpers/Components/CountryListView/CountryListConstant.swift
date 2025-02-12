@@ -240,5 +240,5 @@ CountryModel(name: "Wallis And Futuna", code: "+681", flag: "🇼🇫"),
 CountryModel(name: "Western Sahara", code: "+212", flag: "🇪🇭"),
 CountryModel(name: "Yemen", code: "+967", flag: "🇾🇪"),
 CountryModel(name: "Zambia", code: "+260", flag: "🇿🇲"),
-CountryModel(name: "Zimbabwe", code: "+263", flag: "🇿🇼"),
+CountryModel(name: "Zimbabwe", code: "+263", flag: "🇿🇼")
 ]

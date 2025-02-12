@@ -80,7 +80,10 @@ struct PhoneNumberTextField: View {
             state: .constant(.defaultState),
             label: "Phone Number",
             hintText: "Enter your username",
-            placeholderText: "ex: +923465944619", selectedCountry: .constant(CountryModel(name: "Pakistan", code: "+92", flag: "🇵🇰")),
+            placeholderText: "ex: +923465944619", 
+            selectedCountry: .constant(CountryModel(name: "Pakistan",
+                                                    code: "+92",
+                                                    flag: "🇵🇰")),
             validatable: PhoneNumberValidator())
     }
 

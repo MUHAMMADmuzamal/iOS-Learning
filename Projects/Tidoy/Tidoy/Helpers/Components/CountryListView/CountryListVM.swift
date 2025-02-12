@@ -16,7 +16,6 @@ class CountryListVM: ObservableObject {
     
     private var cancelBag = Set<AnyCancellable>()
     
-    
     init() {
         self.binding()
     }
@@ -27,7 +26,9 @@ class CountryListVM: ObservableObject {
             if value.isEmpty {
                 self.countriesList = allCountersList
             } else {
-                self.countriesList = allCountersList.filter({$0.name.contains(value) || $0.code.contains(value)})
+                self.countriesList = allCountersList.filter({
+                    $0.name.contains(value) || $0.code.contains(value)
+                })
             }
         }.store(in: &cancelBag)
     }

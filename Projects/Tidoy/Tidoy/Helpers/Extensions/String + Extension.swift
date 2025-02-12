@@ -1,4 +1,3 @@
-// 
 //  String + Extension.swift
 //  Tidoy
 //

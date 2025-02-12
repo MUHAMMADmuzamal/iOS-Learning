@@ -11,7 +11,7 @@ protocol SignupRouterProtocol {
     func navigateToSignIn()
 }
 
-final class SignupRouterRouter:Router, SignupRouterProtocol {
+final class SignupRouterRouter: Router, SignupRouterProtocol {
         
     func navigateToSignIn() {
         coordinator.displaySignup = false

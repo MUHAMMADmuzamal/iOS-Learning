@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct OnboardingCarouselCard: View {
     var  model: OnboardingCarouselCardModel
     @State private var rotate: CGFloat = 0

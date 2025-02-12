@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct EmailValidator: Validatable {
     func validate(_ text: String) -> Bool {
         // Regular expression for basic email validation
@@ -39,7 +38,8 @@ struct PhoneNumberValidator: Validatable {
 struct PasswordValidator: Validatable {
     func validate(_ text: String) -> Bool {
         // Password must be at least 8 characters, with at least one uppercase, one lowercase, one digit, and one special character
-        let passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
+        let passwordRegex = 
+        "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         return !text.isEmpty && passwordPredicate.evaluate(with: text)
     }

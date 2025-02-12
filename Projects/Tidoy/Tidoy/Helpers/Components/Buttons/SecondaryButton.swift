@@ -11,7 +11,7 @@ struct SecondaryButtonStyle: ButtonStyle {
     var backgroundColor: Color
     
     func makeBody(configuration: Configuration) -> some View {
-         configuration.label
+        configuration.label
             .background(configuration.isPressed ? .background30 : backgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: .cornerRadiusM))
             .overlay {
@@ -28,7 +28,7 @@ struct SecondaryButton: View {
     var rightIcon: Image?
     private var backgroundColor: Color {
         .background10
-       }
+    }
     
     @Binding private var disabled: Bool
     @State private var isHovered: Bool = false
@@ -62,7 +62,7 @@ struct SecondaryButton: View {
                         }
                 }
                 rightIcon
-                    
+                
                     .frame(width: 24, height: 24)
             }
             .foregroundStyle(disabled ? .icon50 :.icon100)
@@ -87,8 +87,8 @@ struct SecondaryButton: View {
         SecondaryButton(title: "Skip") {}
             .frame(width: 63, height: 56)
         SecondaryButton(title: "Disabled",
-                      leftIcon: Image(systemName: "plus.circle"), rightIcon: Image(systemName: "wifi"),
-                      disabled: .constant(true),
-                      action: {})
+                        leftIcon: Image(systemName: "plus.circle"), rightIcon: Image(systemName: "wifi"),
+                        disabled: .constant(true),
+                        action: {})
     }
 }

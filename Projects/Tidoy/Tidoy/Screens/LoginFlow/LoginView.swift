@@ -81,7 +81,7 @@ extension LoginView {
                         HStack {
                             RoundedRectangle(cornerRadius: 21.0)
                                 .foregroundStyle(.background100)
-                                .frame(width: geometry.size.width / 2 ,height: 42)
+                                .frame(width: geometry.size.width / 2 , height: 42)
                                 .padding(.leading, loginMethod == .email ? 5 : (geometry.size.width / 2) - 5)
                             Spacer()
                         }

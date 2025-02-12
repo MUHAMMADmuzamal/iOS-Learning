@@ -10,7 +10,6 @@ import Swinject
 
 final class NotificationBuilder {
     static func build(injector: Container) -> some View {
-        let coordinator = injector.resolve(AppCoordinator.self)!
         let router = NotificationRouter(injector: injector)
         return NotificationView(router: router)
     }

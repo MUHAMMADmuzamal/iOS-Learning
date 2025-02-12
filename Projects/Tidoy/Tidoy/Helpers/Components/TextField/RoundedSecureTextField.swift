@@ -46,15 +46,15 @@ struct RoundedSecureTextField: View {
                 }
                 .onChange(of: text) {
                     state = validatable.validate(text) ? .defaultState : .error }
-                    .foregroundColor(state.textColor)
-                    .background {
-                        if text.isEmpty {
-                             HStack {
-                                 Text(placeholderText)
-                                 Spacer()
-                             }
-                         }
+                .foregroundColor(state.textColor)
+                .background {
+                    if text.isEmpty {
+                        HStack {
+                            Text(placeholderText)
+                            Spacer()
+                        }
                     }
+                }
                 if let rightImage = rightImage, let rightImage2 = rightImage2 {
                     let showPassImage = showPassword ? rightImage : rightImage2
                     showPassImage
@@ -67,11 +67,11 @@ struct RoundedSecureTextField: View {
                 }
             }
             .foregroundStyle(.icon60)
-                .padding(.all, .padding12)
-                .background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(state.borderColor, lineWidth: 1.0)
-                }
+            .padding(.all, .padding12)
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(state.borderColor, lineWidth: 1.0)
+            }
             Text(hintText)
                 .font(.bodyXSmallRegular)
                 .foregroundColor(state.labelColor)

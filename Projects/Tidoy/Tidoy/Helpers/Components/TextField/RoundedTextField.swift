@@ -26,7 +26,7 @@ struct RoundedTextField: View {
             Text(label)
                 .foregroundColor(state.labelColor)
                 .padding(.bottom, 4)
-
+            
             HStack(spacing: .padding4) {
                 if let leftImage = leftImage {
                     leftImage
@@ -40,7 +40,7 @@ struct RoundedTextField: View {
                     TextField("", text: $text)
                         .onChange(of: text) { _, newValue in
                             state = validatable.validate(newValue) ? .defaultState : .error
-                    }
+                        }
                 }
                 .foregroundColor(state.textColor)
                 .background {
@@ -51,7 +51,7 @@ struct RoundedTextField: View {
                         }
                     }
                 }
-
+                
                 if let rightImage = rightImage {
                     rightImage
                         .foregroundColor(state.textColor)
@@ -66,7 +66,7 @@ struct RoundedTextField: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(state.borderColor, lineWidth: 1.0)
             }
-
+            
             if state == .error {
                 Text(hintText)
                     .font(.bodyXSmallRegular)
@@ -76,27 +76,27 @@ struct RoundedTextField: View {
         .padding(.horizontal, 2)
         .disabled(state == .disable)
     }
-
+    
 }
 
 #Preview {
-        return VStack {
-            RoundedTextField(text: .constant("hello"),
-                             label: "Username",
-                             hintText: "Enter your username",
-                             placeholderText: "Placeholder",
-                             state: .constant(.defaultState),
-                             leftImage:Image(systemName: "person"),
-                             rightImage: Image(systemName: "checkmark"),
-                             leftImageTapAction: nil, 
-                             validatable: UsernameValidator())
-            RoundedTextField(text: .constant("hi"),
-                             label: "Username",
-                             hintText: "Enter your username",
-                             placeholderText: "Placeholder", 
-                             state: .constant(.defaultState),
-                             leftImage: Image(systemName: "person"),
-                             rightImage: Image(systemName: "checkmark"),
-                             validatable: UsernameValidator())
-        }
+    return VStack {
+        RoundedTextField(text: .constant("hello"),
+                         label: "Username",
+                         hintText: "Enter your username",
+                         placeholderText: "Placeholder",
+                         state: .constant(.defaultState),
+                         leftImage:Image(systemName: "person"),
+                         rightImage: Image(systemName: "checkmark"),
+                         leftImageTapAction: nil, 
+                         validatable: UsernameValidator())
+        RoundedTextField(text: .constant("hi"),
+                         label: "Username",
+                         hintText: "Enter your username",
+                         placeholderText: "Placeholder", 
+                         state: .constant(.defaultState),
+                         leftImage: Image(systemName: "person"),
+                         rightImage: Image(systemName: "checkmark"),
+                         validatable: UsernameValidator())
+    }
 }

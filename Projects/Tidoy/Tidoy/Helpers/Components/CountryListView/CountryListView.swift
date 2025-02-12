@@ -61,7 +61,6 @@ struct Corners: OptionSet {
     static let all: Corners = [.topLeft, .topRight, .bottomLeft, .bottomRight]
 }
 
-
 struct CustomRoundedRectangle: Shape {
     var cornerRadius: CGFloat
     var corners: Corners
@@ -164,6 +163,6 @@ struct CountryListRow: View {
 
 #Preview {
     CountryListView { country in
-        print(country?.name)
+        print("\(country?.name)")
     }
 }
