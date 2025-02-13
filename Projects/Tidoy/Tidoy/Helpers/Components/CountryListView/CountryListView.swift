@@ -117,7 +117,6 @@ struct CustomRoundedRectangle: Shape {
     }
 }
 
-
 struct CountryListRow: View {
     let flag: String
     let code: String
@@ -163,6 +162,6 @@ struct CountryListRow: View {
 
 #Preview {
     CountryListView { country in
-        print("\(country?.name)")
+        print("\(country)")
     }
 }

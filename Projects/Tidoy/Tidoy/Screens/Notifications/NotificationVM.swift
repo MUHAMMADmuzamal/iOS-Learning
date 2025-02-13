@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NotificationVMProtocol{
+protocol NotificationVMProtocol {
     func navigateToMessages()
 }
 
@@ -18,7 +18,7 @@ final class NotificationVM: NotificationVMProtocol {
         self.router = router
     }
     
-    func navigateToMessages(){
+    func navigateToMessages() {
         self.router.navigateToMessages()
     }
     

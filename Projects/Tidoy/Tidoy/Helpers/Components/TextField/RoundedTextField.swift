@@ -86,7 +86,7 @@ struct RoundedTextField: View {
                          hintText: "Enter your username",
                          placeholderText: "Placeholder",
                          state: .constant(.defaultState),
-                         leftImage:Image(systemName: "person"),
+                         leftImage: Image(systemName: "person"),
                          rightImage: Image(systemName: "checkmark"),
                          leftImageTapAction: nil, 
                          validatable: UsernameValidator())

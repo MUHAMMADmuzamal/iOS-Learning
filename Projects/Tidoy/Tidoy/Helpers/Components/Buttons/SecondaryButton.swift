@@ -65,7 +65,7 @@ struct SecondaryButton: View {
                 
                     .frame(width: 24, height: 24)
             }
-            .foregroundStyle(disabled ? .icon50 :.icon100)
+            .foregroundStyle(disabled ? .icon50 : .icon100)
             .padding(.padding16)
             .frame(maxWidth: .infinity)
             

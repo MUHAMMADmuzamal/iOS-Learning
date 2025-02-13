@@ -45,7 +45,8 @@ struct RoundedSecureTextField: View {
                     }
                 }
                 .onChange(of: text) {
-                    state = validatable.validate(text) ? .defaultState : .error }
+                    state = validatable.validate(text) ? .defaultState : .error
+                }
                 .foregroundColor(state.textColor)
                 .background {
                     if text.isEmpty {
