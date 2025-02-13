@@ -22,11 +22,11 @@ struct RootView: View {
             } else {
                 if !viewModel.hasCompletedOnboarding {
                     OnboardingScreen(hasCompletedOnboarding: $viewModel.hasCompletedOnboarding)
-                } else if viewModel.coordinator.displaySignup {
-                    SignupView(router: SignupRouterRouter(injector: viewModel.injector))
+                } else if viewModel.displaySignup {
+                    SignupView(displaySignup: $viewModel.displaySignup)
                 } else {
                     if !viewModel.coordinator.isLoggedIn {
-                        LoginView(router: LoginRouter(injector: viewModel.injector))
+                        LoginView(displaySignup: $viewModel.displaySignup, isLoggedIn: $viewModel.coordinator.isLoggedIn)
                    } else {
                        HomeView(router: HomeRouter(injector: viewModel.injector))
                            .navigationDestination(for: AnyRoute.self) { route in

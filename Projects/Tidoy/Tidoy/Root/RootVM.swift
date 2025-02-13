@@ -19,6 +19,7 @@ class RootVM: RootVMProtocol, ObservableObject {
     @Published var coordinator: AppCoordinatorProtocol
     @Published var isLoading: Bool = true
     @Published var hasCompletedOnboarding: Bool = false
+    @Published var displaySignup: Bool = true
     
     init(injector: Container) {
         self.injector = injector

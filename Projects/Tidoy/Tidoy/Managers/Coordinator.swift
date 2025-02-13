@@ -10,7 +10,6 @@ import SwiftUI
 protocol AppCoordinatorProtocol {
     var path: NavigationPath { get set }
     var isLoggedIn: Bool { get set }
-    var displaySignup: Bool { get set }
     
     func navigate(to route: some Route)
     func goBack()
@@ -19,7 +18,6 @@ protocol AppCoordinatorProtocol {
 class AppCoordinator: AppCoordinatorProtocol, ObservableObject {
     @Published var path = NavigationPath()
     @Published var isLoggedIn: Bool = false
-    @Published var displaySignup: Bool = true
     
     func navigate(to route: some Route) {
         path.append(AnyRoute(route))
