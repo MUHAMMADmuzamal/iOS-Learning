@@ -10,6 +10,7 @@ import Swinject
 
 struct NotificationRoute: Route {
     let injector: Container
+    
     func destinationView() -> some View {
         return NotificationBuilder.build(injector: self.injector)
     }
