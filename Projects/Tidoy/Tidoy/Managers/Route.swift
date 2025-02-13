@@ -9,7 +9,9 @@ import SwiftUI
 
 protocol Route: Hashable {
     associatedtype Destination: View
-    @ViewBuilder func destinationView() -> Destination
+    
+    @ViewBuilder 
+    func destinationView() -> Destination
 }
 
 struct AnyRoute: Hashable {

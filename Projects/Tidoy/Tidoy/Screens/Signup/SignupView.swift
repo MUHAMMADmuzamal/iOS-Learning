@@ -9,11 +9,7 @@ import SwiftUI
 
 struct SignupView: View {
     
-    private var router: SignupRouterProtocol!
-    
-    init (router: SignupRouterProtocol) {
-        self.router = router
-    }
+    @Binding var displaySignup: Bool
     
     @State private var selectedCountry: CountryModel = .defaultCountry
     @State private var showCountrySheet: Bool = false
@@ -127,7 +123,7 @@ struct SignupView: View {
                 .foregroundStyle(.primaryMain)
                 .font(.bodyXSmallSemiBold)
                 .onTapGesture {
-                    router.navigateToSignIn()
+                    displaySignup = false
                 }
         }
     }
@@ -138,5 +134,5 @@ struct SignupView: View {
 }
 
 #Preview {
-    SignupView(router: SignupRouterRouter(injector: DependenciesHolder().injector()))
+    SignupView(displaySignup: .constant(false))
 }

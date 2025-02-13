@@ -13,12 +13,8 @@ enum LoginMethod: Int {
 }
 struct LoginView: View {
     
-    private var router: LoginRouterProtocol!
-    
-    init(router: LoginRouterProtocol) {
-        self.router = router
-    }
-    
+    @Binding var displaySignup: Bool
+    @Binding var isLoggedIn: Bool
     @State private var loginMethod: LoginMethod = .phoneNumber
     @State private var phoneNumberFieldText: String = ""
     @State private var emailFieldText: String = ""
@@ -81,7 +77,7 @@ extension LoginView {
                         HStack {
                             RoundedRectangle(cornerRadius: 21.0)
                                 .foregroundStyle(.background100)
-                                .frame(width: geometry.size.width / 2 , height: 42)
+                                .frame(width: geometry.size.width / 2, height: 42)
                                 .padding(.leading, loginMethod == .email ? 5 : (geometry.size.width / 2) - 5)
                             Spacer()
                         }
@@ -161,7 +157,7 @@ extension LoginView {
     private var bottomSection: some View {
         VStack {
             PrimaryButton(title: "Login") {
-                router.navigateToHome()
+                isLoggedIn = true
             }
             Spacer()
             Divider()
@@ -210,7 +206,7 @@ extension LoginView {
                     .foregroundStyle(.primaryMain)
                     .font(.bodyXSmallSemiBold)
                     .onTapGesture {
-                        router.navigateToSignUp()
+                        displaySignup = true
                     }
             }
             .padding(.top, .padding80)
@@ -219,5 +215,5 @@ extension LoginView {
 }
 
 #Preview {
-    LoginView(router: LoginRouter(injector: DependenciesHolder().injector()))
+    LoginView(displaySignup: .constant(true), isLoggedIn: .constant(false))
 }

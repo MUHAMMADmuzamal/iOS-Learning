@@ -8,31 +8,40 @@
 import SwiftUI
 import Swinject
 
+class RootVM: ObservableObject {
+    
+    @Published var isLoading: Bool = true
+    @Published var hasCompletedOnboarding: Bool = false
+    @Published var displaySignup: Bool = true
+    
+}
+
 struct RootView: View {
     let injector: Container
+    @ObservedObject var viewModel = RootVM()
     @ObservedObject var coordinator: AppCoordinator
-    @State private var isLoading = true
 
     init(injector: Container) {
         self.injector = injector
         self.coordinator = injector.resolve(AppCoordinator.self)!
     }
+    
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            if isLoading {
+            if viewModel.isLoading {
                 SplashScreen {
                     withAnimation {
-                        isLoading = false
+                        viewModel.isLoading = false
                     }
                 }
             } else {
-                if !coordinator.hasCompletedOnboarding {
-                    OnboardingScreen(router: OnboardingRouter(injector: self.injector))
-                } else if coordinator.displaySignup {
-                    SignupView(router: SignupRouterRouter(injector: self.injector))
+                if !viewModel.hasCompletedOnboarding {
+                    OnboardingScreen(hasCompletedOnboarding: $viewModel.hasCompletedOnboarding)
+                } else if viewModel.displaySignup {
+                    SignupView(displaySignup: $viewModel.displaySignup)
                 } else {
                     if !coordinator.isLoggedIn {
-                        LoginView(router: LoginRouter(injector: self.injector))
+                        LoginView(displaySignup: $viewModel.displaySignup, isLoggedIn: $coordinator.isLoggedIn)
                    } else {
                        HomeView(router: HomeRouter(injector: self.injector))
                            .navigationDestination(for: AnyRoute.self) { route in

@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct OnboardingScreen: View {
-    
-    private var router: OnboardingRouterProtocol!
-    
-    init(router: OnboardingRouterProtocol) {
-        self.router = router
-    }
-    
+    @Binding var hasCompletedOnboarding: Bool
     private let dataSource = OnboardingCarouselCardModel.data
     @State private var index: Int = 0
     private var dataSourceLength: Int { dataSource.count}
@@ -49,12 +43,10 @@ struct OnboardingScreen: View {
         } else {
             index += 1
         }
-        if index == dataSourceLength {
-            router.navigateToSignup()
-        }
+        hasCompletedOnboarding = index == dataSourceLength
     }
 }
 
 #Preview {
-    OnboardingScreen(router: OnboardingRouter(injector: DependenciesHolder().injector()))
+    OnboardingScreen(hasCompletedOnboarding: .constant(false))
 }

@@ -15,7 +15,7 @@ protocol LoginRouterProtocol {
 final class LoginRouter: Router, LoginRouterProtocol {
     
     func navigateToSignUp() {
-        coordinator.displaySignup = true
+//        coordinator.displaySignup = true
     } 
     
     func navigateToHome() {
