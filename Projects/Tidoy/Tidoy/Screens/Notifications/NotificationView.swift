@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct NotificationView: View {
-    private var router: NotificationRouterProtocol!
+    private var viewModel: NotificationVMProtocol!
     
-    init(router: NotificationRouterProtocol) {
-        self.router = router
+    init(viewModel: NotificationVMProtocol) {
+        self.viewModel = viewModel
     }
     
     var body: some View {
         VStack {
             Text("Notifications")
             Button {
-                router.navigateToMessages()
+                viewModel.navigateToMessages()
             } label: {
                 Text("Display Messages screen. ")
             }
@@ -27,5 +27,5 @@ struct NotificationView: View {
 }
 
 #Preview {
-    NotificationView(router: NotificationRouter(injector: DependenciesHolder().injector()))
+    NotificationView(viewModel: NotificationVM(router: NotificationRouter(injector: DependenciesHolder().injector())))
 }

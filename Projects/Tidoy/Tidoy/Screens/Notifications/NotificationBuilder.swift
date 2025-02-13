@@ -11,6 +11,7 @@ import Swinject
 final class NotificationBuilder {
     static func build(injector: Container) -> some View {
         let router = NotificationRouter(injector: injector)
-        return NotificationView(router: router)
+        let vm = NotificationVM(router: router)
+        return NotificationView(viewModel: vm)
     }
 }
