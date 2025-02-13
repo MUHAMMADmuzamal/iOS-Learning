@@ -18,6 +18,6 @@ class Router: RouterProtocol {
     
     init(injector: Container) {
         self.injector = injector
-        self.coordinator = injector.resolve(AppCoordinator.self)!
+        self.coordinator = injector.resolve(AppCoordinatorProtocol.self)!
     }
 }

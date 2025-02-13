@@ -84,9 +84,9 @@ struct TertiaryButton: View {
         TertiaryButton(title: "Button", leftIcon: Image(systemName: "plus.circle")) {}
         TertiaryButton(title: "Button", rightIcon: Image(systemName: "wifi")) {}
         TertiaryButton(title: "Disabled",
-                      leftIcon: Image(systemName: "plus.circle"), 
+                       leftIcon: Image(systemName: "plus.circle"),
                        rightIcon: Image(systemName: "wifi"),
                        disabled: .constant(true),
-                      action: {})
+                       action: {})
     }
 }

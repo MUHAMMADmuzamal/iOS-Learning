@@ -117,7 +117,6 @@ struct CustomRoundedRectangle: Shape {
     }
 }
 
-
 struct CountryListRow: View {
     let flag: String
     let code: String

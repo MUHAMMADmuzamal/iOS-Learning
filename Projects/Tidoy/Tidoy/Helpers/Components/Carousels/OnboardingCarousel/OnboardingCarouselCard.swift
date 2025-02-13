@@ -26,7 +26,9 @@ struct OnboardingCarouselCard: View {
                         
                         LinearGradient(stops: [
                             .init(color: .clear, location: 0.53),
-                                .init(color: .white, location: 1)],
+                                .init(color: .white, 
+                                      location: 1)
+                        ],
                                        startPoint: .top,
                                        endPoint: .bottom)
                     }

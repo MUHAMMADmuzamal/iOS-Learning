@@ -13,7 +13,7 @@ struct TidoyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootView(injector: injector)
+            RootView(viewModel: RootVM(injector: injector))
         }
     }
 }

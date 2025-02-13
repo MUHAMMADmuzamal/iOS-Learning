@@ -34,7 +34,7 @@ struct SingleDigitTextField: View, Identifiable {
                                 .foregroundStyle(Color.text60)
                         }
                     }
-                    .onChange(of: value) { oldValue, newValue in
+                    .onChange(of: value) { _, newValue in
                         if newValue.count > 1 {
                             value = String(newValue.prefix(1)) // Restrict to 1 digit
                         }
