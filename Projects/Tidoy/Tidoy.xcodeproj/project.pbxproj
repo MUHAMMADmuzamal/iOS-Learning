@@ -21,12 +21,6 @@
 		D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F1E2C47BD8E00F55756 /* LoginView.swift */; };
 		D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62161E62C4C1488003C3389 /* RoundedTextField.swift */; };
 		D631794C2D578B65005A6791 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631794B2D578B65005A6791 /* Coordinator.swift */; };
-		D631794E2D578E4E005A6791 /* SignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631794D2D578E4E005A6791 /* SignupRouter.swift */; };
-		D63179502D578F50005A6791 /* SignupRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631794F2D578F50005A6791 /* SignupRoute.swift */; };
-		D63179522D57900F005A6791 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179512D57900F005A6791 /* LoginRouter.swift */; };
-		D63179542D579015005A6791 /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179532D579015005A6791 /* LoginRoute.swift */; };
-		D63179582D57A158005A6791 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179572D57A158005A6791 /* OnboardingRouter.swift */; };
-		D631795A2D57A165005A6791 /* OnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179592D57A165005A6791 /* OnboardingRoute.swift */; };
 		D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631795D2D57A26F005A6791 /* OnboardingCarouselModel.swift */; };
 		D63179672D58EED3005A6791 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179662D58EED3005A6791 /* Route.swift */; };
 		D63179692D59D167005A6791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179682D59D167005A6791 /* RootView.swift */; };
@@ -97,12 +91,6 @@
 		D61A8F1E2C47BD8E00F55756 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D62161E62C4C1488003C3389 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D631794B2D578B65005A6791 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		D631794D2D578E4E005A6791 /* SignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRouter.swift; sourceTree = "<group>"; };
-		D631794F2D578F50005A6791 /* SignupRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRoute.swift; sourceTree = "<group>"; };
-		D63179512D57900F005A6791 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
-		D63179532D579015005A6791 /* LoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
-		D63179572D57A158005A6791 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
-		D63179592D57A165005A6791 /* OnboardingRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRoute.swift; sourceTree = "<group>"; };
 		D631795D2D57A26F005A6791 /* OnboardingCarouselModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCarouselModel.swift; sourceTree = "<group>"; };
 		D63179662D58EED3005A6791 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		D63179682D59D167005A6791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -258,8 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				D61A8F1E2C47BD8E00F55756 /* LoginView.swift */,
-				D63179512D57900F005A6791 /* LoginRouter.swift */,
-				D63179532D579015005A6791 /* LoginRoute.swift */,
 			);
 			path = LoginFlow;
 			sourceTree = "<group>";
@@ -415,8 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */,
-				D63179572D57A158005A6791 /* OnboardingRouter.swift */,
-				D63179592D57A165005A6791 /* OnboardingRoute.swift */,
 			);
 			path = OnboardingFlow;
 			sourceTree = "<group>";
@@ -469,8 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				D6C67A132D20535800166EF1 /* SignupView.swift */,
-				D631794D2D578E4E005A6791 /* SignupRouter.swift */,
-				D631794F2D578F50005A6791 /* SignupRoute.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -636,7 +618,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
-				D63179582D57A158005A6791 /* OnboardingRouter.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D631794C2D578B65005A6791 /* Coordinator.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
@@ -647,11 +628,9 @@
 				D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */,
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
-				D63179522D57900F005A6791 /* LoginRouter.swift in Sources */,
 				D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */,
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
-				D631794E2D578E4E005A6791 /* SignupRouter.swift in Sources */,
 				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
@@ -661,12 +640,9 @@
 				D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */,
 				D631797E2D5A4F0F005A6791 /* NotificationRoute.swift in Sources */,
 				D63179852D5A57FA005A6791 /* NotificationRouter.swift in Sources */,
-				D631795A2D57A165005A6791 /* OnboardingRoute.swift in Sources */,
-				D63179502D578F50005A6791 /* SignupRoute.swift in Sources */,
 				D61A8F182C42C6F300F55756 /* PrimaryButton.swift in Sources */,
 				D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */,
 				D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */,
-				D63179542D579015005A6791 /* LoginRoute.swift in Sources */,
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
 				D6C2EEDF2D5DDB2A004E5DA9 /* NotificationVM.swift in Sources */,
 				D63179872D5A5846005A6791 /* Router.swift in Sources */,

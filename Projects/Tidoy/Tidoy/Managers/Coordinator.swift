@@ -10,8 +10,6 @@ import SwiftUI
 protocol AppCoordinatorProtocol {
     var path: NavigationPath { get set }
     var isLoggedIn: Bool { get set }
-    var displaySignup: Bool { get set }
-    var hasCompletedOnboarding: Bool { get set }
     
     func navigate(to route: some Route)
     func goBack()
