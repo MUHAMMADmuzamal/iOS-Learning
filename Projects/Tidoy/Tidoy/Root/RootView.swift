@@ -9,10 +9,10 @@ import SwiftUI
 import Swinject
 
 struct RootView: View {
-    let injector: Container
+    private let injector: Container
     @ObservedObject var viewModel = RootVM()
     @ObservedObject var coordinator: AppCoordinator
-
+    
     init(injector: Container) {
         self.injector = injector
         self.coordinator = injector.resolve(AppCoordinator.self)!
@@ -21,28 +21,53 @@ struct RootView: View {
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             if viewModel.isLoading {
-                SplashScreen {
-                    withAnimation {
-                        viewModel.isLoading = false
-                    }
-                }
+                splash
             } else {
-                if !viewModel.hasCompletedOnboarding {
-                    OnboardingScreen(hasCompletedOnboarding: $viewModel.hasCompletedOnboarding)
-                } else if viewModel.displaySignup {
-                    SignupView(displaySignup: $viewModel.displaySignup)
-                } else {
-                    if !coordinator.isLoggedIn {
-                        LoginView(displaySignup: $viewModel.displaySignup, isLoggedIn: $coordinator.isLoggedIn)
-                   } else {
-                       HomeView(router: HomeRouter(injector: self.injector))
-                           .navigationDestination(for: AnyRoute.self) { route in
-                               route.destinationView()
-                           }
-                   }
-                }
+                contentView
             }
         }
+    }
+    
+    @ViewBuilder
+    private var contentView: some View {
+        if !viewModel.hasCompletedOnboarding {
+            onboarding
+        } else if viewModel.displaySignup {
+            signup
+        } else {
+            if !coordinator.isLoggedIn {
+                login
+            } else {
+                home
+                    .navigationDestination(for: AnyRoute.self) { route in
+                        route.destinationView()
+                    }
+            }
+        }
+    }
+    
+    private var splash: some View {
+        SplashScreen {
+            withAnimation {
+                viewModel.finishLoading()
+            }
+        }
+    }
+    
+    private var onboarding: some View {
+        OnboardingScreen(hasCompletedOnboarding: $viewModel.hasCompletedOnboarding)
+    }
+    
+    private var signup: some View {
+        SignupView(displaySignup: $viewModel.displaySignup)
+    }
+    
+    private var login: some View {
+        LoginView(displaySignup: $viewModel.displaySignup, isLoggedIn: $coordinator.isLoggedIn)
+    }
+    
+    private var home: some View {
+        HomeView(router: HomeRouter(injector: self.injector))
     }
 }
 

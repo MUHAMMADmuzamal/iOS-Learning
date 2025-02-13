@@ -12,4 +12,7 @@ class RootVM: ObservableObject {
     @Published var hasCompletedOnboarding: Bool = false
     @Published var displaySignup: Bool = true
     
+    func finishLoading() {
+        self.isLoading = false
+    }
 }
