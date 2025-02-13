@@ -8,14 +8,6 @@
 import SwiftUI
 import Swinject
 
-class RootVM: ObservableObject {
-    
-    @Published var isLoading: Bool = true
-    @Published var hasCompletedOnboarding: Bool = false
-    @Published var displaySignup: Bool = true
-    
-}
-
 struct RootView: View {
     let injector: Container
     @ObservedObject var viewModel = RootVM()
