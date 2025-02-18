@@ -18,8 +18,6 @@ protocol AppCoordinatorProtocol {
 class AppCoordinator: AppCoordinatorProtocol, ObservableObject {
     @Published var path = NavigationPath()
     @Published var isLoggedIn: Bool = false
-    @Published var displaySignup: Bool = true
-    @Published var hasCompletedOnboarding: Bool = false
     
     func navigate(to route: some Route) {
         path.append(AnyRoute(route))
