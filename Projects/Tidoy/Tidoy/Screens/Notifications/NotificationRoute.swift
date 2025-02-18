@@ -15,13 +15,3 @@ struct NotificationRoute: Route {
         return NotificationBuilder.build(injector: self.injector)
     }
 }
-
-extension NotificationRoute {
-    static func == (lhs: NotificationRoute, rhs: NotificationRoute) -> Bool {
-        lhs.hashValue == rhs.hashValue
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine("NotificationRoute")
-    }
-}
