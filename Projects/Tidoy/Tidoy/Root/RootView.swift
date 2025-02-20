@@ -24,10 +24,13 @@ struct RootView: View {
                 splash
             } else {
                 contentView
-                    .sheet(item: $coordinator.sheetRoute) { route in
-                        route.destinationView()
-                    }
             }
+        }
+        .sheet(item: $coordinator.sheetRoute) { route in
+            route.destinationView()
+                .clipShape(CustomRoundedRectangle(cornerRadius: 32, corners: [.topLeft, .topRight]))
+                .ignoresSafeArea()
+                .presentationBackground(.clear)
         }
     }
     

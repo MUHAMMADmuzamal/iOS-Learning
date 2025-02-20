@@ -141,6 +141,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
+		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +213,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
 				D6E24F482D1C455200CCDD4F /* ConfirmNumberView */,
 				D61733182CA9597E0046CEE2 /* XmarkButton */,
 				D6487A0A2CA8338300AB9376 /* SearchField */,
@@ -511,6 +513,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				D610113B2D649DC9006D1FA7 /* Routing */,
+				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
 			);
 			name = Tidoy;
 			productName = Tidoy;

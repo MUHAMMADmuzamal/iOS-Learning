@@ -9,7 +9,16 @@ import SwiftUI
 
 struct MessagesView: View {
     var body: some View {
-        Text("Messages.")
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Text("Messages.")
+                Spacer()
+            }
+            Spacer()
+        }
+        .background(Color.red)
     }
 }
 
