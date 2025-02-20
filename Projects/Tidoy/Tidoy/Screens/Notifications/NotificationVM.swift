@@ -9,6 +9,7 @@ import Foundation
 
 protocol NotificationVMProtocol {
     func navigateToMessages()
+    func close()
 }
 
 final class NotificationVM: NotificationVMProtocol {
@@ -20,6 +21,10 @@ final class NotificationVM: NotificationVMProtocol {
     
     func navigateToMessages() {
         self.router.navigateToMessages()
+    }
+    
+    func close() {
+        router.dissmiss()
     }
     
 }

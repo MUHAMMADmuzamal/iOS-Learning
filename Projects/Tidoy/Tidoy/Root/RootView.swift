@@ -24,6 +24,9 @@ struct RootView: View {
                 splash
             } else {
                 contentView
+                    .sheet(item: $coordinator.sheetRoute) { route in
+                        route.destinationView()
+                    }
             }
         }
     }

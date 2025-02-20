@@ -9,7 +9,7 @@ import Foundation
 class RootVM: ObservableObject {
     
     @Published var isLoading: Bool = true
-    @Published var hasCompletedOnboarding: Bool = false
+    @Published var hasCompletedOnboarding: Bool = true
     @Published var displaySignup: Bool = true
     
     func finishLoading() {

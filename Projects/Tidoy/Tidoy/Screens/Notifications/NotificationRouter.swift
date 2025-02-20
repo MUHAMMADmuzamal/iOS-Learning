@@ -9,11 +9,16 @@ import Foundation
 
 protocol NotificationRouterProtocol {
     func navigateToMessages()
+    func dissmiss()
 }
 
 final class NotificationRouter: Router, NotificationRouterProtocol {
     
     func navigateToMessages() {
-        coordinator.navigate(to: MessagesRoute())
+        coordinator.displaySheet(with: MessagesRoute())
+    }
+    
+    func dissmiss() {
+        coordinator.dissmissSheet()
     }
 }

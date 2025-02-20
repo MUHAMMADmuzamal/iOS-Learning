@@ -22,6 +22,10 @@ struct NotificationView: View {
             } label: {
                 Text("Display Messages screen. ")
             }
+            
+            Button("Close") {
+                viewModel.close()
+            }
         }
     }
 }

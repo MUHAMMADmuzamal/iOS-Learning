@@ -30,7 +30,8 @@ extension Route {
     }
 }
 
-struct AnyRoute: Hashable {
+struct AnyRoute: Hashable, Identifiable {
+    let id: UUID = UUID()
     private let _destinationView: () -> AnyView
     private let _hashValue: Int
 
