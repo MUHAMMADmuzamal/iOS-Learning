@@ -13,7 +13,7 @@ protocol AppCoordinatorProtocol {
     var sheetRoute: AnyRoute? { get }
     
     func navigate(to route: some Route)
-    func displaySheet(with route: some Route)
+    func displaySheet(with route: some Route, onDismiss: (()-> Void)?)
     func goBack()
     func dissmissSheet()
 }
@@ -23,16 +23,21 @@ class AppCoordinator: AppCoordinatorProtocol, ObservableObject {
     @Published var isLoggedIn: Bool = true
     @Published var sheetRoute: AnyRoute?
     
+    private var sheetDismissHandler: (() -> Void)?
+    
     func navigate(to route: some Route) {
         path.append(AnyRoute(route))
     }
     
-    func displaySheet(with route: some Route) {
+    func displaySheet(with route: some Route, onDismiss: (() -> Void)? = nil) {
         sheetRoute = AnyRoute(route)
+        sheetDismissHandler = onDismiss
     }
     
     func dissmissSheet() {
         self.sheetRoute = nil
+        sheetDismissHandler?()
+        sheetDismissHandler = nil
     }
     
     func goBack() {

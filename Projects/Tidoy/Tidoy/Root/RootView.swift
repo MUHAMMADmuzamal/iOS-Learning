@@ -26,7 +26,7 @@ struct RootView: View {
                 contentView
             }
         }
-        .sheet(item: $coordinator.sheetRoute) { route in
+        .sheet(item: $coordinator.sheetRoute, onDismiss: coordinator.dissmissSheet) { route in
             route.destinationView()
                 .clipShape(CustomRoundedRectangle(cornerRadius: 32, corners: [.topLeft, .topRight]))
                 .ignoresSafeArea()
