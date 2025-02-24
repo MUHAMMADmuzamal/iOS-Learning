@@ -16,6 +16,7 @@ struct RootView: View {
     init(injector: Container) {
         self.injector = injector
         self.coordinator = injector.resolve(AppCoordinator.self)!
+        viewModel.fetch()
     }
     
     var body: some View {
