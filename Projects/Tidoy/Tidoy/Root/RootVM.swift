@@ -14,18 +14,19 @@ class RootVM: ObservableObject {
     @Published var hasCompletedOnboarding: Bool = true
     @Published var displaySignup: Bool = true
     var subscriber: AnyCancellable?
-    let networkManager: NetworkService = NetworkService()
+    let homeService: HomeServiceProtocol = HomeService(client: URLSession.shared)
     
     func finishLoading() {
         self.isLoading = false
     }
     
     func fetch() {
-        subscriber = networkManager.request().sink { completion in
+        subscriber = homeService.loadHomeData().sink { completion in
             print(completion)
-        } receiveValue: { response in
-            print(response)
+        } receiveValue: { data in
+            print("✅✅✅✅✅✅✅")
+            print(data)
+            print("✅✅✅✅✅✅✅")
         }
-
     }
 }
