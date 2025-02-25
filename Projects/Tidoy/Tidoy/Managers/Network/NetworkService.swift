@@ -23,10 +23,10 @@ struct UserElement: Codable {
 typealias User = [UserElement]
 
 class NetworkService {
-    let urlSession = URLSession.shared
+    let client: HTTPClient = URLSession.shared
     func request() -> AnyPublisher<User, ServerError> {
         var apiRequest: URLRequest = URLRequest(url: URL(string: "https://dummyjson.com/c/9c21-3664-49d1-ab17")!)
-        return urlSession.dataTaskPublisher(for: apiRequest)
+        return client.performRequest(apiRequest)
             .mapError({ error in
                 ServerError(title: "Network Error", description: error.localizedDescription)
             })
@@ -44,21 +44,25 @@ class NetworkService {
                 }
             }.eraseToAnyPublisher()
     }
+}
+
+
+
+protocol HTTPClient {
+    func performRequest(_ request: URLRequest) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error>
+}
+
+extension URLSession: HTTPClient {
+    struct InValidHTTPResponseError: Error {}
     
-    
-//    func request() -> AnyPublisher<User, ServerError> {
-//        var apiRequest: URLRequest = URLRequest(url: URL(string: "https://dummyjson.com/c/9c21-3664-49d1-ab17")!)
-//        return urlSession.dataTaskPublisher(for: apiRequest)
-//            .tryMap { (data: Data, response: URLResponse) -> Data in
-//                guard let httpResponse = response as? HTTPURLResponse, 100..<200 ~= httpResponse.statusCode else {
-//                    throw ServerError(title: "Not in range", description: nil)
-//                }
-//                return data
-//            }
-//            .decode(type: User.self, decoder: JSONDecoder())
-//            .mapError({ error in
-//                ServerError(title: "Json parse error", description: error.localizedDescription)
-//            })
-//            .eraseToAnyPublisher()
-//    }
+    func performRequest(_ request: URLRequest) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
+        let session = URLSession.shared
+        return session.dataTaskPublisher(for: request)
+            .tryMap { (data: Data, response: URLResponse) in
+                guard let response = response as? HTTPURLResponse else {
+                    throw InValidHTTPResponseError()
+                }
+                return (data, response)
+            }.eraseToAnyPublisher()
+    }
 }
