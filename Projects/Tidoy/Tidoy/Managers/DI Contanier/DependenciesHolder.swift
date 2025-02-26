@@ -13,6 +13,10 @@ class DependenciesHolder {
         container.register(AppCoordinator.self) { _ in
             AppCoordinator()
         }.inObjectScope(.container)
+        
+        container.register(HomeServiceProtocol.self) { _ in
+            HomeService(repository: HomeRepository(client: URLSession.shared))
+        }.inObjectScope(.container)
         return container
     }
 }

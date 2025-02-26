@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
-    private var router: HomeRouterProtocol!
+    private var viewModel: HomeVMProtocol!
     
-    init(router: HomeRouterProtocol) {
-        self.router = router
+    init(viewModel: HomeVMProtocol!) {
+        self.viewModel = viewModel
+        viewModel.fetchData()
     }
     
     var body: some View {
         VStack {
             Text("Hello, World! Home ")
             Button {
-                router.navigateToNotification()
+                viewModel.router.navigateToNotification()
             } label: {
                 Text("Display Notification screen. ")
             }
@@ -27,5 +28,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(router: HomeRouter(injector: DependenciesHolder().injector()))
+    let injector = DependenciesHolder().injector()
+    return HomeView(viewModel: HomeVM(router: HomeRouter(injector: injector),
+                                      service: injector.resolve(HomeServiceProtocol.self)!))
 }

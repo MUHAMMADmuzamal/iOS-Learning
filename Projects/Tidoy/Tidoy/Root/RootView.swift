@@ -16,7 +16,6 @@ struct RootView: View {
     init(injector: Container) {
         self.injector = injector
         self.coordinator = injector.resolve(AppCoordinator.self)!
-        viewModel.fetch()
     }
     
     var body: some View {
@@ -74,7 +73,7 @@ struct RootView: View {
     }
     
     private var home: some View {
-        HomeView(router: HomeRouter(injector: self.injector))
+        HomeBuilder.build(injector: injector)
     }
 }
 

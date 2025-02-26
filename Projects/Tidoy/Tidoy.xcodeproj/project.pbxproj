@@ -10,6 +10,13 @@
 		3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872C5D23B387E9E3F50C213 /* Pods_Tidoy.framework */; };
 		D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */; };
 		D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011502D6759CF006D1FA7 /* NetworkService.swift */; };
+		D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */; };
+		D610115C2D6DA72A006D1FA7 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */; };
+		D610115E2D6DA7B0006D1FA7 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115D2D6DA7B0006D1FA7 /* URLRequestFactory.swift */; };
+		D61011602D6DC16A006D1FA7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115F2D6DC16A006D1FA7 /* HomeVM.swift */; };
+		D61011622D6DC265006D1FA7 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011612D6DC265006D1FA7 /* HomeBuilder.swift */; };
+		D61011642D6DC518006D1FA7 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011632D6DC518006D1FA7 /* HomeService.swift */; };
+		D61011662D6DC538006D1FA7 /* HomeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011652D6DC538006D1FA7 /* HomeMapper.swift */; };
 		D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61733192CA9598B0046CEE2 /* XmarkButton.swift */; };
 		D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617331B2CA95D280046CEE2 /* UIAppliction + Extension.swift */; };
 		D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */; };
@@ -60,6 +67,7 @@
 		D6C67A142D20535800166EF1 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C67A132D20535800166EF1 /* SignupView.swift */; };
 		D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA712C7496B20063D7F6 /* CountryListView.swift */; };
 		D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */; };
+		D6CDAF6F2D6F1479007CD8A4 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CDAF6E2D6F1479007CD8A4 /* HomeRepository.swift */; };
 		D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E24F492D1C457900CCDD4F /* ConfirmNumberView.swift */; };
 		D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E24F4B2D1C4FA400CCDD4F /* SingleDigitTextField.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +87,13 @@
 		C0929F3BA5611A2734ECB213 /* Pods-TidoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidoyTests.release.xcconfig"; path = "Target Support Files/Pods-TidoyTests/Pods-TidoyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSecureTextField.swift; sourceTree = "<group>"; };
 		D61011502D6759CF006D1FA7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		D610115D2D6DA7B0006D1FA7 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
+		D610115F2D6DC16A006D1FA7 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		D61011612D6DC265006D1FA7 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		D61011632D6DC518006D1FA7 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		D61011652D6DC538006D1FA7 /* HomeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapper.swift; sourceTree = "<group>"; };
 		D61733192CA9598B0046CEE2 /* XmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmarkButton.swift; sourceTree = "<group>"; };
 		D617331B2CA95D280046CEE2 /* UIAppliction + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAppliction + Extension.swift"; sourceTree = "<group>"; };
 		D61A8F092C4151DC00F55756 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
@@ -135,6 +150,7 @@
 		D6C67A132D20535800166EF1 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		D6C9DA712C7496B20063D7F6 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVM.swift; sourceTree = "<group>"; };
+		D6CDAF6E2D6F1479007CD8A4 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E24F492D1C457900CCDD4F /* ConfirmNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNumberView.swift; sourceTree = "<group>"; };
@@ -200,6 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				D61011502D6759CF006D1FA7 /* NetworkService.swift */,
+				D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */,
+				D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */,
+				D610115D2D6DA7B0006D1FA7 /* URLRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -298,6 +317,11 @@
 			children = (
 				D631796B2D59D2C9005A6791 /* HomeView.swift */,
 				D631797B2D5A4DBD005A6791 /* HomeRouter.swift */,
+				D610115F2D6DC16A006D1FA7 /* HomeVM.swift */,
+				D61011612D6DC265006D1FA7 /* HomeBuilder.swift */,
+				D61011632D6DC518006D1FA7 /* HomeService.swift */,
+				D61011652D6DC538006D1FA7 /* HomeMapper.swift */,
+				D6CDAF6E2D6F1479007CD8A4 /* HomeRepository.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -650,6 +674,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
+				D61011622D6DC265006D1FA7 /* HomeBuilder.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
 				D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */,
@@ -657,15 +682,19 @@
 				D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */,
 				D63179832D5A57CE005A6791 /* MessagesRoute.swift in Sources */,
 				D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */,
+				D6CDAF6F2D6F1479007CD8A4 /* HomeRepository.swift in Sources */,
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */,
+				D610115E2D6DA7B0006D1FA7 /* URLRequestFactory.swift in Sources */,
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
 				D6C67A142D20535800166EF1 /* SignupView.swift in Sources */,
+				D610115C2D6DA72A006D1FA7 /* HTTPRequest.swift in Sources */,
+				D61011662D6DC538006D1FA7 /* HomeMapper.swift in Sources */,
 				D63179782D5A4DAB005A6791 /* NotificationView.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
 				D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */,
@@ -680,14 +709,17 @@
 				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */,
+				D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */,
 				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
 				D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */,
+				D61011602D6DC16A006D1FA7 /* HomeVM.swift in Sources */,
 				D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */,
 				D631797C2D5A4DBD005A6791 /* HomeRouter.swift in Sources */,
 				D63179692D59D167005A6791 /* RootView.swift in Sources */,
 				D63179812D5A579C005A6791 /* MessagesView.swift in Sources */,
+				D61011642D6DC518006D1FA7 /* HomeService.swift in Sources */,
 				D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
 				D6C2EEE42D5E537E004E5DA9 /* RootVM.swift in Sources */,
