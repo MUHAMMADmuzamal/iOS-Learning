@@ -12,7 +12,7 @@
 		D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011502D6759CF006D1FA7 /* NetworkService.swift */; };
 		D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */; };
 		D610115C2D6DA72A006D1FA7 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */; };
-		D610115E2D6DA7B0006D1FA7 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115D2D6DA7B0006D1FA7 /* URLRequestFactory.swift */; };
+		D610115E2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115D2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift */; };
 		D61011602D6DC16A006D1FA7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115F2D6DC16A006D1FA7 /* HomeVM.swift */; };
 		D61011622D6DC265006D1FA7 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011612D6DC265006D1FA7 /* HomeBuilder.swift */; };
 		D61011642D6DC518006D1FA7 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011632D6DC518006D1FA7 /* HomeService.swift */; };
@@ -89,7 +89,7 @@
 		D61011502D6759CF006D1FA7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
-		D610115D2D6DA7B0006D1FA7 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
+		D610115D2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeURLRequestFactory.swift; sourceTree = "<group>"; };
 		D610115F2D6DC16A006D1FA7 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		D61011612D6DC265006D1FA7 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		D61011632D6DC518006D1FA7 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -218,7 +218,6 @@
 				D61011502D6759CF006D1FA7 /* NetworkService.swift */,
 				D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */,
 				D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */,
-				D610115D2D6DA7B0006D1FA7 /* URLRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -322,6 +321,7 @@
 				D61011632D6DC518006D1FA7 /* HomeService.swift */,
 				D61011652D6DC538006D1FA7 /* HomeMapper.swift */,
 				D6CDAF6E2D6F1479007CD8A4 /* HomeRepository.swift */,
+				D610115D2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -686,7 +686,7 @@
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */,
-				D610115E2D6DA7B0006D1FA7 /* URLRequestFactory.swift in Sources */,
+				D610115E2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift in Sources */,
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,

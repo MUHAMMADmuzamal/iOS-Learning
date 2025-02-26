@@ -20,7 +20,7 @@ final class HomeRepository: HomeRepositoryProtocol {
     }
     
     func fetchHomeData() -> AnyPublisher<[UserElement], any Error> {
-        return client.performRequest(URLRequestAbstractFactory.getHomeFactory().makeHomeURLRequest())
+        return client.performRequest(HomeURLRequestFactory.makeHomeURLRequest())
             .tryMap(HomeMapper.map)
             .eraseToAnyPublisher()
     }
