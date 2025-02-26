@@ -31,5 +31,5 @@ struct HomeView: View {
 #Preview {
     let injector = DependenciesHolder.shared.injector()
     return HomeView(viewModel: HomeVM(router: HomeRouter(injector: injector),
-                                      service: injector.resolve(HomeServiceProtocol.self)!))
+                                      useCase: injector.resolve(HomeUseCaseProtocol.self)!))
 }

@@ -16,16 +16,16 @@ protocol HomeVMProtocol {
 
 class HomeVM: HomeVMProtocol, ObservableObject {
     let router: HomeRouterProtocol
-    let service: HomeServiceProtocol
+    let useCase: HomeUseCaseProtocol
     var subscriber: AnyCancellable?
     
-    init(router: HomeRouterProtocol, service: HomeServiceProtocol) {
+    init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol) {
         self.router = router
-        self.service = service
+        self.useCase = useCase
     }
     
     func fetchData() {
-        subscriber = service.loadHomeData().sink { completion in
+        subscriber = useCase.loadHomeData().sink { completion in
             print(completion)
         } receiveValue: { data in
             print("✅✅✅✅✅✅✅")

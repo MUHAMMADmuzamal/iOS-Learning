@@ -72,6 +72,7 @@
 		D6CDAF7B2D6F3CA7007CD8A4 /* HomeDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CDAF7A2D6F3CA7007CD8A4 /* HomeDIContainer.swift */; };
 		D6CDAF7D2D6F43F0007CD8A4 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CDAF7C2D6F43F0007CD8A4 /* AppDIContainer.swift */; };
 		D6CDAF7F2D6F4400007CD8A4 /* CoreDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CDAF7E2D6F4400007CD8A4 /* CoreDIContainer.swift */; };
+		D6CDAF812D6F4785007CD8A4 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CDAF802D6F4785007CD8A4 /* HomeUseCase.swift */; };
 		D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E24F492D1C457900CCDD4F /* ConfirmNumberView.swift */; };
 		D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E24F4B2D1C4FA400CCDD4F /* SingleDigitTextField.swift */; };
 /* End PBXBuildFile section */
@@ -159,6 +160,7 @@
 		D6CDAF7A2D6F3CA7007CD8A4 /* HomeDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDIContainer.swift; sourceTree = "<group>"; };
 		D6CDAF7C2D6F43F0007CD8A4 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		D6CDAF7E2D6F4400007CD8A4 /* CoreDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDIContainer.swift; sourceTree = "<group>"; };
+		D6CDAF802D6F4785007CD8A4 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E24F492D1C457900CCDD4F /* ConfirmNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNumberView.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				D610115D2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift */,
 				D6CDAF782D6F3A27007CD8A4 /* HomeDTO.swift */,
 				D6CDAF7A2D6F3CA7007CD8A4 /* HomeDIContainer.swift */,
+				D6CDAF802D6F4785007CD8A4 /* HomeUseCase.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				D63179692D59D167005A6791 /* RootView.swift in Sources */,
 				D63179812D5A579C005A6791 /* MessagesView.swift in Sources */,
 				D61011642D6DC518006D1FA7 /* HomeService.swift in Sources */,
+				D6CDAF812D6F4785007CD8A4 /* HomeUseCase.swift in Sources */,
 				D6CDAF7F2D6F4400007CD8A4 /* CoreDIContainer.swift in Sources */,
 				D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
