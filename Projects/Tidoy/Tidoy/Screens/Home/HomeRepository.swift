@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol HomeRepositoryProtocol {
-    func fetchHomeData() -> AnyPublisher<[UserElement], Error>
+    func fetchHomeData() -> AnyPublisher<[HomeDTO], Error>
 }
 
 final class HomeRepository: HomeRepositoryProtocol {
@@ -19,7 +19,7 @@ final class HomeRepository: HomeRepositoryProtocol {
         self.client = client
     }
     
-    func fetchHomeData() -> AnyPublisher<[UserElement], any Error> {
+    func fetchHomeData() -> AnyPublisher<[HomeDTO], any Error> {
         return client.performRequest(HomeURLRequestFactory.makeHomeURLRequest())
             .tryMap(HomeMapper.map)
             .eraseToAnyPublisher()

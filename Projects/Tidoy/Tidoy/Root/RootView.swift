@@ -78,5 +78,5 @@ struct RootView: View {
 }
 
 #Preview {
-    RootView(injector: DependenciesHolder().injector())
+    RootView(injector: DependenciesHolder.shared.injector())
 }

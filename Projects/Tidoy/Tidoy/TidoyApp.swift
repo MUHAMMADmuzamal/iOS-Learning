@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct TidoyApp: App {
-    let injector = DependenciesHolder().injector()
+    let injector = DependenciesHolder.shared.injector()
     
     var body: some Scene {
         WindowGroup {

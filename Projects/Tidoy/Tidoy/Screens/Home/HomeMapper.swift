@@ -8,9 +8,9 @@
 import Foundation
 
 class HomeMapper {
-    static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [UserElement] {
+    static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [HomeDTO] {
         if response.statusCode == 200 {
-            return try JSONDecoder().decode([UserElement].self, from: data)
+            return try JSONDecoder().decode([HomeDTO].self, from: data)
         }
         return []
     }

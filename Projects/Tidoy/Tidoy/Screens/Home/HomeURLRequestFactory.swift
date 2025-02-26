@@ -18,7 +18,7 @@ struct HomeURLResolver: URLRequestProtocol {
     init(baseURL: String,
          path: String,
          method: HTTPMethod,
-         headers: [String : String]? = nil,
+         headers: [String: String]? = nil,
          bodyParams: Data? = nil,
          queryParams: [URLQueryItem]? = nil) {
         

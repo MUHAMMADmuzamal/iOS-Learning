@@ -12,7 +12,6 @@ struct HomeView: View {
     
     init(viewModel: HomeVMProtocol!) {
         self.viewModel = viewModel
-        viewModel.fetchData()
     }
     
     var body: some View {
@@ -23,12 +22,14 @@ struct HomeView: View {
             } label: {
                 Text("Display Notification screen. ")
             }
+        }.onAppear {
+            viewModel.fetchData()
         }
     }
 }
 
 #Preview {
-    let injector = DependenciesHolder().injector()
+    let injector = DependenciesHolder.shared.injector()
     return HomeView(viewModel: HomeVM(router: HomeRouter(injector: injector),
                                       service: injector.resolve(HomeServiceProtocol.self)!))
 }

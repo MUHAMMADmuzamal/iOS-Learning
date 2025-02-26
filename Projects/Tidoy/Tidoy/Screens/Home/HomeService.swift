@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol HomeServiceProtocol {
-    func loadHomeData() -> AnyPublisher<[UserElement], Error>
+    func loadHomeData() -> AnyPublisher<[HomeDTO], Error>
 }
 
 class HomeService: HomeServiceProtocol {
@@ -20,7 +20,7 @@ class HomeService: HomeServiceProtocol {
         self.repository = repository
     }
     
-    func loadHomeData() -> AnyPublisher<[UserElement], Error> {
+    func loadHomeData() -> AnyPublisher<[HomeDTO], Error> {
         return repository.fetchHomeData()
     }
 }

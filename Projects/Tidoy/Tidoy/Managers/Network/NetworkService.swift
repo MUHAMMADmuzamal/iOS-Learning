@@ -13,13 +13,6 @@ struct ServerError: Error {
     let description: String?
 }
 
-// MARK: - UserElement
-struct UserElement: Codable {
-    let createdAt, name: String?
-    let avatar: String?
-    let accessToken, refreshToken, id: String?
-}
-
 protocol HTTPClient {
     func performRequest(_ request: URLRequestProtocol) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error>
 }

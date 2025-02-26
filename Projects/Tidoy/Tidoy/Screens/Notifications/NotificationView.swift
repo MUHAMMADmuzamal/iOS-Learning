@@ -31,5 +31,5 @@ struct NotificationView: View {
 }
 
 #Preview {
-    NotificationView(viewModel: NotificationVM(router: NotificationRouter(injector: DependenciesHolder().injector())))
+    NotificationView(viewModel: NotificationVM(router: NotificationRouter(injector: DependenciesHolder.shared.injector())))
 }
