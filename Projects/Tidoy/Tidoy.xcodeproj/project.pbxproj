@@ -168,6 +168,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D60B30D72D70858E008A9471 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -227,6 +228,7 @@
 		D610114F2D6759BE006D1FA7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D60B30D72D70858E008A9471 /* Models */,
 				D61011502D6759CF006D1FA7 /* NetworkService.swift */,
 				D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */,
 				D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */,
@@ -562,6 +564,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				D60B30D72D70858E008A9471 /* Models */,
 				D610113B2D649DC9006D1FA7 /* Routing */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
 			);

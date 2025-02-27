@@ -26,7 +26,10 @@ class HomeVM: HomeVMProtocol, ObservableObject {
     
     func fetchData() {
         subscriber = useCase.loadHomeData().sink { completion in
-            print(completion)
+            
+            if case .failure(let error) = completion {
+                print((error as? APIError)?.title)
+            }
         } receiveValue: { data in
             print("✅✅✅✅✅✅✅")
             print(data)
