@@ -9,13 +9,13 @@ import Foundation
 import Combine
 
 protocol HTTPClient {
-    func performRequest(_ request: URLRequestProtocol) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error>
+    func performRequest(_ request: Endpoint) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error>
 }
 
 extension URLSession: HTTPClient {
     struct InValidHTTPResponseError: Error {}
     
-    func performRequest(_ request: URLRequestProtocol) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
+    func performRequest(_ request: Endpoint) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
         let session = URLSession.shared
         return session.dataTaskPublisher(for: request.request)
             .tryMap { (data: Data, response: URLResponse) in
@@ -39,7 +39,7 @@ class HTTPMockClient: HTTPClient {
         self.error = error
     }
     
-    func performRequest(_ request: URLRequestProtocol) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
+    func performRequest(_ request: Endpoint) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
         
         if let error = self.error {
             return Fail(error: error).eraseToAnyPublisher()

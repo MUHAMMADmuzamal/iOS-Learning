@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    private var viewModel: HomeVMProtocol!
+    @StateObject private var viewModel: HomeVM
     
-    init(viewModel: HomeVMProtocol!) {
-        self.viewModel = viewModel
+    init(viewModel: HomeVM) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -24,6 +24,12 @@ struct HomeView: View {
             }
         }.onAppear {
             viewModel.fetchData()
+        }
+        .alert(item: $viewModel.appError) { appError in
+            Alert(
+                title: Text(appError.title),
+                message: Text(appError.message),
+                dismissButton: .default(Text("OK")))
         }
     }
 }

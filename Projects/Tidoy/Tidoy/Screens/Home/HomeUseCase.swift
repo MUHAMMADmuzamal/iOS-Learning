@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol HomeUseCaseProtocol {
-    func loadHomeData() -> AnyPublisher<[HomeDTO], Error>
+    func loadHomeData() -> AnyPublisher<[HomeDTO], AppError>
 }
 
 final class HomeUseCase: HomeUseCaseProtocol {
@@ -19,7 +19,7 @@ final class HomeUseCase: HomeUseCaseProtocol {
         self.service = service
     }
     
-    func loadHomeData() -> AnyPublisher<[HomeDTO], Error> {
+    func loadHomeData() -> AnyPublisher<[HomeDTO], AppError> {
         return service.loadHomeData()
     }
 }

@@ -7,9 +7,14 @@
 
 import Foundation
 
-enum APIError: Error {
+enum APIError: Error, Identifiable {
+    
     case invalidResponse
     case customError(title: String, message: String)
+    
+    var id: UUID {
+        UUID()
+    }
     
     var title: String {
         switch self {

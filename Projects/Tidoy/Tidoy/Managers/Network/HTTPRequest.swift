@@ -7,18 +7,17 @@
 
 import Foundation
 
-protocol URLRequestProtocol {
-
+protocol Endpoint {
     var baseURL: String { get }
     var path: String { get }
-    var request: URLRequest { get }
-    var headers: [String: String]? { get }
     var method: HTTPMethod { get }
-    var queryParams: [URLQueryItem]? { get }
+    var headers: [String: String]? { get }
     var bodyParams: Data? { get }
+    var queryParams: [URLQueryItem]? { get }
 }
 
-extension URLRequestProtocol {
+
+extension Endpoint {
     func getQueryItems(for dictionary: [String: Any]) -> [URLQueryItem] {
         return dictionary.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
     }

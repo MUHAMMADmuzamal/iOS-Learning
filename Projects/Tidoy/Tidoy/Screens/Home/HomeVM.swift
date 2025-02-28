@@ -10,6 +10,7 @@ import Combine
 
 protocol HomeVMProtocol {
     var router: HomeRouterProtocol { get } 
+    var appError: AppError? { get }
     
     func fetchData()
 }
@@ -19,16 +20,28 @@ class HomeVM: HomeVMProtocol, ObservableObject {
     let useCase: HomeUseCaseProtocol
     var subscriber: AnyCancellable?
     
+    @Published var appError: AppError?
+    
     init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol) {
         self.router = router
         self.useCase = useCase
     }
     
     func fetchData() {
-        subscriber = useCase.loadHomeData().sink { completion in
+        subscriber = useCase.loadHomeData()
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
             
-            if case .failure(let error) = completion {
-                print((error as? APIError)?.title)
+//            if case .failure(let error) = completion {
+//                print((error as? APIError)?.title)
+//            }
+
+            switch completion {
+            case let .failure(errorResponse):
+                guard let error = errorResponse as? AppError else { return }
+                self.appError = error
+            case .finished:
+                break
             }
         } receiveValue: { data in
             print("✅✅✅✅✅✅✅")

@@ -12,7 +12,7 @@
 		D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011502D6759CF006D1FA7 /* NetworkService.swift */; };
 		D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */; };
 		D610115C2D6DA72A006D1FA7 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */; };
-		D610115E2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115D2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift */; };
+		D610115E2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115D2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift */; };
 		D61011602D6DC16A006D1FA7 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D610115F2D6DC16A006D1FA7 /* HomeVM.swift */; };
 		D61011622D6DC265006D1FA7 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011612D6DC265006D1FA7 /* HomeBuilder.swift */; };
 		D61011642D6DC518006D1FA7 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011632D6DC518006D1FA7 /* HomeService.swift */; };
@@ -94,7 +94,7 @@
 		D61011502D6759CF006D1FA7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
-		D610115D2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeURLRequestFactory.swift; sourceTree = "<group>"; };
+		D610115D2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndPointsFactory.swift; sourceTree = "<group>"; };
 		D610115F2D6DC16A006D1FA7 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		D61011612D6DC265006D1FA7 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		D61011632D6DC518006D1FA7 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -171,6 +171,7 @@
 		D60B30D72D70858E008A9471 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
+		D65116BF2D72385C00DBC242 /* AppError */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppError; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +320,7 @@
 		D631794A2D578B36005A6791 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D65116BF2D72385C00DBC242 /* AppError */,
 				D610114F2D6759BE006D1FA7 /* Network */,
 				D610113C2D649F02006D1FA7 /* DI Contanier */,
 			);
@@ -335,7 +337,7 @@
 				D61011632D6DC518006D1FA7 /* HomeService.swift */,
 				D61011652D6DC538006D1FA7 /* HomeMapper.swift */,
 				D6CDAF6E2D6F1479007CD8A4 /* HomeRepository.swift */,
-				D610115D2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift */,
+				D610115D2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift */,
 				D6CDAF782D6F3A27007CD8A4 /* HomeDTO.swift */,
 				D6CDAF7A2D6F3CA7007CD8A4 /* HomeDIContainer.swift */,
 				D6CDAF802D6F4785007CD8A4 /* HomeUseCase.swift */,
@@ -567,6 +569,7 @@
 				D60B30D72D70858E008A9471 /* Models */,
 				D610113B2D649DC9006D1FA7 /* Routing */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
+				D65116BF2D72385C00DBC242 /* AppError */,
 			);
 			name = Tidoy;
 			productName = Tidoy;
@@ -704,7 +707,7 @@
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */,
-				D610115E2D6DA7B0006D1FA7 /* HomeURLRequestFactory.swift in Sources */,
+				D610115E2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift in Sources */,
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,
