@@ -8,14 +8,14 @@
 import Foundation
 import Combine
 
-protocol HomeVMProtocol {
+protocol HomeVMProtocol: ObservableObject {
     var router: HomeRouterProtocol { get } 
-    var appError: AppError? { get }
+    var appError: AppError? { get set }
     
     func fetchData()
 }
 
-class HomeVM: HomeVMProtocol, ObservableObject {
+class HomeVM: HomeVMProtocol {
     let router: HomeRouterProtocol
     let useCase: HomeUseCaseProtocol
     var subscriber: AnyCancellable?

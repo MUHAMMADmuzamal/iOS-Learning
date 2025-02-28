@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct HomeView: View {
-    @StateObject private var viewModel: HomeVM
+struct HomeView<VM: HomeVMProtocol>: View {
+    @StateObject private var viewModel: VM
     
-    init(viewModel: HomeVM) {
+    init(viewModel: VM) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
