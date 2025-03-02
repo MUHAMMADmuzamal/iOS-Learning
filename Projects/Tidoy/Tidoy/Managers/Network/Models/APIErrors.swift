@@ -8,9 +8,10 @@
 import Foundation
 
 enum APIError: Error, Identifiable {
-    
     case invalidResponse
     case customError(title: String, message: String)
+    case invalidObject
+    case invalidJSON
     
     var id: UUID {
         UUID()
@@ -22,6 +23,10 @@ enum APIError: Error, Identifiable {
             return "Invalid Response"
         case let .customError(title, _):
             return title
+        case .invalidObject:
+            return "InvalidObject"
+        case .invalidJSON:
+            return "InvalidJSON"
         }
     }
     
@@ -31,6 +36,10 @@ enum APIError: Error, Identifiable {
             return "Invalid Response"
         case let .customError(_, message):
             return message
+        case .invalidObject:
+            return "Failed to convert object to dictionary"
+        case .invalidJSON:
+            return "Failed to parse JSON into dictionary"
         }
     }
 }

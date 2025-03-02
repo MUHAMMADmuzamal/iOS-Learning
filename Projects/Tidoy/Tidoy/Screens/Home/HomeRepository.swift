@@ -20,7 +20,7 @@ final class HomeRepository: HomeRepositoryProtocol {
     }
     
     func fetchHomeData() -> AnyPublisher<[HomeDTO], AppError> {
-        return client.performRequest(HomeURLRequestFactory.makeHomeURLRequest())
+        return client.performRequest(HomeURLRequestFactory.makeExampleURLRequest())
             .tryMap(HomeMapper.map)
             .mapError { error in
                 if let apiError = error as? APIError {

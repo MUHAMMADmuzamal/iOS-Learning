@@ -9,14 +9,12 @@ import Foundation
 
 class HomeMapper {
     static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [HomeDTO] {
-        if response.statusCode == 200 {
-            return try JSONDecoder().decode([HomeDTO].self, from: data)
+        // Check for errors first
+        if !(200...299).contains(response.statusCode) {
+            try HomeErrorMapper.map(data, response)
         }
-        
-        if response.statusCode == 401 {
-            let decodeData = try JSONDecoder().decode(ServerErrorResponse.self, from: data)
-            throw APIError.customError(title: "\(decodeData.error ?? "Error")", message: "\(decodeData.message ?? "")")
-        }
-        return []
+
+        // Map successful response
+        return try [HomeDTO].decode(from: data)
     }
 }

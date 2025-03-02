@@ -18,14 +18,6 @@ protocol Endpoint {
 
 
 extension Endpoint {
-    func getQueryItems(for dictionary: [String: Any]) -> [URLQueryItem] {
-        return dictionary.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
-    }
-    
-    func getJsonData(for dictionary: [String: Any]) -> Data? {
-        let jsonData = try? JSONSerialization.data(withJSONObject: dictionary)
-        return jsonData
-    }
     
     var request: URLRequest {
         var urlComponents: URLComponents = URLComponents(string: baseURL + path)! // base URL + path

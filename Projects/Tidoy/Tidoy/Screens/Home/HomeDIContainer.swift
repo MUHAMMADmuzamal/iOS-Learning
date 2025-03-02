@@ -12,7 +12,7 @@ class HomeAssembly: Assembly {
     func assemble(container: Container) {
         container.register(HomeUseCaseProtocol.self) { resolver in
             let client = resolver.resolve(URLSession.self) ?? URLSession.shared
-            let service = HomeService(repository: HomeRepository(client: failureResponse()))
+            let service = HomeService(repository: HomeRepository(client: client))
             return HomeUseCase(service: service)
         }.inObjectScope(.weak)
     }

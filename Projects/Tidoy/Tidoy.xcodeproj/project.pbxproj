@@ -42,6 +42,11 @@
 		D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */; };
 		D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6487A0B2CA8339200AB9376 /* SearchField.swift */; };
 		D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6487A0D2CA8467E00AB9376 /* CountryListConstant.swift */; };
+		D65116C32D72405700DBC242 /* HomeErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C22D72405700DBC242 /* HomeErrorMapper.swift */; };
+		D65116C52D733E5900DBC242 /* Decodeable + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C42D733E5900DBC242 /* Decodeable + Extension.swift */; };
+		D65116C72D73400700DBC242 /* Encodable + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C62D73400700DBC242 /* Encodable + Extension.swift */; };
+		D65116C92D7347A600DBC242 /* Dictionary + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C82D7347A600DBC242 /* Dictionary + Extension.swift */; };
+		D65116E72D7441FA00DBC242 /* String(baseURL) + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */; };
 		D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */; };
 		D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */; };
 		D66FD4ED2C1C67B7007D9F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */; };
@@ -124,6 +129,11 @@
 		D63A6CD22D54800000B0A17A /* ValidationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationImplementation.swift; sourceTree = "<group>"; };
 		D6487A0B2CA8339200AB9376 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 		D6487A0D2CA8467E00AB9376 /* CountryListConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListConstant.swift; sourceTree = "<group>"; };
+		D65116C22D72405700DBC242 /* HomeErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeErrorMapper.swift; sourceTree = "<group>"; };
+		D65116C42D733E5900DBC242 /* Decodeable + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodeable + Extension.swift"; sourceTree = "<group>"; };
+		D65116C62D73400700DBC242 /* Encodable + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable + Extension.swift"; sourceTree = "<group>"; };
+		D65116C82D7347A600DBC242 /* Dictionary + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary + Extension.swift"; sourceTree = "<group>"; };
+		D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String(baseURL) + Extension.swift"; sourceTree = "<group>"; };
 		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -336,6 +346,7 @@
 				D61011612D6DC265006D1FA7 /* HomeBuilder.swift */,
 				D61011632D6DC518006D1FA7 /* HomeService.swift */,
 				D61011652D6DC538006D1FA7 /* HomeMapper.swift */,
+				D65116C22D72405700DBC242 /* HomeErrorMapper.swift */,
 				D6CDAF6E2D6F1479007CD8A4 /* HomeRepository.swift */,
 				D610115D2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift */,
 				D6CDAF782D6F3A27007CD8A4 /* HomeDTO.swift */,
@@ -507,6 +518,10 @@
 				D68A53552C3FC99100F69181 /* String + Extension.swift */,
 				D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */,
 				D617331B2CA95D280046CEE2 /* UIAppliction + Extension.swift */,
+				D65116C42D733E5900DBC242 /* Decodeable + Extension.swift */,
+				D65116C62D73400700DBC242 /* Encodable + Extension.swift */,
+				D65116C82D7347A600DBC242 /* Dictionary + Extension.swift */,
+				D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -696,6 +711,7 @@
 			files = (
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
 				D61011622D6DC265006D1FA7 /* HomeBuilder.swift in Sources */,
+				D65116E72D7441FA00DBC242 /* String(baseURL) + Extension.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
 				D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */,
@@ -712,6 +728,7 @@
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
+				D65116C52D733E5900DBC242 /* Decodeable + Extension.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
 				D6CDAF7B2D6F3CA7007CD8A4 /* HomeDIContainer.swift in Sources */,
 				D6C67A142D20535800166EF1 /* SignupView.swift in Sources */,
@@ -730,7 +747,9 @@
 				D6C2EEDF2D5DDB2A004E5DA9 /* NotificationVM.swift in Sources */,
 				D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */,
 				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
+				D65116C32D72405700DBC242 /* HomeErrorMapper.swift in Sources */,
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
+				D65116C92D7347A600DBC242 /* Dictionary + Extension.swift in Sources */,
 				D61A8F1F2C47BD8E00F55756 /* LoginView.swift in Sources */,
 				D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */,
 				D6CDAF792D6F3A27007CD8A4 /* HomeDTO.swift in Sources */,
@@ -746,6 +765,7 @@
 				D61011642D6DC518006D1FA7 /* HomeService.swift in Sources */,
 				D6CDAF812D6F4785007CD8A4 /* HomeUseCase.swift in Sources */,
 				D6CDAF7F2D6F4400007CD8A4 /* CoreDIContainer.swift in Sources */,
+				D65116C72D73400700DBC242 /* Encodable + Extension.swift in Sources */,
 				D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
 				D6C2EEE42D5E537E004E5DA9 /* RootVM.swift in Sources */,
