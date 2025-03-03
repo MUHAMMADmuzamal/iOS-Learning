@@ -25,12 +25,11 @@ struct HomeView<VM: HomeVMProtocol>: View {
         }.onAppear {
             viewModel.fetchData()
         }
-        .alert(item: $viewModel.appError) { appError in
-            Alert(
-                title: Text(appError.title),
-                message: Text(appError.message),
-                dismissButton: .default(Text("OK")))
-        }
+        .alert(viewModel.appError?.title ?? "", isPresented: $viewModel.isPresentError, actions: {
+            // actions
+        }, message: {
+            Text(viewModel.appError?.message ?? "")
+        })
     }
 }
 

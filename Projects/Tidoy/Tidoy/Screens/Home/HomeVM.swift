@@ -11,6 +11,7 @@ import Combine
 protocol HomeVMProtocol: ObservableObject {
     var router: HomeRouterProtocol { get } 
     var appError: AppError? { get set }
+    var isPresentError: Bool { get set }
     
     func fetchData()
 }
@@ -20,7 +21,8 @@ class HomeVM: HomeVMProtocol {
     let useCase: HomeUseCaseProtocol
     var subscriber: AnyCancellable?
     
-    @Published var appError: AppError?
+    var appError: AppError?
+    @Published var isPresentError: Bool = false
     
     init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol) {
         self.router = router
@@ -38,8 +40,8 @@ class HomeVM: HomeVMProtocol {
 
             switch completion {
             case let .failure(errorResponse):
-                guard let error = errorResponse as? AppError else { return }
-                self.appError = error
+                self.appError = errorResponse
+                self.isPresentError = true
             case .finished:
                 break
             }
