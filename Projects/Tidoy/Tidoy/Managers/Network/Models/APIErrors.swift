@@ -39,7 +39,7 @@ enum APIError: Error, Identifiable {
         case .invalidObject:
             return "Failed to convert object to dictionary"
         case .invalidJSON:
-            return "Failed to parse JSON into dictionary"
+            return "Failed to parse JSON."
         }
     }
 }

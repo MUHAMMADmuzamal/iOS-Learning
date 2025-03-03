@@ -9,7 +9,7 @@ import Foundation
 
 enum AppError: Error, Identifiable {
     case api(APIError)
-    case network(Error)
+    case network
     case unknown
 
     var id: UUID { UUID() }
@@ -17,7 +17,7 @@ enum AppError: Error, Identifiable {
     var title: String {
         switch self {
         case .api(let apiError): return apiError.title
-        case .network(let error): return "Network Error"
+        case .network: return "Network Not Reachable"
         case .unknown: return "Unknown Error"
         }
     }
@@ -25,7 +25,7 @@ enum AppError: Error, Identifiable {
     var message: String {
         switch self {
         case .api(let apiError): return apiError.message
-        case .network(let error): return error.localizedDescription
+        case .network: return "Check your internet connection and try again."
         case .unknown: return "An unknown error occurred."
         }
     }

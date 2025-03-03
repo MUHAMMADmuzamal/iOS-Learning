@@ -26,7 +26,7 @@ final class HomeRepository: HomeRepositoryProtocol {
                 if let apiError = error as? APIError {
                     return AppError.api(apiError)
                 } else {
-                    return .network(error)
+                    return .network
                 }
             }
             .eraseToAnyPublisher()

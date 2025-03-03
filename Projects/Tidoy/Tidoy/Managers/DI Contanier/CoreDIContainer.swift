@@ -12,5 +12,12 @@ class CoreAssembly: Assembly {
     func assemble(container: Container) {
         container.register(URLSession.self) { _ in URLSession.shared }
             .inObjectScope(.container)
+        
+        container.register(NetworkMonitoringService.self) { _ in NetworkMonitoringService() }
+            .inObjectScope(.container)
+        
+        container.register(NetworkService.self) { resolver in
+            NetworkService(networkMonitoringService: resolver.resolve(NetworkMonitoringService.self)!)
+        }.inObjectScope(.transient)
     }
 }

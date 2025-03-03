@@ -10,6 +10,10 @@ import Foundation
 extension Decodable {
     static func decode(from data: Data) throws -> Self {
         let decoder = JSONDecoder()
-        return try decoder.decode(Self.self, from: data)
+        do {
+            return try decoder.decode(Self.self, from: data)
+        } catch {
+            throw APIError.invalidJSON
+        }
     }
 }
