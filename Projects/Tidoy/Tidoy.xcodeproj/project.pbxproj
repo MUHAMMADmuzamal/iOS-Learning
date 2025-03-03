@@ -48,6 +48,7 @@
 		D65116C92D7347A600DBC242 /* Dictionary + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C82D7347A600DBC242 /* Dictionary + Extension.swift */; };
 		D65116E72D7441FA00DBC242 /* String(baseURL) + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */; };
 		D65116E92D7578FC00DBC242 /* NetworkMonitoringService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116E82D7578FC00DBC242 /* NetworkMonitoringService.swift */; };
+		D65116EB2D758B6A00DBC242 /* Publisher + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116EA2D758B6A00DBC242 /* Publisher + Extension.swift */; };
 		D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */; };
 		D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */; };
 		D66FD4ED2C1C67B7007D9F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */; };
@@ -136,6 +137,7 @@
 		D65116C82D7347A600DBC242 /* Dictionary + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary + Extension.swift"; sourceTree = "<group>"; };
 		D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String(baseURL) + Extension.swift"; sourceTree = "<group>"; };
 		D65116E82D7578FC00DBC242 /* NetworkMonitoringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitoringService.swift; sourceTree = "<group>"; };
+		D65116EA2D758B6A00DBC242 /* Publisher + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Extension.swift"; sourceTree = "<group>"; };
 		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				D65116C62D73400700DBC242 /* Encodable + Extension.swift */,
 				D65116C82D7347A600DBC242 /* Dictionary + Extension.swift */,
 				D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */,
+				D65116EA2D758B6A00DBC242 /* Publisher + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				D610115C2D6DA72A006D1FA7 /* HTTPRequest.swift in Sources */,
 				D61011662D6DC538006D1FA7 /* HomeMapper.swift in Sources */,
 				D63179782D5A4DAB005A6791 /* NotificationView.swift in Sources */,
+				D65116EB2D758B6A00DBC242 /* Publisher + Extension.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
 				D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */,
 				D631797E2D5A4F0F005A6791 /* NotificationRoute.swift in Sources */,

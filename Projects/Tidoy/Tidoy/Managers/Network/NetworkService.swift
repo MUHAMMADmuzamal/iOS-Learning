@@ -22,7 +22,7 @@ class NetworkService: HTTPClient {
     func performRequest(_ request: Endpoint) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
         
         guard self.networkMonitoringService.isReachable else {
-            return Fail(error: AppError.network).eraseToAnyPublisher()
+            return .fail(AppError.network)
         }
         
         let session = URLSession.shared

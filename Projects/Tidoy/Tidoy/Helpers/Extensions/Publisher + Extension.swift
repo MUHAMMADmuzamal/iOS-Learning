@@ -1,0 +1,25 @@
+//
+//  Publisher + Extension.swift
+//  Tidoy
+//
+//  Created by Muhammad Muzamal on 03/03/2025.
+//
+
+import Foundation
+import Combine
+
+extension Publisher {
+    static func empty() -> AnyPublisher<Output, Failure> {
+        return Empty().eraseToAnyPublisher()
+    }
+
+    static func just(_ output: Output) -> AnyPublisher<Output, Failure> {
+        return Just(output)
+            .setFailureType(to: Failure.self)
+            .eraseToAnyPublisher()
+    }
+
+    static func fail(_ error: Failure) -> AnyPublisher<Output, Failure> {
+        return Fail(error: error).eraseToAnyPublisher()
+    }
+}
