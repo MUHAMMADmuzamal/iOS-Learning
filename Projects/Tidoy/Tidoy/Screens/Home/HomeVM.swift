@@ -19,14 +19,16 @@ protocol HomeVMProtocol: ObservableObject {
 class HomeVM: HomeVMProtocol {
     let router: HomeRouterProtocol
     let useCase: HomeUseCaseProtocol
+    let logger: Logger
     var subscriber: AnyCancellable?
     
     var appError: AppError?
     @Published var isPresentError: Bool = false
     
-    init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol) {
+    init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol, logger: Logger) {
         self.router = router
         self.useCase = useCase
+        self.logger = logger
     }
     
     func fetchData() {
@@ -42,13 +44,13 @@ class HomeVM: HomeVMProtocol {
             case let .failure(errorResponse):
                 self.appError = errorResponse
                 self.isPresentError = true
+                self.logger.log(errorResponse.message, .error)
             case .finished:
                 break
             }
         } receiveValue: { data in
-            print("✅✅✅✅✅✅✅")
             print(data)
-            print("✅✅✅✅✅✅✅")
+            self.logger.log("Data fetched", .info)
         }
     }
 }

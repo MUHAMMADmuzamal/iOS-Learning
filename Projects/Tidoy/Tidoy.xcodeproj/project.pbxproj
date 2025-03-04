@@ -185,6 +185,7 @@
 		D60B30D72D70858E008A9471 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
+		D64C2F512D75A8C200BE9854 /* Logger */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logger; sourceTree = "<group>"; };
 		D65116BF2D72385C00DBC242 /* AppError */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppError; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -335,6 +336,7 @@
 		D631794A2D578B36005A6791 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D64C2F512D75A8C200BE9854 /* Logger */,
 				D65116BF2D72385C00DBC242 /* AppError */,
 				D610114F2D6759BE006D1FA7 /* Network */,
 				D610113C2D649F02006D1FA7 /* DI Contanier */,
@@ -590,6 +592,7 @@
 				D60B30D72D70858E008A9471 /* Models */,
 				D610113B2D649DC9006D1FA7 /* Routing */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
+				D64C2F512D75A8C200BE9854 /* Logger */,
 				D65116BF2D72385C00DBC242 /* AppError */,
 			);
 			name = Tidoy;

@@ -12,7 +12,8 @@ final class HomeBuilder {
     static func build(injector: Container) -> some View {
         let router = HomeRouter(injector: injector)
         let useCase = injector.resolve(HomeUseCaseProtocol.self)!
-        let viewModel = HomeVM(router: router, useCase: useCase)
+        let logger = injector.resolve(RemoteLogger.self)!
+        let viewModel = HomeVM(router: router, useCase: useCase, logger: logger)
         return HomeView(viewModel: viewModel)
     }
 }

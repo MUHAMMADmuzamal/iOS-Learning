@@ -22,7 +22,8 @@ class DependenciesHolder {
             [
                 CoreAssembly(),
                 AppAssembly(),
-                HomeAssembly()
+                HomeAssembly(),
+                LoggerDIContainer()
             ],
         container: container)
     }
