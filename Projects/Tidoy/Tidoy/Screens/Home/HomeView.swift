@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView<VM: HomeVMProtocol>: View {
     @StateObject private var viewModel: VM
-    
+    @AppStorage
     init(viewModel: VM) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -37,5 +37,5 @@ struct HomeView<VM: HomeVMProtocol>: View {
     let injector = DependenciesHolder.shared.injector()
     return HomeView(viewModel: HomeVM(router: HomeRouter(injector: injector),
                                       useCase: injector.resolve(HomeUseCaseProtocol.self)!,
-                                      logger: injector.resolve(Logger.self)!))
+                                      logger: injector.resolve(RemoteLogger.self)!))
 }

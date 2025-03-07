@@ -19,5 +19,9 @@ class CoreAssembly: Assembly {
         container.register(NetworkService.self) { resolver in
             NetworkService(networkMonitoringService: resolver.resolve(NetworkMonitoringService.self)!)
         }.inObjectScope(.transient)
+        
+        container.register(HTTPAuthenticationNetworkService.self) { resolver in
+            HTTPAuthenticationNetworkService(httpClient: resolver.resolve(NetworkService.self)!)
+        }.inObjectScope(.transient)
     }
 }

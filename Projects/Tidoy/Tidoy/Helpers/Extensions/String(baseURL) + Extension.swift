@@ -8,5 +8,5 @@
 import Foundation
 
 extension String {
-    static let baseURL = "https://ca56e2c2bb64007c6dbb.free.beeceptor.com/"
+    static let baseURL = "http://127.0.0.1:8000"
 }

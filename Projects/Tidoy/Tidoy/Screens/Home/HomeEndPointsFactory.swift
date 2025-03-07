@@ -22,24 +22,25 @@ class HomeURLRequestFactory {
     }
     
     static func makeExampleURLRequest() -> Endpoint {
-        return ExampleEndpoint(ExampleDTO(name: "ali"))
+        return ExampleEndpoint(ExampleDTO(username: "testuser", password: "testpassword"))
     }
 }
 
 struct ExampleDTO: Encodable {
-    let name: String
+    let username: String
+    let password: String
 }
 
 struct ExampleEndpoint: Endpoint {
     var baseURL: String = .baseURL
-    var path: String = "api/users/"
-    var method: HTTPMethod = .POST
+    var path: String = "/users"
+    var method: HTTPMethod = .GET
     var headers: [String: String]?
     var bodyParams: Data?
     var queryParams: [URLQueryItem]?
     init(_ model: ExampleDTO) {
         // [URLQueryItem(name: "limit", value: model.limit)]
-        queryParams = try? model.toQueryItems()
-        bodyParams = try? model.encode()
+//        queryParams = try? model.toQueryItems()
+//        bodyParams = try? model.encode()
     }
 }

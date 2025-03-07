@@ -21,4 +21,9 @@ final class ConsoleLogger: Logger {
         let prefix = logPrefixes[level] ?? ""
         print(prefix, message)
     }
+    
+    func log(_ entry: LogEntry) {
+        let prefix = logPrefixes[entry.level] ?? ""
+        print(prefix, entry.message)
+    }
 }

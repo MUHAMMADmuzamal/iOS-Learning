@@ -14,17 +14,15 @@ final class LoggerDIContainer: Assembly {
             ConsoleLogger()
         }.inObjectScope(.container)
         
-        container.register(LoggerEndPoint.self) { _ in
-            LoggerEndPoint()
-        }.inObjectScope(.transient)
+        container.register(HttpRemoteLogSender.self) { resolver in
+            let httpClient = resolver.resolve(NetworkService.self)!
+            return HttpRemoteLogSender(httpClient: httpClient)
+        }
         
         container.register(RemoteLogger.self) { resolver in
-            let httpClient = resolver.resolve(NetworkService.self)!
             let consoleLogger = resolver.resolve(ConsoleLogger.self)!
-            let loggerEndPoint = resolver.resolve(LoggerEndPoint.self)!
-            return RemoteLogger(wrapper: consoleLogger,
-                                httpClient: httpClient,
-                                logEndpoint: loggerEndPoint)
+            let logSender = resolver.resolve(HttpRemoteLogSender.self)!
+            return RemoteLogger(wrapper: consoleLogger, logSender: logSender)
         }.inObjectScope(.container)
     }
 }
