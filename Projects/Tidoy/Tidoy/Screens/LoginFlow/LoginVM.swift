@@ -1,45 +1,42 @@
 //
-//  HomeVM.swift
+//  LoginVM.swift
 //  Tidoy
 //
-//  Created by Muhammad Muzamal on 25/02/2025.
+//  Created by Muhammad Muzamal on 07/03/2025.
 //
 
 import Foundation
 import Combine
 
-protocol HomeVMProtocol: ObservableObject {
-    var router: HomeRouterProtocol { get } 
+protocol LoginVMProtocol: ObservableObject {
     var appError: AppError? { get set }
     var isPresentError: Bool { get set }
     
-    func fetchData()
+    func login(email: String, password: String)
 }
 
-final class HomeVM: HomeVMProtocol {
-    internal let router: HomeRouterProtocol
-    private let useCase: HomeUseCaseProtocol
+final class LoginVM: LoginVMProtocol {
+    private let router: LoginRouterProtocol
+    private let useCase: LoginUseCaseProtocol
     private let logger: Logger
     private var subscriber: AnyCancellable?
     
     var appError: AppError?
     @Published var isPresentError: Bool = false
     
-    init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol, logger: Logger) {
-        self.router = router
+    init(useCase: LoginUseCaseProtocol,
+         router: LoginRouterProtocol,
+         logger: Logger) {
         self.useCase = useCase
+        self.router = router
         self.logger = logger
     }
     
-    func fetchData() {
-        subscriber = useCase.loadHomeData()
+    func login(email: String, password: String)  {
+        subscriber = useCase.login(email: email, password: password)
             .receive(on: DispatchQueue.main)
             .sink { completion in
-            
-//            if case .failure(let error) = completion {
-//                print((error as? APIError)?.title)
-//            }
-
+                
             switch completion {
             case let .failure(errorResponse):
                 self.appError = errorResponse
@@ -50,7 +47,10 @@ final class HomeVM: HomeVMProtocol {
             }
         } receiveValue: { data in
             print(data)
-            self.logger.log("Data fetched", .info)
+            TokenStorage.accessToken = data.accessToken
+            TokenStorage.refreshToken = data.refreshToken
+            self.logger.log("Login Success", .info)
+            self.router.navigateToHome()
         }
     }
 }

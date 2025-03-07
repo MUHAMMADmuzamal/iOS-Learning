@@ -11,10 +11,16 @@ enum LoginMethod: Int {
     case email = 0
     case phoneNumber
 }
-struct LoginView: View {
+struct LoginView<VM: LoginVMProtocol>: View {
+    
+    @StateObject private var viewModel: VM
+    
+    init(viewModel: VM, displaySignup: Binding<Bool>) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+        self._displaySignup = displaySignup
+    }
     
     @Binding var displaySignup: Bool
-    @Binding var isLoggedIn: Bool
     @State private var loginMethod: LoginMethod = .phoneNumber
     @State private var phoneNumberFieldText: String = ""
     @State private var emailFieldText: String = ""
@@ -157,7 +163,7 @@ extension LoginView {
     private var bottomSection: some View {
         VStack {
             PrimaryButton(title: "Login") {
-                isLoggedIn = true
+                viewModel.login(email: "testuser@example.com", password: "testpassword")
             }
             Spacer()
             Divider()
@@ -215,5 +221,9 @@ extension LoginView {
 }
 
 #Preview {
-    LoginView(displaySignup: .constant(true), isLoggedIn: .constant(false))
+    let injector = DependenciesHolder.shared.injector()
+    LoginView(viewModel: LoginVM(useCase: injector.resolve(LoginUseCaseProtocol.self)!,
+                                 router: LoginRouter(injector: injector),
+                                      logger: injector.resolve(RemoteLogger.self)!),
+                     displaySignup: .constant(true))
 }

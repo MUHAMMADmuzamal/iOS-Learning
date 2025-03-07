@@ -69,7 +69,8 @@ struct RootView: View {
     }
     
     private var login: some View {
-        LoginView(displaySignup: $viewModel.displaySignup, isLoggedIn: $coordinator.isLoggedIn)
+        LoginBuilder.build(injector: injector,
+                           displaySignup: $viewModel.displaySignup)
     }
     
     private var home: some View {

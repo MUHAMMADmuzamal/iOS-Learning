@@ -46,16 +46,6 @@ struct RefreshTokenDTO: Encodable {
     }
 }
 
-struct AccessTokenDTO: Decodable {
-    let accessToken: String
-    let tokenType: String
-    
-    enum CodingKeys: String, CodingKey {
-        case accessToken = "access_token"
-        case tokenType = "token_type"
-    }
-}
-
 class HTTPAuthenticationNetworkService: HTTPClient {
     let httpClient: HTTPClient
     
@@ -65,17 +55,17 @@ class HTTPAuthenticationNetworkService: HTTPClient {
     
     func performRequest(_ request: Endpoint) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
         return httpClient.performRequest(request)
-            .tryMap(HTTPAuthenticationNetworkServiceMapper.map)
-            .tryCatch { error in
-                if let apiError = error as? APIError, case .unauthorized = apiError {
-                    return try self.refreshToken()
-                        .flatMap { _ in self.httpClient.performRequest(request) }
-                        .eraseToAnyPublisher()
-                } else {
-                    throw error
-                }
-            }
-            .eraseToAnyPublisher()
+//            .tryMap(HTTPAuthenticationNetworkServiceMapper.map)
+//            .tryCatch { error in
+//                if let apiError = error as? APIError, case .unauthorized = apiError {
+//                    return try self.refreshToken()
+//                        .flatMap { _ in self.httpClient.performRequest(request) }
+//                        .eraseToAnyPublisher()
+//                } else {
+//                    throw error
+//                }
+//            }
+//            .eraseToAnyPublisher()
 
     }
     
@@ -85,7 +75,7 @@ class HTTPAuthenticationNetworkService: HTTPClient {
 //            RefreshTokenEndpoint(bodyParams: RefreshTokenDTO(refreshToken: "refreshToken").encode()))
 //            .eraseToAnyPublisher()
 //    }
-    private func refreshToken() throws -> AnyPublisher<AccessTokenDTO, Error> {
+    private func refreshToken() throws -> AnyPublisher<LoginResponseDTO, Error> {
 //            guard !isRefreshingToken else {
 //                return refreshTokenSubject.eraseToAnyPublisher()
 //            }
@@ -94,19 +84,16 @@ class HTTPAuthenticationNetworkService: HTTPClient {
 
             return  httpClient.performRequest(
                 RefreshTokenEndpoint(queryParams:
-                                        try RefreshTokenDTO(refreshToken:
-"""
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTc0MTkzMTU1Mn0.98SfLUw3Q8DN01VATtYKwcNOnXQ5aNNpjy3fVG2SkRA
-""").toQueryItems())
+                                        try RefreshTokenDTO(refreshToken: TokenStorage.refreshToken ?? "").toQueryItems())
             )
-            .tryMap { data, _ -> AccessTokenDTO in
-                let response = try JSONDecoder().decode(AccessTokenDTO.self, from: data)
+            .tryMap { data, _ -> LoginResponseDTO in
+                let response = try JSONDecoder().decode(LoginResponseDTO.self, from: data)
 //                self.isRefreshingToken = false
 //                self.refreshTokenSubject.send(response.accessToken)
 //                self.refreshTokenSubject.send(completion: .finished)
                 return response
             }
-            .catch { error -> AnyPublisher<AccessTokenDTO, Error> in
+            .catch { error -> AnyPublisher<LoginResponseDTO, Error> in
 //                self.isRefreshingToken = false
 //                self.refreshTokenSubject.send(completion: .failure(error))
                 return Fail(error: error).eraseToAnyPublisher()
@@ -121,7 +108,7 @@ class HTTPAuthenticationNetworkServiceMapper {
           case 401:
             throw APIError.unauthorized
             case 200:
-            let response = try JSONDecoder().decode(AccessTokenDTO.self , from: data)
+            let response = try JSONDecoder().decode(LoginResponseDTO.self , from: data)
         default:
             break
         }

@@ -7,6 +7,20 @@
 
 import Foundation
 // MARK: - HomeDTO
-struct HomeDTO: Codable {
-    let username, email, role: String
+struct HomeDTO: Decodable {
+    let users: UsersContainer
+
+    enum CodingKeys: String, CodingKey {
+        case users = "Users"
+    }
+}
+
+struct UsersContainer: Decodable {
+    let data: [User]
+}
+
+struct User: Decodable {
+    let email: String
+    let username: String
+    let role: String
 }

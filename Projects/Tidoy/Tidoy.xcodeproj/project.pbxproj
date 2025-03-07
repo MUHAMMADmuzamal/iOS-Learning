@@ -45,6 +45,17 @@
 		D64C2F602D76DF9700BE9854 /* URLRequest + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F5F2D76DF9700BE9854 /* URLRequest + Extension.swift */; };
 		D64C2F882D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F872D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift */; };
 		D64C2F8A2D7AC9BF00BE9854 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F892D7AC9BF00BE9854 /* UserDefaults + Extension.swift */; };
+		D64C2F8C2D7AD87D00BE9854 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F8B2D7AD87D00BE9854 /* LoginVM.swift */; };
+		D64C2F8E2D7AD88800BE9854 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F8D2D7AD88800BE9854 /* LoginUseCase.swift */; };
+		D64C2F902D7AD89600BE9854 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F8F2D7AD89600BE9854 /* LoginService.swift */; };
+		D64C2F922D7AD8A600BE9854 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F912D7AD8A600BE9854 /* LoginRepository.swift */; };
+		D64C2F942D7AD92D00BE9854 /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F932D7AD92D00BE9854 /* LoginBuilder.swift */; };
+		D64C2F962D7ADA8D00BE9854 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F952D7ADA8D00BE9854 /* LoginDTO.swift */; };
+		D64C2F982D7ADC6800BE9854 /* LoginEndPointsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F972D7ADC6800BE9854 /* LoginEndPointsFactory.swift */; };
+		D64C2F9A2D7ADCDD00BE9854 /* LoginMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F992D7ADCDD00BE9854 /* LoginMapper.swift */; };
+		D64C2F9C2D7ADCE700BE9854 /* LoginErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F9B2D7ADCE700BE9854 /* LoginErrorMapper.swift */; };
+		D64C2F9E2D7AEFC300BE9854 /* LognDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F9D2D7AEFC300BE9854 /* LognDIContainer.swift */; };
+		D64C2FA02D7AF99100BE9854 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F9F2D7AF99100BE9854 /* LoginRouter.swift */; };
 		D65116C32D72405700DBC242 /* HomeErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C22D72405700DBC242 /* HomeErrorMapper.swift */; };
 		D65116C52D733E5900DBC242 /* Decodeable + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C42D733E5900DBC242 /* Decodeable + Extension.swift */; };
 		D65116C72D73400700DBC242 /* Encodable + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116C62D73400700DBC242 /* Encodable + Extension.swift */; };
@@ -137,6 +148,17 @@
 		D64C2F5F2D76DF9700BE9854 /* URLRequest + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extension.swift"; sourceTree = "<group>"; };
 		D64C2F872D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthenticationNetworkService.swift; sourceTree = "<group>"; };
 		D64C2F892D7AC9BF00BE9854 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
+		D64C2F8B2D7AD87D00BE9854 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		D64C2F8D2D7AD88800BE9854 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		D64C2F8F2D7AD89600BE9854 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D64C2F912D7AD8A600BE9854 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		D64C2F932D7AD92D00BE9854 /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		D64C2F952D7ADA8D00BE9854 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		D64C2F972D7ADC6800BE9854 /* LoginEndPointsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPointsFactory.swift; sourceTree = "<group>"; };
+		D64C2F992D7ADCDD00BE9854 /* LoginMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMapper.swift; sourceTree = "<group>"; };
+		D64C2F9B2D7ADCE700BE9854 /* LoginErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorMapper.swift; sourceTree = "<group>"; };
+		D64C2F9D2D7AEFC300BE9854 /* LognDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LognDIContainer.swift; sourceTree = "<group>"; };
+		D64C2F9F2D7AF99100BE9854 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		D65116C22D72405700DBC242 /* HomeErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeErrorMapper.swift; sourceTree = "<group>"; };
 		D65116C42D733E5900DBC242 /* Decodeable + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodeable + Extension.swift"; sourceTree = "<group>"; };
 		D65116C62D73400700DBC242 /* Encodable + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable + Extension.swift"; sourceTree = "<group>"; };
@@ -323,6 +345,17 @@
 			isa = PBXGroup;
 			children = (
 				D61A8F1E2C47BD8E00F55756 /* LoginView.swift */,
+				D64C2F8B2D7AD87D00BE9854 /* LoginVM.swift */,
+				D64C2F8D2D7AD88800BE9854 /* LoginUseCase.swift */,
+				D64C2F8F2D7AD89600BE9854 /* LoginService.swift */,
+				D64C2F912D7AD8A600BE9854 /* LoginRepository.swift */,
+				D64C2F932D7AD92D00BE9854 /* LoginBuilder.swift */,
+				D64C2F9D2D7AEFC300BE9854 /* LognDIContainer.swift */,
+				D64C2F952D7ADA8D00BE9854 /* LoginDTO.swift */,
+				D64C2F972D7ADC6800BE9854 /* LoginEndPointsFactory.swift */,
+				D64C2F992D7ADCDD00BE9854 /* LoginMapper.swift */,
+				D64C2F9B2D7ADCE700BE9854 /* LoginErrorMapper.swift */,
+				D64C2F9F2D7AF99100BE9854 /* LoginRouter.swift */,
 			);
 			path = LoginFlow;
 			sourceTree = "<group>";
@@ -730,23 +763,27 @@
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
 				D61011622D6DC265006D1FA7 /* HomeBuilder.swift in Sources */,
 				D65116E72D7441FA00DBC242 /* String(baseURL) + Extension.swift in Sources */,
+				D64C2F9C2D7ADCE700BE9854 /* LoginErrorMapper.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
 				D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */,
 				D64C2F8A2D7AC9BF00BE9854 /* UserDefaults + Extension.swift in Sources */,
 				D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */,
 				D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */,
+				D64C2F9E2D7AEFC300BE9854 /* LognDIContainer.swift in Sources */,
 				D63179832D5A57CE005A6791 /* MessagesRoute.swift in Sources */,
 				D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */,
 				D6CDAF6F2D6F1479007CD8A4 /* HomeRepository.swift in Sources */,
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */,
+				D64C2F922D7AD8A600BE9854 /* LoginRepository.swift in Sources */,
 				D610115E2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift in Sources */,
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
+				D64C2F8C2D7AD87D00BE9854 /* LoginVM.swift in Sources */,
 				D65116C52D733E5900DBC242 /* Decodeable + Extension.swift in Sources */,
 				D64C2F602D76DF9700BE9854 /* URLRequest + Extension.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
@@ -755,10 +792,12 @@
 				D610115C2D6DA72A006D1FA7 /* HTTPRequest.swift in Sources */,
 				D61011662D6DC538006D1FA7 /* HomeMapper.swift in Sources */,
 				D63179782D5A4DAB005A6791 /* NotificationView.swift in Sources */,
+				D64C2F902D7AD89600BE9854 /* LoginService.swift in Sources */,
 				D65116EB2D758B6A00DBC242 /* Publisher + Extension.swift in Sources */,
 				D61A8F0A2C4151DD00F55756 /* OnboardingScreen.swift in Sources */,
 				D63A6CD32D54800000B0A17A /* ValidationImplementation.swift in Sources */,
 				D631797E2D5A4F0F005A6791 /* NotificationRoute.swift in Sources */,
+				D64C2F962D7ADA8D00BE9854 /* LoginDTO.swift in Sources */,
 				D63179852D5A57FA005A6791 /* NotificationRouter.swift in Sources */,
 				D61A8F182C42C6F300F55756 /* PrimaryButton.swift in Sources */,
 				D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */,
@@ -776,12 +815,15 @@
 				D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */,
 				D6CDAF792D6F3A27007CD8A4 /* HomeDTO.swift in Sources */,
 				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
+				D64C2F9A2D7ADCDD00BE9854 /* LoginMapper.swift in Sources */,
 				D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */,
+				D64C2F942D7AD92D00BE9854 /* LoginBuilder.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
 				D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */,
 				D61011602D6DC16A006D1FA7 /* HomeVM.swift in Sources */,
 				D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */,
 				D631797C2D5A4DBD005A6791 /* HomeRouter.swift in Sources */,
+				D64C2F982D7ADC6800BE9854 /* LoginEndPointsFactory.swift in Sources */,
 				D63179692D59D167005A6791 /* RootView.swift in Sources */,
 				D65116E92D7578FC00DBC242 /* NetworkMonitoringService.swift in Sources */,
 				D63179812D5A579C005A6791 /* MessagesView.swift in Sources */,
@@ -793,6 +835,8 @@
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
 				D6C2EEE42D5E537E004E5DA9 /* RootVM.swift in Sources */,
 				D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */,
+				D64C2FA02D7AF99100BE9854 /* LoginRouter.swift in Sources */,
+				D64C2F8E2D7AD88800BE9854 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@ extension Endpoint {
         request.httpMethod = method.rawValue
         request.httpBody = bodyParams
         request.setValue("application/json", forHTTPHeaderField: "Content-type")
-        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTc0MTMyNjgxMn0.zh3zLrLBIQ0R865pn_0yEgvBsxycsa1mGVMMB349iew"
+        let token = TokenStorage.accessToken ?? ""
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         self.headers?.forEach({ (key: String, value: String) in
             request.setValue(value, forHTTPHeaderField: key)

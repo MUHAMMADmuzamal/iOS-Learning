@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class HomeErrorMapper {
+final class HomeErrorMapper {
     static func map(_ data: Data, _ response: HTTPURLResponse) throws {
         switch response.statusCode {
         case 401:
