@@ -49,7 +49,6 @@ final class HomeVM: HomeVMProtocol {
                 break
             }
         } receiveValue: { data in
-            print(data)
             self.logger.log("Data fetched", .info)
         }
     }

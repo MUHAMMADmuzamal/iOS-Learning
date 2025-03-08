@@ -31,7 +31,7 @@ class NetworkService: HTTPClient {
                 guard let response = response as? HTTPURLResponse else {
                     throw APIError.invalidResponse
                 }
-                print(String(data: data, encoding: .utf8) as Any)
+                data.log()
                 return (data, response)
             }.eraseToAnyPublisher()
     }

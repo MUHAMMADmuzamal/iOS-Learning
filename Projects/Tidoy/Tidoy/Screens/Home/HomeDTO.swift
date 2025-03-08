@@ -6,8 +6,8 @@
 //
 
 import Foundation
-// MARK: - HomeDTO
-struct HomeDTO: Decodable {
+// MARK: - HomeResponseDTO
+struct HomeResponseDTO: Decodable {
     let users: UsersContainer
 
     enum CodingKeys: String, CodingKey {

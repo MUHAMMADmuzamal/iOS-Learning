@@ -12,7 +12,7 @@ enum APIError: Error, Identifiable {
     case customError(title: String, message: String)
     case invalidObject
     case invalidJSON
-    case unauthorized
+    case unAuthorized
     
     var id: UUID {
         UUID()
@@ -28,7 +28,7 @@ enum APIError: Error, Identifiable {
             return "InvalidObject"
         case .invalidJSON:
             return "InvalidJSON"
-        case .unauthorized:
+        case .unAuthorized:
             return "Unauthorized"
         }
     }
@@ -43,7 +43,7 @@ enum APIError: Error, Identifiable {
             return "Failed to convert object to dictionary"
         case .invalidJSON:
             return "Failed to parse JSON."
-        case .unauthorized:
+        case .unAuthorized:
             return "Unauthorized"
         }
     }

@@ -12,8 +12,8 @@ final class HomeAssembly: Assembly {
     func assemble(container: Container) {
         container.register(HomeUseCaseProtocol.self) { resolver in
             let client = resolver.resolve(HTTPAuthenticationNetworkService.self)!
-            let service = HomeService(repository: HomeRepository(client: client))
-            return HomeUseCase(service: service)
+            let repository = HomeRepository(client: client)
+            return HomeUseCase(repository: repository)
         }.inObjectScope(.weak)
     }
 }

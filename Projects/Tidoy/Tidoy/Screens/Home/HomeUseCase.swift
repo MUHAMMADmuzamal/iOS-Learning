@@ -9,17 +9,17 @@ import Foundation
 import Combine
 
 protocol HomeUseCaseProtocol {
-    func loadHomeData() -> AnyPublisher<HomeDTO, AppError>
+    func loadHomeData() -> AnyPublisher<HomeResponseDTO, AppError>
 }
 
 final class HomeUseCase: HomeUseCaseProtocol {
-    let service: HomeServiceProtocol
+    let repository: HomeRepositoryProtocol
     
-    init(service: HomeServiceProtocol) {
-        self.service = service
+    init(repository: HomeRepositoryProtocol) {
+        self.repository = repository
     }
     
-    func loadHomeData() -> AnyPublisher<HomeDTO, AppError> {
-        return service.loadHomeData()
+    func loadHomeData() -> AnyPublisher<HomeResponseDTO, AppError> {
+        return repository.fetchHomeData()
     }
 }

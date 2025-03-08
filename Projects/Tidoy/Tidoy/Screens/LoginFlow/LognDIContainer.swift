@@ -12,8 +12,8 @@ final class LoginAssembly: Assembly {
     func assemble(container: Container) {
         container.register(LoginUseCaseProtocol.self) { resolver in
             let client = resolver.resolve(HTTPAuthenticationNetworkService.self)!
-            let service = LoginService(repository: LoginRepository(client: client))
-            return LoginUseCase(service: service)
+            let repository = LoginRepository(client: client)
+            return LoginUseCase(repository: repository)
         }.inObjectScope(.weak)
     }
 }

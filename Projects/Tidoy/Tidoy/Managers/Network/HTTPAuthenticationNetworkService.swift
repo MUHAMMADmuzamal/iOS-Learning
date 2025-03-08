@@ -38,7 +38,7 @@ struct RefreshTokenEndpoint: Endpoint {
     }
 }
 
-struct RefreshTokenDTO: Encodable {
+struct RefreshTokenRequestDTO: Encodable {
     let refreshToken: String
     
     enum CodingKeys: String, CodingKey {
@@ -46,8 +46,19 @@ struct RefreshTokenDTO: Encodable {
     }
 }
 
+struct RefreshTokenResponseDTO: Decodable {
+    let accessToken: String
+    let tokenType: String
+    
+    enum CodingKeys: String, CodingKey {
+        case accessToken = "access_token"
+        case tokenType = "token_type"
+    }
+}
+
 class HTTPAuthenticationNetworkService: HTTPClient {
     let httpClient: HTTPClient
+    private var isRefreshingToken: Bool = false
     
     init(httpClient: HTTPClient) {
         self.httpClient = httpClient
@@ -55,46 +66,41 @@ class HTTPAuthenticationNetworkService: HTTPClient {
     
     func performRequest(_ request: Endpoint) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
         return httpClient.performRequest(request)
-//            .tryMap(HTTPAuthenticationNetworkServiceMapper.map)
-//            .tryCatch { error in
-//                if let apiError = error as? APIError, case .unauthorized = apiError {
-//                    return try self.refreshToken()
-//                        .flatMap { _ in self.httpClient.performRequest(request) }
-//                        .eraseToAnyPublisher()
-//                } else {
-//                    throw error
-//                }
-//            }
-//            .eraseToAnyPublisher()
+            .tryMap(HTTPAuthenticationNetworkServiceMapper.map)
+            .tryCatch { error in
+                if let apiError = error as? APIError, case .unAuthorized = apiError {
+                     try self.refreshToken()
+                        .flatMap { _ in self.httpClient.performRequest(request) }
+                        .eraseToAnyPublisher()
+                } else {
+                    throw error
+                }
+            }
+            .eraseToAnyPublisher()
 
     }
     
-    
-//    private func refreshToken() throws -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
-//        return try self.httpClient.performRequest(
-//            RefreshTokenEndpoint(bodyParams: RefreshTokenDTO(refreshToken: "refreshToken").encode()))
-//            .eraseToAnyPublisher()
-//    }
-    private func refreshToken() throws -> AnyPublisher<LoginResponseDTO, Error> {
+    private func refreshToken() throws -> AnyPublisher<RefreshTokenResponseDTO, Error> {
 //            guard !isRefreshingToken else {
 //                return refreshTokenSubject.eraseToAnyPublisher()
 //            }
 //
-//            isRefreshingToken = true
+            isRefreshingToken = true
 
             return  httpClient.performRequest(
                 RefreshTokenEndpoint(queryParams:
-                                        try RefreshTokenDTO(refreshToken: TokenStorage.refreshToken ?? "").toQueryItems())
+                                        try RefreshTokenRequestDTO(refreshToken: TokenStorage.refreshToken ?? "").toQueryItems())
             )
-            .tryMap { data, _ -> LoginResponseDTO in
-                let response = try JSONDecoder().decode(LoginResponseDTO.self, from: data)
-//                self.isRefreshingToken = false
+            .tryMap { data, _ -> RefreshTokenResponseDTO in
+                let response = try JSONDecoder().decode(RefreshTokenResponseDTO.self, from: data)
+                self.isRefreshingToken = false
+                TokenStorage.accessToken = response.accessToken
 //                self.refreshTokenSubject.send(response.accessToken)
 //                self.refreshTokenSubject.send(completion: .finished)
                 return response
             }
-            .catch { error -> AnyPublisher<LoginResponseDTO, Error> in
-//                self.isRefreshingToken = false
+            .catch { error -> AnyPublisher<RefreshTokenResponseDTO, Error> in
+                self.isRefreshingToken = false
 //                self.refreshTokenSubject.send(completion: .failure(error))
                 return Fail(error: error).eraseToAnyPublisher()
             }
@@ -105,10 +111,8 @@ class HTTPAuthenticationNetworkService: HTTPClient {
 class HTTPAuthenticationNetworkServiceMapper {
     static func map(_ data: Data, _ response: HTTPURLResponse) throws -> (data: Data, response: HTTPURLResponse) {
         switch response.statusCode {
-          case 401:
-            throw APIError.unauthorized
-            case 200:
-            let response = try JSONDecoder().decode(LoginResponseDTO.self , from: data)
+        case 401:
+            throw APIError.unAuthorized
         default:
             break
         }
