@@ -11,7 +11,7 @@ final class HTTPAuthenticationNetworkServiceMapper {
     static func map(_ data: Data, _ response: HTTPURLResponse) throws -> (data: Data, response: HTTPURLResponse) {
         switch response.statusCode {
         case 401:
-            throw APIError.unAuthorized
+            throw UnAuthorizedError()
         default:
             break
         }
@@ -20,11 +20,11 @@ final class HTTPAuthenticationNetworkServiceMapper {
     
     static func refreshTokenMap(_ data: Data, _ response: HTTPURLResponse) throws -> RefreshTokenResponseDTO {
         switch response.statusCode {
-            case 200:
+        case 200:
             let response = try JSONDecoder().decode(RefreshTokenResponseDTO.self, from: data)
             return response
         default:
-            throw APIError.unAuthorized
+            throw UnAuthorizedError()
         }
     }
 }

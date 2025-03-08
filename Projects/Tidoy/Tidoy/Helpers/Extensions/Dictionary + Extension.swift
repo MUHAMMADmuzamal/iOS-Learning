@@ -15,7 +15,7 @@ extension Dictionary where Key == String, Value: Any {
 
     static func fromJSONData(_ data: Data) throws -> [String: Any] {
         guard let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-            throw APIError.invalidJSON
+            throw InvalidJSONError()
         }
         return dictionary
     }

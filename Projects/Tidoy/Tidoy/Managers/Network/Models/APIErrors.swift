@@ -7,49 +7,38 @@
 
 import Foundation
 
-enum APIError: Error, Identifiable {
-    case invalidResponse
-    case customError(title: String, message: String)
-    case invalidObject
-    case invalidJSON
-    case unAuthorized
-    case refreshTokenExpired
-    
-    var id: UUID {
-        UUID()
-    }
-    
-    var title: String {
-        switch self {
-        case .invalidResponse:
-            return "Invalid Response"
-        case let .customError(title, _):
-            return title
-        case .invalidObject:
-            return "InvalidObject"
-        case .invalidJSON:
-            return "InvalidJSON"
-        case .unAuthorized:
-            return "Unauthorized"
-        case .refreshTokenExpired:
-            return "Session Expired"
-        }
-    }
-    
-    var message: String {
-        switch self {
-        case .invalidResponse:
-            return "Invalid Response"
-        case let .customError(_, message):
-            return message
-        case .invalidObject:
-            return "Failed to convert object to dictionary"
-        case .invalidJSON:
-            return "Failed to parse JSON."
-        case .unAuthorized:
-            return "Unauthorized"
-        case .refreshTokenExpired:
-            return "Your session has expired. Please log in again."
-        }
+class InvalidResponseError: AppError {
+    init() {
+        super.init(title: "Invalid Response",
+                   message: "The server returned an unexpected response.")
     }
 }
+
+class InvalidObjectError: AppError {
+    init() {
+        super.init(title: "Invalid Object",
+                   message: "Failed to convert object to dictionary.")
+    }
+}
+
+class InvalidJSONError: AppError {
+    init() {
+        super.init(title: "JSON Parsing Error",
+                   message: "Failed to parse the JSON response from the server.")
+    }
+}
+
+class UnAuthorizedError: AppError {
+    init() {
+        super.init(title: "UnAuthorized",
+                   message: "You are not authorized to access this resource. Please log in again.")
+    }
+}
+
+class RefreshTokenExpiredError: AppError {
+    init() {
+        super.init(title: "Session Expired",
+                   message: "Your session has expired. Please log in again.")
+    }
+}
+

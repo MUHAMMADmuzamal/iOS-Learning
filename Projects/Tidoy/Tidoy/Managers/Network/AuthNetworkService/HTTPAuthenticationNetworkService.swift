@@ -21,7 +21,7 @@ class HTTPAuthenticationNetworkService: HTTPClient {
         return httpClient.performRequest(request)
             .tryMap(HTTPAuthenticationNetworkServiceMapper.map)
             .tryCatch { error in
-                if let apiError = error as? APIError, case .unAuthorized = apiError {
+                if let _ = error as? UnAuthorizedError {
                      return try self.refreshToken()
                         .flatMap { _ in self.httpClient.performRequest(request) }
                         .eraseToAnyPublisher()
@@ -52,7 +52,7 @@ class HTTPAuthenticationNetworkService: HTTPClient {
             TokenStorage.accessToken = response.accessToken
             self.refreshTokenSubject.send(response)
             self.refreshTokenSubject.send(completion: .finished)
-        }, receiveCompletion: { completion in
+        }, receiveCompletion: { _ in
             self.isRefreshingToken = false
         })
         .catch { error -> AnyPublisher<RefreshTokenResponseDTO, Error> in
@@ -74,4 +74,3 @@ class HTTPAuthenticationNetworkService: HTTPClient {
 //        NotificationCenter.default.post(name: .logoutUser, object: nil)
     }
 }
-

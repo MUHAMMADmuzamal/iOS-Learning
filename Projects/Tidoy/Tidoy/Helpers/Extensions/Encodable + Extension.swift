@@ -20,7 +20,7 @@ extension Encodable {
           
           // Convert the JSON data to a dictionary
           guard let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-              throw APIError.invalidJSON
+              throw InvalidJSONError()
           }
           
           // Map the dictionary to URLQueryItem

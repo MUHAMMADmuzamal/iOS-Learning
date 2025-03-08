@@ -10,7 +10,7 @@ final class LoginErrorMapper {
     static func map(_ data: Data, _ response: HTTPURLResponse) throws {
         switch response.statusCode {
         default:
-            throw APIError.invalidResponse
+            throw InvalidResponseError()
         }
     }
 }

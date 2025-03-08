@@ -22,14 +22,14 @@ class NetworkService: HTTPClient {
     func performRequest(_ request: Endpoint) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
         
         guard self.networkMonitoringService.isReachable else {
-            return .fail(AppError.network)
+            return .fail(NetworkError())
         }
         
         let session = URLSession.shared
         return session.dataTaskPublisher(for: request.request)
             .tryMap { (data: Data, response: URLResponse) in
                 guard let response = response as? HTTPURLResponse else {
-                    throw APIError.invalidResponse
+                    throw InvalidResponseError()
                 }
                 data.log()
                 return (data, response)
@@ -45,7 +45,7 @@ extension URLSession: HTTPClient {
         return session.dataTaskPublisher(for: request.request)
             .tryMap { (data: Data, response: URLResponse) in
                 guard let response = response as? HTTPURLResponse else {
-                    throw APIError.invalidResponse
+                    throw InvalidResponseError()
                 }
                 return (data, response)
             }.eraseToAnyPublisher()

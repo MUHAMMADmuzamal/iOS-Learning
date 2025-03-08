@@ -20,10 +20,6 @@ final class HomeURLRequestFactory {
     static func makeHomeURLRequest() -> Endpoint {
         return HomeEndpoint()
     }
-    
-//    static func makeExampleURLRequest() -> Endpoint {
-//        return ExampleEndpoint(ExampleDTO(username: "testuser", password: "testpassword"))
-//    }
 }
 
 //struct ExampleDTO: Encodable {

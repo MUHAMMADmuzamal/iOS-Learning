@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol HomeVMProtocol: ObservableObject {
-    var router: HomeRouterProtocol { get } 
+    var router: HomeRouterProtocol { get }
     var appError: AppError? { get set }
     var isPresentError: Bool { get set }
     
@@ -35,21 +35,21 @@ final class HomeVM: HomeVMProtocol {
         useCase.loadHomeData()
             .receive(on: DispatchQueue.main)
             .sink { completion in
-            
-//            if case .failure(let error) = completion {
-//                print((error as? APIError)?.title)
-//            }
-
-            switch completion {
-            case let .failure(errorResponse):
-                self.appError = errorResponse
-                self.isPresentError = true
-                self.logger.log(errorResponse.message, .error)
-            case .finished:
-                break
-            }
-        } receiveValue: { data in
-            self.logger.log("Data fetched", .info)
-        }.store(in: &cancellables)
+                
+                //            if case .failure(let error) = completion {
+                //                print((error as? APIError)?.title)
+                //            }
+                
+                switch completion {
+                case let .failure(errorResponse):
+                    self.appError = errorResponse
+                    self.isPresentError = true
+                    self.logger.log(errorResponse.message, .error)
+                case .finished:
+                    break
+                }
+            } receiveValue: { _ in
+                self.logger.log("Data fetched", .info)
+            }.store(in: &cancellables)
     }
 }

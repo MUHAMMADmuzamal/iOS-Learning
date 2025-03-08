@@ -14,7 +14,7 @@ struct RefreshTokenEndpoint: Endpoint {
     
     var headers: [String: String]? = ["Content-type": "application/json"]
     
-    var bodyParams: Data? = nil
+    var bodyParams: Data?
     
     var queryParams: [URLQueryItem]?
     

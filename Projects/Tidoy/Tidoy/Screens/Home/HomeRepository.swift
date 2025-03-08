@@ -22,18 +22,10 @@ final class HomeRepository: HomeRepositoryProtocol {
     func fetchHomeData() -> AnyPublisher<HomeResponseDTO, AppError> {
         return client.performRequest(HomeURLRequestFactory.makeHomeURLRequest())
             .tryMap(HomeMapper.map)
-            .mapError { error -> APIError in
-                    print("❌❌❌ Error occurred in mapError ❌❌❌")
-                    print(error)
-                    print("❌❌❌❌❌❌❌❌❌❌")
-                return .invalidResponse // Default fallback error
-                }
-                .catch { error -> AnyPublisher<HomeResponseDTO, AppError> in
-                    print("❌❌❌ Error occurred in catch ❌❌❌")
-                    print(error)
-                    print("❌❌❌❌❌❌❌❌❌❌")
-                    return Fail(error: AppError.api(error)).eraseToAnyPublisher()
-                }
+            .mapError { error in
+                return  (error as? AppError) ?? UnknownError(title: "Unknown Error",
+                                                             message: error.localizedDescription)
+            }
             .eraseToAnyPublisher()
     }
 }

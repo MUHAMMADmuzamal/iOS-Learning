@@ -24,11 +24,8 @@ final class LoginRepository: LoginRepositoryProtocol {
         return client.performRequest(LoginURLRequestFactory.makeLoginURLRequest(data))
             .tryMap(LoginMapper.map)
             .mapError { error in
-                if let apiError = error as? APIError {
-                    return AppError.api(apiError)
-                } else {
-                    return .network
-                }
+                return  (error as? AppError) ?? UnknownError(title: "Unknown Error",
+                                                             message: error.localizedDescription)
             }
             .eraseToAnyPublisher()
     }

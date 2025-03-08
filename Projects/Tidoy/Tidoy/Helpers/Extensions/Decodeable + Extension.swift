@@ -13,7 +13,7 @@ extension Decodable {
         do {
             return try decoder.decode(Self.self, from: data)
         } catch {
-            throw APIError.invalidJSON
+            throw InvalidJSONError()
         }
     }
 }
