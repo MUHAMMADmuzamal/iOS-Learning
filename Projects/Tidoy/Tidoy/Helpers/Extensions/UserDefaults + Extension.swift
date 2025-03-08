@@ -14,10 +14,12 @@ extension UserDefaults {
 
 class TokenStorage {
     // - accessToken
-    @Wrapper(key: "accessToken") static var accessToken: String?
+    @Wrapper(key: "accessToken")
+    static var accessToken: String?
     
     // - refreshToken
-    @Wrapper(key: "refreshToken") static var refreshToken: String?
+    @Wrapper(key: "refreshToken")
+    static var refreshToken: String?
 }
 
 @propertyWrapper

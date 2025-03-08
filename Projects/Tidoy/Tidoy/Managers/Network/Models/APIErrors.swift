@@ -13,6 +13,7 @@ enum APIError: Error, Identifiable {
     case invalidObject
     case invalidJSON
     case unAuthorized
+    case refreshTokenExpired
     
     var id: UUID {
         UUID()
@@ -30,6 +31,8 @@ enum APIError: Error, Identifiable {
             return "InvalidJSON"
         case .unAuthorized:
             return "Unauthorized"
+        case .refreshTokenExpired:
+            return "Session Expired"
         }
     }
     
@@ -45,6 +48,8 @@ enum APIError: Error, Identifiable {
             return "Failed to parse JSON."
         case .unAuthorized:
             return "Unauthorized"
+        case .refreshTokenExpired:
+            return "Your session has expired. Please log in again."
         }
     }
 }

@@ -19,7 +19,7 @@ final class LoginVM: LoginVMProtocol {
     private let router: LoginRouterProtocol
     private let useCase: LoginUseCaseProtocol
     private let logger: Logger
-    private var subscriber: AnyCancellable?
+    private var cancellables = Set<AnyCancellable>()
     
     var appError: AppError?
     @Published var isPresentError: Bool = false
@@ -32,8 +32,8 @@ final class LoginVM: LoginVMProtocol {
         self.logger = logger
     }
     
-    func login(email: String, password: String)  {
-        subscriber = useCase.login(email: email, password: password)
+    func login(email: String, password: String) {
+        useCase.login(email: email, password: password)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 
@@ -51,6 +51,6 @@ final class LoginVM: LoginVMProtocol {
             TokenStorage.refreshToken = data.refreshToken
             self.logger.log("Login Success", .info)
             self.router.navigateToHome()
-        }
+        }.store(in: &cancellables)
     }
 }

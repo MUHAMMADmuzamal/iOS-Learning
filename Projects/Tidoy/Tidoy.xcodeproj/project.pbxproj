@@ -42,7 +42,6 @@
 		D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6487A0B2CA8339200AB9376 /* SearchField.swift */; };
 		D6487A0E2CA8467E00AB9376 /* CountryListConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6487A0D2CA8467E00AB9376 /* CountryListConstant.swift */; };
 		D64C2F602D76DF9700BE9854 /* URLRequest + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F5F2D76DF9700BE9854 /* URLRequest + Extension.swift */; };
-		D64C2F882D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F872D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift */; };
 		D64C2F8A2D7AC9BF00BE9854 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F892D7AC9BF00BE9854 /* UserDefaults + Extension.swift */; };
 		D64C2F8C2D7AD87D00BE9854 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F8B2D7AD87D00BE9854 /* LoginVM.swift */; };
 		D64C2F8E2D7AD88800BE9854 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C2F8D2D7AD88800BE9854 /* LoginUseCase.swift */; };
@@ -144,7 +143,6 @@
 		D6487A0B2CA8339200AB9376 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 		D6487A0D2CA8467E00AB9376 /* CountryListConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListConstant.swift; sourceTree = "<group>"; };
 		D64C2F5F2D76DF9700BE9854 /* URLRequest + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extension.swift"; sourceTree = "<group>"; };
-		D64C2F872D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthenticationNetworkService.swift; sourceTree = "<group>"; };
 		D64C2F892D7AC9BF00BE9854 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		D64C2F8B2D7AD87D00BE9854 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		D64C2F8D2D7AD88800BE9854 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
@@ -212,6 +210,7 @@
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
 		D64C2F512D75A8C200BE9854 /* Logger */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logger; sourceTree = "<group>"; };
+		D64C2FA32D7C481A00BE9854 /* AuthNetworkService */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AuthNetworkService; sourceTree = "<group>"; };
 		D65116BF2D72385C00DBC242 /* AppError */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppError; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -272,7 +271,7 @@
 			children = (
 				D60B30D72D70858E008A9471 /* Models */,
 				D61011502D6759CF006D1FA7 /* NetworkService.swift */,
-				D64C2F872D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift */,
+				D64C2FA32D7C481A00BE9854 /* AuthNetworkService */,
 				D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */,
 				D610115B2D6DA72A006D1FA7 /* HTTPRequest.swift */,
 				D65116E82D7578FC00DBC242 /* NetworkMonitoringService.swift */,
@@ -632,6 +631,7 @@
 				D610113B2D649DC9006D1FA7 /* Routing */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
 				D64C2F512D75A8C200BE9854 /* Logger */,
+				D64C2FA32D7C481A00BE9854 /* AuthNetworkService */,
 				D65116BF2D72385C00DBC242 /* AppError */,
 			);
 			name = Tidoy;
@@ -804,7 +804,6 @@
 				D6C2EEDF2D5DDB2A004E5DA9 /* NotificationVM.swift in Sources */,
 				D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */,
 				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
-				D64C2F882D79CDBA00BE9854 /* HTTPAuthenticationNetworkService.swift in Sources */,
 				D65116C32D72405700DBC242 /* HomeErrorMapper.swift in Sources */,
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D65116C92D7347A600DBC242 /* Dictionary + Extension.swift in Sources */,

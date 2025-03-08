@@ -20,7 +20,7 @@ final class HomeVM: HomeVMProtocol {
     internal let router: HomeRouterProtocol
     private let useCase: HomeUseCaseProtocol
     private let logger: Logger
-    private var subscriber: AnyCancellable?
+    private var cancellables = Set<AnyCancellable>()
     
     var appError: AppError?
     @Published var isPresentError: Bool = false
@@ -32,7 +32,7 @@ final class HomeVM: HomeVMProtocol {
     }
     
     func fetchData() {
-        subscriber = useCase.loadHomeData()
+        useCase.loadHomeData()
             .receive(on: DispatchQueue.main)
             .sink { completion in
             
@@ -50,6 +50,6 @@ final class HomeVM: HomeVMProtocol {
             }
         } receiveValue: { data in
             self.logger.log("Data fetched", .info)
-        }
+        }.store(in: &cancellables)
     }
 }
