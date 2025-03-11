@@ -8,18 +8,41 @@
 import SwiftUI
 
 struct MessagesView: View {
-    var body: some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Text("Messages.")
-                Spacer()
+    @StateObject private var webSocketManager = MessagesVM()
+        @State private var messageToSend = ""
+
+        var body: some View {
+            VStack {
+                Text(webSocketManager.isConnected ? "Connected ✅" : "Disconnected ❌")
+                    .foregroundColor(webSocketManager.isConnected ? .green : .red)
+
+                Text("Received: \(webSocketManager.receivedMessage)")
+                    .padding()
+
+                TextField("Enter message", text: $messageToSend)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
+                HStack {
+                    Button("Connect") {
+                        webSocketManager.connect()
+                    }
+                    .buttonStyle(.bordered)
+
+                    Button("Send") {
+                        webSocketManager.sendMessage(messageToSend)
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(messageToSend.isEmpty)
+
+                    Button("Disconnect") {
+                        webSocketManager.disconnect()
+                    }
+                    .buttonStyle(.bordered)
+                }
             }
-            Spacer()
+            .padding()
         }
-        .background(Color.red)
-    }
 }
 
 #Preview {

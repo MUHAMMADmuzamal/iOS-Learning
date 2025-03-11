@@ -78,6 +78,7 @@
 		D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
+		D69AEDD22D7F06B0005DD964 /* MessagesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
 		D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */; };
 		D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */; };
@@ -185,6 +186,7 @@
 		D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
 		D690E4892C836EDB003FAE23 /* CountryListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListModel.swift; sourceTree = "<group>"; };
 		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
+		D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVM.swift; sourceTree = "<group>"; };
 		D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
 		D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
 		D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 			children = (
 				D63179802D5A579C005A6791 /* MessagesView.swift */,
 				D63179822D5A57CE005A6791 /* MessagesRoute.swift */,
+				D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
 				D631796C2D59D2C9005A6791 /* HomeView.swift in Sources */,
+				D69AEDD22D7F06B0005DD964 /* MessagesVM.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D64C2F8C2D7AD87D00BE9854 /* LoginVM.swift in Sources */,
 				D65116C52D733E5900DBC242 /* Decodeable + Extension.swift in Sources */,

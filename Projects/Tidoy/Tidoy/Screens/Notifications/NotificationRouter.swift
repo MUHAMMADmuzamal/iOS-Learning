@@ -15,9 +15,10 @@ protocol NotificationRouterProtocol {
 final class NotificationRouter: Router, NotificationRouterProtocol {
     
     func navigateToMessages() {
-        coordinator.displaySheet(with: MessagesRoute(), onDismiss: {
-            print("Sheet was dismissed! Perform cleanup here.")
-        })
+//        coordinator.displaySheet(with: MessagesRoute(), onDismiss: {
+//            print("Sheet was dismissed! Perform cleanup here.")
+//        })
+        coordinator.navigate(to: MessagesRoute())
     }
     
     func dissmiss() {
