@@ -19,6 +19,6 @@ struct LoginResponseDTO: Decodable {
     }
 }
 
-struct LoginSendDTO: Encodable {
+struct LoginSendDTO: Codable {
     let email, password: String
 }
