@@ -7,9 +7,11 @@
 
 import Foundation
 import CoreData
+import Combine
 
-class CoreDataService {
-    private let manager = CoreDataManager()
+class HomeCoreDataRepository: HomeRepositoryProtocol {
+
+    private let manager = CoreDataManager.shared
     
     func addUser(_ model: LoginSendDTO) {
         let newUser = Users(context: manager.context)
@@ -39,5 +41,16 @@ class CoreDataService {
         manager.context.delete(user)
 
         manager.saveContext()
+    }
+    
+    func fetchHomeData() -> AnyPublisher<HomeResponseDTO, AppError> {
+        let users = getAllUsers()
+        for user in users {
+            print(user.email ?? "Unknown")
+        }
+        let homeData = HomeResponseDTO(users: UsersContainer(data: users.map({User(email: $0.email ?? "Unknown", username: $0.password ?? "No password", role: "no role")})))
+        return Just(homeData)
+            .setFailureType(to: AppError.self)
+            .eraseToAnyPublisher()
     }
 }

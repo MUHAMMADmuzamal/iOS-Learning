@@ -12,7 +12,6 @@ struct RootView: View {
     private let injector: Container
     @ObservedObject var viewModel = RootVM()
     @ObservedObject var coordinator: AppCoordinator
-    @StateObject private var dataController = CoreDataManager()
     
     init(injector: Container) {
         self.injector = injector
@@ -27,7 +26,6 @@ struct RootView: View {
                 contentView
             }
         }
-        .environment(\.managedObjectContext, dataController.context)
         .sheet(item: $coordinator.sheetRoute, onDismiss: coordinator.dissmissSheet) { route in
             route.destinationView()
                 .clipShape(CustomRoundedRectangle(cornerRadius: 32, corners: [.topLeft, .topRight]))

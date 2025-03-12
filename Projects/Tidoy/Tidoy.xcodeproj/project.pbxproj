@@ -79,6 +79,7 @@
 		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
 		D69AEDD22D7F06B0005DD964 /* MessagesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */; };
+		D69AEDE92D801CC0005DD964 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEDE82D801CC0005DD964 /* CoreDataRepository.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
 		D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */; };
 		D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */; };
@@ -187,6 +188,7 @@
 		D690E4892C836EDB003FAE23 /* CountryListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListModel.swift; sourceTree = "<group>"; };
 		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
 		D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVM.swift; sourceTree = "<group>"; };
+		D69AEDE82D801CC0005DD964 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
 		D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
 		D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				D61011652D6DC538006D1FA7 /* HomeMapper.swift */,
 				D65116C22D72405700DBC242 /* HomeErrorMapper.swift */,
 				D6CDAF6E2D6F1479007CD8A4 /* HomeRepository.swift */,
+				D69AEDE82D801CC0005DD964 /* CoreDataRepository.swift */,
 				D610115D2D6DA7B0006D1FA7 /* HomeEndPointsFactory.swift */,
 				D6CDAF782D6F3A27007CD8A4 /* HomeDTO.swift */,
 				D6CDAF7A2D6F3CA7007CD8A4 /* HomeDIContainer.swift */,
@@ -769,6 +772,7 @@
 				D64C2F9C2D7ADCE700BE9854 /* LoginErrorMapper.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
+				D69AEDE92D801CC0005DD964 /* CoreDataRepository.swift in Sources */,
 				D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */,
 				D64C2F8A2D7AC9BF00BE9854 /* UserDefaults + Extension.swift in Sources */,
 				D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */,

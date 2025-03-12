@@ -12,6 +12,7 @@ protocol HomeVMProtocol: ObservableObject {
     var router: HomeRouterProtocol { get }
     var appError: AppError? { get set }
     var isPresentError: Bool { get set }
+    var users: [User] { get }
     
     func fetchData()
 }
@@ -24,6 +25,7 @@ final class HomeVM: HomeVMProtocol {
     
     var appError: AppError?
     @Published var isPresentError: Bool = false
+    @Published var users: [User] = []
     
     init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol, logger: Logger) {
         self.router = router
@@ -48,8 +50,9 @@ final class HomeVM: HomeVMProtocol {
                 case .finished:
                     break
                 }
-            } receiveValue: { _ in
+            } receiveValue: { data in
                 self.logger.log("Data fetched", .info)
+                self.users = data.users.data
             }.store(in: &cancellables)
     }
 }

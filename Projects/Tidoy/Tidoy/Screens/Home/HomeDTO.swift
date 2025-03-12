@@ -19,7 +19,7 @@ struct UsersContainer: Decodable {
     let data: [User]
 }
 
-struct User: Decodable {
+struct User: Decodable, Hashable {
     let email: String
     let username: String
     let role: String

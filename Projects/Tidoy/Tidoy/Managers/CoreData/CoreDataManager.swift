@@ -8,12 +8,12 @@
 import Foundation
 import CoreData
 
-class CoreDataManager: ObservableObject {
-//    static let shared = CoreDataManager()
+final class CoreDataManager {
+    static let shared = CoreDataManager()
     
     let persistentContainer = NSPersistentContainer(name: "MyDatabase")
     
-     init() {
+     private init() {
         persistentContainer.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("Failed to load Core Data stack: \(error)")
