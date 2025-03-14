@@ -71,14 +71,13 @@
 		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
 		D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F91E2D84358E0016A873 /* Kingfisher */; };
 		D694F9222D84359F0016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9212D84359F0016A873 /* Swinject */; };
-		D694F9242D84359F0016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9232D84359F0016A873 /* Swinject-Dynamic */; };
 		D694F9282D8436980016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9272D8436980016A873 /* Swinject */; };
-		D694F92A2D8436980016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9292D8436980016A873 /* Swinject-Dynamic */; };
 		D694F92D2D8437100016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F92C2D8437100016A873 /* Kingfisher */; };
 		D694F9312D8439190016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9302D8439190016A873 /* Swinject */; };
-		D694F9342D8439AC0016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9332D8439AC0016A873 /* Swinject-Dynamic */; };
 		D694F9372D843A440016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9362D843A440016A873 /* Swinject */; };
-		D694F9392D843A440016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9382D843A440016A873 /* Swinject-Dynamic */; };
+		D694F93C2D843BF60016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F93B2D843BF60016A873 /* Swinject */; };
+		D694F93F2D843D530016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F93E2D843D530016A873 /* Swinject */; };
+		D694F9442D843F940016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9432D843F940016A873 /* Swinject */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
 		D69AEDD22D7F06B0005DD964 /* MessagesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
@@ -94,6 +93,19 @@
 		D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E24F492D1C457900CCDD4F /* ConfirmNumberView.swift */; };
 		D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E24F4B2D1C4FA400CCDD4F /* SingleDigitTextField.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D694F9482D84402A0016A873 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSecureTextField.swift; sourceTree = "<group>"; };
@@ -201,15 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D694F92D2D8437100016A873 /* Kingfisher in Frameworks */,
-				D694F9342D8439AC0016A873 /* Swinject-Dynamic in Frameworks */,
-				D694F9242D84359F0016A873 /* Swinject-Dynamic in Frameworks */,
-				D694F9392D843A440016A873 /* Swinject-Dynamic in Frameworks */,
 				D694F9312D8439190016A873 /* Swinject in Frameworks */,
+				D694F93C2D843BF60016A873 /* Swinject in Frameworks */,
 				D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */,
 				D694F9372D843A440016A873 /* Swinject in Frameworks */,
+				D694F9442D843F940016A873 /* Swinject in Frameworks */,
 				D694F9222D84359F0016A873 /* Swinject in Frameworks */,
-				D694F92A2D8436980016A873 /* Swinject-Dynamic in Frameworks */,
 				D694F9282D8436980016A873 /* Swinject in Frameworks */,
+				D694F93F2D843D530016A873 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +576,7 @@
 				D66FD4DE2C1C67B2007D9F52 /* Sources */,
 				D66FD4DF2C1C67B2007D9F52 /* Frameworks */,
 				D66FD4E02C1C67B2007D9F52 /* Resources */,
+				D694F9482D84402A0016A873 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -617,7 +629,7 @@
 			packageReferences = (
 				D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D694F92E2D84371D0016A873 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
-				D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D694F9422D843F940016A873 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = D66FD4D92C1C67B2007D9F52;
 			projectDirPath = "";
@@ -1076,7 +1088,7 @@
 				minimumVersion = 2.9.1;
 			};
 		};
-		D694F9322D8439AC0016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
@@ -1084,7 +1096,23 @@
 				minimumVersion = 2.9.1;
 			};
 		};
-		D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		D694F93A2D843BF60016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.2;
+			};
+		};
+		D694F93D2D843D530016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+		D694F9422D843F940016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
@@ -1105,20 +1133,10 @@
 			package = D694F9202D84359F0016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
-		D694F9232D84359F0016A873 /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F9202D84359F0016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
-		};
 		D694F9272D8436980016A873 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D694F9262D8436980016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		D694F9292D8436980016A873 /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F9262D8436980016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
 		};
 		D694F92C2D8437100016A873 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1130,20 +1148,25 @@
 			package = D694F92F2D8439190016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
-		D694F9332D8439AC0016A873 /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F9322D8439AC0016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
-		};
 		D694F9362D843A440016A873 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
-		D694F9382D843A440016A873 /* Swinject-Dynamic */ = {
+		D694F93B2D843BF60016A873 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
+			package = D694F93A2D843BF60016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D694F93E2D843D530016A873 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F93D2D843D530016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D694F9432D843F940016A873 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9422D843F940016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
