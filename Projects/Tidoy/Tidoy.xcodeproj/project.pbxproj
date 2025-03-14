@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872C5D23B387E9E3F50C213 /* Pods_Tidoy.framework */; };
 		D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */; };
 		D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011502D6759CF006D1FA7 /* NetworkService.swift */; };
 		D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */; };
@@ -70,6 +69,16 @@
 		D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53552C3FC99100F69181 /* String + Extension.swift */; };
 		D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
+		D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F91E2D84358E0016A873 /* Kingfisher */; };
+		D694F9222D84359F0016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9212D84359F0016A873 /* Swinject */; };
+		D694F9242D84359F0016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9232D84359F0016A873 /* Swinject-Dynamic */; };
+		D694F9282D8436980016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9272D8436980016A873 /* Swinject */; };
+		D694F92A2D8436980016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9292D8436980016A873 /* Swinject-Dynamic */; };
+		D694F92D2D8437100016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F92C2D8437100016A873 /* Kingfisher */; };
+		D694F9312D8439190016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9302D8439190016A873 /* Swinject */; };
+		D694F9342D8439AC0016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9332D8439AC0016A873 /* Swinject-Dynamic */; };
+		D694F9372D843A440016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9362D843A440016A873 /* Swinject */; };
+		D694F9392D843A440016A873 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9382D843A440016A873 /* Swinject-Dynamic */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
 		D69AEDD22D7F06B0005DD964 /* MessagesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
@@ -87,18 +96,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13C5CDE2AC3E8E0C40A66735 /* Pods-Tidoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy.release.xcconfig"; path = "Target Support Files/Pods-Tidoy/Pods-Tidoy.release.xcconfig"; sourceTree = "<group>"; };
-		1E5F472D6EF731278EF47801 /* Pods-Tidoy-TidoyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy-TidoyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tidoy-TidoyUITests/Pods-Tidoy-TidoyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2872C5D23B387E9E3F50C213 /* Pods_Tidoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53B7ED3DC4BC2534D96C4821 /* Pods-Tidoy-TidoyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy-TidoyUITests.release.xcconfig"; path = "Target Support Files/Pods-Tidoy-TidoyUITests/Pods-Tidoy-TidoyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		78A3F7FDB885E08429C2EB71 /* Pods-TidoyTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidoyTests.staging.xcconfig"; path = "Target Support Files/Pods-TidoyTests/Pods-TidoyTests.staging.xcconfig"; sourceTree = "<group>"; };
-		82161D800FABECA810DF8355 /* Pods_TidoyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TidoyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85862B8584F4ED1D30DAAD99 /* Pods-Tidoy.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy.staging.xcconfig"; path = "Target Support Files/Pods-Tidoy/Pods-Tidoy.staging.xcconfig"; sourceTree = "<group>"; };
-		8869F2ADF98EB3F330C055AA /* Pods-Tidoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy.debug.xcconfig"; path = "Target Support Files/Pods-Tidoy/Pods-Tidoy.debug.xcconfig"; sourceTree = "<group>"; };
-		959BBC7006024E68BD2CE14D /* Pods-Tidoy-TidoyUITests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidoy-TidoyUITests.staging.xcconfig"; path = "Target Support Files/Pods-Tidoy-TidoyUITests/Pods-Tidoy-TidoyUITests.staging.xcconfig"; sourceTree = "<group>"; };
-		AD087384E26224D2081F9FA4 /* Pods-TidoyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidoyTests.debug.xcconfig"; path = "Target Support Files/Pods-TidoyTests/Pods-TidoyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B243A6A990AC37C061E57654 /* Pods_Tidoy_TidoyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidoy_TidoyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0929F3BA5611A2734ECB213 /* Pods-TidoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TidoyTests.release.xcconfig"; path = "Target Support Files/Pods-TidoyTests/Pods-TidoyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSecureTextField.swift; sourceTree = "<group>"; };
 		D61011502D6759CF006D1FA7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -145,11 +142,10 @@
 		D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String(baseURL) + Extension.swift"; sourceTree = "<group>"; };
 		D65116E82D7578FC00DBC242 /* NetworkMonitoringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitoringService.swift; sourceTree = "<group>"; };
 		D65116EA2D758B6A00DBC242 /* Publisher + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Extension.swift"; sourceTree = "<group>"; };
-		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Tidoy.debug.app; path = "/Users/codesorbit/Documents/Office/Learning/Projects/Tidoy/build/Debug-iphoneos/Tidoy.debug.app"; sourceTree = "<absolute>"; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D66FD5342C1C6A9E007D9F52 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66FD5662C1C72BA007D9F52 /* Tidoy.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.debug.xcconfig; sourceTree = "<group>"; };
 		D66FD5672C1C72F9007D9F52 /* Tidoy.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.release.xcconfig; sourceTree = "<group>"; };
 		D66FD5682C1C730C007D9F52 /* Tidoy.staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tidoy.staging.xcconfig; sourceTree = "<group>"; };
@@ -179,8 +175,6 @@
 		D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVM.swift; sourceTree = "<group>"; };
 		D6CDAF7C2D6F43F0007CD8A4 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		D6CDAF7E2D6F4400007CD8A4 /* CoreDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDIContainer.swift; sourceTree = "<group>"; };
-		D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E24F492D1C457900CCDD4F /* ConfirmNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNumberView.swift; sourceTree = "<group>"; };
 		D6E24F4B2D1C4FA400CCDD4F /* SingleDigitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDigitTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,42 +200,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3529E7998AA49BA259944060 /* Pods_Tidoy.framework in Frameworks */,
+				D694F92D2D8437100016A873 /* Kingfisher in Frameworks */,
+				D694F9342D8439AC0016A873 /* Swinject-Dynamic in Frameworks */,
+				D694F9242D84359F0016A873 /* Swinject-Dynamic in Frameworks */,
+				D694F9392D843A440016A873 /* Swinject-Dynamic in Frameworks */,
+				D694F9312D8439190016A873 /* Swinject in Frameworks */,
+				D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */,
+				D694F9372D843A440016A873 /* Swinject in Frameworks */,
+				D694F9222D84359F0016A873 /* Swinject in Frameworks */,
+				D694F92A2D8436980016A873 /* Swinject-Dynamic in Frameworks */,
+				D694F9282D8436980016A873 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AC5D90B46AD4773AB95F32E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8869F2ADF98EB3F330C055AA /* Pods-Tidoy.debug.xcconfig */,
-				13C5CDE2AC3E8E0C40A66735 /* Pods-Tidoy.release.xcconfig */,
-				1E5F472D6EF731278EF47801 /* Pods-Tidoy-TidoyUITests.debug.xcconfig */,
-				53B7ED3DC4BC2534D96C4821 /* Pods-Tidoy-TidoyUITests.release.xcconfig */,
-				AD087384E26224D2081F9FA4 /* Pods-TidoyTests.debug.xcconfig */,
-				C0929F3BA5611A2734ECB213 /* Pods-TidoyTests.release.xcconfig */,
-				85862B8584F4ED1D30DAAD99 /* Pods-Tidoy.staging.xcconfig */,
-				959BBC7006024E68BD2CE14D /* Pods-Tidoy-TidoyUITests.staging.xcconfig */,
-				78A3F7FDB885E08429C2EB71 /* Pods-TidoyTests.staging.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		67B65A5E91C6FB3491D622ED /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D6DEF46D2C2AD7A500428AC0 /* Onboarding.framework */,
-				D6DEF4692C2AD6EB00428AC0 /* Onboarding.framework */,
-				D66FD5342C1C6A9E007D9F52 /* Onboarding.framework */,
-				2872C5D23B387E9E3F50C213 /* Pods_Tidoy.framework */,
-				B243A6A990AC37C061E57654 /* Pods_Tidoy_TidoyUITests.framework */,
-				82161D800FABECA810DF8355 /* Pods_TidoyTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D610113C2D649F02006D1FA7 /* DI Contanier */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,18 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				D66FD4E42C1C67B2007D9F52 /* Tidoy */,
-				D66FD4E32C1C67B2007D9F52 /* Products */,
-				0AC5D90B46AD4773AB95F32E /* Pods */,
-				67B65A5E91C6FB3491D622ED /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		D66FD4E32C1C67B2007D9F52 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D66FD4E42C1C67B2007D9F52 /* Tidoy */ = {
@@ -599,12 +562,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D66FD5062C1C67B8007D9F52 /* Build configuration list for PBXNativeTarget "Tidoy" */;
 			buildPhases = (
-				537B8204BB1B14DFFCDAB3AC /* [CP] Check Pods Manifest.lock */,
 				D66FD4DE2C1C67B2007D9F52 /* Sources */,
 				D66FD4DF2C1C67B2007D9F52 /* Frameworks */,
 				D66FD4E02C1C67B2007D9F52 /* Resources */,
-				D66FD50F2C1C6975007D9F52 /* ShellScript */,
-				8D76AF6A8B01C624A1C25C44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -654,7 +614,12 @@
 				Base,
 			);
 			mainGroup = D66FD4D92C1C67B2007D9F52;
-			productRefGroup = D66FD4E32C1C67B2007D9F52 /* Products */;
+			packageReferences = (
+				D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D694F92E2D84371D0016A873 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
+			productRefGroup = D66FD4D92C1C67B2007D9F52;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -683,65 +648,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		537B8204BB1B14DFFCDAB3AC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tidoy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D76AF6A8B01C624A1C25C44 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tidoy/Pods-Tidoy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tidoy/Pods-Tidoy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tidoy/Pods-Tidoy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D66FD50F2C1C6975007D9F52 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D66FD4DE2C1C67B2007D9F52 /* Sources */ = {
@@ -821,7 +727,6 @@
 /* Begin XCBuildConfiguration section */
 		D66FD5042C1C67B8007D9F52 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8869F2ADF98EB3F330C055AA /* Pods-Tidoy.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -919,7 +824,6 @@
 		};
 		D66FD5692C1C73AB007D9F52 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13C5CDE2AC3E8E0C40A66735 /* Pods-Tidoy.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1010,7 +914,6 @@
 		};
 		D6DEF46F2C2AD95C00428AC0 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85862B8584F4ED1D30DAAD99 /* Pods-Tidoy.staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1123,6 +1026,126 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D694F91D2D84358E0016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.0;
+			};
+		};
+		D694F9202D84359F0016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		D694F9262D8436980016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.0;
+			};
+		};
+		D694F92E2D84371D0016A873 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.58.2;
+			};
+		};
+		D694F92F2D8439190016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		D694F9322D8439AC0016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D694F91E2D84358E0016A873 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F91D2D84358E0016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		D694F9212D84359F0016A873 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9202D84359F0016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D694F9232D84359F0016A873 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9202D84359F0016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+		D694F9272D8436980016A873 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9262D8436980016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D694F9292D8436980016A873 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9262D8436980016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+		D694F92C2D8437100016A873 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		D694F9302D8439190016A873 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F92F2D8439190016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D694F9332D8439AC0016A873 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9322D8439AC0016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+		D694F9362D843A440016A873 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D694F9382D843A440016A873 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D66FD4DA2C1C67B2007D9F52 /* Project object */;
 }
