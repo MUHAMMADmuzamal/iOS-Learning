@@ -70,3 +70,4 @@ fastlane/tmp
 fastlane/README.md
 
 Support/Configuration/Configuration.plist
+*.db

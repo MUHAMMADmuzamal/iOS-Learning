@@ -21,10 +21,6 @@ struct LoginView<VM: LoginVMProtocol>: View {
     }
     
     @Binding var displaySignup: Bool
-    @State private var loginMethod: LoginMethod = .phoneNumber
-    @State private var phoneNumberFieldText: String = ""
-    @State private var emailFieldText: String = ""
-    @State private var passwordFieldText: String = ""
     @State private var showCountrySheet: Bool = false
     @State private var emailFieldState: StateOfTextField = .defaultState
     @State private var passwordFieldState: StateOfTextField = .defaultState
@@ -37,11 +33,11 @@ struct LoginView<VM: LoginVMProtocol>: View {
         VStack(alignment: .leading) {
             heading
             selectionBar
-            TabView(selection: $loginMethod) {
+            TabView(selection: $viewModel.loginMethod) {
                 loginWithEmailSection.tag(LoginMethod.email)
                 loginWithPhoneNumberSection.tag(LoginMethod.phoneNumber)
             }
-            .frame(height: loginMethod == .phoneNumber ? 180 : 250)
+            .frame(height: viewModel.loginMethod == .phoneNumber ? 180 : 250)
             .tabViewStyle(.page(indexDisplayMode: .never))
             .padding(.top, .padding12)
             bottomSection
@@ -61,7 +57,7 @@ struct LoginView<VM: LoginVMProtocol>: View {
     
     func updateLoginMethod(to method: LoginMethod) {
         withAnimation(.smooth) {
-            loginMethod = method
+            viewModel.loginMethod = method
         }
     }
 }
@@ -84,21 +80,21 @@ extension LoginView {
                             RoundedRectangle(cornerRadius: 21.0)
                                 .foregroundStyle(.background100)
                                 .frame(width: geometry.size.width / 2, height: 42)
-                                .padding(.leading, loginMethod == .email ? 5 : (geometry.size.width / 2) - 5)
+                                .padding(.leading, viewModel.loginMethod == .email ? 5 : (geometry.size.width / 2) - 5)
                             Spacer()
                         }
                     }
                     .overlay {
                         HStack {
                             Text("Username")
-                                .foregroundStyle(loginMethod == .email ? .text10 : .text100)
+                                .foregroundStyle(viewModel.loginMethod == .email ? .text10 : .text100)
                                 .frame(maxWidth: .infinity)
                                 .onTapGesture {
                                     updateLoginMethod(to: .email)
                                 }
                             Spacer()
                             Text("Phone Number")
-                                .foregroundStyle(loginMethod == .email ? .text100 : .text10)
+                                .foregroundStyle(viewModel.loginMethod == .email ? .text100 : .text10)
                                 .frame(maxWidth: .infinity)
                                 .onTapGesture {
                                     updateLoginMethod(to: .phoneNumber)
@@ -115,14 +111,14 @@ extension LoginView {
     
     private var loginWithEmailSection: some View {
         VStack(alignment: .leading) {
-            RoundedTextField(text: $emailFieldText,
+            RoundedTextField(text: $viewModel.emailFieldText,
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
                              state: $emailFieldState,
                              validatable: EmailValidator())
             RoundedSecureTextField(
-                text: $passwordFieldText,
+                text: $viewModel.passwordFieldText,
                 label: "Password",
                 hintText: "Enter your username",
                 placeholderText: "Password",
@@ -148,7 +144,7 @@ extension LoginView {
     private var loginWithPhoneNumberSection: some View {
         VStack {
             PhoneNumberTextField(
-                text: $passwordFieldText,
+                text: $viewModel.passwordFieldText,
                 state: $phoneNumberFieldState,
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
@@ -163,7 +159,7 @@ extension LoginView {
     private var bottomSection: some View {
         VStack {
             PrimaryButton(title: "Login") {
-                viewModel.login(email: "testuser@example.com", password: "testpassword")
+                viewModel.login()
             }
             Spacer()
             Divider()

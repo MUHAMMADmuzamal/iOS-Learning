@@ -12,10 +12,21 @@ protocol LoginVMProtocol: ObservableObject {
     var appError: AppError? { get set }
     var isPresentError: Bool { get set }
     
-    func login(email: String, password: String)
+    var loginMethod: LoginMethod { get set }
+    var phoneNumberFieldText: String { get set }
+    var emailFieldText: String { get set }
+    var passwordFieldText: String { get set }
+    
+    func login()
 }
 
 final class LoginVM: LoginVMProtocol {
+    
+    @Published var loginMethod: LoginMethod = .phoneNumber
+    @Published var phoneNumberFieldText: String = ""
+    @Published var emailFieldText: String = ""
+    @Published var passwordFieldText: String = ""
+    
     private let router: LoginRouterProtocol
     private let useCase: LoginUseCaseProtocol
     private let logger: Logger
@@ -32,8 +43,8 @@ final class LoginVM: LoginVMProtocol {
         self.logger = logger
     }
     
-    func login(email: String, password: String) {
-        useCase.login(email: email, password: password)
+    func login() {
+        useCase.login(email: self.emailFieldText, password: self.passwordFieldText)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 
