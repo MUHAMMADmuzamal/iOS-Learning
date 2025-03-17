@@ -78,6 +78,8 @@
 		D694F93C2D843BF60016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F93B2D843BF60016A873 /* Swinject */; };
 		D694F93F2D843D530016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F93E2D843D530016A873 /* Swinject */; };
 		D694F9442D843F940016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9432D843F940016A873 /* Swinject */; };
+		D694F95A2D8442490016A873 /* NearByCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694F9582D8442490016A873 /* NearByCards.swift */; };
+		D694F9CC2D8806FA0016A873 /* SignupDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694F9CB2D8806FA0016A873 /* SignupDIContainer.swift */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
 		D69AEDD22D7F06B0005DD964 /* MessagesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
@@ -85,7 +87,6 @@
 		D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */; };
 		D6C2EEDF2D5DDB2A004E5DA9 /* NotificationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEDE2D5DDB2A004E5DA9 /* NotificationVM.swift */; };
 		D6C2EEE42D5E537E004E5DA9 /* RootVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEE32D5E537E004E5DA9 /* RootVM.swift */; };
-		D6C67A142D20535800166EF1 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C67A132D20535800166EF1 /* SignupView.swift */; };
 		D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA712C7496B20063D7F6 /* CountryListView.swift */; };
 		D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */; };
 		D6CDAF7D2D6F43F0007CD8A4 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CDAF7C2D6F43F0007CD8A4 /* AppDIContainer.swift */; };
@@ -154,7 +155,6 @@
 		D65116E62D7441FA00DBC242 /* String(baseURL) + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String(baseURL) + Extension.swift"; sourceTree = "<group>"; };
 		D65116E82D7578FC00DBC242 /* NetworkMonitoringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitoringService.swift; sourceTree = "<group>"; };
 		D65116EA2D758B6A00DBC242 /* Publisher + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Extension.swift"; sourceTree = "<group>"; };
-		D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Tidoy.debug.app; path = "/Users/codesorbit/Documents/Office/Learning/Projects/Tidoy/build/Debug-iphoneos/Tidoy.debug.app"; sourceTree = "<absolute>"; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -175,6 +175,9 @@
 		D68A53552C3FC99100F69181 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
 		D690E4892C836EDB003FAE23 /* CountryListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListModel.swift; sourceTree = "<group>"; };
+		D694F9582D8442490016A873 /* NearByCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByCards.swift; sourceTree = "<group>"; };
+		D694F96A2D87E3C00016A873 /* Tidoy.debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidoy.debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D694F9CB2D8806FA0016A873 /* SignupDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDIContainer.swift; sourceTree = "<group>"; };
 		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
 		D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVM.swift; sourceTree = "<group>"; };
 		D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
@@ -182,7 +185,6 @@
 		D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
 		D6C2EEDE2D5DDB2A004E5DA9 /* NotificationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVM.swift; sourceTree = "<group>"; };
 		D6C2EEE32D5E537E004E5DA9 /* RootVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVM.swift; sourceTree = "<group>"; };
-		D6C67A132D20535800166EF1 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		D6C9DA712C7496B20063D7F6 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVM.swift; sourceTree = "<group>"; };
 		D6CDAF7C2D6F43F0007CD8A4 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -198,6 +200,11 @@
 		D64C2F512D75A8C200BE9854 /* Logger */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logger; sourceTree = "<group>"; };
 		D64C2FA32D7C481A00BE9854 /* AuthNetworkService */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AuthNetworkService; sourceTree = "<group>"; };
 		D65116BF2D72385C00DBC242 /* AppError */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppError; sourceTree = "<group>"; };
+		D694F9B42D87F0C90016A873 /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
+		D694F9B52D87F0E70016A873 /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
+		D694F9B92D87F1C70016A873 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
+		D694F9CA2D8806D20016A873 /* Builders */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Builders; sourceTree = "<group>"; };
+		D694F9D02D8807EE0016A873 /* Navigation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Navigation; sourceTree = "<group>"; };
 		D69AEDD32D800EA4005DD964 /* CoreData */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CoreData; sourceTree = "<group>"; };
 		D69AEE2A2D81855B005DD964 /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
 		D69AEE2B2D818564005DD964 /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
@@ -270,6 +277,8 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D694F95B2D84426C0016A873 /* NetworkImage */,
+				D694F9592D8442490016A873 /* NearByCards */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
 				D6E24F482D1C455200CCDD4F /* ConfirmNumberView */,
 				D61733182CA9597E0046CEE2 /* XmarkButton */,
@@ -409,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				D66FD4E42C1C67B2007D9F52 /* Tidoy */,
+				D694F96A2D87E3C00016A873 /* Tidoy.debug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -419,11 +429,11 @@
 				D631794A2D578B36005A6791 /* Managers */,
 				D68A53322C3EBB3A00F69181 /* Resources */,
 				D68A53502C3FC94100F69181 /* Helpers */,
-				D68A53372C3EBBB400F69181 /* Info.plist */,
 				D68A52722C2C2F8300F69181 /* Screens */,
 				D66FD5652C1C729D007D9F52 /* Configurations */,
-				D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */,
 				D6C2EEE52D5E538E004E5DA9 /* Root */,
+				D68A53372C3EBBB400F69181 /* Info.plist */,
+				D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */,
 				D66FD4EB2C1C67B7007D9F52 /* Preview Content */,
 			);
 			path = Tidoy;
@@ -530,6 +540,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D694F9592D8442490016A873 /* NearByCards */ = {
+			isa = PBXGroup;
+			children = (
+				D694F9582D8442490016A873 /* NearByCards.swift */,
+			);
+			path = NearByCards;
+			sourceTree = "<group>";
+		};
+		D694F95B2D84426C0016A873 /* NetworkImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkImage;
+			sourceTree = "<group>";
+		};
+		D694F9CD2D8807250016A873 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				D694F9CB2D8806FA0016A873 /* SignupDIContainer.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 		D6C2EEE52D5E538E004E5DA9 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,7 +575,12 @@
 		D6C67A112D20533500166EF1 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				D6C67A132D20535800166EF1 /* SignupView.swift */,
+				D694F9D02D8807EE0016A873 /* Navigation */,
+				D694F9CA2D8806D20016A873 /* Builders */,
+				D694F9B92D87F1C70016A873 /* Data */,
+				D694F9B52D87F0E70016A873 /* Domain */,
+				D694F9B42D87F0C90016A873 /* Presentation */,
+				D694F9CD2D8807250016A873 /* DependencyInjection */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -589,6 +627,11 @@
 				D64C2F512D75A8C200BE9854 /* Logger */,
 				D64C2FA32D7C481A00BE9854 /* AuthNetworkService */,
 				D65116BF2D72385C00DBC242 /* AppError */,
+				D694F9B42D87F0C90016A873 /* Presentation */,
+				D694F9B52D87F0E70016A873 /* Domain */,
+				D694F9B92D87F1C70016A873 /* Data */,
+				D694F9CA2D8806D20016A873 /* Builders */,
+				D694F9D02D8807EE0016A873 /* Navigation */,
 				D69AEDD32D800EA4005DD964 /* CoreData */,
 				D69AEE2A2D81855B005DD964 /* Presentation */,
 				D69AEE2B2D818564005DD964 /* Domain */,
@@ -599,7 +642,7 @@
 			);
 			name = Tidoy;
 			productName = Tidoy;
-			productReference = D66FD4E22C1C67B2007D9F52 /* Tidoy.debug.app */;
+			productReference = D694F96A2D87E3C00016A873 /* Tidoy.debug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -668,6 +711,7 @@
 			files = (
 				D61A8F1A2C4547FC00F55756 /* SecondaryButton.swift in Sources */,
 				D65116E72D7441FA00DBC242 /* String(baseURL) + Extension.swift in Sources */,
+				D694F95A2D8442490016A873 /* NearByCards.swift in Sources */,
 				D64C2F9C2D7ADCE700BE9854 /* LoginErrorMapper.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
@@ -690,7 +734,6 @@
 				D65116C52D733E5900DBC242 /* Decodeable + Extension.swift in Sources */,
 				D64C2F602D76DF9700BE9854 /* URLRequest + Extension.swift in Sources */,
 				D617331C2CA95D280046CEE2 /* UIAppliction + Extension.swift in Sources */,
-				D6C67A142D20535800166EF1 /* SignupView.swift in Sources */,
 				D610115C2D6DA72A006D1FA7 /* HTTPRequest.swift in Sources */,
 				D63179782D5A4DAB005A6791 /* NotificationView.swift in Sources */,
 				D65116EB2D758B6A00DBC242 /* Publisher + Extension.swift in Sources */,
@@ -704,6 +747,7 @@
 				D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */,
 				D6CDAF7D2D6F43F0007CD8A4 /* AppDIContainer.swift in Sources */,
 				D61A8F122C417BEF00F55756 /* OnboardingCarousel.swift in Sources */,
+				D694F9CC2D8806FA0016A873 /* SignupDIContainer.swift in Sources */,
 				D61A8F1C2C45520D00F55756 /* TertiaryButton.swift in Sources */,
 				D6C2EEDF2D5DDB2A004E5DA9 /* NotificationVM.swift in Sources */,
 				D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */,

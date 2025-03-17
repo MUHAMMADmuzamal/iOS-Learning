@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Swinject
 
 protocol HomeRouterProtocol: RouterProtocol {
     func navigateToNotification()

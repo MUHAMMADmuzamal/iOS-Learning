@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountryModel: Hashable {
+struct CountryModel: Hashable, Codable {
     let name: String
     let code: String
     let flag: String

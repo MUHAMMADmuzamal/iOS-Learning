@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-struct SignupView: View {
+struct SignupView<VM: SignupVMProtocol>: View {
     
     @Binding var displaySignup: Bool
-    
-    @State private var selectedCountry: CountryModel = .defaultCountry
     @State private var showCountrySheet: Bool = false
     
     @State private var userNameFieldState: StateOfTextField = .defaultState
@@ -21,11 +19,12 @@ struct SignupView: View {
     @State private var phoneNumberFieldState: StateOfTextField = .defaultState
     @State private var isDisabledRegisterButton: Bool = true
     
-    @State private var userName: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
-    @State private var phoneNumber: String = ""
+    @StateObject private var viewModel: VM
+    
+    init(viewModel: VM, displaySignup: Binding<Bool>) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self._displaySignup = displaySignup
+    }
     
     var body: some View {
         ScrollView {
@@ -35,7 +34,10 @@ struct SignupView: View {
                 
                 formSection
                     .padding(.bottom, 34)
-                PrimaryButton(title: "Register", disabled: $isDisabledRegisterButton ) { }
+                PrimaryButton(title: "Register",
+                              disabled: $isDisabledRegisterButton ) {
+                    viewModel.signup()
+                }
                 
                     .padding(.bottom, 20)
                 
@@ -50,7 +52,7 @@ struct SignupView: View {
                 showCountrySheet = false
             }, content: {
                 CountryListView { country in
-                    selectedCountry = country ?? .defaultCountry
+                    viewModel.selectedCountry = country ?? .defaultCountry
                 }
                 .presentationDetents([.medium, .large])
                 .presentationBackground(.clear)
@@ -70,30 +72,30 @@ struct SignupView: View {
     
     private var formSection: some View {
         VStack {
-            RoundedTextField(text: $userName,
+            RoundedTextField(text: $viewModel.userName,
                              label: "Username",
                              hintText: "Enter your username",
                              placeholderText: "ex: Johnedeo",
                              state: $userNameFieldState,
                              validatable: UsernameValidator())
-            RoundedTextField(text: $email, label: "Email",
+            RoundedTextField(text: $viewModel.email, label: "Email",
                              hintText: "Enter your email",
                              placeholderText: "ex: Johnedeo@gmail.com",
                              state: $emailFieldState, validatable: EmailValidator())
             
             PhoneNumberTextField(
-                text: $phoneNumber,
+                text: $viewModel.phoneNumber,
                 state: $phoneNumberFieldState,
                 label: "Phone Number",
                 hintText: "We'll call or text you to confirm your number. Standard message and data rates apply",
                 placeholderText: "ex : 81234567890",
-                selectedCountry: $selectedCountry, action: {
+                selectedCountry: $viewModel.selectedCountry, action: {
                     self.showCountrySheet.toggle()
                 },
                 validatable: PhoneNumberValidator())
             
             RoundedSecureTextField(
-                text: $password,
+                text: $viewModel.password,
                 label: "Password",
                 hintText: "Enter your username",
                 placeholderText: "Password",
@@ -102,7 +104,7 @@ struct SignupView: View {
                 rightImage2: Image(systemName: "eye.slash"),
                 validatable: PasswordValidator())
             RoundedSecureTextField(
-                text: $confirmPassword,
+                text: $viewModel.confirmPassword,
                 label: "Confirm Password",
                 hintText: "Enter your username",
                 placeholderText: "Password",
@@ -134,5 +136,8 @@ struct SignupView: View {
 }
 
 #Preview {
-    SignupView(displaySignup: .constant(false))
+    let injector = DependenciesHolder.shared.injector()
+    SignupView(viewModel: SignupVM(router: SignupRouter(injector: injector),
+                                      useCase: injector.resolve(SignupUseCaseProtocol.self)!,
+                                   logger: injector.resolve(RemoteLogger.self)!), displaySignup: .constant(false))
 }

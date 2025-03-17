@@ -43,3 +43,9 @@ class CustomError: AppError {
     }
 }
 
+class InvalidRequestError: AppError {
+    override init(title: String, message: String) {
+        super.init(title: title, message: message)
+    }
+}
+
