@@ -14,6 +14,7 @@ protocol Endpoint {
     var headers: [String: String]? { get }
     var bodyParams: Data? { get }
     var queryParams: [URLQueryItem]? { get }
+    var request: URLRequest { get }
 }
 
 extension Endpoint {
@@ -37,3 +38,26 @@ extension Endpoint {
         return request
     }
 }
+
+protocol WithOutAuthTokenEndpoint: Endpoint { }
+
+extension WithOutAuthTokenEndpoint {
+    var request: URLRequest {
+        var urlComponents: URLComponents = URLComponents(string: baseURL + path)! // base URL + path
+        urlComponents.queryItems = queryParams
+        var request = URLRequest(url: urlComponents.url!)
+        request.httpMethod = method.rawValue
+        request.httpBody = bodyParams
+        request.setValue("application/json", forHTTPHeaderField: "Content-type")
+        self.headers?.forEach({ (key: String, value: String) in
+            request.setValue(value, forHTTPHeaderField: key)
+        })
+        request.timeoutInterval = 10
+        
+        request.log() // Only Print to terminal
+        
+        return request
+    }
+}
+
+

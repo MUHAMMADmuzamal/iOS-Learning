@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct SignupEndpoint: Endpoint {
+struct SignupEndpoint: WithOutAuthTokenEndpoint {
     var baseURL: String = .baseURL
     var path: String = "/signup"
     var method: HTTPMethod = .POST

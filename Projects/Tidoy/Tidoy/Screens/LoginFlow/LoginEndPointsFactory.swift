@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct LoginEndpoint: Endpoint {
+struct LoginEndpoint: WithOutAuthTokenEndpoint {
     var baseURL: String = .baseURL
     var path: String = "/login"
     var method: HTTPMethod = .POST
