@@ -10,6 +10,7 @@ import SwiftUI
 protocol AppCoordinatorProtocol {
     var path: NavigationPath { get set }
     var isLoggedIn: Bool { get set }
+    var displaySignup: Bool { get set }
     var sheetRoute: AnyRoute? { get }
     
     func navigate(to route: some Route)
@@ -21,6 +22,7 @@ protocol AppCoordinatorProtocol {
 class AppCoordinator: AppCoordinatorProtocol, ObservableObject {
     @Published var path = NavigationPath()
     @Published var isLoggedIn: Bool = false
+    @Published var displaySignup: Bool = false
     @Published var sheetRoute: AnyRoute?
     
     private var sheetDismissHandler: (() -> Void)?

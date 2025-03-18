@@ -38,7 +38,7 @@ struct RootView: View {
     private var contentView: some View {
         if !viewModel.hasCompletedOnboarding {
             onboarding
-        } else if viewModel.displaySignup {
+        } else if coordinator.displaySignup {
             signup
         } else {
             if !coordinator.isLoggedIn {
@@ -65,12 +65,11 @@ struct RootView: View {
     }
     
     private var signup: some View {
-        SignupBuilder.build(injector: injector, displaySignup: $viewModel.displaySignup)
+        SignupBuilder.build(injector: injector)
     }
     
     private var login: some View {
-        LoginBuilder.build(injector: injector,
-                           displaySignup: $viewModel.displaySignup)
+        LoginBuilder.build(injector: injector)
     }
     
     private var home: some View {

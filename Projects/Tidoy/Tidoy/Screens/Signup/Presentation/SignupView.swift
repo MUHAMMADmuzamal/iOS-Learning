@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SignupView<VM: SignupVMProtocol>: View {
     
-    @Binding var displaySignup: Bool
     @State private var showCountrySheet: Bool = false
     
     @State private var userNameFieldState: StateOfTextField = .defaultState
@@ -21,9 +20,8 @@ struct SignupView<VM: SignupVMProtocol>: View {
     
     @StateObject private var viewModel: VM
     
-    init(viewModel: VM, displaySignup: Binding<Bool>) {
+    init(viewModel: VM) {
         _viewModel = StateObject(wrappedValue: viewModel)
-        self._displaySignup = displaySignup
     }
     
     var body: some View {
@@ -125,7 +123,7 @@ struct SignupView<VM: SignupVMProtocol>: View {
                 .foregroundStyle(.primaryMain)
                 .font(.bodyXSmallSemiBold)
                 .onTapGesture {
-                    displaySignup = false
+                    viewModel.navigateToLogin()
                 }
         }
     }
@@ -139,5 +137,5 @@ struct SignupView<VM: SignupVMProtocol>: View {
     let injector = DependenciesHolder.shared.injector()
     SignupView(viewModel: SignupVM(router: SignupRouter(injector: injector),
                                       useCase: injector.resolve(SignupUseCaseProtocol.self)!,
-                                   logger: injector.resolve(RemoteLogger.self)!), displaySignup: .constant(false))
+                                   logger: injector.resolve(RemoteLogger.self)!))
 }

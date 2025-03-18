@@ -15,12 +15,10 @@ struct LoginView<VM: LoginVMProtocol>: View {
     
     @StateObject private var viewModel: VM
     
-    init(viewModel: VM, displaySignup: Binding<Bool>) {
+    init(viewModel: VM) {
         self._viewModel = StateObject(wrappedValue: viewModel)
-        self._displaySignup = displaySignup
     }
     
-    @Binding var displaySignup: Bool
     @State private var showCountrySheet: Bool = false
     @State private var emailFieldState: StateOfTextField = .defaultState
     @State private var passwordFieldState: StateOfTextField = .defaultState
@@ -208,7 +206,7 @@ extension LoginView {
                     .foregroundStyle(.primaryMain)
                     .font(.bodyXSmallSemiBold)
                     .onTapGesture {
-                        displaySignup = true
+                        viewModel.navigateToSignup()
                     }
             }
             .padding(.top, .padding80)
@@ -220,6 +218,5 @@ extension LoginView {
     let injector = DependenciesHolder.shared.injector()
     LoginView(viewModel: LoginVM(useCase: injector.resolve(LoginUseCaseProtocol.self)!,
                                  router: LoginRouter(injector: injector),
-                                      logger: injector.resolve(RemoteLogger.self)!),
-                     displaySignup: .constant(true))
+                                      logger: injector.resolve(RemoteLogger.self)!))
 }

@@ -8,9 +8,11 @@
 import Foundation
 
 protocol SignupRouterProtocol: RouterProtocol {
-
+    func navigateToLogin()
 }
 
 final class SignupRouter: Router, SignupRouterProtocol {
-    
+    func navigateToLogin() {
+        coordinator.displaySignup = false
+    }
 }

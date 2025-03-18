@@ -18,6 +18,7 @@ protocol LoginVMProtocol: ObservableObject {
     var passwordFieldText: String { get set }
     
     func login()
+    func navigateToSignup()
 }
 
 final class LoginVM: LoginVMProtocol {
@@ -63,5 +64,9 @@ final class LoginVM: LoginVMProtocol {
             self.logger.log("Login Success", .info)
             self.router.navigateToHome()
         }.store(in: &cancellables)
+    }
+    
+    func navigateToSignup() {
+        router.navigateToSignup()
     }
 }

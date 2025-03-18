@@ -7,15 +7,14 @@
 
 import SwiftUI
 import Swinject
-import SwiftUI
 
 final class LoginBuilder {
-    static func build(injector: Container, displaySignup: Binding<Bool>) -> some View {
+    static func build(injector: Container) -> some View {
         let router = LoginRouter(injector: injector)
         let useCase = injector.resolve(LoginUseCaseProtocol.self)!
         let logger = injector.resolve(ConsoleLogger.self)!
         let viewModel = LoginVM(useCase: useCase, router: router, logger: logger)
-        return LoginView(viewModel: viewModel, displaySignup: displaySignup)
+        return LoginView(viewModel: viewModel)
     }
 
 }

@@ -18,6 +18,7 @@ protocol SignupVMProtocol: ObservableObject {
     var isDisabledRegisterButton: Bool { get }
 
     func signup()
+    func navigateToLogin()
 }
 
 final class SignupVM: SignupVMProtocol {
@@ -61,5 +62,9 @@ final class SignupVM: SignupVMProtocol {
                 self.logger.log("Signup Success", .info)
             }.store(in: &cancellable)
 
+    }
+    
+    func navigateToLogin() {
+        router.navigateToLogin()
     }
 }
