@@ -67,6 +67,7 @@
 		D6A153CC2D8AA4570035F4EB /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A153CB2D8AA4570035F4EB /* NetworkImage.swift */; };
 		D6A153CF2D8AA67D0035F4EB /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D6A153CE2D8AA67D0035F4EB /* Swinject */; };
 		D6A153D32D8AA71B0035F4EB /* NetworkImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A153D22D8AA71B0035F4EB /* NetworkImageLoader.swift */; };
+		D6A153D52D8AC2A80035F4EB /* NetworkImageEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A153D42D8AC2A80035F4EB /* NetworkImageEnvironmentKey.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
 		D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */; };
 		D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */; };
@@ -156,6 +157,7 @@
 		D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVM.swift; sourceTree = "<group>"; };
 		D6A153CB2D8AA4570035F4EB /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		D6A153D22D8AA71B0035F4EB /* NetworkImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageLoader.swift; sourceTree = "<group>"; };
+		D6A153D42D8AC2A80035F4EB /* NetworkImageEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageEnvironmentKey.swift; sourceTree = "<group>"; };
 		D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
 		D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
 		D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 			children = (
 				D6A153CB2D8AA4570035F4EB /* NetworkImage.swift */,
 				D6A153D22D8AA71B0035F4EB /* NetworkImageLoader.swift */,
+				D6A153D42D8AC2A80035F4EB /* NetworkImageEnvironmentKey.swift */,
 			);
 			path = NetworkImage;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				D6C2EEDF2D5DDB2A004E5DA9 /* NotificationVM.swift in Sources */,
 				D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */,
 				D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */,
+				D6A153D52D8AC2A80035F4EB /* NetworkImageEnvironmentKey.swift in Sources */,
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D65116C92D7347A600DBC242 /* Dictionary + Extension.swift in Sources */,
 				D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */,

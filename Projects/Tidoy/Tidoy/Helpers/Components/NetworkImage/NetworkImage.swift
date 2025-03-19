@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct NetworkImage<Loader: ImageLoader>: View {
+struct NetworkImage: View {
     let url: URL
-    let imageLoader: Loader
+    @Environment(\.imageLoader) private var imageLoader
 
     var body: some View {
-        imageLoader.loadImage(from: url)
+        AnyView(imageLoader.loadImage(from: url))
     }
 }
 
 
 #Preview {
     NetworkImage(
-        url: URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher-TestImages/master/DemoAppImage/Loading/kingfisher-1.jpg")!,
-        imageLoader: KingfisherImageLoader()
+        url: URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher-TestImages/master/DemoAppImage/Loading/kingfisher-1.jpg")!
     )
     .scaledToFit()
+    .environment(\.imageLoader, KingfisherImageLoader())
 }
 
 

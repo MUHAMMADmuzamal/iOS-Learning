@@ -14,7 +14,6 @@ protocol ImageLoader {
     func loadImage(from url: URL) -> ImageView
 }
 
-
 struct KingfisherImageLoader: ImageLoader {
     
     func loadImage(from url: URL) -> some View {
@@ -23,7 +22,6 @@ struct KingfisherImageLoader: ImageLoader {
             .placeholder {
                 ProgressView()
             }
-        
     }
 }
 
@@ -36,17 +34,3 @@ struct DefaultImageLoader: ImageLoader {
         }
     }
 }
-
-//private struct ImageLoaderKey: EnvironmentKey {
-//    static let defaultValue: any ImageLoader = KingfisherImageLoader()
-//}
-//
-//extension EnvironmentValues {
-//    var imageLoader: any ImageLoader {
-//        get {
-//            self[ImageLoaderKey.self]
-//        } set {
-//            self[ImageLoaderKey.self] = newValue
-//        }
-//    }
-//}

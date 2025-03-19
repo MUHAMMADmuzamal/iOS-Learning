@@ -14,6 +14,7 @@ struct TidoyApp: App {
     var body: some Scene {
         WindowGroup {
             RootView(injector: injector)
+                .environment(\.imageLoader, KingfisherImageLoader())
         }
     }
 }
