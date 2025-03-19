@@ -196,6 +196,7 @@
 		D69AEE2D2D818572005DD964 /* Navigation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Navigation; sourceTree = "<group>"; };
 		D69AEE2E2D818578005DD964 /* DependencyInjection */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DependencyInjection; sourceTree = "<group>"; };
 		D69AEE2F2D81857F005DD964 /* Builders */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Builders; sourceTree = "<group>"; };
+		D6A153C82D8A88F10035F4EB /* ModalAlert */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ModalAlert; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +262,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6A153C82D8A88F10035F4EB /* ModalAlert */,
 				D694F95B2D84426C0016A873 /* NetworkImage */,
 				D694F9592D8442490016A873 /* NearByCards */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
@@ -624,6 +626,7 @@
 				D69AEE2D2D818572005DD964 /* Navigation */,
 				D69AEE2E2D818578005DD964 /* DependencyInjection */,
 				D69AEE2F2D81857F005DD964 /* Builders */,
+				D6A153C82D8A88F10035F4EB /* ModalAlert */,
 			);
 			name = Tidoy;
 			productName = Tidoy;

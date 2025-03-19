@@ -30,11 +30,14 @@ struct HomeView<VM: HomeVMProtocol>: View {
         }.onAppear {
             viewModel.fetchData()
         }
-        .alert(viewModel.appError?.title ?? "", isPresented: $viewModel.isPresentError, actions: {
-            // actions
-        }, message: {
-            Text(viewModel.appError?.message ?? "")
-        })
+        .modelAlert(isPresented: $viewModel.isPresentError, model: CustomAlertModel(
+            title:viewModel.appError?.title ?? "Error",
+            message: viewModel.appError?.message ?? "Some thing went wrong!",
+            primaryButtonTitle: "OK",
+            primaryAction: { print("OK Pressed") },
+            secondaryButtonTitle: "Cancel",
+            secondaryAction: { print("Cancel Pressed")})
+        )
     }
 }
 
