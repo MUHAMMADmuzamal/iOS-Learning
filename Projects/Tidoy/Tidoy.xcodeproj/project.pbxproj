@@ -59,18 +59,14 @@
 		D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
 		D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F91E2D84358E0016A873 /* Kingfisher */; };
-		D694F9222D84359F0016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9212D84359F0016A873 /* Swinject */; };
-		D694F9282D8436980016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9272D8436980016A873 /* Swinject */; };
 		D694F92D2D8437100016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F92C2D8437100016A873 /* Kingfisher */; };
-		D694F9312D8439190016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9302D8439190016A873 /* Swinject */; };
-		D694F9372D843A440016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9362D843A440016A873 /* Swinject */; };
-		D694F93C2D843BF60016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F93B2D843BF60016A873 /* Swinject */; };
-		D694F93F2D843D530016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F93E2D843D530016A873 /* Swinject */; };
-		D694F9442D843F940016A873 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D694F9432D843F940016A873 /* Swinject */; };
 		D694F95A2D8442490016A873 /* NearByCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694F9582D8442490016A873 /* NearByCards.swift */; };
 		D694F9CC2D8806FA0016A873 /* SignupDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694F9CB2D8806FA0016A873 /* SignupDIContainer.swift */; };
 		D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */; };
 		D69AEDD22D7F06B0005DD964 /* MessagesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */; };
+		D6A153CC2D8AA4570035F4EB /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A153CB2D8AA4570035F4EB /* NetworkImage.swift */; };
+		D6A153CF2D8AA67D0035F4EB /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D6A153CE2D8AA67D0035F4EB /* Swinject */; };
+		D6A153D32D8AA71B0035F4EB /* NetworkImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A153D22D8AA71B0035F4EB /* NetworkImageLoader.swift */; };
 		D6C2EEC42D5B4C93004E5DA9 /* NotificationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */; };
 		D6C2EECC2D5CC502004E5DA9 /* InjectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */; };
 		D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */; };
@@ -158,6 +154,8 @@
 		D694F9CB2D8806FA0016A873 /* SignupDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDIContainer.swift; sourceTree = "<group>"; };
 		D69987B72C6D052000A96E9A /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
 		D69AEDD12D7F06B0005DD964 /* MessagesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVM.swift; sourceTree = "<group>"; };
+		D6A153CB2D8AA4570035F4EB /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
+		D6A153D22D8AA71B0035F4EB /* NetworkImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageLoader.swift; sourceTree = "<group>"; };
 		D6C2EEC32D5B4C93004E5DA9 /* NotificationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBuilder.swift; sourceTree = "<group>"; };
 		D6C2EECB2D5CC502004E5DA9 /* InjectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectorProtocol.swift; sourceTree = "<group>"; };
 		D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
@@ -205,14 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D694F92D2D8437100016A873 /* Kingfisher in Frameworks */,
-				D694F9312D8439190016A873 /* Swinject in Frameworks */,
-				D694F93C2D843BF60016A873 /* Swinject in Frameworks */,
 				D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */,
-				D694F9372D843A440016A873 /* Swinject in Frameworks */,
-				D694F9442D843F940016A873 /* Swinject in Frameworks */,
-				D694F9222D84359F0016A873 /* Swinject in Frameworks */,
-				D694F9282D8436980016A873 /* Swinject in Frameworks */,
-				D694F93F2D843D530016A873 /* Swinject in Frameworks */,
+				D6A153CF2D8AA67D0035F4EB /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +524,8 @@
 		D694F95B2D84426C0016A873 /* NetworkImage */ = {
 			isa = PBXGroup;
 			children = (
+				D6A153CB2D8AA4570035F4EB /* NetworkImage.swift */,
+				D6A153D22D8AA71B0035F4EB /* NetworkImageLoader.swift */,
 			);
 			path = NetworkImage;
 			sourceTree = "<group>";
@@ -660,7 +654,7 @@
 			packageReferences = (
 				D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D694F92E2D84371D0016A873 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
-				D694F9422D843F940016A873 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D6A153CD2D8AA67D0035F4EB /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = D66FD4D92C1C67B2007D9F52;
 			projectDirPath = "";
@@ -702,6 +696,7 @@
 				D694F95A2D8442490016A873 /* NearByCards.swift in Sources */,
 				D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */,
 				D617331A2CA9598B0046CEE2 /* XmarkButton.swift in Sources */,
+				D6A153D32D8AA71B0035F4EB /* NetworkImageLoader.swift in Sources */,
 				D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */,
 				D64C2F8A2D7AC9BF00BE9854 /* UserDefaults + Extension.swift in Sources */,
 				D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */,
@@ -750,6 +745,7 @@
 				D65116C72D73400700DBC242 /* Encodable + Extension.swift in Sources */,
 				D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */,
 				D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */,
+				D6A153CC2D8AA4570035F4EB /* NetworkImage.swift in Sources */,
 				D6C2EEE42D5E537E004E5DA9 /* RootVM.swift in Sources */,
 				D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */,
 			);
@@ -1069,22 +1065,6 @@
 				minimumVersion = 8.3.0;
 			};
 		};
-		D694F9202D84359F0016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
-		D694F9262D8436980016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
 		D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -1101,39 +1081,7 @@
 				minimumVersion = 0.58.2;
 			};
 		};
-		D694F92F2D8439190016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
-		D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
-		D694F93A2D843BF60016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.6.2;
-			};
-		};
-		D694F93D2D843D530016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.8.0;
-			};
-		};
-		D694F9422D843F940016A873 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		D6A153CD2D8AA67D0035F4EB /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
@@ -1149,44 +1097,14 @@
 			package = D694F91D2D84358E0016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		D694F9212D84359F0016A873 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F9202D84359F0016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
-		D694F9272D8436980016A873 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F9262D8436980016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
 		D694F92C2D8437100016A873 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		D694F9302D8439190016A873 /* Swinject */ = {
+		D6A153CE2D8AA67D0035F4EB /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D694F92F2D8439190016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
-		D694F9362D843A440016A873 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F9352D843A440016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
-		D694F93B2D843BF60016A873 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F93A2D843BF60016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
-		D694F93E2D843D530016A873 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F93D2D843D530016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
-		D694F9432D843F940016A873 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F9422D843F940016A873 /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = D6A153CD2D8AA67D0035F4EB /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
