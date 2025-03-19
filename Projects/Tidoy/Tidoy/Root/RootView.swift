@@ -10,12 +10,15 @@ import Swinject
 
 struct RootView: View {
     private let injector: Container
-    @ObservedObject var viewModel = RootVM()
+    @ObservedObject var viewModel: RootVM
     @ObservedObject var coordinator: AppCoordinator
     
     init(injector: Container) {
+        let coordinator = injector.resolve(AppCoordinator.self)!
+        
         self.injector = injector
-        self.coordinator = injector.resolve(AppCoordinator.self)!
+        self.coordinator = coordinator
+        self.viewModel = RootVM(coordinator: coordinator)
     }
     
     var body: some View {
