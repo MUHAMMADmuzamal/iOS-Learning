@@ -10,10 +10,14 @@ import SwiftUI
 struct NearByCards: View {
     let url = URL(string: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHwzfHxob3VzZXxlbnwwfHx8fDE3NDE5MzY2Njd8MA&ixlib=rb-4.0.3")
     @State private var isFavorite: Bool = false
+    let height: Double
+    let width: Double
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             cardImage
-                
+                .frame(height: height * 0.7)
+            
             VStack(alignment: .leading, spacing: 4) {
                 titleSection
                 rating
@@ -23,7 +27,7 @@ struct NearByCards: View {
         }
         .overlay(alignment: .topTrailing) {
             FavoriteButton
-            .padding([.top, .trailing], 10)
+                .padding([.top, .trailing], 10)
         }
         .clipShape(RoundedRectangle(cornerRadius: .cornerRadiusXS))
         .background() {
@@ -34,7 +38,9 @@ struct NearByCards: View {
 }
 
 #Preview {
-    NearByCards()
+    let height =  UIScreen.main.bounds.height - 10
+    let width =  UIScreen.main.bounds.width - 10
+    NearByCards(height: height, width: width)
         .environment(\.imageLoader, KingfisherImageLoader())
         .padding()
 }
