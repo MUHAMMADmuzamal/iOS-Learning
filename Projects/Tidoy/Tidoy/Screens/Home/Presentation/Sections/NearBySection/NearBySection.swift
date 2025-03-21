@@ -10,30 +10,50 @@ import SwiftUI
 struct NearBySection: View {
     let height: Double = 148
     let width: Double = 165
+    
+    let housesList:[NearByCardModel]
     var body: some View {
         VStack {
-            HStack {
-                Text("NearBy")
-                Spacer()
-                Button {
-                    
-                } label: {
-                    Text("Show all")
-                }
-
+            headingSection
+            cardsList
+        }
+        .padding(.vertical, 5)
+        .background {
+            Color.background10
+        }
+        
+    }
+    
+    private var headingSection: some View {
+        HStack {
+            Text("NearBy")
+                .font(.bodySmallSemiBold)
+            Spacer()
+            Button {
+                
+            } label: {
+                Text("Show all")
+                    .font(.body2XSmallSemiBold)
+                    .underline()
             }
-            ScrollView(.horizontal) {
-                HStack {
-                    ForEach(0..<5) { _ in
-                        NearByCard(model: .sampleData, height: height, width: width)
-                    }
+        }
+        .foregroundStyle(Color.text100)
+        .padding(.horizontal, 16)
+    }
+    
+    private var cardsList: some View {
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(housesList) { data in
+                    NearByCard(model: data, height: height, width: width)
                 }
             }
         }
+        .padding(.leading, 16)
     }
 }
 
 #Preview {
-    NearBySection()
-        .padding()
+    NearBySection(housesList: NearByCardModel.sampleDataList)
 }
+

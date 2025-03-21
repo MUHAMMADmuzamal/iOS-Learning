@@ -21,7 +21,6 @@ struct RatingView: View {
     private var ratingValue: some View {
         Text(String(format: "%.1f", rating))
             .font(.body2XSmallRegular)
-            .foregroundStyle(Color.text100)
     }
 }
 

@@ -12,6 +12,15 @@ struct NearByCard: View {
     @State private var isFavorite: Bool = false
     let height: Double
     let width: Double
+    var textColor: Color = .text100
+    
+    init(model: NearByCardModel, height: Double, width: Double) {
+        self.model = model
+        self.height = height
+        self.width = width
+        
+        textColor = model.isAvailable ? .text100 : .text60
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -38,6 +47,9 @@ struct NearByCard: View {
         .background() {
             RoundedRectangle(cornerRadius: .cornerRadiusXS)
                 .stroke(.stroke20, lineWidth: 1)
+        }
+        .background {
+            Color.background10
         }
         .onAppear {
             isFavorite = model.isFavorite
@@ -71,7 +83,7 @@ extension NearByCard {
         VStack(alignment: .leading, spacing: 0) {
             Text(model.nameOfHouse)
                 .font(.bodyXSmallSemiBold)
-                .foregroundStyle(Color.text100)
+                .foregroundStyle(textColor)
             Text(model.addressOfHouse)
                 .font(.body2XSmallRegular)
                 .foregroundStyle(Color.text60)
@@ -80,12 +92,13 @@ extension NearByCard {
     
     private var rating: some View {
         RatingView(rating: model.rating)
+            .foregroundStyle(textColor)
     }
     
     private var distance: some View {
         Text("\(model.distance)\(model.distanceUnit) away")
             .font(.body2XSmallRegular)
-            .foregroundStyle(Color.text100)
+            .foregroundStyle(textColor)
     }
     
     private var verticalDivider: some View {
@@ -95,13 +108,18 @@ extension NearByCard {
     }
     
     private var priceSection: some View {
-        HStack(spacing: 0) {
-            Text("\(model.priceUnit)\(model.price)")
-                .font(.bodySmallSemiBold)
-                .foregroundStyle(Color.text100)
+        let text = model.isAvailable ?
+        "\(model.priceUnit)\(model.price)" : "Not Available"
+        
+        return HStack(spacing: 0) {
+                Text(text)
+                    .font(.bodySmallSemiBold)
+                    .foregroundStyle(textColor)
+                    
             Text("/\(model.duration)")
                 .font(.body2XSmallRegular)
                 .foregroundStyle(Color.text60)
+                .isHiddenWithOutSpace(!model.isAvailable)
         }
     }
 }

@@ -186,6 +186,7 @@
 		D65810B22D893230001E05B3 /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
 		D65810B42D893247001E05B3 /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
 		D65810B52D89328C001E05B3 /* DependencyInjection */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DependencyInjection; sourceTree = "<group>"; };
+		D6838C082D8D98BF00E83BAB /* Swift UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Swift UI"; sourceTree = "<group>"; };
 		D694F9B42D87F0C90016A873 /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
 		D694F9B52D87F0E70016A873 /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
 		D694F9B92D87F1C70016A873 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
@@ -503,6 +504,7 @@
 		D68A53512C3FC96A00F69181 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D6838C082D8D98BF00E83BAB /* Swift UI */,
 				D68A53522C3FC98500F69181 /* Font + Extension.swift */,
 				D68A53552C3FC99100F69181 /* String + Extension.swift */,
 				D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */,
@@ -616,6 +618,7 @@
 				D65810B22D893230001E05B3 /* Domain */,
 				D65810B42D893247001E05B3 /* Presentation */,
 				D65810B52D89328C001E05B3 /* DependencyInjection */,
+				D6838C082D8D98BF00E83BAB /* Swift UI */,
 				D694F9B42D87F0C90016A873 /* Presentation */,
 				D694F9B52D87F0E70016A873 /* Domain */,
 				D694F9B92D87F1C70016A873 /* Data */,
