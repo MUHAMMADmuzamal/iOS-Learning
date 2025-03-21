@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct NearByCards: View {
-    let url = URL(string: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHwzfHxob3VzZXxlbnwwfHx8fDE3NDE5MzY2Njd8MA&ixlib=rb-4.0.3")
+struct NearByCard: View {
+    let model: NearByCardModel
     @State private var isFavorite: Bool = false
     let height: Double
     let width: Double
@@ -20,11 +20,16 @@ struct NearByCards: View {
             
             VStack(alignment: .leading, spacing: 4) {
                 titleSection
-                rating
+                HStack(spacing: 4) {
+                    rating
+                    verticalDivider
+                    distance
+                }
                 priceSection
             }
             .padding(8)
         }
+        .frame(width: width)
         .overlay(alignment: .topTrailing) {
             FavoriteButton
                 .padding([.top, .trailing], 10)
@@ -34,20 +39,23 @@ struct NearByCards: View {
             RoundedRectangle(cornerRadius: .cornerRadiusXS)
                 .stroke(.stroke20, lineWidth: 1)
         }
+        .onAppear {
+            isFavorite = model.isFavorite
+        }
     }
 }
 
 #Preview {
     let height =  UIScreen.main.bounds.height - 10
     let width =  UIScreen.main.bounds.width - 10
-    NearByCards(height: height, width: width)
+    NearByCard(model: .sampleData, height: height, width: width)
         .environment(\.imageLoader, KingfisherImageLoader())
         .padding()
 }
 
-extension NearByCards {
+extension NearByCard {
     private var cardImage: some View {
-        NetworkImage(url: url!)
+        NetworkImage(url: URL(string: model.imageURL)!)
     }
     
     private var FavoriteButton: some View {
@@ -61,27 +69,37 @@ extension NearByCards {
     
     private var titleSection: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Pasteur Luxury Home")
+            Text(model.nameOfHouse)
                 .font(.bodyXSmallSemiBold)
                 .foregroundStyle(Color.text100)
-            Text("Dago Pakar, Bandung")
+            Text(model.addressOfHouse)
                 .font(.body2XSmallRegular)
                 .foregroundStyle(Color.text60)
         }
     }
     
     private var rating: some View {
-        Text("⭐️4.8 25km away")
+        RatingView(rating: model.rating)
+    }
+    
+    private var distance: some View {
+        Text("\(model.distance)\(model.distanceUnit) away")
             .font(.body2XSmallRegular)
             .foregroundStyle(Color.text100)
     }
     
+    private var verticalDivider: some View {
+        Rectangle()
+            .frame(width: 1, height: 8)
+            .foregroundStyle(Color.stroke20)
+    }
+    
     private var priceSection: some View {
-        HStack {
-            Text("$152")
+        HStack(spacing: 0) {
+            Text("\(model.priceUnit)\(model.price)")
                 .font(.bodySmallSemiBold)
                 .foregroundStyle(Color.text100)
-            Text("/night")
+            Text("/\(model.duration)")
                 .font(.body2XSmallRegular)
                 .foregroundStyle(Color.text60)
         }
