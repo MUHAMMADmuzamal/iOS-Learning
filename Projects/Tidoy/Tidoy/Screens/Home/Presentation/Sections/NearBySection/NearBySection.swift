@@ -8,37 +8,20 @@
 import SwiftUI
 
 struct NearBySection: View {
-    let height: Double = 148
+    let height: Double = 236
     let width: Double = 165
     
     let housesList:[NearByCardModel]
     var body: some View {
-        VStack {
-            headingSection
+        VStack(spacing: 16) {
+            HomeSectionHeader(title: "Near by")
+                .frame(height: 40)
+                .padding(.top, .padding12)
+                .padding(.bottom, .padding8)
+            
             cardsList
         }
-        .padding(.vertical, 5)
-        .background {
-            Color.background10
-        }
-        
-    }
-    
-    private var headingSection: some View {
-        HStack {
-            Text("NearBy")
-                .font(.bodySmallSemiBold)
-            Spacer()
-            Button {
-                
-            } label: {
-                Text("Show all")
-                    .font(.body2XSmallSemiBold)
-                    .underline()
-            }
-        }
-        .foregroundStyle(Color.text100)
-        .padding(.horizontal, 16)
+        .padding(.bottom, .padding12)        
     }
     
     private var cardsList: some View {
@@ -49,11 +32,14 @@ struct NearBySection: View {
                 }
             }
         }
-        .padding(.leading, 16)
+        .padding(.leading, .padding16)
     }
 }
 
 #Preview {
-    NearBySection(housesList: NearByCardModel.sampleDataList)
+    ZStack {
+        Color.background10
+        NearBySection(housesList: NearByCardModel.sampleDataList)
+    }
 }
 

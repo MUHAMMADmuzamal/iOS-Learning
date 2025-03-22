@@ -9,11 +9,20 @@ import SwiftUI
 
 struct SearchField: View {
     @Binding var searchText: String
+    var placeHolderText: String = ""
+    
+    init(searchText: Binding<String>, placeHolderText: String = "Search") {
+        self._searchText = searchText
+        self.placeHolderText = placeHolderText
+    }
     
     var body: some View {
         HStack {
-            TextField("Search", text: $searchText)
+            TextField("", text: $searchText,
+                      prompt: Text(placeHolderText)
                 .foregroundStyle(searchText.isEmpty ? .text60 : .text100)
+            )
+                
             if searchText.isEmpty {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(.icon60)
@@ -35,11 +44,14 @@ struct SearchField: View {
                 .stroke(lineWidth: 1.0)
                 .foregroundStyle(searchText.isEmpty ? .stroke60 : .stroke100)
         }
+        .background(.background10Input)
+        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+        
     }
 }
 
 #Preview {
-    SearchField(searchText: .constant("hello"))
+    SearchField(searchText: .constant(""))
         .frame(height: 100)
         .padding()
 }

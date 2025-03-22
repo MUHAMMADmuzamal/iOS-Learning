@@ -10,34 +10,68 @@ import CoreData
 
 struct HomeView<VM: HomeVMProtocol>: View {
     @StateObject private var viewModel: VM
+    @State private var searchText: String = ""
     
     init(viewModel: VM) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
-        VStack {
-            List(viewModel.users, id: \.self) { user in
-                Text(user.email)
-            }
+        ZStack {
+            Color.background10
+                .ignoresSafeArea()
             
-            Text("Hello, World! Home ")
-            Button {
-                viewModel.router.navigateToNotification()
-            } label: {
-                Text("Display Notification screen. ")
+            VStack {
+                // navbar
+                VStack {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Find your place in")
+                                .font(.bodyXSmallRegular)
+                                .foregroundStyle(Color.text60)
+                            HStack(spacing: 8) {
+                                Image("location")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                Text("Bandung, Indonesia")
+                                    .font(.bodyLargeSemiBold)
+                                    .foregroundStyle(Color.text100)
+                                Image(systemName: "chevron.down")
+                                    .resizable()
+                                    .frame(width: 10, height: 6)
+                                    .foregroundStyle(Color.icon60)
+                                    .padding(.leading, .padding4)
+                            }
+                        }
+                        
+                        Spacer()
+                        
+                        HStack(spacing: 24) {
+                            Image("messages")
+                            Image("notification")
+                        }
+                        .frame(height: 32)
+                        .foregroundStyle(Color.icon80)
+                    }
+                   
+                    HStack {
+                        SearchField(searchText: $searchText, placeHolderText: "where are you going?")
+                            
+                        Image("mapImage")
+                            .resizable()
+                            .clipShape(Circle())
+                            .frame(width: 48)
+                    }
+                    .frame(height: 48)
+                    .padding(.vertical, .padding8)
+                }
+                .padding(.horizontal, .padding16)
+                
+                
+                NearBySection(housesList: NearByCardModel.sampleDataList)
+                FeatureSection(placesList: FeaturedCardModel.sampleData)
             }
-        }.onAppear {
-            viewModel.fetchData()
         }
-        .modelAlert(isPresented: $viewModel.isPresentError, model: CustomAlertModel(
-            title:viewModel.appError?.title ?? "Error",
-            message: viewModel.appError?.message ?? "Some thing went wrong!",
-            primaryButtonTitle: "OK",
-            primaryAction: { print("OK Pressed") },
-            secondaryButtonTitle: "Cancel",
-            secondaryAction: { print("Cancel Pressed")})
-        )
     }
 }
 
