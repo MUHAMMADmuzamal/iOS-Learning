@@ -8,18 +8,23 @@
 import SwiftUI
 
 struct NetworkImage: View {
-    let url: URL
+    let url: String
     @Environment(\.imageLoader) private var imageLoader
 
     var body: some View {
-        AnyView(imageLoader.loadImage(from: url))
+        if let url = URL(string: url) {
+            AnyView(imageLoader.loadImage(from: url))
+        }else {
+            Image(systemName: "photo.fill")
+                .resizable()
+        }
+        
     }
 }
 
 
 #Preview {
-    NetworkImage(
-        url: URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher-TestImages/master/DemoAppImage/Loading/kingfisher-1.jpg")!
+    NetworkImage(url: "https://raw.githubusercontent.com/onevcat/Kingfisher-TestImages/master/DemoAppImage/Loading/kingfisher-1.jpg"
     )
     .scaledToFit()
     .environment(\.imageLoader, KingfisherImageLoader())

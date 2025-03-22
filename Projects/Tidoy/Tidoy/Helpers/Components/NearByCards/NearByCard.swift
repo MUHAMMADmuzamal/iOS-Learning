@@ -67,7 +67,7 @@ struct NearByCard: View {
 
 extension NearByCard {
     private var cardImage: some View {
-        NetworkImage(url: URL(string: model.imageURL)!)
+        NetworkImage(url: model.imageURL)
     }
     
     private var FavoriteButton: some View {
