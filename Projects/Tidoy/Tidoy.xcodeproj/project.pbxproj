@@ -187,6 +187,7 @@
 		D65810B42D893247001E05B3 /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
 		D65810B52D89328C001E05B3 /* DependencyInjection */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DependencyInjection; sourceTree = "<group>"; };
 		D6838C082D8D98BF00E83BAB /* Swift UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Swift UI"; sourceTree = "<group>"; };
+		D6838C0D2D8DDB8D00E83BAB /* FeaturedCard */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = FeaturedCard; sourceTree = "<group>"; };
 		D694F9B42D87F0C90016A873 /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
 		D694F9B52D87F0E70016A873 /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
 		D694F9B92D87F1C70016A873 /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
@@ -260,6 +261,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6838C0D2D8DDB8D00E83BAB /* FeaturedCard */,
 				D6A153D62D8BDAC70035F4EB /* RatingView */,
 				D6A153C82D8A88F10035F4EB /* ModalAlert */,
 				D694F95B2D84426C0016A873 /* NetworkImage */,
@@ -619,6 +621,7 @@
 				D65810B42D893247001E05B3 /* Presentation */,
 				D65810B52D89328C001E05B3 /* DependencyInjection */,
 				D6838C082D8D98BF00E83BAB /* Swift UI */,
+				D6838C0D2D8DDB8D00E83BAB /* FeaturedCard */,
 				D694F9B42D87F0C90016A873 /* Presentation */,
 				D694F9B52D87F0E70016A873 /* Domain */,
 				D694F9B92D87F1C70016A873 /* Data */,
