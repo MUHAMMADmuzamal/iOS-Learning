@@ -202,6 +202,7 @@
 		D69AEE2F2D81857F005DD964 /* Builders */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Builders; sourceTree = "<group>"; };
 		D6A153C82D8A88F10035F4EB /* ModalAlert */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ModalAlert; sourceTree = "<group>"; };
 		D6A153D62D8BDAC70035F4EB /* RatingView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = RatingView; sourceTree = "<group>"; };
+		D6BFCEBE2D95509800BB7FA3 /* DefaultCard */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DefaultCard; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +262,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6BFCEBE2D95509800BB7FA3 /* DefaultCard */,
 				D6838C0D2D8DDB8D00E83BAB /* FeaturedCard */,
 				D6A153D62D8BDAC70035F4EB /* RatingView */,
 				D6A153C82D8A88F10035F4EB /* ModalAlert */,
@@ -636,6 +638,7 @@
 				D69AEE2F2D81857F005DD964 /* Builders */,
 				D6A153C82D8A88F10035F4EB /* ModalAlert */,
 				D6A153D62D8BDAC70035F4EB /* RatingView */,
+				D6BFCEBE2D95509800BB7FA3 /* DefaultCard */,
 			);
 			name = Tidoy;
 			productName = Tidoy;
