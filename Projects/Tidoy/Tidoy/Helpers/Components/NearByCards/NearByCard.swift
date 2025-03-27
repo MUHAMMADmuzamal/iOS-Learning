@@ -43,7 +43,6 @@ struct NearByCard: View {
             FavoriteButton
                 .padding([.top, .trailing], 10)
         }
-        .clipShape(RoundedRectangle(cornerRadius: .cornerRadiusXS))
         .background() {
             RoundedRectangle(cornerRadius: .cornerRadiusXS)
                 .stroke(.stroke20, lineWidth: 1)
@@ -51,6 +50,7 @@ struct NearByCard: View {
         .background {
             Color.background10
         }
+        .clipShape(RoundedRectangle(cornerRadius: .cornerRadiusXS))
         .onAppear {
             isFavorite = model.isFavorite
         }
