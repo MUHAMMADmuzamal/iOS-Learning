@@ -13,11 +13,14 @@ protocol HomeVMProtocol: ObservableObject {
     var appError: AppError? { get set }
     var isPresentError: Bool { get set }
     var users: [User] { get }
+    var selectionBarItemsList: [HomeSelectionBarItemModel] { get }
     
     func fetchData()
+    func updateSelection(_ id: String)
 }
 
 final class HomeVM: HomeVMProtocol {
+    
     internal let router: HomeRouterProtocol
     private let useCase: HomeUseCaseProtocol
     private let logger: Logger
@@ -26,6 +29,7 @@ final class HomeVM: HomeVMProtocol {
     var appError: AppError?
     @Published var isPresentError: Bool = false
     @Published var users: [User] = []
+    @Published var selectionBarItemsList: [HomeSelectionBarItemModel] = HomeSelectionBarItemModel.selectionBarItemsList
     
     init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol, logger: Logger) {
         self.router = router
@@ -54,5 +58,18 @@ final class HomeVM: HomeVMProtocol {
                 self.logger.log("Data fetched", .info)
                 self.users = data.users.data
             }.store(in: &cancellables)
+    }
+    
+    func updateSelection(_ id: String) {
+        
+        self.selectionBarItemsList =  HomeSelectionBarItemModel.selectionBarItemsList.map { model in
+            var model = model
+            if model.id == id {
+                model.isSelected = true
+            }else {
+                model.isSelected = false
+            }
+            return model
+        }
     }
 }
