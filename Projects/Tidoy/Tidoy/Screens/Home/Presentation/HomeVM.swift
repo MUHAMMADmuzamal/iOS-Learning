@@ -14,6 +14,7 @@ protocol HomeVMProtocol: ObservableObject {
     var isPresentError: Bool { get set }
     var users: [User] { get }
     var selectionBarItemsList: [HomeSelectionBarItemModel] { get }
+    var houseListWithDetail: [DefaultCardModel] { get }
     
     func fetchData()
     func updateSelection(_ id: String)
@@ -30,6 +31,7 @@ final class HomeVM: HomeVMProtocol {
     @Published var isPresentError: Bool = false
     @Published var users: [User] = []
     @Published var selectionBarItemsList: [HomeSelectionBarItemModel] = HomeSelectionBarItemModel.selectionBarItemsList
+    @Published var houseListWithDetail: [DefaultCardModel] = DefaultCardModel.sampleDataList
     
     init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol, logger: Logger) {
         self.router = router

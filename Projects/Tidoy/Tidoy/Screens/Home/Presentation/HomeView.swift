@@ -13,6 +13,8 @@ struct HomeView<VM: HomeVMProtocol>: View {
     @StateObject private var viewModel: VM
     @State private var searchText: String = ""
     
+    let screenWidth = UIScreen.main.bounds.width
+    
     init(viewModel: VM) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -22,16 +24,22 @@ struct HomeView<VM: HomeVMProtocol>: View {
             
             background
             
-            ScrollView {
-                VStack {
+            VStack {
+                
+                homeNavigationBar
+                
+                ScrollView {
                     
-                    homeNavigationBar
-                    
-                    NearBySection(housesList: NearByCardModel.sampleDataList)
-                    
-                    FeatureSection(placesList: FeaturedCardModel.sampleData)
-                    
-                    selectionBar
+                    VStack {
+                        
+                        NearBySection(housesList: NearByCardModel.sampleDataList)
+                        
+                        FeatureSection(placesList: FeaturedCardModel.sampleData)
+                        
+                        selectionBar
+                        
+                        houseDetailSection
+                    }
                 }
             }
         }
@@ -95,6 +103,15 @@ struct HomeView<VM: HomeVMProtocol>: View {
             .padding(.vertical, .padding8)
         }
         .padding(.horizontal, .padding16)
+    }
+    
+    private var houseDetailSection: some View {
+        VStack(spacing: .padding16) {
+            ForEach(viewModel.houseListWithDetail) { data in
+                DefaultCard(height: 172, width: screenWidth - .padding16, model: data)
+            }
+        }
+        .padding(.vertical, .padding16)
     }
 }
 
