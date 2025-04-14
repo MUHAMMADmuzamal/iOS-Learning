@@ -11,6 +11,7 @@ struct MessagesView: View {
     @StateObject private var webSocketManager = MessagesVM()
     @State private var messageToSend = ""
     @Environment(\.dismiss) private var dismiss
+    @State private var isPresentError: Bool = true
     
     var body: some View {
         VStack {
@@ -42,6 +43,14 @@ struct MessagesView: View {
                 .buttonStyle(.bordered)
             }
         }
+        .modelAlert(isPresented: $isPresentError, model: CustomAlertModel(
+            title: "Error",
+            message: "Some thing went wrong!",
+            primaryButtonTitle: "OK",
+            primaryAction: { print("OK Pressed") },
+            secondaryButtonTitle: "Cancel",
+            secondaryAction: { print("Cancel Pressed")})
+        )
         .padding()
         .navigationBarBackButtonHidden(true)
         .toolbar {

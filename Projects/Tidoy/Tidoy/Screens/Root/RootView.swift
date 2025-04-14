@@ -47,7 +47,17 @@ struct RootView: View {
             if !coordinator.isLoggedIn {
                 login
             } else {
-                home
+                TabBarContainerView(selection: $coordinator.selectedTab) {
+                    home
+                        .tabBarItems(tab: .home, selection: $coordinator.selectedTab)
+                    TestTabView(text: "2")
+                        .tabBarItems(tab: .wishList, selection: $coordinator.selectedTab)
+                    TestTabView(text: "3")
+                        .tabBarItems(tab: .stay, selection: $coordinator.selectedTab)
+                    TestTabView(text: "4")
+                        .tabBarItems(tab: .profile, selection: $coordinator.selectedTab)
+                }
+//                home
                     .navigationDestination(for: AnyRoute.self) { route in
                         route.destinationView()
                     }

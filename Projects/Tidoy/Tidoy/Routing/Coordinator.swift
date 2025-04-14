@@ -24,6 +24,7 @@ class AppCoordinator: AppCoordinatorProtocol, ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var displaySignup: Bool = false
     @Published var sheetRoute: AnyRoute?
+    @Published var selectedTab: TabBarItems = .home
     
     private var sheetDismissHandler: (() -> Void)?
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6033E122DACD3060080E461 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6033E112DACD3060080E461 /* Tabbar.swift */; };
 		D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */; };
 		D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011502D6759CF006D1FA7 /* NetworkService.swift */; };
 		D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */; };
@@ -59,7 +60,6 @@
 		D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53552C3FC99100F69181 /* String + Extension.swift */; };
 		D68A53592C3FCA7000F69181 /* CGFloat + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A53582C3FCA7000F69181 /* CGFloat + Extension.swift */; };
 		D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690E4892C836EDB003FAE23 /* CountryListModel.swift */; };
-		D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F91E2D84358E0016A873 /* Kingfisher */; };
 		D694F92D2D8437100016A873 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D694F92C2D8437100016A873 /* Kingfisher */; };
 		D694F95A2D8442490016A873 /* NearByCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694F9582D8442490016A873 /* NearByCard.swift */; };
 		D694F9CC2D8806FA0016A873 /* SignupDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694F9CB2D8806FA0016A873 /* SignupDIContainer.swift */; };
@@ -96,6 +96,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D6033E112DACD3060080E461 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSecureTextField.swift; sourceTree = "<group>"; };
 		D61011502D6759CF006D1FA7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D6033CF22DA786BF0080E461 /* TabBar */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = TabBar; sourceTree = "<group>"; };
 		D60B30D72D70858E008A9471 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
@@ -212,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D694F92D2D8437100016A873 /* Kingfisher in Frameworks */,
-				D694F91F2D84358E0016A873 /* Kingfisher in Frameworks */,
 				D6A153CF2D8AA67D0035F4EB /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,7 +418,6 @@
 				D68A53502C3FC94100F69181 /* Helpers */,
 				D68A52722C2C2F8300F69181 /* Screens */,
 				D66FD5652C1C729D007D9F52 /* Configurations */,
-				D6C2EEE52D5E538E004E5DA9 /* Root */,
 				D68A53372C3EBBB400F69181 /* Info.plist */,
 				D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */,
 				D66FD4EB2C1C67B7007D9F52 /* Preview Content */,
@@ -454,6 +454,7 @@
 				D61A8F0B2C415C3C00F55756 /* SplashScreen */,
 				D68A532F2C3EA0C400F69181 /* OnboardingFlow */,
 				D68A532E2C3EA0B200F69181 /* LaunchScreen */,
+				D6C2EEE52D5E538E004E5DA9 /* Root */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -557,6 +558,8 @@
 		D6C2EEE52D5E538E004E5DA9 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				D6033E112DACD3060080E461 /* Tabbar.swift */,
+				D6033CF22DA786BF0080E461 /* TabBar */,
 				D63179682D59D167005A6791 /* RootView.swift */,
 				D6C2EEE32D5E537E004E5DA9 /* RootVM.swift */,
 			);
@@ -612,6 +615,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				D6033CF22DA786BF0080E461 /* TabBar */,
 				D60B30D72D70858E008A9471 /* Models */,
 				D610113B2D649DC9006D1FA7 /* Routing */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
@@ -756,6 +760,7 @@
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D65116C92D7347A600DBC242 /* Dictionary + Extension.swift in Sources */,
 				D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */,
+				D6033E122DACD3060080E461 /* Tabbar.swift in Sources */,
 				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
 				D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,
@@ -861,7 +866,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -951,7 +956,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1041,7 +1046,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1080,14 +1085,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D694F91D2D84358E0016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.3.0;
-			};
-		};
 		D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -1115,11 +1112,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D694F91E2D84358E0016A873 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D694F91D2D84358E0016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
 		D694F92C2D8437100016A873 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D694F92B2D8437100016A873 /* XCRemoteSwiftPackageReference "Kingfisher" */;
