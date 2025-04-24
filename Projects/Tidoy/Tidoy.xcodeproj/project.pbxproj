@@ -263,6 +263,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6033CF22DA786BF0080E461 /* TabBar */,
 				D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */,
 				D6BFCEBE2D95509800BB7FA3 /* DefaultCard */,
 				D6838C0D2D8DDB8D00E83BAB /* FeaturedCard */,
@@ -558,7 +559,6 @@
 		D6C2EEE52D5E538E004E5DA9 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				D6033CF22DA786BF0080E461 /* TabBar */,
 				D63179682D59D167005A6791 /* RootView.swift */,
 				D6C2EEE32D5E537E004E5DA9 /* RootVM.swift */,
 			);
