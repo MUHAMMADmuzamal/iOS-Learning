@@ -48,16 +48,19 @@ struct RootView: View {
                 login
             } else {
                 TabBarContainerView(selection: $coordinator.selectedTab) {
-                    home
-                        .tabBarItems(tab: .home, selection: $coordinator.selectedTab)
-                    TestTabView(text: "2")
-                        .tabBarItems(tab: .wishList, selection: $coordinator.selectedTab)
-                    TestTabView(text: "3")
-                        .tabBarItems(tab: .stay, selection: $coordinator.selectedTab)
-                    TestTabView(text: "4")
-                        .tabBarItems(tab: .profile, selection: $coordinator.selectedTab)
-                }
-//                home
+                       TabItem(.home, selection: $coordinator.selectedTab) {
+                           home
+                       }
+                       TabItem(.wishList, selection: $coordinator.selectedTab) {
+                           Color.green
+                       }
+                       TabItem(.stay, selection: $coordinator.selectedTab) {
+                           Color.orange
+                       }
+                       TabItem(.profile, selection: $coordinator.selectedTab) {
+                           Color.blue
+                       }
+                   }
                     .navigationDestination(for: AnyRoute.self) { route in
                         route.destinationView()
                     }

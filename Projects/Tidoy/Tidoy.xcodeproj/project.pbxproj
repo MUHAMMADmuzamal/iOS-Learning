@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6033E122DACD3060080E461 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6033E112DACD3060080E461 /* Tabbar.swift */; };
 		D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */; };
 		D61011512D6759CF006D1FA7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011502D6759CF006D1FA7 /* NetworkService.swift */; };
 		D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */; };
@@ -96,7 +95,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D6033E112DACD3060080E461 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		D60865692CB1360800BE1D81 /* RoundedSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSecureTextField.swift; sourceTree = "<group>"; };
 		D61011502D6759CF006D1FA7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D61011592D6DA6F3006D1FA7 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -206,6 +204,7 @@
 		D6A153D62D8BDAC70035F4EB /* RatingView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = RatingView; sourceTree = "<group>"; };
 		D6BFCEBE2D95509800BB7FA3 /* DefaultCard */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DefaultCard; sourceTree = "<group>"; };
 		D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = HomeSelectionBar; sourceTree = "<group>"; };
+		D6C73ABC2DBA424F0087118E /* PreferenceKeys */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PreferenceKeys; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +501,7 @@
 		D68A53502C3FC94100F69181 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D6C73ABC2DBA424F0087118E /* PreferenceKeys */,
 				D61A8F0E2C417AA300F55756 /* Components */,
 				D68A53512C3FC96A00F69181 /* Extensions */,
 			);
@@ -558,7 +558,6 @@
 		D6C2EEE52D5E538E004E5DA9 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				D6033E112DACD3060080E461 /* Tabbar.swift */,
 				D6033CF22DA786BF0080E461 /* TabBar */,
 				D63179682D59D167005A6791 /* RootView.swift */,
 				D6C2EEE32D5E537E004E5DA9 /* RootVM.swift */,
@@ -646,6 +645,7 @@
 				D6A153D62D8BDAC70035F4EB /* RatingView */,
 				D6BFCEBE2D95509800BB7FA3 /* DefaultCard */,
 				D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */,
+				D6C73ABC2DBA424F0087118E /* PreferenceKeys */,
 			);
 			name = Tidoy;
 			productName = Tidoy;
@@ -760,7 +760,6 @@
 				D690E48A2C836EDB003FAE23 /* CountryListModel.swift in Sources */,
 				D65116C92D7347A600DBC242 /* Dictionary + Extension.swift in Sources */,
 				D610115A2D6DA6F3006D1FA7 /* HTTPMethod.swift in Sources */,
-				D6033E122DACD3060080E461 /* Tabbar.swift in Sources */,
 				D62161E72C4C1489003C3389 /* RoundedTextField.swift in Sources */,
 				D6E24F4A2D1C457900CCDD4F /* ConfirmNumberView.swift in Sources */,
 				D68A53562C3FC99100F69181 /* String + Extension.swift in Sources */,

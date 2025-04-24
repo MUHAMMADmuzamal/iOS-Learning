@@ -61,27 +61,3 @@ struct TabBarView: View {
 #Preview {
     TabBarView(tabs: [.home, .wishList, .stay, .profile], selection: .constant(.home))
 }
-
-
-struct TestTabView: View {
-    
-    let text: String
-    @State private var textFieldText: String = ""
-    
-    init(text: String) {
-        self.text = text
-        print("INIT" + text)
-    }
-    
-    var body: some View {
-        VStack {
-            Text(text)
-                .onAppear {
-                    print("ONAPPEAR" + text)
-            }
-            TextField("Type something...", text: $textFieldText)
-                .disableAutocorrection(true)
-            
-        }
-    }
-}
