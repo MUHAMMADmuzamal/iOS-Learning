@@ -73,6 +73,7 @@
 		D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */; };
 		D6C2EEDF2D5DDB2A004E5DA9 /* NotificationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEDE2D5DDB2A004E5DA9 /* NotificationVM.swift */; };
 		D6C2EEE42D5E537E004E5DA9 /* RootVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C2EEE32D5E537E004E5DA9 /* RootVM.swift */; };
+		D6C73C112DBB95EA0087118E /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C73C102DBB95EA0087118E /* BackButton.swift */; };
 		D6C9DA722C7496B20063D7F6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA712C7496B20063D7F6 /* CountryListView.swift */; };
 		D6C9DA742C7496FA0063D7F6 /* CountryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */; };
 		D6CDAF7D2D6F43F0007CD8A4 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CDAF7C2D6F43F0007CD8A4 /* AppDIContainer.swift */; };
@@ -164,6 +165,7 @@
 		D6C2EECD2D5CC542004E5DA9 /* DependenciesHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesHolder.swift; sourceTree = "<group>"; };
 		D6C2EEDE2D5DDB2A004E5DA9 /* NotificationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVM.swift; sourceTree = "<group>"; };
 		D6C2EEE32D5E537E004E5DA9 /* RootVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVM.swift; sourceTree = "<group>"; };
+		D6C73C102DBB95EA0087118E /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		D6C9DA712C7496B20063D7F6 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		D6C9DA732C7496FA0063D7F6 /* CountryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVM.swift; sourceTree = "<group>"; };
 		D6CDAF7C2D6F43F0007CD8A4 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -205,6 +207,8 @@
 		D6BFCEBE2D95509800BB7FA3 /* DefaultCard */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DefaultCard; sourceTree = "<group>"; };
 		D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = HomeSelectionBar; sourceTree = "<group>"; };
 		D6C73ABC2DBA424F0087118E /* PreferenceKeys */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PreferenceKeys; sourceTree = "<group>"; };
+		D6C73B642DBA44C70087118E /* MapScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MapScreen; sourceTree = "<group>"; };
+		D6C73C122DBBAAAB0087118E /* MapView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MapView; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6C73C122DBBAAAB0087118E /* MapView */,
 				D6033CF22DA786BF0080E461 /* TabBar */,
 				D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */,
 				D6BFCEBE2D95509800BB7FA3 /* DefaultCard */,
@@ -307,6 +312,7 @@
 				D61A8F172C42C6F200F55756 /* PrimaryButton.swift */,
 				D61A8F192C4547FB00F55756 /* SecondaryButton.swift */,
 				D61A8F1B2C45520D00F55756 /* TertiaryButton.swift */,
+				D6C73C102DBB95EA0087118E /* BackButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D6C73B642DBA44C70087118E /* MapScreen */,
 				D631797F2D5A5788005A6791 /* Messages */,
 				D63179742D5A4D8A005A6791 /* Notifications */,
 				D631796A2D59D2BB005A6791 /* Home */,
@@ -646,6 +653,8 @@
 				D6BFCEBE2D95509800BB7FA3 /* DefaultCard */,
 				D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */,
 				D6C73ABC2DBA424F0087118E /* PreferenceKeys */,
+				D6C73B642DBA44C70087118E /* MapScreen */,
+				D6C73C122DBBAAAB0087118E /* MapView */,
 			);
 			name = Tidoy;
 			productName = Tidoy;
@@ -730,6 +739,7 @@
 				D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */,
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D688BF562D8D79D4006C507A /* NearByCardModel.swift in Sources */,
+				D6C73C112DBB95EA0087118E /* BackButton.swift in Sources */,
 				D61A8F142C417C0200F55756 /* OnboardingCarouselCard.swift in Sources */,
 				D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */,
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,

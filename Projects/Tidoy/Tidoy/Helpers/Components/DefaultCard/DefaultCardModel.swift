@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct DefaultCardHouseDetail: Identifiable {
     let id: String = UUID().uuidString
@@ -25,6 +26,7 @@ struct DefaultCardModel: Identifiable {
     let isFavorite: Bool
     let image: String
     let rating: Double
+    let coordinates: CLLocationCoordinate2D
 }
 
 extension DefaultCardModel {
@@ -42,7 +44,8 @@ extension DefaultCardModel {
         duration: "days",
         isFavorite: true,
         image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHwzfHxob3VzZXxlbnwwfHx8fDE3NDE5MzY2Njd8MA&ixlib=rb-4.0.3",
-        rating: 4.8
+        rating: 4.8,
+        coordinates: .init(latitude: 33.7294, longitude: 73.0379)
     )
 }
 
@@ -62,7 +65,8 @@ extension DefaultCardModel {
             duration: "days",
             isFavorite: true,
             image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHwzfHxob3VzZXxlbnwwfHx8fDE3NDE5MzY2Njd8MA&ixlib=rb-4.0.3",
-            rating: 4.8
+            rating: 4.8,
+            coordinates: .init(latitude: 33.7518, longitude: 73.0510)
         ),
         DefaultCardModel(
             title: "Luxury Modern House with Pool",
@@ -78,7 +82,8 @@ extension DefaultCardModel {
             duration: "days",
             isFavorite: false,
             image: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHw0fHxob3VzZXxlbnwwfHx8fDE3NDE5MzY2Njd8MA&ixlib=rb-4.0.3",
-            rating: 4.9
+            rating: 4.9,
+            coordinates: .init(latitude: 33.6939, longitude: 73.0652)
         ),
         DefaultCardModel(
             title: "Cozy Minimalist Apartment",
@@ -94,7 +99,8 @@ extension DefaultCardModel {
             duration: "days",
             isFavorite: false,
             image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHw5fHxob3VzZXxlbnwwfHx8fDE3NDQwOTAyNjd8MA&ixlib=rb-4.0.3&q=80&w=400",
-            rating: 4.5
+            rating: 4.5,
+            coordinates: .init(latitude: 33.7016, longitude: 73.0555)
         ),
         DefaultCardModel(
             title: "Seaside Cottage with Ocean View",
@@ -110,8 +116,11 @@ extension DefaultCardModel {
             duration: "days",
             isFavorite: true,
             image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHwxMHx8aG91c2V8ZW58MHx8fHwxNzQ0MDkwMjY3fDA&ixlib=rb-4.0.3&q=80&w=400",
-            rating: 5.0
+            rating: 5.0,
+            coordinates: .init(latitude: 33.7476, longitude: 73.1379)
         )
     ]
+    
+    static let mapSampleData = DefaultCardModel.sampleDataList.map({MapViewDataModel($0)})
 }
 

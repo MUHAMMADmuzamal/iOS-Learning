@@ -39,6 +39,7 @@ struct DefaultCard: View {
             RoundedRectangle(cornerRadius: .cornerRadiusS)
                 .stroke(.stroke20, lineWidth: 1)
         }
+        .background(Color.background10)
         .clipShape(RoundedRectangle(cornerRadius: .cornerRadiusS))
         .frame(width: width, height: height)
     }
