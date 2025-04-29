@@ -7,11 +7,18 @@
 
 import SwiftUI
 import MapKit
+import Swinject
 
-struct MapScreen: View {
-    @State private var position: MapCameraPosition = .automatic
-    private let locations: [DefaultCardModel] = DefaultCardModel.sampleDataList
-    private let screenWidth = UIScreen.main.bounds.width
+struct MapScreen<VM: MapScreenVMProtocol>: View {
+    
+    private let screenWidth = UIScreen.screenWidth
+    @State var position: MapCameraPosition = .automatic
+    
+    @StateObject private var viewModel: VM
+    
+    init(viewModel: VM) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         ZStack {
@@ -25,12 +32,13 @@ struct MapScreen: View {
                 cardSection
             }
         }
+        .toolbarVisibility(.hidden)
     }
     
     private var cardSection: some View {
         ScrollView(.horizontal) {
             HStack(spacing: .padding12) {
-                ForEach(locations) { data in
+                ForEach(viewModel.dataSource) { data in
                     DefaultCard(height: 172, width: screenWidth - .padding32, model: data)
                         .onTapGesture {
                             position = .camera(
@@ -51,7 +59,9 @@ struct MapScreen: View {
     
     private var backButtonSection: some View {
         HStack(alignment: .center) {
-            BackButton() {}
+            BackButton() {
+                viewModel.goBack()
+            }
                 .padding(.leading, .padding16)
             Spacer()
         }
@@ -59,5 +69,5 @@ struct MapScreen: View {
 }
 
 #Preview {
-    MapScreen()
+    MapScreen(viewModel: MapScreenVM(router: MapScreenRouter(injector: DependenciesHolder.shared.injector())))
 }

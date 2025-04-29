@@ -58,8 +58,8 @@ struct NearByCard: View {
 }
 
 #Preview {
-    let height =  UIScreen.main.bounds.height - 10
-    let width =  UIScreen.main.bounds.width - 10
+    let height =  UIScreen.screenHeight - 10
+    let width =  UIScreen.screenWidth - 10
     NearByCard(model: .sampleData, height: height, width: width)
         .environment(\.imageLoader, KingfisherImageLoader())
         .padding()

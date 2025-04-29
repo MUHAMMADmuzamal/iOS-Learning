@@ -18,6 +18,7 @@ protocol HomeVMProtocol: ObservableObject {
     
     func fetchData()
     func updateSelection(_ id: String)
+    func navigateToMapScreen()
 }
 
 final class HomeVM: HomeVMProtocol {
@@ -73,5 +74,9 @@ final class HomeVM: HomeVMProtocol {
             }
             return model
         }
+    }
+    
+    func navigateToMapScreen() {
+        self.router.navigateToMapScreen()
     }
 }

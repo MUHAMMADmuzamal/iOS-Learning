@@ -13,7 +13,7 @@ struct HomeView<VM: HomeVMProtocol>: View {
     @StateObject private var viewModel: VM
     @State private var searchText: String = ""
     
-    let screenWidth = UIScreen.main.bounds.width
+    let screenWidth = UIScreen.screenWidth
     
     init(viewModel: VM) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -98,6 +98,10 @@ struct HomeView<VM: HomeVMProtocol>: View {
                     .resizable()
                     .clipShape(Circle())
                     .frame(width: 48)
+                    .onTapGesture {
+                        print("✅ ")
+                        viewModel.navigateToMapScreen()
+                    }
             }
             .frame(height: 48)
             .padding(.vertical, .padding8)

@@ -209,6 +209,7 @@
 		D6C73ABC2DBA424F0087118E /* PreferenceKeys */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PreferenceKeys; sourceTree = "<group>"; };
 		D6C73B642DBA44C70087118E /* MapScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MapScreen; sourceTree = "<group>"; };
 		D6C73C122DBBAAAB0087118E /* MapView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MapView; sourceTree = "<group>"; };
+		D6C73CC52DBF4DF80087118E /* UIKIT */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UIKIT; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -519,6 +520,7 @@
 		D68A53512C3FC96A00F69181 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D6C73CC52DBF4DF80087118E /* UIKIT */,
 				D6838C082D8D98BF00E83BAB /* Swift UI */,
 				D68A53522C3FC98500F69181 /* Font + Extension.swift */,
 				D68A53552C3FC99100F69181 /* String + Extension.swift */,
@@ -655,6 +657,7 @@
 				D6C73ABC2DBA424F0087118E /* PreferenceKeys */,
 				D6C73B642DBA44C70087118E /* MapScreen */,
 				D6C73C122DBBAAAB0087118E /* MapView */,
+				D6C73CC52DBF4DF80087118E /* UIKIT */,
 			);
 			name = Tidoy;
 			productName = Tidoy;
