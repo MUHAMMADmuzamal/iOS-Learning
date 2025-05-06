@@ -117,6 +117,19 @@ extension NearByCardModel {
             priceUnit: "$",
             duration: "night",
             isAvailable: false
+        ),
+        NearByCardModel(
+            imageURL: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHw3fHxob3VzZXxlbnwwfHx8fDE3NDI1NjcyMTZ8MA&ixlib=rb-4.0.3&q=80&w=400",
+            isFavorite: true,
+            nameOfHouse: "Lake House",
+            addressOfHouse: "Ontario, Canada",
+            rating: 4.7,
+            distance: 20,
+            distanceUnit: "km",
+            price: 250,
+            priceUnit: "$",
+            duration: "night",
+            isAvailable: false
         )
     ]
 }

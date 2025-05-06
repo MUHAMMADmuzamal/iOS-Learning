@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct NearBySection: View {
-    let height: Double = 236
-    let width: Double = 165
+
     
     let housesList:[NearByCardModel]
     var body: some View {
@@ -28,7 +27,7 @@ struct NearBySection: View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(housesList) { data in
-                    NearByCard(model: data, height: height, width: width)
+                    NearByCard(model: data, height: .nearByCardHeight, width: .nearByCardWidth)
                 }
             }
         }
