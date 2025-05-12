@@ -25,9 +25,8 @@ struct NearByScreen: View {
     ]
     
     var body: some View {
-        CustomNavigationBarView(title: "Near By") {
-            
-        } bodyContent: {
+        
+        NavigationBarContainer {
             VStack {
                 HStack(spacing: .padding8) {
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -59,6 +58,7 @@ struct NearByScreen: View {
                 cardsSection
             }
         }
+        .withNavigationBar(title: "Screen Title", backAction: { print("Back tapped") })
         .toolbarVisibility(.hidden, for: .navigationBar)
     }
     
@@ -199,55 +199,6 @@ struct FilterButton: View {
         selected ? .clear : .stroke40
     }
 }
-
-struct CustomNavigationBarView: View {
-    private let content: () -> AnyView
-
-    // MARK: - 1. Fully customizable content
-    init(
-        @ViewBuilder navBarContent: @escaping () -> some View,
-        @ViewBuilder bodyContent: @escaping () -> some View
-    ) {
-        self.content = {
-            AnyView(
-                VStack(spacing: 0) {
-                    navBarContent()
-                    bodyContent()
-                }
-            )
-        }
-    }
-
-    // MARK: - 2. With back button and title
-    init(
-        title: String,
-        backButtonDidTap: @escaping () -> Void,
-        @ViewBuilder bodyContent: @escaping () -> some View
-    ) {
-        self.content = {
-            AnyView(
-                VStack(spacing: 0) {
-                    HStack {
-                        BackButtonView(action: backButtonDidTap, text: title)
-                        Spacer()
-                    }
-                    .padding(.leading, .padding24)
-
-                    bodyContent()
-                } .background {
-                    Color.background10
-                        .ignoresSafeArea()
-                }
-            )
-        }
-    }
-
-    var body: some View {
-        content()
-    }
-}
-
-
 
 struct BackButtonView: View {
     let action: () -> Void

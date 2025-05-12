@@ -181,6 +181,7 @@
 		D60B30D72D70858E008A9471 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
+		D63672732DCB480000D16EB6 /* NavigationBarContainer */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NavigationBarContainer; sourceTree = "<group>"; };
 		D64C2F512D75A8C200BE9854 /* Logger */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logger; sourceTree = "<group>"; };
 		D64C2FA32D7C481A00BE9854 /* AuthNetworkService */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AuthNetworkService; sourceTree = "<group>"; };
 		D65116BF2D72385C00DBC242 /* AppError */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppError; sourceTree = "<group>"; };
@@ -271,6 +272,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D63672732DCB480000D16EB6 /* NavigationBarContainer */,
 				D6C73C122DBBAAAB0087118E /* MapView */,
 				D6033CF22DA786BF0080E461 /* TabBar */,
 				D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */,
@@ -632,6 +634,7 @@
 				D60B30D72D70858E008A9471 /* Models */,
 				D610113B2D649DC9006D1FA7 /* Routing */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
+				D63672732DCB480000D16EB6 /* NavigationBarContainer */,
 				D64C2F512D75A8C200BE9854 /* Logger */,
 				D64C2FA32D7C481A00BE9854 /* AuthNetworkService */,
 				D65116BF2D72385C00DBC242 /* AppError */,
