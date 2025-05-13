@@ -55,7 +55,6 @@ struct NearByScreen: View {
     }
     
     private var rows: [[NearByCardModel]] {
-        let data = NearByCardModel.sampleDataList
         return stride(from: 0, to: data.count, by: 2).map { index in
             Array(data[index..<min(index + 2, data.count)])
         }
