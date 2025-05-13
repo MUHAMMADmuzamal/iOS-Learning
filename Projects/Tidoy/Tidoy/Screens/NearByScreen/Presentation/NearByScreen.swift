@@ -7,22 +7,9 @@
 
 import SwiftUI
 
-struct FilterModel {
-    let id: String = UUID().uuidString
-    let title: String
-    var isSelected: Bool
-}
-
 struct NearByScreen: View {
     let data = NearByCardModel.sampleDataList
-    @State var filters: [FilterModel] = [
-        FilterModel(title: "All", isSelected: true),
-        FilterModel(title: "Recommend", isSelected: false),
-        FilterModel(title: "Popular", isSelected: false),
-        FilterModel(title: "Best Price", isSelected: false),
-        FilterModel(title: "Best Price", isSelected: false),
-        FilterModel(title: "Best Price", isSelected: false),
-    ]
+    @State var filters: [FilterModel] = FilterModel.sampleData
     
     var body: some View {
         
@@ -109,110 +96,6 @@ struct NearByScreenRow: View {
             if data.count == 1 {
                 Spacer() // Maintain 2-column layout
             }
-        }
-    }
-}
-
-struct FilterCell: View {
-    let model: FilterModel
-    let action: (FilterModel) -> Void
-    private let height = 30.0
-    private let cornerRadius = 30.0 / 2
-
-    var body: some View {
-        Button(action: {
-            action(model)
-        }) {
-            Text(model.title)
-                .font(.body2XSmallRegular)
-                .padding(.vertical, .padding8)
-                .padding(.horizontal, .padding12)
-                .frame(height: height)
-                .background(backgroundColor)
-                .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-                .overlay(
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .stroke(borderColor, lineWidth: 1)
-                )
-        }
-        .buttonStyle(.plain)
-    }
-    
-    private var backgroundColor: Color {
-        model.isSelected ? .background20 : .background10
-    }
-
-    private var borderColor: Color {
-        model.isSelected ? .clear : .stroke40
-    }
-}
-
-struct FilterButton: View {
-    let action: () -> Void
-    private let height = 30.0
-    private let cornerRadius = 30.0 / 2
-    @State private var selected = false
-
-    var body: some View {
-        Button(action: {
-            action()
-        }) {
-            HStack(spacing: .padding4) {
-                Image("filterIcon")
-                    .foregroundStyle(Color.icon100)
-                Text("Filter")
-                    .font(.body2XSmallRegular)
-            }
-            .padding(.vertical, .padding8)
-            .padding(.horizontal, .padding12)
-            .frame(height: height)
-            .background(backgroundColor)
-            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-            .overlay(
-                RoundedRectangle(cornerRadius: cornerRadius)
-                    .stroke(borderColor, lineWidth: 1)
-            )
-            .overlay {
-                HStack {
-                    Spacer()
-                    Circle()
-                        .fill(Color.dangerMain)
-                        .frame(height: 16)
-                        .overlay {
-                            Text("99")
-                                .font(Font.body2XSmallRegular)
-                        }
-                        .offset(y: -15)
-                        .padding(.trailing, .padding4)
-                        
-                }
-            }
-        }
-        .buttonStyle(.plain)
-    }
-    
-    private var backgroundColor: Color {
-        selected ? .background20 : .background10
-    }
-
-    private var borderColor: Color {
-        selected ? .clear : .stroke40
-    }
-}
-
-struct BackButtonView: View {
-    let action: () -> Void
-    var color: Color = .icon100
-    var text: String
-
-    var body: some View {
-        Button(action: action) {
-            HStack {
-                Image(systemName: "chevron.left")
-                    .frame(width: 24, height: 24)
-                Text(text)
-            }
-            .foregroundStyle(color)
         }
     }
 }

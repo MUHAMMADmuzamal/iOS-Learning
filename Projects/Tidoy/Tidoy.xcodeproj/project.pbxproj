@@ -214,6 +214,8 @@
 		D6C73C122DBBAAAB0087118E /* MapView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MapView; sourceTree = "<group>"; };
 		D6C73CC52DBF4DF80087118E /* UIKIT */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UIKIT; sourceTree = "<group>"; };
 		D6C740192DC890FD0087118E /* NearByScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NearByScreen; sourceTree = "<group>"; };
+		D6E3C20D2DD32CF800F5E21C /* FeaturePlacesScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = FeaturePlacesScreen; sourceTree = "<group>"; };
+		D6E3C2142DD32E5D00F5E21C /* Filter */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Filter; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6E3C2142DD32E5D00F5E21C /* Filter */,
 				D63672732DCB480000D16EB6 /* NavigationBarContainer */,
 				D6C73C122DBBAAAB0087118E /* MapView */,
 				D6033CF22DA786BF0080E461 /* TabBar */,
@@ -458,6 +461,7 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D6E3C20D2DD32CF800F5E21C /* FeaturePlacesScreen */,
 				D6C740192DC890FD0087118E /* NearByScreen */,
 				D6C73B642DBA44C70087118E /* MapScreen */,
 				D631797F2D5A5788005A6791 /* Messages */,
@@ -667,6 +671,8 @@
 				D6C73C122DBBAAAB0087118E /* MapView */,
 				D6C73CC52DBF4DF80087118E /* UIKIT */,
 				D6C740192DC890FD0087118E /* NearByScreen */,
+				D6E3C20D2DD32CF800F5E21C /* FeaturePlacesScreen */,
+				D6E3C2142DD32E5D00F5E21C /* Filter */,
 			);
 			name = Tidoy;
 			productName = Tidoy;

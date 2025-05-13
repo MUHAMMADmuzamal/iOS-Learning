@@ -30,3 +30,21 @@ struct BackButton: View {
         print("hello")
     }
 }
+
+
+struct BackButtonView: View {
+    let action: () -> Void
+    var color: Color = .icon100
+    var text: String
+
+    var body: some View {
+        Button(action: action) {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .frame(width: 24, height: 24)
+                Text(text)
+            }
+            .foregroundStyle(color)
+        }
+    }
+}
