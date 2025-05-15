@@ -11,6 +11,7 @@ protocol HomeRouterProtocol: RouterProtocol {
     func navigateToNotification()
     func navigateToMapScreen()
     func navigateToNearByScreen()
+    func navigateToFeaturePlacesScreen()
 }
 
 final class HomeRouter: Router, HomeRouterProtocol {
@@ -25,5 +26,9 @@ final class HomeRouter: Router, HomeRouterProtocol {
     
     func navigateToNearByScreen() {
         coordinator.navigate(to: NearByScreenRoute(injector: self.injector))
+    }
+    
+    func navigateToFeaturePlacesScreen() {
+        coordinator.navigate(to: FeaturePlacesScreenRoute(injector: self.injector))
     }
 }

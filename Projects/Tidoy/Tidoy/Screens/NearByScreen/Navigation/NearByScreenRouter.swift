@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 protocol NearByScreenRouterProtocol: RouterProtocol {
     func goBack()
 }

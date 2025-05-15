@@ -39,7 +39,7 @@ struct HomeView<VM: HomeVMProtocol>: View {
                         }, housesList: NearByCardModel.sampleDataList)
                         
                         FeatureSection(showAllDidTap: {
-                            self.viewModel.navigateToNearByScreen()
+                            self.viewModel.navigateToFeaturePlacesScreen()
                         }, placesList: FeaturedCardModel.sampleData)
                         
                         selectionBar
