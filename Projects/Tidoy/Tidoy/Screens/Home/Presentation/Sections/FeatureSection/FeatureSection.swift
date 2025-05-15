@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct FeatureSection: View {
+    let showAllDidTap: () -> Void
     let placesList: [FeaturedCardModel]
     var body: some View {
         VStack(spacing: 16) {
-            HomeSectionHeader(title: "Featured Destination")
+            HomeSectionHeader(showAllDidTap: showAllDidTap, title: "Featured Destination")
                 .frame(height: 40)
                 .padding(.top, .padding12)
                 .padding(.bottom, .padding8)
@@ -35,5 +36,5 @@ struct FeatureSection: View {
 }
 
 #Preview {
-    FeatureSection(placesList: FeaturedCardModel.sampleData)
+    FeatureSection(showAllDidTap: {}, placesList: FeaturedCardModel.sampleData)
 }

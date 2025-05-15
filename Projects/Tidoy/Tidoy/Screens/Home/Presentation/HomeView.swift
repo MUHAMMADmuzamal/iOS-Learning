@@ -32,9 +32,15 @@ struct HomeView<VM: HomeVMProtocol>: View {
                     
                     VStack {
                         
-                        NearBySection(housesList: NearByCardModel.sampleDataList)
+                        NearBySection(showAll: {
+                            self.viewModel.navigateToNearByScreen()
+                        }, tapOnCard: { _ in
+                            
+                        }, housesList: NearByCardModel.sampleDataList)
                         
-                        FeatureSection(placesList: FeaturedCardModel.sampleData)
+                        FeatureSection(showAllDidTap: {
+                            self.viewModel.navigateToNearByScreen()
+                        }, placesList: FeaturedCardModel.sampleData)
                         
                         selectionBar
                         

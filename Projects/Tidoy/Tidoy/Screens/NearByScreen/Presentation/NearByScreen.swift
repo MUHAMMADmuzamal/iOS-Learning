@@ -7,45 +7,30 @@
 
 import SwiftUI
 
-struct NearByScreen: View {
-    let data = NearByCardModel.sampleDataList
-    @State var filters: [FilterModel] = FilterModel.sampleData
+struct NearByScreen<VM: NearByScreenVMProtocol>: View {
+    
+    @StateObject var viewModel: VM
+    
+    init(viewModel: VM) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         
         NavigationBarContainer {
             VStack {
-                HStack(spacing: .padding8) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: .padding8) {
-                            ForEach(filters, id: \.id) { model in
-                                FilterCell(model: model){ selectedModel in
-                                    for index in filters.indices {
-                                        let model = filters[index]
-                                        if model.id == selectedModel.id {
-                                            filters[index].isSelected = true
-                                        } else {
-                                            filters[index].isSelected = false
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .frame(height: 50)
-                    }
-                    Spacer()
-                    FilterButton() {}
-                }
-                .padding(.horizontal, .padding16)
+                filterSection
                 Rectangle()
                     .fill(Color.stroke40)
                     .frame(height: 1)
-                    
-                    
+                
+                
                 cardsSection
             }
         }
-        .withNavigationBar(title: "Screen Title", backAction: { print("Back tapped") })
+        .withNavigationBar(title: "Near by", backAction: {
+            viewModel.goBack()
+        })
         .toolbarVisibility(.hidden, for: .navigationBar)
     }
     
@@ -54,48 +39,41 @@ struct NearByScreen: View {
             .ignoresSafeArea()
     }
     
-    private var rows: [[NearByCardModel]] {
-        return stride(from: 0, to: data.count, by: 2).map { index in
-            Array(data[index..<min(index + 2, data.count)])
-        }
-    }
-    
     private var cardsSection: some View {
         return ScrollView(.vertical) {
             Grid(horizontalSpacing: .padding12, verticalSpacing: .padding12) {
-                ForEach(rows.indices, id: \.self) { rowIndex in
-                    let row = rows[rowIndex]
+                ForEach(viewModel.rowsForGrid.indices, id: \.self) { rowIndex in
+                    let row = viewModel.rowsForGrid[rowIndex]
                     NearByScreenRow(data: row)
-     
+                    
                 }
             }
             .padding(.horizontal, .padding16)
         }
     }
+    
+    private var filterSection: some View {
+        HStack(spacing: .padding8) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: .padding8) {
+                    ForEach(viewModel.filtersDataSource, id: \.id) { model in
+                        FilterCell(model: model){ selectedModel in
+                            viewModel.updateFilterDataSourceModel(selectedModel)
+                        }
+                    }
+                }
+                .frame(height: 50)
+            }
+            Spacer()
+            FilterButton() {}
+        }
+        .padding(.horizontal, .padding16)
+    }
 }
 
 #Preview {
     NavigationStack {
-        NearByScreen()
-    }
-}
-
-struct NearByScreenRow: View {
-    
-    let data: [NearByCardModel]
-    let width = (UIScreen.screenWidth / 2) - .padding16
-    
-    var body: some View {
-        GridRow {
-            
-            ForEach(data, id: \.id) { item in
-                NearByCard(model: item, height: .nearByCardHeight, width: width)
-            }
-            
-            if data.count == 1 {
-                Spacer() // Maintain 2-column layout
-            }
-        }
+        NearByScreenBuilder.build(injector: DependenciesHolder.shared.injector())
     }
 }
 

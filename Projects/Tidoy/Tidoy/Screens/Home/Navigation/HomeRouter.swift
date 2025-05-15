@@ -10,6 +10,7 @@ import Foundation
 protocol HomeRouterProtocol: RouterProtocol {
     func navigateToNotification()
     func navigateToMapScreen()
+    func navigateToNearByScreen()
 }
 
 final class HomeRouter: Router, HomeRouterProtocol {
@@ -20,5 +21,9 @@ final class HomeRouter: Router, HomeRouterProtocol {
     
     func navigateToMapScreen() {
         coordinator.navigate(to: MapScreenRoute(injector: self.injector))
+    }
+    
+    func navigateToNearByScreen() {
+        coordinator.navigate(to: NearByScreenRoute(injector: self.injector))
     }
 }

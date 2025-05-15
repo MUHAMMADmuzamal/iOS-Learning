@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeSectionHeader: View {
+    let showAllDidTap: () -> Void
     let title: String
     var body: some View {
         HStack {
@@ -15,7 +16,7 @@ struct HomeSectionHeader: View {
                 .font(.bodySmallSemiBold)
             Spacer()
             Button {
-                
+                showAllDidTap()
             } label: {
                 Text("Show all")
                     .font(.body2XSmallSemiBold)
@@ -28,5 +29,5 @@ struct HomeSectionHeader: View {
 }
 
 #Preview {
-    HomeSectionHeader(title: "Near by")
+    HomeSectionHeader(showAllDidTap: {}, title: "Near by")
 }

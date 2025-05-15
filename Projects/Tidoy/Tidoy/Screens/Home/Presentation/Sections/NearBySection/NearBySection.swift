@@ -9,11 +9,12 @@ import SwiftUI
 
 struct NearBySection: View {
 
-    
+    let showAll: () -> Void
+    let tapOnCard: (NearByCardModel) -> Void
     let housesList:[NearByCardModel]
     var body: some View {
         VStack(spacing: 16) {
-            HomeSectionHeader(title: "Near by")
+            HomeSectionHeader(showAllDidTap: showAll, title: "Near by")
                 .frame(height: 40)
                 .padding(.top, .padding12)
                 .padding(.bottom, .padding8)
@@ -28,6 +29,9 @@ struct NearBySection: View {
             HStack {
                 ForEach(housesList) { data in
                     NearByCard(model: data, height: .nearByCardHeight, width: .nearByCardWidth)
+                        .onTapGesture {
+                            tapOnCard(data)
+                        }
                 }
             }
         }
@@ -38,7 +42,7 @@ struct NearBySection: View {
 #Preview {
     ZStack {
         Color.background10
-        NearBySection(housesList: NearByCardModel.sampleDataList)
+        NearBySection(showAll: {}, tapOnCard: { _ in} ,housesList: NearByCardModel.sampleDataList)
     }
 }
 

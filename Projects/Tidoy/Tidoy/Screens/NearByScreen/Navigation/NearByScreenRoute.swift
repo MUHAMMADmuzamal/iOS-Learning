@@ -12,6 +12,6 @@ struct NearByScreenRoute: Route {
     let injector: Container
     
     func destinationView() -> some View {
-        return MapScreenBuilder.build(injector: self.injector)
+        return NearByScreenBuilder.build(injector: self.injector)
     }
 }

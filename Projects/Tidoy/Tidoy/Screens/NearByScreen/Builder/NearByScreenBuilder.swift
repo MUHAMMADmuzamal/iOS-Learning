@@ -10,6 +10,8 @@ import Swinject
 
 final class NearByScreenBuilder {
     static func build(injector: Container) -> some View {
-        return NearByScreen()
+        let router = NearByScreenRouter(injector: injector)
+        let viewModel = NearByScreenVM(router: router)
+        return NearByScreen(viewModel: viewModel)
     }
 }
