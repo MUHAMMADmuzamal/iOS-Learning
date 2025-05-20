@@ -40,3 +40,12 @@ struct HiddenWithSpaceModifier: ViewModifier {
         }
     }
 }
+
+extension View {
+    func roundedBorder(cornerRadius: CGFloat, color: Color, lineWidth: CGFloat = 1) -> some View {
+        self.overlay(
+            RoundedRectangle(cornerRadius: cornerRadius)
+                .stroke(color, lineWidth: lineWidth)
+        )
+    }
+}

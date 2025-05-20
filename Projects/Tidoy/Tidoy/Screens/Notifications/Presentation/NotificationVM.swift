@@ -7,9 +7,8 @@
 
 import Foundation
 
-protocol NotificationVMProtocol {
-    func navigateToMessages()
-    func close()
+protocol NotificationVMProtocol: ObservableObject {
+    func goBack()
 }
 
 final class NotificationVM: NotificationVMProtocol {
@@ -19,12 +18,7 @@ final class NotificationVM: NotificationVMProtocol {
         self.router = router
     }
     
-    func navigateToMessages() {
-        self.router.navigateToMessages()
+    func goBack() {
+        router.goBack()
     }
-    
-    func close() {
-        router.dissmiss()
-    }
-    
 }

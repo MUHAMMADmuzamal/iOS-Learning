@@ -91,7 +91,11 @@ struct HomeView<VM: HomeVMProtocol>: View {
                 
                 HStack(spacing: 24) {
                     Image("messages")
-                    Image("notification")
+                    Button {
+                        viewModel.navigateToNotification()
+                    } label: {
+                        Image("notification")
+                    }
                 }
                 .frame(height: 32)
                 .foregroundStyle(Color.icon80)

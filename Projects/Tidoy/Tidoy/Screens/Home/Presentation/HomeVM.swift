@@ -21,6 +21,7 @@ protocol HomeVMProtocol: ObservableObject {
     func navigateToMapScreen()
     func navigateToNearByScreen()
     func navigateToFeaturePlacesScreen()
+    func navigateToNotification()
 }
 
 final class HomeVM: HomeVMProtocol {
@@ -88,5 +89,9 @@ final class HomeVM: HomeVMProtocol {
     
     func navigateToFeaturePlacesScreen() {
         self.router.navigateToFeaturePlacesScreen()
+    }
+    
+    func navigateToNotification() {
+        self.router.navigateToNotification()
     }
 }
