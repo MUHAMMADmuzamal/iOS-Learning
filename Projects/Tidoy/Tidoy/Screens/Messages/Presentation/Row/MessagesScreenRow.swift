@@ -1,70 +1,42 @@
 //
-//  MessagesView.swift
+//  MessagesScreenRow.swift
 //  Tidoy
 //
-//  Created by Muhammad Muzamal on 10/02/2025.
+//  Created by Muhammad Muzamal on 27/05/2025.
 //
 
 import SwiftUI
 
-struct MessagesView: View {
-
-    @State var searchText: String = ""
-    
-    var body: some View {
-        NavigationBarContainer {
-            ScrollView(.vertical) {
-                ForEach(0..<10) { _ in
-                    MessagesScreenRow()
-                    .padding(.horizontal, .padding16)
-                }
-            }
-            .padding(.top, .padding16)
-            .background(Color.background10.ignoresSafeArea())
-        }.withCustomNavigationBar(navBar: {
-            HStack {
-                BackButtonView(action: {}, text: "")
-                Spacer()
-                SearchField(searchText: $searchText, placeHolderText: "Search")
-            }
-            .padding(.horizontal, .padding16)
-            .background(Color.background10.ignoresSafeArea())
-        })
-        .toolbarVisibility(.hidden, for: .navigationBar)
-    }
-}
-
-#Preview {
-    NavigationStack {
-        MessagesView()
-    }
-}
-
 struct MessagesScreenRow: View {
+    let model: MessageScreenRowModel
     var body: some View {
         VStack {
             HStack {
                 avatarView
                 VStack(spacing: .padding4) {
                     HStack {
-                        Text("Adaline Alexa")
+                        Text(model.title)
                             .font(.bodyMediumSemiBold)
-                        Image("verifiedIcon")
-                            .resizable()
-                            .frame(width: 16, height: 16)
+                        if model.isVerified {
+                            Image("verifiedIcon")
+                                .resizable()
+                                .frame(width: 16, height: 16)
+                        }
+                        
                         Spacer()
-                        Text("Today")
+                        Text(model.date)
                             .font(.body2XSmallRegular)
                             
                     }
                     .foregroundStyle(Color.text100)
                     HStack {
-                        Text("Hi, Yes the room is available, so can make an order")
+                        Text(model.lastMessage)
                             .font(.bodyXSmallRegular)
                             .foregroundStyle(Color.text80)
                         Spacer()
-                        circleView
-                            
+                        if model.messageCount != 0 {
+                            circleView
+                        }     
                     }
                 }
                 Spacer()
@@ -76,7 +48,7 @@ struct MessagesScreenRow: View {
     }
     
     private var circleView: some View {
-        Text("5")
+        Text("\(model.messageCount)")
             .font(.bodyXSmallRegular)
             .foregroundStyle(Color.infoMain)
             .padding(.horizontal, .padding8)
@@ -95,10 +67,15 @@ struct MessagesScreenRow: View {
     }
     
     private var avatarView: some View {
-        Image("userAvatar")
-            .resizable()
+        NetworkImage(url: model.imageUrl ?? ""){
+            Image("userAvatar").resizable()
+        }
             .frame(width: 48)
             .clipShape(Circle())
     }
 
+}
+
+#Preview {
+    MessagesScreenRow(model: MessageScreenRowModel.mockData)
 }

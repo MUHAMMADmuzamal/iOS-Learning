@@ -9,6 +9,6 @@ import SwiftUI
 
 struct MessagesRoute: Route {
     func destinationView() -> some View {
-        return MessagesView()
+        return MessagesView(viewModel: MessagesVM())
     }
 }
