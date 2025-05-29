@@ -173,6 +173,7 @@
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
 		D623FB1D2DE86657009D9307 /* Builder */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Builder; sourceTree = "<group>"; };
 		D623FB202DE866BA009D9307 /* Navigation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Navigation; sourceTree = "<group>"; };
+		D623FB232DE86CBB009D9307 /* ChatScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ChatScreen; sourceTree = "<group>"; };
 		D63672732DCB480000D16EB6 /* NavigationBarContainer */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NavigationBarContainer; sourceTree = "<group>"; };
 		D64C2F512D75A8C200BE9854 /* Logger */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logger; sourceTree = "<group>"; };
 		D64C2FA32D7C481A00BE9854 /* AuthNetworkService */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AuthNetworkService; sourceTree = "<group>"; };
@@ -455,6 +456,7 @@
 		D68A52722C2C2F8300F69181 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D623FB232DE86CBB009D9307 /* ChatScreen */,
 				D6E3C21B2DD3560000F5E21C /* LocationBasedDestinationScreen */,
 				D6E3C20D2DD32CF800F5E21C /* FeaturePlacesScreen */,
 				D6C740192DC890FD0087118E /* NearByScreen */,
@@ -635,6 +637,7 @@
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
 				D623FB1D2DE86657009D9307 /* Builder */,
 				D623FB202DE866BA009D9307 /* Navigation */,
+				D623FB232DE86CBB009D9307 /* ChatScreen */,
 				D63672732DCB480000D16EB6 /* NavigationBarContainer */,
 				D64C2F512D75A8C200BE9854 /* Logger */,
 				D64C2FA32D7C481A00BE9854 /* AuthNetworkService */,
