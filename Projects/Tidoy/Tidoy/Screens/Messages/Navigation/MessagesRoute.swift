@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import Swinject
 
 struct MessagesRoute: Route {
+    let injector: Container
+    
     func destinationView() -> some View {
-        return MessagesView(viewModel: MessagesVM())
+        return MessagesScreenBuilder.build(injector: self.injector)
     }
 }

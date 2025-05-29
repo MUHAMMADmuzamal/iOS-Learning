@@ -19,8 +19,9 @@ class MessagesVM: MessagesVMProtocol {
     
     private var messagesList: [MessageScreenRowModel] = MessageScreenRowModel.mockDataList
     private var cancellables = Set<AnyCancellable>()
-    
-    init() {
+    private var router: MessagesScreenRouterProtocol
+    init(router: MessagesScreenRouterProtocol) {
+        self.router = router
         setupBindings()
         filteredMessages = messagesList
     }

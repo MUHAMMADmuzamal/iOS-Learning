@@ -40,6 +40,6 @@ struct MessagesView<VM: MessagesVMProtocol>: View {
 
 #Preview {
     NavigationStack {
-        MessagesView(viewModel: MessagesVM())
+        MessagesScreenBuilder.build(injector: DependenciesHolder.shared.injector())
     }
 }

@@ -24,7 +24,6 @@
 		D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631795D2D57A26F005A6791 /* OnboardingCarouselModel.swift */; };
 		D63179692D59D167005A6791 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179682D59D167005A6791 /* RootView.swift */; };
 		D631797E2D5A4F0F005A6791 /* NotificationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D631797D2D5A4F0F005A6791 /* NotificationRoute.swift */; };
-		D63179832D5A57CE005A6791 /* MessagesRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179822D5A57CE005A6791 /* MessagesRoute.swift */; };
 		D63179852D5A57FA005A6791 /* NotificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63179842D5A57FA005A6791 /* NotificationRouter.swift */; };
 		D63A6CCE2D52109600B0A17A /* TextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CCD2D52109600B0A17A /* TextFieldState.swift */; };
 		D63A6CD12D547FDB00B0A17A /* ValidatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */; };
@@ -110,7 +109,6 @@
 		D631795D2D57A26F005A6791 /* OnboardingCarouselModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCarouselModel.swift; sourceTree = "<group>"; };
 		D63179682D59D167005A6791 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D631797D2D5A4F0F005A6791 /* NotificationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRoute.swift; sourceTree = "<group>"; };
-		D63179822D5A57CE005A6791 /* MessagesRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesRoute.swift; sourceTree = "<group>"; };
 		D63179842D5A57FA005A6791 /* NotificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRouter.swift; sourceTree = "<group>"; };
 		D63A6CCD2D52109600B0A17A /* TextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldState.swift; sourceTree = "<group>"; };
 		D63A6CD02D547FDB00B0A17A /* ValidatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableProtocol.swift; sourceTree = "<group>"; };
@@ -173,6 +171,8 @@
 		D60B30D72D70858E008A9471 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		D610113B2D649DC9006D1FA7 /* Routing */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Routing; sourceTree = "<group>"; };
 		D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Custom Rounded Rectangle"; sourceTree = "<group>"; };
+		D623FB1D2DE86657009D9307 /* Builder */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Builder; sourceTree = "<group>"; };
+		D623FB202DE866BA009D9307 /* Navigation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Navigation; sourceTree = "<group>"; };
 		D63672732DCB480000D16EB6 /* NavigationBarContainer */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NavigationBarContainer; sourceTree = "<group>"; };
 		D64C2F512D75A8C200BE9854 /* Logger */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logger; sourceTree = "<group>"; };
 		D64C2FA32D7C481A00BE9854 /* AuthNetworkService */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AuthNetworkService; sourceTree = "<group>"; };
@@ -386,8 +386,9 @@
 		D631797F2D5A5788005A6791 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				D623FB202DE866BA009D9307 /* Navigation */,
+				D623FB1D2DE86657009D9307 /* Builder */,
 				D6A8D9622DE590F10098B082 /* Presentation */,
-				D63179822D5A57CE005A6791 /* MessagesRoute.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -632,6 +633,8 @@
 				D60B30D72D70858E008A9471 /* Models */,
 				D610113B2D649DC9006D1FA7 /* Routing */,
 				D61011422D670B3E006D1FA7 /* Custom Rounded Rectangle */,
+				D623FB1D2DE86657009D9307 /* Builder */,
+				D623FB202DE866BA009D9307 /* Navigation */,
 				D63672732DCB480000D16EB6 /* NavigationBarContainer */,
 				D64C2F512D75A8C200BE9854 /* Logger */,
 				D64C2FA32D7C481A00BE9854 /* AuthNetworkService */,
@@ -750,7 +753,6 @@
 				D64C2F8A2D7AC9BF00BE9854 /* UserDefaults + Extension.swift in Sources */,
 				D608656A2CB1360800BE1D81 /* RoundedSecureTextField.swift in Sources */,
 				D6E24F4C2D1C4FA400CCDD4F /* SingleDigitTextField.swift in Sources */,
-				D63179832D5A57CE005A6791 /* MessagesRoute.swift in Sources */,
 				D6C2EECE2D5CC542004E5DA9 /* DependenciesHolder.swift in Sources */,
 				D631795E2D57A26F005A6791 /* OnboardingCarouselModel.swift in Sources */,
 				D688BF562D8D79D4006C507A /* NearByCardModel.swift in Sources */,
