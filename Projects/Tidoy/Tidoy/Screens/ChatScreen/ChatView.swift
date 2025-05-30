@@ -42,19 +42,18 @@ struct ChatView: View {
         HStack {
             
             VStack(alignment: .leading, spacing: 4) {
-                Text("Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies?")
+                Text("Hi, for this hotel with a king sweet room are there still any vacancies?")
                     .font(.bodySmallRegular)
-                    .foregroundStyle(Color.neutral10)
-                Text("16.50 · Read")
+                    .foregroundStyle(Color.text100)
+                Text("16.50")
                     .font(.body2XSmallRegular)
-                    .foregroundStyle(Color.neutral40)
+                    .foregroundStyle(Color.text90)
             }
             .padding(10)
             .frame(width: responsiveWidth(designedWidth: 242, basedOn: 343))
-            .background {
-                CustomRoundedRectangle(cornerRadius: 12, corners: [.topLeft, .topRight, .bottomRight])
-                    .fill(Color.background40)
-            }
+            .background(Color.background40)
+            .clipShape(CustomRoundedRectangle(cornerRadius: 12, corners: [.topLeft, .topRight, .bottomRight]))
+            
             Spacer()
         }
         .padding(.leading, .padding16)
@@ -130,7 +129,7 @@ struct ChatView: View {
     }
     
     private func responsiveWidth(designedWidth: CGFloat, basedOn designTotalWidth: CGFloat) -> CGFloat {
-        let screenWidth = UIScreen.main.bounds.width
+        let screenWidth = UIScreen.screenWidth
         return (designedWidth / designTotalWidth) * screenWidth
     }
 }

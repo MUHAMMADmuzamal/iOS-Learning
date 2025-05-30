@@ -175,6 +175,7 @@
 		D623FB202DE866BA009D9307 /* Navigation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Navigation; sourceTree = "<group>"; };
 		D623FB232DE86CBB009D9307 /* ChatScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ChatScreen; sourceTree = "<group>"; };
 		D623FB2B2DE980CD009D9307 /* IconWithText */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = IconWithText; sourceTree = "<group>"; };
+		D623FC312DE9BDA8009D9307 /* ChatMessageView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ChatMessageView; sourceTree = "<group>"; };
 		D63672732DCB480000D16EB6 /* NavigationBarContainer */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NavigationBarContainer; sourceTree = "<group>"; };
 		D64C2F512D75A8C200BE9854 /* Logger */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Logger; sourceTree = "<group>"; };
 		D64C2FA32D7C481A00BE9854 /* AuthNetworkService */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AuthNetworkService; sourceTree = "<group>"; };
@@ -271,6 +272,7 @@
 		D61A8F0E2C417AA300F55756 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D623FC312DE9BDA8009D9307 /* ChatMessageView */,
 				D623FB2B2DE980CD009D9307 /* IconWithText */,
 				D6E3C2142DD32E5D00F5E21C /* Filter */,
 				D63672732DCB480000D16EB6 /* NavigationBarContainer */,
@@ -641,6 +643,7 @@
 				D623FB202DE866BA009D9307 /* Navigation */,
 				D623FB232DE86CBB009D9307 /* ChatScreen */,
 				D623FB2B2DE980CD009D9307 /* IconWithText */,
+				D623FC312DE9BDA8009D9307 /* ChatMessageView */,
 				D63672732DCB480000D16EB6 /* NavigationBarContainer */,
 				D64C2F512D75A8C200BE9854 /* Logger */,
 				D64C2FA32D7C481A00BE9854 /* AuthNetworkService */,
