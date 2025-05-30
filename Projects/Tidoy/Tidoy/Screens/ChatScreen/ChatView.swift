@@ -7,30 +7,78 @@
 
 import SwiftUI
 
-struct ChatViewNavigationBarModel {
-    let title: String
-    let isVerified: Bool
-    let subTitle: String
-    let imageUrl: String?
-}
-
-extension ChatViewNavigationBarModel {
-    static var mockData = ChatViewNavigationBarModel(
-        title: "Adaline Alexa",
-        isVerified: true,
-        subTitle: "Property Owner",
-        imageUrl: "https://raw.githubusercontent.com/onevcat/Kingfisher-TestImages/master/DemoAppImage/Loading/kingfisher-1.jpg"
-    )
-}
-
 struct ChatView: View {
     let model: ChatViewNavigationBarModel = ChatViewNavigationBarModel.mockData
+    let screenWidth = UIScreen.screenWidth
+    
     var body: some View {
         NavigationBarContainer {
-            Color.background10
+            ZStack {
+                background
+                VStack {
+                    cardView
+                    receivedMessageView
+                    sendMessageView
+                    Spacer()
+                }
+                .padding(.top, .padding16)
+            }
+
         }.withCustomNavigationBar {
             navBarView
         }
+    }
+    
+    private var background: some View {
+        Color.background10
+            .ignoresSafeArea()
+    }
+    
+    private var cardView: some View {
+        DefaultCard(height: 100, width: screenWidth - .padding32, model: DefaultCardModel.sampleData1, style: compactCardStyle)
+    }
+    
+    private var sendMessageView: some View {
+        HStack {
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies? Hi, for this hotel with a king sweet room are there still any vacancies?")
+                    .font(.bodySmallRegular)
+                    .foregroundStyle(Color.neutral10)
+                Text("16.50 · Read")
+                    .font(.body2XSmallRegular)
+                    .foregroundStyle(Color.neutral40)
+            }
+            .padding(10)
+            .frame(width: responsiveWidth(designedWidth: 242, basedOn: 343))
+            .background {
+                CustomRoundedRectangle(cornerRadius: 12, corners: [.topLeft, .topRight, .bottomRight])
+                    .fill(Color.background40)
+            }
+            Spacer()
+        }
+        .padding(.leading, .padding16)
+    }
+    
+    private var receivedMessageView: some View {
+        HStack {
+            Spacer()
+            VStack(alignment: .trailing, spacing: 4) {
+                Text("Hi, for this hotel with a king sweet room are there still any vacancies?")
+                    .font(.bodySmallRegular)
+                    .foregroundStyle(Color.neutral10)
+                Text("16.50 · Read")
+                    .font(.body2XSmallRegular)
+                    .foregroundStyle(Color.neutral40)
+            }
+            .padding(10)
+            .frame(width: responsiveWidth(designedWidth: 242, basedOn: 343))
+            .background {
+                CustomRoundedRectangle(cornerRadius: 12, corners: [.topLeft, .topRight, .bottomLeft])
+                    .fill(Color.infoMain)
+            }
+        }
+        .padding(.trailing, .padding16)
     }
     
     private var avatarView: some View {
@@ -79,6 +127,11 @@ struct ChatView: View {
         .padding(.leading, .padding16)
         .frame(height: 72)
         .background(Color.background10)
+    }
+    
+    private func responsiveWidth(designedWidth: CGFloat, basedOn designTotalWidth: CGFloat) -> CGFloat {
+        let screenWidth = UIScreen.main.bounds.width
+        return (designedWidth / designTotalWidth) * screenWidth
     }
 }
 

@@ -39,7 +39,7 @@ struct MapScreen<VM: MapScreenVMProtocol>: View {
         ScrollView(.horizontal) {
             HStack(spacing: .padding12) {
                 ForEach(viewModel.dataSource) { data in
-                    DefaultCard(height: 172, width: screenWidth - .padding32, model: data)
+                    DefaultCard(height: 172, width: screenWidth - .padding32, model: data, style: fullCardStyle)
                         .onTapGesture {
                             position = .camera(
                                 MapCamera(

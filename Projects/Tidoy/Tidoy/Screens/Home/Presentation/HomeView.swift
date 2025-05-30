@@ -122,7 +122,7 @@ struct HomeView<VM: HomeVMProtocol>: View {
     private var houseDetailSection: some View {
         VStack(spacing: .padding16) {
             ForEach(viewModel.houseListWithDetail) { data in
-                DefaultCard(height: 172, width: screenWidth - .padding16, model: data)
+                DefaultCard(height: 172, width: screenWidth - .padding16, model: data, style: fullCardStyle)
             }
         }
         .padding(.vertical, .padding16)

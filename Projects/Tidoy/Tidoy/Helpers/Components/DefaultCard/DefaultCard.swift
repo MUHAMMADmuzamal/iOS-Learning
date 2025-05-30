@@ -12,11 +12,13 @@ struct DefaultCard: View {
     let width: Double
     
     let model: DefaultCardModel
+    let style: CardStyle
     
     var body: some View {
+        let imageWidthRatio = style.imageAbsoluteWidth / width
         HStack {
             NetworkImage(url: model.image)
-                .frame(width: width * 0.33 )
+                .frame(width: width * imageWidthRatio)
             VStack(alignment: .leading, spacing: 0) {
                 
                 VStack(alignment: .leading, spacing: 12) {
@@ -27,30 +29,31 @@ struct DefaultCard: View {
                         
                         ratingSection
                         
-                        detailSection
+                        if style.showLocationDetail {
+                            detailSection
+                        }
                     }
                     priceSection
                 }
             }
             .padding(.padding12)
         }
-        
+        .frame(width: width, height: height)
         .background {
             RoundedRectangle(cornerRadius: .cornerRadiusS)
                 .stroke(.stroke20, lineWidth: 1)
         }
         .background(Color.background10)
         .clipShape(RoundedRectangle(cornerRadius: .cornerRadiusS))
-        .frame(width: width, height: height)
     }
     
     private var titleSection: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(model.title)
-                .font(.bodyMediumSemiBold)
+                .font(style.titleFont)
                 .foregroundStyle(Color.text100)
             Text(model.subTitle)
-                .font(.body2XSmallRegular)
+                .font(style.subtitleFont)
                 .foregroundStyle(Color.text60)
         }
     }
@@ -59,7 +62,7 @@ struct DefaultCard: View {
         HStack {
             RatingView(rating: 4.8)
             Text("(\(model.reviewsCount) Review)")
-                .font(.body2XSmallRegular)
+                .font(style.ratingFont)
                 .foregroundStyle(Color.text60)
         }
     }
@@ -76,14 +79,16 @@ struct DefaultCard: View {
     private var priceSection: some View {
         HStack(spacing: 0) {
             Text("\(model.priceUnit) \(model.price)")
-                .font(.bodyMediumSemiBold)
+                .font(style.priceFont)
                 .foregroundStyle(Color.text100)
             Text("/\(model.duration)")
-                .font(.body2XSmallRegular)
+                .font(style.durationFont)
                 .foregroundStyle(Color.text60)
             Spacer()
-            Image(systemName: model.isFavorite ? "heart.fill" : "heart")
-                .foregroundStyle(model.isFavorite ? Color.dangerMain : Color.icon60)
+            if style.showFavorite {
+                Image(systemName: model.isFavorite ? "heart.fill" : "heart")
+                    .foregroundStyle(model.isFavorite ? Color.dangerMain : Color.icon60)
+            }
         }
     }
 }
@@ -91,19 +96,11 @@ struct DefaultCard: View {
 #Preview {
     ZStack {
         Color.background10
-        DefaultCard(height: 172, width: 343, model: DefaultCardModel.sampleData)
-    }
-}
-
-struct IconWithText: View {
-    let title: String
-    let IconName: String
-    var body: some View {
-        HStack {
-            Image(IconName)
-            Text(title)
+        VStack {
+            DefaultCard(height: 172, width: 343, model: DefaultCardModel.sampleData, style: fullCardStyle)
+                .padding(.bottom, 100)
+            
+            DefaultCard(height: 100, width: 343, model: DefaultCardModel.sampleData1, style: compactCardStyle)
         }
-        .font(.body2XSmallRegular)
-        .foregroundStyle(Color.text60)
     }
 }

@@ -47,6 +47,24 @@ extension DefaultCardModel {
         rating: 4.8,
         coordinates: .init(latitude: 33.7294, longitude: 73.0379)
     )
+    
+    static let sampleData1 = DefaultCardModel(
+        title: "Villa Family Resort Dago Pakar",
+        subTitle: "Dago Pakar, Bandung",
+        reviewsCount: 21,
+        detail: [
+            .init(image: "bed", title: "4 room"),
+            .init(image: "bath", title: "2 bath"),
+            .init(image: "house", title: "42.0 m²"),
+            ],
+        price: 251,
+        priceUnit: "$",
+        duration: "days",
+        isFavorite: true,
+        image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=M3w3MjIxMDl8MHwxfHNlYXJjaHwzfHxob3VzZXxlbnwwfHx8fDE3NDE5MzY2Njd8MA&ixlib=rb-4.0.3",
+        rating: 4.8,
+        coordinates: .init(latitude: 33.7294, longitude: 73.0379)
+    )
 }
 
 extension DefaultCardModel {

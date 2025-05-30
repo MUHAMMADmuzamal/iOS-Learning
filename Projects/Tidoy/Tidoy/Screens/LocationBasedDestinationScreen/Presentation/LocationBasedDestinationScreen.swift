@@ -57,7 +57,7 @@ struct LocationBasedDestinationScreen: View {
         ScrollView {
             VStack(spacing: .padding16) {
                 ForEach(houseListWithDetail, id: \.id) { item in
-                    DefaultCard(height: 172, width: screenWidth - .padding16, model: item)
+                    DefaultCard(height: 172, width: screenWidth - .padding16, model: item, style: fullCardStyle)
                 }
             }
             .padding(.horizontal, .padding16)
