@@ -17,13 +17,14 @@ struct ChatView: View {
                 background
                 VStack {
                     cardView
-                    receivedMessageView
-                    sendMessageView
+                    ForEach(ChatMessageModel.mockData, id: \.id) { model in
+                        ChatMessageView(model: model, style: model.isSender ? sendMessageStyle : receivedMessageStyle)
+                    }
                     Spacer()
                 }
-                .padding(.top, .padding16)
+                .padding(.padding16)
             }
-
+            
         }.withCustomNavigationBar {
             navBarView
         }
@@ -38,54 +39,12 @@ struct ChatView: View {
         DefaultCard(height: 100, width: screenWidth - .padding32, model: DefaultCardModel.sampleData1, style: compactCardStyle)
     }
     
-    private var sendMessageView: some View {
-        HStack {
-            
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Hi, for this hotel with a king sweet room are there still any vacancies?")
-                    .font(.bodySmallRegular)
-                    .foregroundStyle(Color.text100)
-                Text("16.50")
-                    .font(.body2XSmallRegular)
-                    .foregroundStyle(Color.text90)
-            }
-            .padding(10)
-            .frame(width: responsiveWidth(designedWidth: 242, basedOn: 343))
-            .background(Color.background40)
-            .clipShape(CustomRoundedRectangle(cornerRadius: 12, corners: [.topLeft, .topRight, .bottomRight]))
-            
-            Spacer()
-        }
-        .padding(.leading, .padding16)
-    }
-    
-    private var receivedMessageView: some View {
-        HStack {
-            Spacer()
-            VStack(alignment: .trailing, spacing: 4) {
-                Text("Hi, for this hotel with a king sweet room are there still any vacancies?")
-                    .font(.bodySmallRegular)
-                    .foregroundStyle(Color.neutral10)
-                Text("16.50 · Read")
-                    .font(.body2XSmallRegular)
-                    .foregroundStyle(Color.neutral40)
-            }
-            .padding(10)
-            .frame(width: responsiveWidth(designedWidth: 242, basedOn: 343))
-            .background {
-                CustomRoundedRectangle(cornerRadius: 12, corners: [.topLeft, .topRight, .bottomLeft])
-                    .fill(Color.infoMain)
-            }
-        }
-        .padding(.trailing, .padding16)
-    }
-    
     private var avatarView: some View {
         NetworkImage(url: model.imageUrl ?? ""){
             Image("userAvatar").resizable()
         }
-            .frame(width: 30)
-            .clipShape(Circle())
+        .frame(width: 30)
+        .clipShape(Circle())
     }
     
     private var textView: some View {
@@ -126,11 +85,6 @@ struct ChatView: View {
         .padding(.leading, .padding16)
         .frame(height: 72)
         .background(Color.background10)
-    }
-    
-    private func responsiveWidth(designedWidth: CGFloat, basedOn designTotalWidth: CGFloat) -> CGFloat {
-        let screenWidth = UIScreen.screenWidth
-        return (designedWidth / designTotalWidth) * screenWidth
     }
 }
 
