@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import IQKeyboardManagerSwift
 
 @main
 struct TidoyApp: App {
     let injector = DependenciesHolder.shared.injector()
+    
+    init() {
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.resignOnTouchOutside = true
+    }
     
     var body: some Scene {
         WindowGroup {

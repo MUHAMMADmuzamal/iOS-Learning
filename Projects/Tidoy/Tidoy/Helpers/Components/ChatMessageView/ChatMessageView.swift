@@ -17,7 +17,6 @@ struct ChatMessageView: View {
                 Spacer()
             }
             
-            HStack{
                 VStack(alignment: style.isSender ? .leading : .trailing, spacing: 4) {
                     Text(model.message)
                         .font(style.messageFont)
@@ -26,10 +25,9 @@ struct ChatMessageView: View {
                         .font(style.timeFont)
                         .foregroundStyle(style.messageColor)
                 }
-                Spacer()
-            }
+            
             .padding(10)
-            .frame(width:242.0.responsive(basedOn: 343, current: UIScreen.screenWidth) )
+            .frame(width:242.0.responsive(basedOn: 343, current: UIScreen.screenWidth), alignment: .leading )
             .background(style.backgroundColor)
             .clipShape(CustomRoundedRectangle(
                 cornerRadius: 12,

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ChatView: View {
+    @StateObject private var keyboard = KeyboardObserver()
+    @State var writeMessageTex: String = ""
+    
     let model: ChatViewNavigationBarModel = ChatViewNavigationBarModel.mockData
     let screenWidth = UIScreen.screenWidth
     
@@ -17,10 +20,14 @@ struct ChatView: View {
                 background
                 VStack {
                     cardView
-                    ForEach(ChatMessageModel.mockData, id: \.id) { model in
-                        ChatMessageView(model: model, style: model.isSender ? sendMessageStyle : receivedMessageStyle)
+                    ScrollView(.vertical) {
+                        ForEach(ChatMessageModel.mockData, id: \.id) { model in
+                            ChatMessageView(model: model, style: model.isSender ? sendMessageStyle : receivedMessageStyle)
+                        }
                     }
                     Spacer()
+                    writeMessageView
+                        .padding(.horizontal, -16)
                 }
                 .padding(.padding16)
             }
@@ -45,6 +52,45 @@ struct ChatView: View {
         }
         .frame(width: 30)
         .clipShape(Circle())
+    }
+    
+    private var writeMessageView: some View {
+        VStack {
+            Rectangle().frame(height: 1)
+                .foregroundStyle(.stroke20)
+            HStack (alignment: .center, spacing: 26 ){
+                if !keyboard.isKeyboardVisible {
+                    Button {} label: {
+                        Image(.attachment)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 12, height: 15)
+                    }
+                }
+              
+                
+                MessageTextField(text: $writeMessageTex)
+                if !keyboard.isKeyboardVisible {
+                    Button {} label: {
+                        Image(.camera)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 12, height: 15)
+                    }
+                    Button {} label: {
+                        Image(.mic)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 12, height: 15)
+                    }
+                }
+
+            }
+            .foregroundStyle(.icon90)
+            .padding(.horizontal, 26)
+            .padding(.vertical, 16)
+        }
+        
     }
     
     private var textView: some View {
