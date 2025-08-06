@@ -83,8 +83,17 @@ struct ChatView: View {
                             .scaledToFit()
                             .frame(width: 12, height: 15)
                     }
+                } else {
+                    SendButton(
+                        size: 34,
+                        icon: Image(.send),
+                        iconScale: CGSize(width: 0.45, height: 0.38),
+                        backgroundStyle: .infoMain,
+                        iconStyle: .neutral10
+                    ) {
+                        print("Send tapped!")
+                    }
                 }
-
             }
             .foregroundStyle(.icon90)
             .padding(.horizontal, 26)

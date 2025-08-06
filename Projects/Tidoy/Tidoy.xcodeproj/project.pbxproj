@@ -41,6 +41,7 @@
 		D65116EB2D758B6A00DBC242 /* Publisher + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65116EA2D758B6A00DBC242 /* Publisher + Extension.swift */; };
 		D662F40F2DEEE7BD00C2C89B /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D662F40E2DEEE7BD00C2C89B /* MessageTextField.swift */; };
 		D662F5172DF01A7600C2C89B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D662F5162DF01A7600C2C89B /* IQKeyboardManagerSwift */; };
+		D662F6DB2DF8100500C2C89B /* SendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D662F6DA2DF8100400C2C89B /* SendButton.swift */; };
 		D66FD4E62C1C67B2007D9F52 /* TidoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */; };
 		D66FD4EA2C1C67B7007D9F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */; };
 		D66FD4ED2C1C67B7007D9F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */; };
@@ -127,6 +128,7 @@
 		D65116E82D7578FC00DBC242 /* NetworkMonitoringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitoringService.swift; sourceTree = "<group>"; };
 		D65116EA2D758B6A00DBC242 /* Publisher + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Extension.swift"; sourceTree = "<group>"; };
 		D662F40E2DEEE7BD00C2C89B /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
+		D662F6DA2DF8100400C2C89B /* SendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendButton.swift; sourceTree = "<group>"; };
 		D66FD4E52C1C67B2007D9F52 /* TidoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidoyApp.swift; sourceTree = "<group>"; };
 		D66FD4E92C1C67B7007D9F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66FD4EC2C1C67B7007D9F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				D61A8F192C4547FB00F55756 /* SecondaryButton.swift */,
 				D61A8F1B2C45520D00F55756 /* TertiaryButton.swift */,
 				D6C73C102DBB95EA0087118E /* BackButton.swift */,
+				D662F6DA2DF8100400C2C89B /* SendButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				D6487A0C2CA8339200AB9376 /* SearchField.swift in Sources */,
 				D69987B82C6D052000A96E9A /* PhoneNumberTextField.swift in Sources */,
 				D68A53532C3FC98500F69181 /* Font + Extension.swift in Sources */,
+				D662F6DB2DF8100500C2C89B /* SendButton.swift in Sources */,
 				D61A8F0D2C415C5000F55756 /* SplashScreen.swift in Sources */,
 				D65116C52D733E5900DBC242 /* Decodeable + Extension.swift in Sources */,
 				D64C2F602D76DF9700BE9854 /* URLRequest + Extension.swift in Sources */,
