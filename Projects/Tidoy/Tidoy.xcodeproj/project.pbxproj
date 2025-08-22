@@ -208,6 +208,7 @@
 		D69AEE2F2D81857F005DD964 /* Builders */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Builders; sourceTree = "<group>"; };
 		D6A153C82D8A88F10035F4EB /* ModalAlert */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ModalAlert; sourceTree = "<group>"; };
 		D6A153D62D8BDAC70035F4EB /* RatingView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = RatingView; sourceTree = "<group>"; };
+		D6A7366F2E467B4500EB3A7C /* Responsive */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Responsive; sourceTree = "<group>"; };
 		D6A8D9622DE590F10098B082 /* Presentation */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presentation; sourceTree = "<group>"; };
 		D6BFCEBE2D95509800BB7FA3 /* DefaultCard */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DefaultCard; sourceTree = "<group>"; };
 		D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = HomeSelectionBar; sourceTree = "<group>"; };
@@ -531,6 +532,7 @@
 		D68A53502C3FC94100F69181 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D6A7366F2E467B4500EB3A7C /* Responsive */,
 				D6C73ABC2DBA424F0087118E /* PreferenceKeys */,
 				D61A8F0E2C417AA300F55756 /* Components */,
 				D68A53512C3FC96A00F69181 /* Extensions */,
@@ -681,6 +683,7 @@
 				D69AEE2F2D81857F005DD964 /* Builders */,
 				D6A153C82D8A88F10035F4EB /* ModalAlert */,
 				D6A153D62D8BDAC70035F4EB /* RatingView */,
+				D6A7366F2E467B4500EB3A7C /* Responsive */,
 				D6A8D9622DE590F10098B082 /* Presentation */,
 				D6BFCEBE2D95509800BB7FA3 /* DefaultCard */,
 				D6BFCEC32D9552B300BB7FA3 /* HomeSelectionBar */,
