@@ -9,7 +9,7 @@ import Foundation
 
 struct HomeViewModelBuilder {
     static func build() -> HomeViewModel {
-        let repository = InMemoryTaskRepository()
+        let repository = InMemoryTaskRepository.shared
         
         let deleteTask = DeleteTaskUseCase(repository: repository)
         let getAllTasks = GetAllTasksUseCase(repository: repository)
@@ -18,7 +18,7 @@ struct HomeViewModelBuilder {
         return HomeViewModel(
             deleteTask: deleteTask,
             getAllTasks: getAllTasks,
-            toggleCompletion: toggleCompletion,
+            toggleCompletion: toggleCompletion, router: Router.shared,
         )
     }
 }

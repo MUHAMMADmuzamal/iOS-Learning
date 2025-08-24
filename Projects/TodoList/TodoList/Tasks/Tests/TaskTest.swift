@@ -14,7 +14,7 @@ struct TaskTest {
 
     @Test func testAddTaskUseCase() {
         let model = TaskModel(taskDescription: "Test", isCompleted: false, priority: .low)
-        let repository = InMemoryTaskRepository()
+        let repository = MockInMemoryTaskRepository()
         let addTaskUseCase = AddTaskUseCase(repository: repository)
         
         addTaskUseCase.execute(model)
@@ -24,7 +24,7 @@ struct TaskTest {
     
     @Test func testGetTaskByIdUseCase() {
         let model = TaskModel(taskDescription: "Test", isCompleted: false, priority: .low)
-        let repository = InMemoryTaskRepository()
+        let repository = MockInMemoryTaskRepository()
         let addTaskUseCase = AddTaskUseCase(repository: repository)
         let getTaskByIDUseCase = GetTaskByIdUseCase(repository: repository)
         
@@ -36,7 +36,7 @@ struct TaskTest {
     
     @Test func testGetAllTaskUseCase() {
         let model = TaskModel(taskDescription: "Test", isCompleted: false, priority: .low)
-        let repository = InMemoryTaskRepository()
+        let repository = MockInMemoryTaskRepository()
         let addTaskUseCase = AddTaskUseCase(repository: repository)
         addTaskUseCase.execute(model)
         addTaskUseCase.execute(model)
@@ -47,7 +47,7 @@ struct TaskTest {
     
     @Test func testEditTaskUseCase() {
         let model = TaskModel(taskDescription: "Test", isCompleted: false, priority: .low)
-        let repository = InMemoryTaskRepository()
+        let repository = MockInMemoryTaskRepository()
         let addTaskUseCase = AddTaskUseCase(repository: repository)
         let editTaskUseCase = EditTaskUseCase(repository: repository)
         let getTaskByIDUseCase = GetTaskByIdUseCase(repository: repository)

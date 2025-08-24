@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct CreateTask: View {
-    @StateObject private var viewModel = CreateTaskVM(
-        addTaskUseCase: AddTaskUseCase(repository: InMemoryTaskRepository())
-    )
+    @StateObject private var viewModel: CreateTaskVM
+    
+    init(editTaskId: UUID? = nil) {
+        self._viewModel = StateObject(wrappedValue: CreateTaskVMBuilder.build(editTaskId))
+    }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 
                 // Title
-                Text("Create a New Task")
+                Text("\(viewModel.editTask ? "Edit a" : "Create a New") Task")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundStyle(.primary)
@@ -57,9 +59,13 @@ struct CreateTask: View {
                 
                 // Add Button
                 Button {
-                    viewModel.addTask()
+                    if viewModel.editTask {
+                        viewModel.updateTask()
+                    }else {
+                        viewModel.addTask()
+                    }
                 } label: {
-                    Text("Add Task")
+                    Text("\(viewModel.editTask  ? "Edit" : "Add") Task")
                         .font(.headline)
                         .foregroundStyle(.white)
                         .padding(.vertical, 14)

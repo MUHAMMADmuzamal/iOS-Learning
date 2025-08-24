@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct TodoListApp: App {
+    @StateObject private var router = Router.shared
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack(path: $router.path) {
+                HomeView()
+                    .navigationDestination(for: RouterPath.self) { destination in
+                        switch destination {
+                        case .createTask:
+                            CreateTask()
+                        case .editTask(let id):
+                            CreateTask(editTaskId: id)
+                        case .home:
+                            HomeView()
+                        }
+                    }
+            }
         }
     }
 }

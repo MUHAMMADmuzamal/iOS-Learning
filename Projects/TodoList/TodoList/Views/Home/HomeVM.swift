@@ -10,6 +10,7 @@ import Foundation
 final class HomeViewModel: ObservableObject {
     @Published private(set) var tasks: [TaskModel] = []
     
+    private let router: Router
     private let deleteTask: DeleteTaskUseCase
     private let getAllTasks: GetAllTasksUseCase
     private let toggleCompletion: ToggleTaskCompletionUseCase
@@ -18,10 +19,12 @@ final class HomeViewModel: ObservableObject {
          deleteTask: DeleteTaskUseCase,
          getAllTasks: GetAllTasksUseCase,
          toggleCompletion: ToggleTaskCompletionUseCase,
+         router: Router
      ) {
          self.deleteTask = deleteTask
          self.getAllTasks = getAllTasks
          self.toggleCompletion = toggleCompletion
+         self.router = router
          loadTasks()
      }
     
@@ -38,6 +41,14 @@ final class HomeViewModel: ObservableObject {
     func toggleCompletionStatus(_ id: UUID) {
         toggleCompletion.execute(id)
         loadTasks()
+    }
+    
+    func navigateToAddTask() {
+        router.navigate(to: .createTask)
+    }
+    
+    func navigateToEditTask(with id: UUID) {
+        router.navigate(to: .editTask(id))
     }
 }
 
