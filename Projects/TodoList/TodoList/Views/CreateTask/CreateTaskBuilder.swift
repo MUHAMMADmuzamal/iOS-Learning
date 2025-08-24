@@ -19,12 +19,11 @@ final class CreateTaskVMFactory {
     
     static func makeEditTaskVM(_ editTaskId: UUID) -> EditTaskVM {
         let repository = InMemoryTaskRepository.shared
-        let addTaskUseCase = AddTaskUseCase(repository: repository)
         let editTaskUseCase = EditTaskUseCase(repository: repository)
         let getTaskByIdUseCase = GetTaskByIdUseCase(repository: repository)
         let router = Router.shared
         
-        var task = getTaskByIdUseCase.execute(editTaskId)  ?? TaskModel(taskDescription: "", isCompleted: false, priority: .low)
+        let task = getTaskByIdUseCase.execute(editTaskId)  ?? TaskModel(taskDescription: "", isCompleted: false, priority: .low)
         
         let vm = EditTaskVM(existingTask: task, editTaskUseCase: editTaskUseCase, router: router)
         return vm
