@@ -17,9 +17,9 @@ struct TodoListApp: App {
                     .navigationDestination(for: RouterPath.self) { destination in
                         switch destination {
                         case .createTask:
-                            CreateTask()
+                            CreateTask(viewModel: CreateTaskVMFactory.makeAddTaskVM())
                         case .editTask(let id):
-                            CreateTask(editTaskId: id)
+                            CreateTask(viewModel: CreateTaskVMFactory.makeEditTaskVM(id))
                         case .home:
                             HomeView()
                         }

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct CreateTask: View {
-    @StateObject private var viewModel: CreateTaskVM
+struct CreateTask<VM: TaskFormVM>: View {
+    @StateObject private var viewModel: VM
     
-    init(editTaskId: UUID? = nil) {
-        self._viewModel = StateObject(wrappedValue: CreateTaskVMBuilder.build(editTaskId))
+    init(viewModel: VM) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -19,7 +19,7 @@ struct CreateTask: View {
             VStack(alignment: .leading, spacing: 24) {
                 
                 // Title
-                Text("\(viewModel.editTask ? "Edit a" : "Create a New") Task")
+                Text("\(viewModel.buttonTitle)")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundStyle(.primary)
@@ -59,13 +59,10 @@ struct CreateTask: View {
                 
                 // Add Button
                 Button {
-                    if viewModel.editTask {
-                        viewModel.updateTask()
-                    }else {
-                        viewModel.addTask()
-                    }
+                    viewModel.saveTask()
+                    
                 } label: {
-                    Text("\(viewModel.editTask  ? "Edit" : "Add") Task")
+                    Text("\(viewModel.buttonTitle)")
                         .font(.headline)
                         .foregroundStyle(.white)
                         .padding(.vertical, 14)
@@ -89,5 +86,5 @@ struct CreateTask: View {
 }
 
 #Preview {
-    CreateTask()
+    CreateTask(viewModel: CreateTaskVMFactory.makeAddTaskVM())
 }

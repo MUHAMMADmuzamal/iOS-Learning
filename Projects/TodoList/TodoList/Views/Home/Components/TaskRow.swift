@@ -25,7 +25,7 @@ struct TaskRow: View {
             
             // Priority Pill
             HStack {
-                Text(model.priority.rawValue.capitalized)
+                Text(model.priority.title)
                     .font(.caption2)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
@@ -50,6 +50,7 @@ struct TaskRow: View {
                         .frame(width: 22, height: 22)
                         .foregroundStyle(model.isCompleted ? .green : .gray)
                 }
+                .buttonStyle(.plain)
                 
                 // Description
                 Text(model.taskDescription)
@@ -74,13 +75,13 @@ struct TaskRow: View {
                             Circle().fill(Color.blue.opacity(0.1))
                         )
                 }
+                .buttonStyle(.plain)
             }
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color(.systemBackground))
-                .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 3)
         )
     }
 }

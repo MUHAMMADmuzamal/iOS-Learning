@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-enum Priority: String {
-    case low, medium, high
+enum Priority: Int {
+    case low = 0, medium, high
 }
 
 extension Priority {
@@ -17,6 +17,14 @@ extension Priority {
         case .low: return .green
         case .medium: return .yellow
         case .high: return .red
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .low: return "Low"
+        case .medium: return "Medium"
+        case .high: return "High"
         }
     }
 }

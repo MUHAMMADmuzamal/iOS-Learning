@@ -7,44 +7,49 @@
 
 import Foundation
 
-class CreateTaskVM: ObservableObject {
-    
-    @Published var taskModel: TaskModel = TaskModel(taskDescription: "", isCompleted: false, priority: .low)
-    @Published var editTask: Bool = false
+protocol TaskFormVM: ObservableObject {
+    var taskModel: TaskModel { get set }
+    var buttonTitle: String { get }
+    func saveTask()
+}
+
+final class CreateTaskVM: TaskFormVM {
+    @Published var taskModel = TaskModel(taskDescription: "", isCompleted: false, priority: .low)
+    var buttonTitle: String { "Add Task" }
     
     private var addTaskUseCase: AddTaskUseCase
-    private var editTaskUseCase: EditTaskUseCase
-    private var getTaskByIdUseCase: GetTaskByIdUseCase
-    private var router: Router
+    private var router: RouterProtocol
     
     init(addTaskUseCase: AddTaskUseCase,
-         editTaskUseCase: EditTaskUseCase,
-         getTaskByIdUseCase: GetTaskByIdUseCase,
-         router: Router) {
-        
+         router: RouterProtocol) {
         self.addTaskUseCase = addTaskUseCase
-        self.editTaskUseCase = editTaskUseCase
-        self.getTaskByIdUseCase = getTaskByIdUseCase
         self.router = router
     }
     
-    func addTask() {
+    func saveTask() {
         self.addTaskUseCase.execute(taskModel)
         router.navigateBack()
     }
+}
+
+final class EditTaskVM: TaskFormVM {
+    @Published var taskModel: TaskModel
+    var buttonTitle: String { "Edit Task" }
     
-    func updateTask() {
-        self.editTaskUseCase.execute(taskModel.id, taskModel)
-        router.navigateBack()
+    private var editTaskUseCase: EditTaskUseCase
+    private var router: RouterProtocol
+    
+    init(existingTask: TaskModel,
+         editTaskUseCase: EditTaskUseCase,
+         router: RouterProtocol) {
+        
+        self.taskModel = existingTask
+        self.editTaskUseCase = editTaskUseCase
+        self.router = router
     }
     
-    func loadTask(id: UUID?) {
-        guard let id = id else { return }
-        editTask = true
-        let task  = getTaskByIdUseCase.execute(id)
-        
-        if let task = task {
-            self.taskModel = task
-        }
+    func saveTask() {
+        self.editTaskUseCase.execute(taskModel.id, taskModel)
+        router.navigateBack()
     }
 }

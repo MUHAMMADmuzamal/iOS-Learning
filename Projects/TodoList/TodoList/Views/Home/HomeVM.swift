@@ -33,8 +33,10 @@ final class HomeViewModel: ObservableObject {
     }
     
     
-    func delete(_ id: UUID) {
-        deleteTask.execute(id)
+    func deleteTask(_ indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let task = tasks[index]
+        deleteTask.execute(task.id)
         loadTasks()
     }
     

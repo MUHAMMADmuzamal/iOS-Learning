@@ -17,7 +17,20 @@ struct AddTaskUseCase {
 struct GetAllTasksUseCase {
     let repository: TaskRepository
     func execute() -> [TaskModel] {
-        repository.getAll()
+        let allTasks = repository.getAll()
+        var completedTasks: [TaskModel] = []
+        var notCompletedTasks: [TaskModel] = []
+        
+        for task in allTasks {
+            if task.isCompleted {
+                completedTasks.append(task)
+            }else {
+                notCompletedTasks.append(task)
+            }
+        }
+        completedTasks.sort(by: {$0.priority.rawValue > $1.priority.rawValue})
+        notCompletedTasks.sort(by: {$0.priority.rawValue > $1.priority.rawValue})
+        return notCompletedTasks + completedTasks
     }
 }
 

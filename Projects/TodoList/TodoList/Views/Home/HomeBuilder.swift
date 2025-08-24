@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct HomeViewModelBuilder {
-    static func build() -> HomeViewModel {
+struct HomeViewModelFactory {
+    static func make() -> HomeViewModel {
         let repository = InMemoryTaskRepository.shared
         
         let deleteTask = DeleteTaskUseCase(repository: repository)

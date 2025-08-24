@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var vm: HomeViewModel = HomeViewModelBuilder.build()
+    @StateObject private var vm: HomeViewModel = HomeViewModelFactory.make()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -50,23 +50,27 @@ struct HomeView: View {
             .padding(.top, 16)
             
             // Task List
-            ScrollView {
-                LazyVStack {
-                    ForEach(vm.tasks) { task in
-                        TaskRow(
-                            model: task,
-                            onTapOfCompleteButton: { id in
-                                vm.toggleCompletionStatus(id)
-                            },
-                            onTapOfEditButton: { id in
-                                vm.navigateToEditTask(with: id)
-                            }
-                        )
-                        .padding(.vertical, 4)
-                    }
+            List {
+                ForEach(vm.tasks) { task in
+                    TaskRow(
+                        model: task,
+                        onTapOfCompleteButton: { id in
+                            vm.toggleCompletionStatus(id)
+                        },
+                        onTapOfEditButton: { id in
+                            vm.navigateToEditTask(with: id)
+                        }
+                    )
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .padding(.vertical, 4)
+                    .background(Color(.systemGroupedBackground))
                 }
-
+                .onDelete(perform: vm.deleteTask)
             }
+            .listStyle(.plain)
+            .background(Color(.systemGroupedBackground))
+            .padding()
         }
         .background(Color(.systemGroupedBackground))
         .onAppear(perform: vm.loadTasks)
