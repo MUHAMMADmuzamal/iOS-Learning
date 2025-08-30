@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 //MARK: - Data source and View Delegate
@@ -166,5 +167,30 @@ extension HomeViewController{
         
         
         return section
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        Container().edgesIgnoringSafeArea(.all)
+    }
+    
+    struct Container: UIViewControllerRepresentable {
+        
+        func makeUIViewController(context: Context) -> UIViewController {
+            UINavigationController(rootViewController: HomeViewController())
+        }
+        
+        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+            
+        }
+        
+        typealias UIViewControllerType = UIViewController
+    }
+}
+struct ContentView: View {
+    var body: some View {
+        Text ("Hello, World!")
     }
 }
