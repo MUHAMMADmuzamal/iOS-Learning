@@ -1,0 +1,12 @@
+//
+//  Tidoy.debug.xcconfig
+//  Tidoy
+//
+//  Created by Codes Orbit on 14/06/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_BUNDLE_IDENTIFIER = com.codesOrbit.Tidoy.debug
+PRODUCT_NAME = Tidoy.debug

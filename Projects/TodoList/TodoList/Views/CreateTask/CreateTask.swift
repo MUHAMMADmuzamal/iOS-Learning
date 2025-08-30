@@ -1,0 +1,90 @@
+//
+//  CreateTask.swift
+//  TodoList
+//
+//  Created by Muhammad Muzamal on 19/08/2025.
+//
+
+import SwiftUI
+
+struct CreateTask<VM: TaskFormVM>: View {
+    @StateObject private var viewModel: VM
+    
+    init(viewModel: VM) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                
+                // Title
+                Text("\(viewModel.buttonTitle)")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.primary)
+                
+                // Description
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Task Description")
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
+                    
+                    TextEditor(text: $viewModel.taskModel.taskDescription)
+                        .padding()
+                        .frame(height: 180)
+                        .background(
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color(.systemGray6))
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                        )
+                }
+                
+                // Priority Picker
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Priority")
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
+                    
+                    Picker("Select Priority", selection: $viewModel.taskModel.priority) {
+                        Text("Low").tag(Priority.low)
+                        Text("Medium").tag(Priority.medium)
+                        Text("High").tag(Priority.high)
+                    }
+                    .pickerStyle(.segmented)
+                }
+                
+                // Add Button
+                Button {
+                    viewModel.saveTask()
+                    
+                } label: {
+                    Text("\(viewModel.buttonTitle)")
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .padding(.vertical, 14)
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            LinearGradient(
+                                colors: [Color.blue, Color.purple],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                        .shadow(color: .black.opacity(0.15), radius: 6, x: 0, y: 4)
+                }
+                .padding(.top, 10)
+            }
+            .padding()
+        }
+        .background(Color(.systemGroupedBackground))
+    }
+}
+
+#Preview {
+    CreateTask(viewModel: CreateTaskVMFactory.makeAddTaskVM())
+}
