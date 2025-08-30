@@ -70,6 +70,21 @@ class HomeCoordinator: ObservableObject {
         switch page {
         case .notifications:
             Text("Notifications")
+        case .home:
+            VStack {
+                Button("Notification"){
+                    self.push(.notifications)
+                }.padding()
+                
+                Button("Sheet"){
+                    self.present(sheet: .addExpense)
+                }.padding()
+                
+                Button("Full Screen Cover"){
+                    self.present(fullScreenCover:.calendar)
+                }.padding()
+                
+            }
         }
     }
     
@@ -91,7 +106,7 @@ class HomeCoordinator: ObservableObject {
 }
 
 enum HomePage: String, Identifiable {
-    case notifications
+    case notifications, home
     
     var id: String {
         self.rawValue

@@ -11,20 +11,7 @@ struct Home: View {
     @StateObject var coordinator = HomeCoordinator()
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            VStack {
-                Button("Notification"){
-                    coordinator.push(.notifications)
-                }.padding()
-                
-                Button("Sheet"){
-                    coordinator.present(sheet: .addExpense)
-                }.padding()
-                
-                Button("Full Screen Cover"){
-                    coordinator.present(fullScreenCover:.calendar)
-                }.padding()
-                
-            }
+            coordinator.build(page: .home)
             .navigationTitle("Home")
             .navigationDestination(for: HomePage.self) { page in
                 coordinator.build(page: page)
