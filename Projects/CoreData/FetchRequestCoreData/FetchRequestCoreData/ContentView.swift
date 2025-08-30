@@ -16,7 +16,7 @@ struct ContentView: View {
                     NSSortDescriptor(keyPath: \FruitEntity.name, ascending: true)
     ])
     var fruits: FetchedResults<FruitEntity>
-    
+    let combine = CombineTest()
     @State private var newFruitName: String = ""
     
     var body: some View {
@@ -52,6 +52,9 @@ struct ContentView: View {
            
             }
             .padding(.horizontal, 20)
+        }
+        .onAppear {
+            combine.run()
         }
     }
 
