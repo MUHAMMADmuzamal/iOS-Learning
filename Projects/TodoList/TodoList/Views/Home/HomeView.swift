@@ -9,12 +9,15 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var vm: HomeViewModel = HomeViewModelFactory.make()
-    
+             @State private var text = ""
+             @State private var bold = false
+             @State private var italic = false
+             @State private var fontSize = 12.0
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             
             // Header with Title + Add Button
-            HStack {
+
                 VStack(alignment: .leading, spacing: 4) {
                     Text("My Tasks")
                         .font(.largeTitle)
@@ -25,27 +28,6 @@ struct HomeView: View {
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
-                
-                Spacer()
-                
-                Button {
-                    vm.navigateToAddTask()
-                } label: {
-                    Image(systemName: "plus")
-                        .font(.title2)
-                        .foregroundStyle(.white)
-                        .padding(10)
-                        .background(
-                            Circle()
-                                .fill(LinearGradient(
-                                    colors: [Color.blue, Color.purple],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                ))
-                        )
-                        .shadow(color: .black.opacity(0.15), radius: 5, x: 0, y: 3)
-                }
-            }
             .padding(.horizontal)
             .padding(.top, 16)
             
@@ -74,6 +56,28 @@ struct HomeView: View {
         }
         .background(Color(.systemGroupedBackground))
         .onAppear(perform: vm.loadTasks)
+        .toolbar {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button {
+                    vm.navigateToAddTask()
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.title2)
+                        .foregroundStyle(.white)
+                        .padding(10)
+                        .background(
+                            Circle()
+                                .fill(LinearGradient(
+                                    colors: [Color.blue, Color.purple],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ))
+                        )
+                        .shadow(color: .black.opacity(0.15), radius: 5, x: 0, y: 3)
+                }
+
+            }
+        }
     }
 }
 
