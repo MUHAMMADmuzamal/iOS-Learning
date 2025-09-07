@@ -15,13 +15,8 @@ struct HomeView: View {
     }
     
     var body: some View {
-//        NavigationStack(path: $vm.coordinator.path) {
             VStack {
                 Text("Home")
-                
-                Button("Go to Wallet") {
-                    vm.navigateToWallet()
-                }
                 
                 Button("Push multiple pages") {
                     vm.pushMultiplePages()
@@ -34,20 +29,10 @@ struct HomeView: View {
                 Button("Full Screen") {
                     vm.fullScreenCover()
                 }
-//            }
-//            .navigationDestination(for: HomeRoute.self) { route in
-//                HomeRouter.view(for: route)
-//            }
-//            .sheet(item: $vm.coordinator.sheet) { route in
-//                HomeRouter.sheet(for: route)
-//            }
-//            .fullScreenCover(item: $vm.coordinator.fullScreenCover) { route in
-//                HomeRouter.fullScreenCover(for: route)
-//            }
         }
     }
 }
 
 #Preview {
-    HomeView(vm: HomeViewModel(coordinator: HomeCoordinator()))
+    HomeView(vm: HomeViewModel(coordinator: HomeCoordinator(), appCoordinator: AppCoordinator()))
 }

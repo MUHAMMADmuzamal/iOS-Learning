@@ -53,13 +53,7 @@ class Coordinator<R: Hashable> : ObservableObject {
     }
 }
 
-enum HomeRoute: String, Identifiable {
-    case pages, test
-    
-    var id: String {
-        self.rawValue
-    }
-}
+
 
 enum StatisticsRoute: String, Identifiable {
     case pages, test

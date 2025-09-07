@@ -10,16 +10,13 @@ import Foundation
 final class HomeViewModel: ObservableObject {
     
     var coordinator: HomeCoordinator
+    var appCoordinator: AppCoordinator
     
-    init(coordinator: HomeCoordinator) {
+    init(coordinator: HomeCoordinator,
+         appCoordinator: AppCoordinator) {
         self.coordinator = coordinator
-    }
-    
-    
-    func navigateToWallet() {
-//        coordinator.pushOnWalletTab([.pages, .test])
-    }
-    
+        self.appCoordinator = appCoordinator
+    }    
     
     func pushMultiplePages() {
         coordinator.push([.pages, .pages, .pages, .test])
