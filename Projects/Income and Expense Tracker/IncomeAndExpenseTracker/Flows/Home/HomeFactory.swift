@@ -8,22 +8,8 @@
 import SwiftUI
 
 final class HomeFactory {
-    static func make(coordinator: AppCoordinator) -> some View {
-        VStack {
-            Text("Home")
-            Button("Go to wallet") {
-                coordinator.pushOnWalletTab([.pages, .test])
-            }
-            
-            Button("Sheet") {
-                coordinator.homeCoordinator.present(sheet: .pages)
-            }
-            
-            Button("Full Scren") {
-                coordinator.homeCoordinator.present(fullScreenCover: .pages)
-            }
-        }
-
+    static func make(coordinator: HomeCoordinator) -> some View {
+        HomeView(vm: HomeViewModel(coordinator: coordinator))
     }
 }
 
