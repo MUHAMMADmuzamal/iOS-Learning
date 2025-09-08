@@ -6,21 +6,34 @@
 //
 
 import SwiftUI
+import Swinject
 
-struct ContentView: View {
-    @StateObject var appCoordinator = AppCoordinator()
-    @StateObject var homeCoordinator = HomeCoordinator()
-    @StateObject var walletCoordinator = WalletCoordinator()
-    @StateObject var statisticsCoordinator = StatisticsCoordinator()
-    @StateObject var profileCoordinator = ProfileCoordinator()
+struct ContentView: View, InjectorProtocol {
+    internal var injector: Container
+    
+    @ObservedObject var appCoordinator: AppCoordinator
+    @ObservedObject var homeCoordinator: HomeCoordinator
+    @ObservedObject var walletCoordinator: WalletCoordinator
+    @ObservedObject var statisticsCoordinator: StatisticsCoordinator
+    @ObservedObject var profileCoordinator: ProfileCoordinator
+    
+    init(injector: Container) {
+        self.injector = injector
+        self.appCoordinator = injector.resolve(AppCoordinator.self)!
+        self.homeCoordinator = injector.resolve(HomeCoordinator.self)!
+        self.walletCoordinator = injector.resolve(WalletCoordinator.self)!
+        self.statisticsCoordinator = injector.resolve(StatisticsCoordinator.self)!
+        self.profileCoordinator = injector.resolve(ProfileCoordinator.self)!
+    }
+    
+
 
     var body: some View {
         TabView(selection: $appCoordinator.selectedTab) {
             
             Tab("Home", systemImage: "house.fill", value: .home) {
                 NavigationStack(path: $homeCoordinator.path) {
-                    HomeFactory.make(coordinator: homeCoordinator,
-                                     appCoordinator: appCoordinator)
+                    HomeFactory.make(injector: injector)
                         .navigationDestination(for: HomeRoute.self,
                                                destination: HomeRouter.view)
                         .sheet(item: $homeCoordinator.sheet,
@@ -55,5 +68,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    ContentView(injector: DependenciesHolder.shared.injector())
 }

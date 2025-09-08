@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D6F9D6E92E6DE1EF00B50DAD /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D6F9D6E82E6DE1EF00B50DAD /* Swinject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D695DFB52E6333AE00A53926 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F9D6E92E6DE1EF00B50DAD /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,7 @@
 			);
 			name = IncomeAndExpenseTracker;
 			packageProductDependencies = (
+				D6F9D6E82E6DE1EF00B50DAD /* Swinject */,
 			);
 			productName = "Income and Expense Tracker";
 			productReference = D695DF922E631DCB00A53926 /* IncomeAndExpenseTracker.app */;
@@ -146,6 +152,9 @@
 			);
 			mainGroup = D695DF892E631DCB00A53926;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D6F9D6E72E6DE1EF00B50DAD /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D695DF932E631DCB00A53926 /* Products */;
 			projectDirPath = "";
@@ -444,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6F9D6E72E6DE1EF00B50DAD /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6F9D6E82E6DE1EF00B50DAD /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6F9D6E72E6DE1EF00B50DAD /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D695DF8A2E631DCB00A53926 /* Project object */;
 }

@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Income_and_Expense_TrackerApp: App {
+    let injector = DependenciesHolder.shared.injector()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(injector: injector)
         }
     }
 }

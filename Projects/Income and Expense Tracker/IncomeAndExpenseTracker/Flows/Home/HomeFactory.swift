@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import Swinject
 
 final class HomeFactory {
-    static func make(coordinator: HomeCoordinator, appCoordinator: AppCoordinator) -> some View {
-        HomeView(vm: HomeViewModel(coordinator: coordinator, appCoordinator: appCoordinator))
+    static func make(injector: Container) -> some View {
+        let coordinator = injector.resolve(HomeCoordinator.self)!
+        let appCoordinator = injector.resolve(AppCoordinator.self)!
+        return HomeView(vm: HomeViewModel(coordinator: coordinator, appCoordinator: appCoordinator))
     }
 }

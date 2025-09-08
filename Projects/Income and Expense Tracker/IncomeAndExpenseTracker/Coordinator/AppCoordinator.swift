@@ -11,7 +11,7 @@ enum Tabs {
     case home, statistics, wallet, profile
 }
 
-class AppCoordinator: ObservableObject {
+final class AppCoordinator: ObservableObject {
     
     @Published var selectedTab: Tabs = .home
     

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class Coordinator<R: Hashable> : ObservableObject {
+final class Coordinator<R: Hashable> : ObservableObject {
 
     @Published var path: [R] = []
     @Published var sheet: R?
