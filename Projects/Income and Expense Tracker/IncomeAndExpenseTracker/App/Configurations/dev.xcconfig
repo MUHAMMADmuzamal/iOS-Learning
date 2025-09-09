@@ -1,0 +1,11 @@
+//
+//  dev.xcconfig
+//  IncomeAndExpenseTracker
+//
+//  Created by Muhammad Muzamal on 08/09/2025.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+APP_NAME = Income and Expense Tracker Dev
+PRODUCT_BUNDLE_IDENTIFIER = "com.app.codesorbit.Income-and-Expense-Tracker.dev"

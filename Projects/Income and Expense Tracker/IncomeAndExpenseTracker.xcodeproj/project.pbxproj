@@ -25,9 +25,22 @@
 		D695DFB12E6333AE00A53926 /* IncomeAndExpenseTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IncomeAndExpenseTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D6EBF7C52E70911B00A03AE9 /* Exceptions for "IncomeAndExpenseTracker" folder in "IncomeAndExpenseTracker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D695DF912E631DCB00A53926 /* IncomeAndExpenseTracker */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D695DF942E631DCB00A53926 /* IncomeAndExpenseTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D6EBF7C52E70911B00A03AE9 /* Exceptions for "IncomeAndExpenseTracker" folder in "IncomeAndExpenseTracker" target */,
+			);
 			path = IncomeAndExpenseTracker;
 			sourceTree = "<group>";
 		};
@@ -211,6 +224,8 @@
 /* Begin XCBuildConfiguration section */
 		D695DF9B2E631DCE00A53926 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D695DF942E631DCB00A53926 /* IncomeAndExpenseTracker */;
+			baseConfigurationReferenceRelativePath = App/Configurations/dev.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -275,6 +290,8 @@
 		};
 		D695DF9C2E631DCE00A53926 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D695DF942E631DCB00A53926 /* IncomeAndExpenseTracker */;
+			baseConfigurationReferenceRelativePath = App/Configurations/release.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -332,6 +349,8 @@
 		};
 		D695DF9E2E631DCE00A53926 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D695DF942E631DCB00A53926 /* IncomeAndExpenseTracker */;
+			baseConfigurationReferenceRelativePath = App/Configurations/dev.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,9 +359,12 @@
 				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IncomeAndExpenseTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Income and Expense Tracker Dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -350,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.app.codesorbit.Income-and-Expense-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "--BUNDLE-IDENTIFIER-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,6 +382,8 @@
 		};
 		D695DF9F2E631DCE00A53926 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D695DF942E631DCB00A53926 /* IncomeAndExpenseTracker */;
+			baseConfigurationReferenceRelativePath = App/Configurations/release.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -368,9 +392,12 @@
 				DEVELOPMENT_TEAM = YBC6QZE5G7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IncomeAndExpenseTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Income and Expense Tracker Dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -378,7 +405,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.app.codesorbit.Income-and-Expense-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "--BUNDLE-IDENTIFIER-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -388,6 +415,8 @@
 		};
 		D695DFB82E6333AE00A53926 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D695DF942E631DCB00A53926 /* IncomeAndExpenseTracker */;
+			baseConfigurationReferenceRelativePath = App/Configurations/dev.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -406,6 +435,8 @@
 		};
 		D695DFB92E6333AE00A53926 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D695DF942E631DCB00A53926 /* IncomeAndExpenseTracker */;
+			baseConfigurationReferenceRelativePath = App/Configurations/release.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
