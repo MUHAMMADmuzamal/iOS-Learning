@@ -12,6 +12,7 @@ final class HomeFactory {
     static func make(injector: Container) -> some View {
         let coordinator = injector.resolve(HomeCoordinator.self)!
         let appCoordinator = injector.resolve(AppCoordinator.self)!
-        return HomeView(vm: HomeViewModel(coordinator: coordinator, appCoordinator: appCoordinator))
+        return HomeView()
+//        return HomeView(vm: HomeViewModel(coordinator: coordinator, appCoordinator: appCoordinator))
     }
 }
