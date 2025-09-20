@@ -37,6 +37,7 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .padding(.bottom, 10)
 }
 
 extension HomeView {
@@ -176,7 +177,7 @@ extension HomeView {
     }
     
     private var senAgainView: some View {
-        VStack {
+        VStack(spacing: 15) {
             HStack {
                 Text("Send Again")
                     .font(.inter(size: 18, weight: .semiBold))
@@ -187,41 +188,13 @@ extension HomeView {
                     .foregroundStyle(.gray66)
             }
             
-            HStack {
-                
-            }
-        }
-    }
-}
-
-struct TransactionHistoryRow: View {
-    var body: some View {
-        HStack {
-            RoundedRectangle(cornerRadius: 10)
-                .fill(.lightTealF5)
-                .frame(width: 50, height: 50)
-                .overlay {
-                    Image(.upwork)
-                        .resizable()
-                        .scaledToFit()
-                        .padding(8)
+            ScrollView(.horizontal) {
+                HStack(spacing: 10) {
+                    ForEach(0..<10) { i in
+                        SendAgainRow()
+                    }
                 }
-            
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Upwork".uppercased())
-                    .font(.inter(size: 16, weight: .medium))
-                    .foregroundStyle(.black)
-                
-                Text("Today")
-                    .font(.inter(size: 13, weight: .regular))
-                    .foregroundStyle(.gray66)
             }
-            
-            Spacer()
-            
-            Text("+ $ 850.00")
-                .font(.inter(size: 18, weight: .semiBold))
-                .foregroundStyle(.green69)
         }
     }
 }
